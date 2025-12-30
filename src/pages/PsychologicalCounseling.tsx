@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
-import illustrationTherapy from "@/assets/illustration-therapy.jpg";
+import psychotherapyHeader from "@/assets/psychotherapy-header.png";
 import counselingImage from "@/assets/counseling-image.jpg";
 import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
 import psiSupportImage from "@/assets/psi-support.jpg";
@@ -101,7 +101,7 @@ const PsychologicalCounseling = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${illustrationTherapy})`,
+            backgroundImage: `url(${psychotherapyHeader})`,
           }}
         />
         

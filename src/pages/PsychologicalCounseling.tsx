@@ -257,8 +257,9 @@ const PsychologicalCounseling = () => {
       {/* Conditions Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary">
-            Състояния, при които можем да помогнем
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12">
+            Състояния, при които можем да{" "}
+            <span className="gradient-text">помогнем</span>
           </h2>
           
           {/* Main Conditions */}
@@ -272,14 +273,6 @@ const PsychologicalCounseling = () => {
             </div>
             
             <div>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Предлагаме консултация с психолог, съобразена с нуждите на всеки човек. С индивидуален подход всеки може да развие увереност и да се чувства разбран.
-              </p>
-              
-              <p className="text-foreground font-medium mb-6">
-                Психологичното консултиране се препоръчва при:
-              </p>
-              
               <div className="flex flex-wrap gap-3">
                 {conditions.map((condition, index) => (
                   <Link

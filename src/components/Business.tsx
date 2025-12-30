@@ -37,7 +37,7 @@ export const Business = () => {
           {services.map((service) => (
             <div 
               key={service.title}
-              className="p-8 rounded-2xl bg-card border border-border/50 hover:shadow-card transition-all duration-300 group"
+              className="p-8 rounded-2xl bg-lavender/30 border border-primary/10 hover:shadow-card transition-all duration-300 group"
             >
               <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                 <service.icon className="h-8 w-8 text-primary" />

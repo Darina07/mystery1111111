@@ -357,14 +357,19 @@ const PsychologicalCounseling = () => {
       </section>
 
       {/* How to Know Section - Testimonial Style */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo via-deep-navy to-indigo" />
+      <section className="relative py-12 md:py-16 overflow-hidden">
+        {/* Background with curved right edge */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-br from-indigo via-deep-navy to-indigo"
+          style={{
+            clipPath: 'ellipse(95% 100% at 30% 50%)',
+          }}
+        />
         
         {/* Decorative circular dots pattern on the right */}
-        <div className="absolute -right-32 top-1/2 -translate-y-1/2">
+        <div className="absolute -right-20 top-1/2 -translate-y-1/2">
           <svg 
-            className="w-[400px] h-[400px] md:w-[500px] md:h-[500px]"
+            className="w-[300px] h-[300px] md:w-[400px] md:h-[400px]"
             viewBox="0 0 400 400" 
             fill="none"
           >
@@ -395,35 +400,35 @@ const PsychologicalCounseling = () => {
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-center py-6">
             {/* Avatar/Icon */}
-            <div className="mb-8 flex justify-center">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-lavender to-soft-blue flex items-center justify-center shadow-lg border-4 border-white/20">
-                <MessageCircle className="h-10 w-10 text-white" />
+            <div className="mb-6 flex justify-center">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-lavender to-soft-blue flex items-center justify-center shadow-lg border-4 border-white/20">
+                <MessageCircle className="h-8 w-8 text-white" />
               </div>
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4 text-white">
               Как да разберете какво е{" "}
               <span className="text-lavender-light">подходящо за вас?</span>
             </h2>
-            <p className="text-lg text-white/80 mb-10 leading-relaxed">
+            <p className="text-base text-white/80 mb-8 leading-relaxed max-w-xl mx-auto">
               Ако не сте сигурни дали имате нужда от психологично консултиране или психотерапия, това е напълно нормално. В първата среща можем да изясним:
             </p>
             
             {/* Three items in a row */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-10">
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 rounded-full bg-primary" />
-                <p className="text-white font-medium">Какво ви води при нас</p>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-primary" />
+                <p className="text-white text-sm font-medium">Какво ви води при нас</p>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 rounded-full bg-primary" />
-                <p className="text-white font-medium">Какво искате да се промени</p>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-primary" />
+                <p className="text-white text-sm font-medium">Какво искате да се промени</p>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 rounded-full bg-primary" />
-                <p className="text-white font-medium">Какъв тип работа би бил най-подходящ</p>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-primary" />
+                <p className="text-white text-sm font-medium">Какъв тип работа би бил най-подходящ</p>
               </div>
             </div>
           </div>

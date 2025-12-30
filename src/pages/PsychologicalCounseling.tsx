@@ -8,7 +8,7 @@ import counselingImage from "@/assets/counseling-image.jpg";
 import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
 import psiSupportImage from "@/assets/psi-support.jpg";
 import mindIllustration from "@/assets/mind-illustration.png";
-import conditionsSupport from "@/assets/conditions-support.jpg";
+import addictionsSticker from "@/assets/addictions-sticker.png";
 import conditionsLgbt from "@/assets/conditions-lgbt.jpg";
 
 const conditions = [
@@ -310,11 +310,11 @@ const PsychologicalCounseling = () => {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <img 
-                src={conditionsSupport} 
+                src={addictionsSticker} 
                 alt="Зависимости" 
-                className="w-full rounded-lg shadow-lg"
+                className="w-full max-w-md"
               />
             </div>
           </div>

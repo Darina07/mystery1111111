@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
-import darLogo from "@/assets/dar-logo.jpg";
+import darLogo from "@/assets/dar-logo-transparent.svg";
 
 const popularTherapies = [
   "Аутизъм и аутистичен спектър",
@@ -34,7 +34,7 @@ export const Footer = () => {
             <img
               src={darLogo}
               alt="Дар - Психологичен център"
-              className="h-20 w-auto brightness-0 invert"
+              className="h-20 w-auto"
             />
           </a>
         </div>

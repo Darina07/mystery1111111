@@ -322,16 +322,16 @@ const PsychologicalCounseling = () => {
 
           {/* LGBT+ Support */}
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="relative flex items-center justify-center gap-4">
+            <div className="relative flex items-center justify-center">
               <img 
                 src={lgbtSticker1} 
                 alt="ЛГБТ+ подкрепа" 
-                className="w-1/2 max-w-[200px]"
+                className="w-1/2 max-w-[280px] -mr-4"
               />
               <img 
                 src={lgbtSticker2} 
                 alt="ЛГБТ+ подкрепа" 
-                className="w-1/2 max-w-[200px]"
+                className="w-1/2 max-w-[280px] -ml-4"
               />
             </div>
             

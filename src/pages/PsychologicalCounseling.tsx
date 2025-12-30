@@ -357,17 +357,17 @@ const PsychologicalCounseling = () => {
       </section>
 
       {/* How to Know Section - Testimonial Style */}
-      <section className="relative py-8 md:py-10 overflow-visible">
+      <section className="relative py-4 md:py-6 overflow-visible">
         {/* Decorative dots in a semi-circle arc around the curved edge */}
-        <div className="absolute right-16 md:right-24 top-1/2 -translate-y-1/2">
+        <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2">
           <svg 
-            className="w-[200px] h-[250px] md:w-[280px] md:h-[350px]"
-            viewBox="0 0 200 350" 
+            className="w-[180px] h-[200px] md:w-[240px] md:h-[280px]"
+            viewBox="0 0 200 280" 
             fill="none"
           >
             {/* Create arc of dots that follows the curve */}
             {Array.from({ length: 12 }).map((_, ring) => {
-              const baseRadius = 100 + ring * 14;
+              const baseRadius = 80 + ring * 12;
               const dotsInArc = Math.floor(8 + ring * 1.5);
               return Array.from({ length: dotsInArc }).map((_, dot) => {
                 // Arc from -80 degrees to +80 degrees (facing left)
@@ -375,7 +375,7 @@ const PsychologicalCounseling = () => {
                 const endAngle = 1.4;
                 const angle = startAngle + (dot / (dotsInArc - 1)) * (endAngle - startAngle);
                 const x = Math.cos(angle) * baseRadius;
-                const y = 175 + Math.sin(angle) * baseRadius;
+                const y = 140 + Math.sin(angle) * baseRadius;
                 return (
                   <circle
                     key={`${ring}-${dot}`}
@@ -390,13 +390,13 @@ const PsychologicalCounseling = () => {
           </svg>
         </div>
 
-        {/* Dark background with concave curve on right */}
+        {/* Dark background with more rounded curve on right */}
         <div 
-          className="absolute inset-y-0 left-0 right-24 md:right-32 bg-gradient-to-br from-indigo via-deep-navy to-indigo rounded-r-[100px]"
+          className="absolute inset-y-0 left-0 right-20 md:right-28 bg-gradient-to-br from-indigo via-deep-navy to-indigo rounded-r-full"
         />
         
         <div className="container relative z-10">
-          <div className="max-w-3xl py-6 pr-32 md:pr-48 text-left">
+          <div className="max-w-3xl py-4 pr-28 md:pr-40 text-left">
             <h2 className="text-xl md:text-2xl font-heading font-bold mb-3 text-white whitespace-nowrap">
               Как да разберете какво е <span className="text-lavender-light">подходящо за вас?</span>
             </h2>

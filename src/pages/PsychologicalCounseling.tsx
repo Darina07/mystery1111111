@@ -97,27 +97,27 @@ const PsychologicalCounseling = () => {
       
       {/* Hero Section with Background Image */}
       <section className="relative min-h-[70vh] overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - positioned to the right */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-contain bg-right bg-no-repeat"
           style={{
             backgroundImage: `url(${psychotherapyHeader})`,
           }}
         />
         
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background/70" />
+        {/* Overlay for text readability - gradient from left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/30" />
         
-        <div className="container relative z-10 pt-40 pb-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+        <div className="container relative z-10 pt-32 pb-20 min-h-[70vh] flex items-center">
+          <div className="max-w-xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Психологично консултиране и{" "}
               <span className="gradient-text">психотерапия</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               Професионална подкрепа при емоционални и житейски трудности
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="lg" className="gap-2">
                 <Calendar className="h-5 w-5" />
                 Запази час

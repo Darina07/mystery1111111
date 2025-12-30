@@ -255,13 +255,12 @@ const PsychologicalCounseling = () => {
       {/* Conditions Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12">
-            <span className="text-[#00a5b5]">Състояния</span>, при които{" "}
-            <span className="text-[#00a5b5]">можем да помогнем</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary">
+            Състояния, при които можем да помогнем
           </h2>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left Side - Image */}
+          {/* Main Conditions */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div className="relative">
               <img 
                 src={mindIllustration} 
@@ -270,64 +269,82 @@ const PsychologicalCounseling = () => {
               />
             </div>
             
-            {/* Right Side - Text and Pills */}
             <div>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                При нас идват хора, които срещат емоционални, социални или поведенчески затруднения. 
-                Предлагаме консултация с психолог, съобразена с нуждите на всеки човек – при тревожност, 
-                страхове, ниска самооценка, социални затруднения, поведенчески предизвикателства, 
-                преживени травматични събития и други емоционални трудности. Вярваме, че с индивидуален 
-                подход и подкрепа на опитен психолог всеки може да развие увереност и да се чувства разбран.
+                Предлагаме консултация с психолог, съобразена с нуждите на всеки човек. С индивидуален подход всеки може да развие увереност и да се чувства разбран.
               </p>
               
               <p className="text-foreground font-medium mb-6">
                 Психологичното консултиране се препоръчва при:
               </p>
               
-              {/* Main Conditions Pills */}
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap gap-3">
                 {conditions.map((condition, index) => (
                   <Link
                     key={condition.slug}
                     to={`/conditions/${condition.slug}`}
                     className={`px-4 py-2 rounded-full text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
-                      index % 2 === 0 ? 'bg-[#e91e8c]' : 'bg-[#00a5b5]'
+                      index % 2 === 0 ? 'bg-primary' : 'bg-accent'
                     }`}
                   >
                     {condition.name}
                   </Link>
                 ))}
               </div>
+            </div>
+          </div>
 
-              {/* Addictions */}
-              <p className="text-foreground font-medium mb-4">
-                <span className="text-[#00a5b5]">Зависимости:</span>
-              </p>
-              <div className="flex flex-wrap gap-3 mb-8">
+          {/* Addictions */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <div className="relative">
+              <img 
+                src={counselingImage} 
+                alt="Зависимости" 
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+                Зависимости
+              </h3>
+              <div className="flex flex-wrap gap-3">
                 {addictions.map((addiction, index) => (
                   <Link
                     key={addiction.slug}
                     to={`/conditions/${addiction.slug}`}
                     className={`px-4 py-2 rounded-full text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
-                      index % 2 === 0 ? 'bg-[#e91e8c]' : 'bg-[#00a5b5]'
+                      index % 2 === 0 ? 'bg-primary' : 'bg-accent'
                     }`}
                   >
                     {addiction.name}
                   </Link>
                 ))}
               </div>
+            </div>
+          </div>
 
-              {/* LGBT+ Support */}
-              <p className="text-foreground font-medium mb-4">
-                <span className="text-[#00a5b5]">ЛГБТ+ психологична подкрепа:</span>
-              </p>
+          {/* LGBT+ Support */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="relative">
+              <img 
+                src={psiSupportImage} 
+                alt="ЛГБТ+ психологична подкрепа" 
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+                ЛГБТ+ психологична подкрепа
+              </h3>
               <div className="flex flex-wrap gap-3">
                 {lgbtSupport.map((item, index) => (
                   <Link
                     key={item.slug}
                     to={`/conditions/${item.slug}`}
                     className={`px-4 py-2 rounded-full text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
-                      index % 2 === 0 ? 'bg-[#e91e8c]' : 'bg-[#00a5b5]'
+                      index % 2 === 0 ? 'bg-primary' : 'bg-accent'
                     }`}
                   >
                     {item.name}

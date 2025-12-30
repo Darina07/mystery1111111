@@ -33,9 +33,9 @@ export const Header = () => {
           <img
             src={darLogo}
             alt="Дар - Психологичен център"
-            className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 absolute -top-4"
+            className="h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105 absolute -top-8"
           />
-          <div className="h-12 w-24" /> {/* Spacer to maintain header size */}
+          <div className="h-12 w-32" /> {/* Spacer to maintain header size */}
         </a>
 
         {/* Desktop Navigation */}

@@ -25,8 +25,11 @@
     --muted-teal: 205 30% 52%; /* #5E82AA */
     --deep-navy: 241 28% 31%; /* #3B3A64 */
     
+    /* Header Color - matches logo */
+    --header: 252 41% 18%; /* #221A42 - dark indigo for header */
+    
     /* Semantic Colors */
-    --background: 260 30% 98%;
+    --background: 0 0% 100%;
     --foreground: 252 41% 18%;
 
     --card: 0 0% 100%;

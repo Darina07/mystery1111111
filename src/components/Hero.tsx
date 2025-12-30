@@ -7,14 +7,14 @@ export const Hero = () => {
     <section
       id="home"
       className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0.3)), url(${illustrationSupport})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center right',
+      }}
     >
-      {/* Background Gradient */}
-      <div className="absolute inset-0 gradient-bg" />
-      <div className="absolute top-20 right-0 w-96 h-96 bg-lavender/10 rounded-full blur-3xl animate-pulse-soft" />
-      <div className="absolute bottom-20 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-soft delay-500" />
-
       <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="max-w-2xl">
           {/* Content */}
           <div className="flex flex-col gap-8">
             <div className="space-y-2 animate-fade-up">
@@ -56,18 +56,6 @@ export const Hero = () => {
                 <p className="text-lg font-semibold">+359 887 079 256</p>
               </div>
             </a>
-          </div>
-
-          {/* Image */}
-          <div className="relative flex items-center justify-center animate-fade-up delay-300">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-lavender/20 to-accent/20 rounded-3xl blur-2xl" />
-              <img
-                src={illustrationSupport}
-                alt="Професионална психологична подкрепа"
-                className="relative w-full max-w-lg mx-auto rounded-2xl shadow-card animate-float"
-              />
-            </div>
           </div>
         </div>
       </div>

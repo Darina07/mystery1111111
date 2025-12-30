@@ -78,6 +78,7 @@ export default {
         "soft-blue": "hsl(var(--soft-blue))",
         "muted-teal": "hsl(var(--muted-teal))",
         "deep-navy": "hsl(var(--deep-navy))",
+        header: "hsl(var(--header))",
       },
       borderRadius: {
         lg: "var(--radius)",

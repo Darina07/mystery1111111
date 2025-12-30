@@ -25,11 +25,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-soft py-3"
-          : "bg-transparent py-5"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-header py-4"
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
@@ -47,7 +43,7 @@ export const Header = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+              className="text-sm font-semibold uppercase tracking-wider text-white hover:text-white/80 transition-colors duration-200"
             >
               {item.label}
             </a>
@@ -58,12 +54,12 @@ export const Header = () => {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href="tel:+359887079256"
-            className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-2 text-sm font-medium text-white hover:text-white/80 transition-colors"
           >
             <Phone className="h-4 w-4" />
             <span>+359 887 079 256</span>
           </a>
-          <Button variant="cta" size="default">
+          <Button variant="outline" size="default" className="border-white text-white hover:bg-white hover:text-header uppercase tracking-wider font-semibold">
             Запазете час
           </Button>
         </div>
@@ -71,7 +67,7 @@ export const Header = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-white"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -80,7 +76,7 @@ export const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-card/98 backdrop-blur-lg shadow-card transition-all duration-300 ${
+        className={`lg:hidden absolute top-full left-0 right-0 bg-header shadow-card transition-all duration-300 ${
           isMobileMenuOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"
@@ -92,20 +88,20 @@ export const Header = () => {
               key={item.label}
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2"
+              className="text-base font-semibold uppercase tracking-wider text-white hover:text-white/80 transition-colors py-2"
             >
               {item.label}
             </a>
           ))}
-          <div className="pt-4 border-t border-border flex flex-col gap-3">
+          <div className="pt-4 border-t border-white/20 flex flex-col gap-3">
             <a
               href="tel:+359887079256"
-              className="flex items-center gap-2 text-base font-medium text-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-base font-medium text-white hover:text-white/80 transition-colors"
             >
               <Phone className="h-5 w-5" />
               <span>+359 887 079 256</span>
             </a>
-            <Button variant="cta" size="lg" className="w-full">
+            <Button variant="outline" size="lg" className="w-full border-white text-white hover:bg-white hover:text-header uppercase tracking-wider font-semibold">
               Запазете час
             </Button>
           </div>

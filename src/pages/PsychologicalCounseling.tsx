@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import illustrationTherapy from "@/assets/illustration-therapy.jpg";
 import counselingImage from "@/assets/counseling-image.jpg";
 import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
+import psiSupportImage from "@/assets/psi-support.jpg";
 
 const conditions = [
   { name: "Депресия", slug: "depression" },
@@ -174,19 +175,32 @@ const PsychologicalCounseling = () => {
             </div>
 
             <div className="mt-12 bg-gradient-to-r from-lavender/10 to-soft-blue/10 rounded-2xl p-8 border border-lavender/20">
-              <div className="flex items-start gap-4">
-                <Heart className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-heading font-semibold mb-3">
-                    Кога може да бъде полезна{" "}
-                    <span className="gradient-text">психологична подкрепа?</span>
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    Ако се чувствате тревожни или изчерпани, преживявате тъга, страх, проблеми със съня, житейска криза или усещане, че „нещо не е наред".
-                  </p>
-                  <p className="text-foreground font-medium italic">
-                    Не е нужно да имате точни думи – достатъчно е желанието за разговор и подкрепа.
-                  </p>
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Image on the left */}
+                <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40">
+                  <img 
+                    src={psiSupportImage} 
+                    alt="Психологична подкрепа" 
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                </div>
+                {/* Text on the right */}
+                <div className="flex-1">
+                  <div className="flex items-start gap-4">
+                    <Heart className="h-8 w-8 text-primary flex-shrink-0 mt-1 hidden md:block" />
+                    <div>
+                      <h3 className="text-xl font-heading font-semibold mb-3">
+                        Кога може да бъде полезна{" "}
+                        <span className="gradient-text">психологична подкрепа?</span>
+                      </h3>
+                      <p className="text-muted-foreground mb-4">
+                        Ако се чувствате тревожни или изчерпани, преживявате тъга, страх, проблеми със съня, житейска криза или усещане, че „нещо не е наред".
+                      </p>
+                      <p className="text-foreground font-medium italic">
+                        Не е нужно да имате точни думи – достатъчно е желанието за разговор и подкрепа.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -7,6 +7,7 @@ import therapyHeader from "@/assets/therapy-header.jpg";
 import counselingImage from "@/assets/counseling-image.jpg";
 import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
 import psiSupportImage from "@/assets/psi-support.jpg";
+import mindIllustration from "@/assets/mind-illustration.png";
 
 const conditions = [
   { name: "Депресия", slug: "depression" },
@@ -252,11 +253,19 @@ const PsychologicalCounseling = () => {
       </section>
 
       {/* Conditions Section */}
-      <section className="py-16 md:py-24">
-        <div className="container">
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-no-repeat bg-right bg-contain opacity-20 pointer-events-none"
+          style={{
+            backgroundImage: `url(${mindIllustration})`,
+          }}
+        />
+        
+        <div className="container relative z-10">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Състояния, при които{" "}
+              <span className="text-[#6b9dab]">Състояния</span>, при които{" "}
               <span className="gradient-text">можем да помогнем</span>
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -275,7 +284,7 @@ const PsychologicalCounseling = () => {
             {/* Addictions */}
             <div className="mb-12">
               <h3 className="text-xl font-heading font-semibold text-center mb-6">
-                <span className="gradient-text">Зависимости</span>
+                <span className="text-[#6b9dab]">Зависимости</span>
               </h3>
               <div className="flex flex-wrap gap-3 justify-center">
                 {addictions.map((addiction) => (
@@ -287,7 +296,7 @@ const PsychologicalCounseling = () => {
             {/* LGBT+ Support */}
             <div>
               <h3 className="text-xl font-heading font-semibold text-center mb-6">
-                <span className="gradient-text">ЛГБТ+ психологична подкрепа</span>
+                <span className="text-[#6b9dab]">ЛГБТ+ психологична подкрепа</span>
               </h3>
               <div className="flex flex-wrap gap-3 justify-center">
                 {lgbtSupport.map((item) => (

@@ -27,14 +27,14 @@ const professionalDevelopment = [
 export const Footer = () => {
   return (
     <footer className="bg-indigo text-primary-foreground">
-      <div className="container py-12">
+      <div className="container py-10">
         {/* Logo */}
-        <div className="mb-8 text-center">
+        <div className="mb-6 text-center">
           <a href="#home" className="inline-block">
             <img
               src={darLogo}
               alt="Дар - Психологичен център"
-              className="h-28 w-auto mx-auto"
+              className="h-44 w-auto mx-auto"
             />
           </a>
         </div>

@@ -361,25 +361,36 @@ const PsychologicalCounseling = () => {
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-indigo via-deep-navy to-indigo" />
         
-        {/* Decorative dots pattern on the right */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/3 overflow-hidden">
+        {/* Decorative circular dots pattern on the right */}
+        <div className="absolute -right-32 top-1/2 -translate-y-1/2">
           <svg 
-            className="absolute right-0 top-1/2 -translate-y-1/2 h-[150%] w-auto opacity-60"
-            viewBox="0 0 200 400" 
+            className="w-[400px] h-[400px] md:w-[500px] md:h-[500px]"
+            viewBox="0 0 400 400" 
             fill="none"
           >
-            {/* Create dot pattern */}
-            {Array.from({ length: 20 }).map((_, row) =>
-              Array.from({ length: 10 }).map((_, col) => (
-                <circle
-                  key={`${row}-${col}`}
-                  cx={col * 20 + 10}
-                  cy={row * 20 + 10}
-                  r={4}
-                  className="fill-primary"
-                />
-              ))
-            )}
+            {/* Create circular dot pattern */}
+            {Array.from({ length: 12 }).map((_, ring) => {
+              const radius = 50 + ring * 15;
+              const dotsInRing = Math.floor(8 + ring * 2);
+              return Array.from({ length: dotsInRing }).map((_, dot) => {
+                const angle = (dot / dotsInRing) * Math.PI * 2 - Math.PI / 2;
+                const x = 200 + Math.cos(angle) * radius;
+                const y = 200 + Math.sin(angle) * radius;
+                // Only show right half of the circle
+                if (x >= 180) {
+                  return (
+                    <circle
+                      key={`${ring}-${dot}`}
+                      cx={x}
+                      cy={y}
+                      r={3}
+                      className="fill-primary"
+                    />
+                  );
+                }
+                return null;
+              });
+            })}
           </svg>
         </div>
         

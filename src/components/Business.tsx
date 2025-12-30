@@ -43,7 +43,7 @@ export const Business = () => {
                 <service.icon className="h-8 w-8 text-primary" />
               </div>
               
-              <h3 className="font-heading text-xl font-semibold text-primary mb-4">
+              <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
                 {service.title}
               </h3>
               
@@ -64,7 +64,7 @@ export const Business = () => {
               
               <a 
                 href="#contact"
-                className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all duration-300"
+                className="inline-flex items-center gap-2 text-foreground font-medium hover:gap-3 transition-all duration-300"
               >
                 Научете повече
                 <ArrowRight className="h-4 w-4" />

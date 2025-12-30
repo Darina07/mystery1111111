@@ -259,8 +259,7 @@ const PsychologicalCounseling = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12">
-            Състояния, при които можем да{" "}
-            <span className="gradient-text">помогнем</span>
+            <span className="gradient-text">Състояния</span>, при които можем да помогнем
           </h2>
           
           {/* Main Conditions */}
@@ -293,7 +292,7 @@ const PsychologicalCounseling = () => {
           {/* Addictions */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+              <h3 className="text-2xl font-heading font-semibold text-foreground mb-6">
                 Зависимости
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -336,7 +335,7 @@ const PsychologicalCounseling = () => {
             </div>
             
             <div>
-              <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+              <h3 className="text-2xl font-heading font-semibold text-foreground mb-6">
                 ЛГБТ+ психологична подкрепа
               </h3>
               <div className="flex flex-wrap gap-3">

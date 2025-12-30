@@ -8,6 +8,8 @@ import counselingImage from "@/assets/counseling-image.jpg";
 import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
 import psiSupportImage from "@/assets/psi-support.jpg";
 import mindIllustration from "@/assets/mind-illustration.png";
+import conditionsSupport from "@/assets/conditions-support.jpg";
+import conditionsLgbt from "@/assets/conditions-lgbt.jpg";
 
 const conditions = [
   { name: "Депресия", slug: "depression" },
@@ -298,7 +300,7 @@ const PsychologicalCounseling = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div className="relative">
               <img 
-                src={counselingImage} 
+                src={conditionsSupport} 
                 alt="Зависимости" 
                 className="w-full rounded-lg shadow-lg"
               />
@@ -328,7 +330,7 @@ const PsychologicalCounseling = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="relative">
               <img 
-                src={psiSupportImage} 
+                src={conditionsLgbt} 
                 alt="ЛГБТ+ психологична подкрепа" 
                 className="w-full rounded-lg shadow-lg"
               />

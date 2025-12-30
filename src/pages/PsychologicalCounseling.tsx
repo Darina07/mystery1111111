@@ -326,12 +326,12 @@ const PsychologicalCounseling = () => {
               <img 
                 src={lgbtSticker1} 
                 alt="ЛГБТ+ подкрепа" 
-                className="w-1/2 max-w-[280px] -mr-4"
+                className="w-1/2 max-w-[280px] -mr-12"
               />
               <img 
                 src={lgbtSticker2} 
                 alt="ЛГБТ+ подкрепа" 
-                className="w-1/2 max-w-[280px] -ml-4"
+                className="w-1/2 max-w-[280px] -ml-12"
               />
             </div>
             

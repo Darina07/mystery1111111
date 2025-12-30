@@ -358,32 +358,33 @@ const PsychologicalCounseling = () => {
 
       {/* How to Know Section - Testimonial Style */}
       <section className="relative py-8 md:py-10 overflow-visible">
-        {/* Decorative dots pattern on the right - no background */}
-        <div className="absolute -right-32 md:-right-20 top-1/2 -translate-y-1/2">
+        {/* Decorative dots in a semi-circle arc around the curved edge */}
+        <div className="absolute right-16 md:right-24 top-1/2 -translate-y-1/2">
           <svg 
-            className="w-[280px] h-[280px] md:w-[350px] md:h-[350px]"
-            viewBox="0 0 350 350" 
+            className="w-[200px] h-[250px] md:w-[280px] md:h-[350px]"
+            viewBox="0 0 200 350" 
             fill="none"
           >
-            {Array.from({ length: 10 }).map((_, ring) => {
-              const radius = 40 + ring * 15;
-              const dotsInRing = Math.floor(6 + ring * 2);
-              return Array.from({ length: dotsInRing }).map((_, dot) => {
-                const angle = (dot / dotsInRing) * Math.PI * 2 - Math.PI / 2;
-                const x = 175 + Math.cos(angle) * radius;
-                const y = 175 + Math.sin(angle) * radius;
-                if (x >= 150) {
-                  return (
-                    <circle
-                      key={`${ring}-${dot}`}
-                      cx={x}
-                      cy={y}
-                      r={2.5}
-                      className="fill-primary"
-                    />
-                  );
-                }
-                return null;
+            {/* Create arc of dots that follows the curve */}
+            {Array.from({ length: 12 }).map((_, ring) => {
+              const baseRadius = 100 + ring * 14;
+              const dotsInArc = Math.floor(8 + ring * 1.5);
+              return Array.from({ length: dotsInArc }).map((_, dot) => {
+                // Arc from -80 degrees to +80 degrees (facing left)
+                const startAngle = -1.4; // radians
+                const endAngle = 1.4;
+                const angle = startAngle + (dot / (dotsInArc - 1)) * (endAngle - startAngle);
+                const x = Math.cos(angle) * baseRadius;
+                const y = 175 + Math.sin(angle) * baseRadius;
+                return (
+                  <circle
+                    key={`${ring}-${dot}`}
+                    cx={x + 20}
+                    cy={y}
+                    r={2.5}
+                    className="fill-primary"
+                  />
+                );
               });
             })}
           </svg>

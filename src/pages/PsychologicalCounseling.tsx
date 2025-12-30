@@ -356,26 +356,63 @@ const PsychologicalCounseling = () => {
         </div>
       </section>
 
-      {/* How to Know Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
+      {/* How to Know Section - Testimonial Style */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo via-deep-navy to-indigo" />
+        
+        {/* Decorative dots pattern on the right */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/3 overflow-hidden">
+          <svg 
+            className="absolute right-0 top-1/2 -translate-y-1/2 h-[150%] w-auto opacity-60"
+            viewBox="0 0 200 400" 
+            fill="none"
+          >
+            {/* Create dot pattern */}
+            {Array.from({ length: 20 }).map((_, row) =>
+              Array.from({ length: 10 }).map((_, col) => (
+                <circle
+                  key={`${row}-${col}`}
+                  cx={col * 20 + 10}
+                  cy={row * 20 + 10}
+                  r={4}
+                  className="fill-primary"
+                />
+              ))
+            )}
+          </svg>
+        </div>
+        
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
+            {/* Avatar/Icon */}
+            <div className="mb-8 flex justify-center">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-lavender to-soft-blue flex items-center justify-center shadow-lg border-4 border-white/20">
+                <MessageCircle className="h-10 w-10 text-white" />
+              </div>
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">
               Как да разберете какво е{" "}
-              <span className="gradient-text">подходящо за вас?</span>
+              <span className="text-lavender-light">подходящо за вас?</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/80 mb-10 leading-relaxed">
               Ако не сте сигурни дали имате нужда от психологично консултиране или психотерапия, това е напълно нормално. В първата среща можем да изясним:
             </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-card rounded-xl p-5 border border-border">
-                <p className="text-foreground font-medium">Какво ви води при нас</p>
+            
+            {/* Three items in a row */}
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-10">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 rounded-full bg-primary" />
+                <p className="text-white font-medium">Какво ви води при нас</p>
               </div>
-              <div className="bg-card rounded-xl p-5 border border-border">
-                <p className="text-foreground font-medium">Какво искате да се промени</p>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 rounded-full bg-primary" />
+                <p className="text-white font-medium">Какво искате да се промени</p>
               </div>
-              <div className="bg-card rounded-xl p-5 border border-border">
-                <p className="text-foreground font-medium">Какъв тип работа би бил най-подходящ</p>
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 rounded-full bg-primary" />
+                <p className="text-white font-medium">Какъв тип работа би бил най-подходящ</p>
               </div>
             </div>
           </div>

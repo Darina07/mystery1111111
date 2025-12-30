@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
-import darLogo from "@/assets/dar-logo.jpg";
+import darLogo from "@/assets/dar-logo.svg";
 
 const navItems = [
   { label: "Начало", href: "#home" },

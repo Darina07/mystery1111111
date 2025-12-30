@@ -358,30 +358,30 @@ const PsychologicalCounseling = () => {
 
       {/* How to Know Section - Testimonial Style */}
       <section className="relative py-4 md:py-6 overflow-visible">
-        {/* Decorative dots in a semi-circle arc around the curved edge */}
-        <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2">
+        {/* Decorative dots in a semicircle hugging the curved edge */}
+        <div className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 pointer-events-none">
           <svg 
-            className="w-[180px] h-[200px] md:w-[240px] md:h-[280px]"
-            viewBox="0 0 200 280" 
+            className="w-[160px] h-[180px] md:w-[200px] md:h-[220px]"
+            viewBox="0 0 160 180" 
             fill="none"
           >
-            {/* Create arc of dots that follows the curve */}
-            {Array.from({ length: 12 }).map((_, ring) => {
-              const baseRadius = 80 + ring * 12;
-              const dotsInArc = Math.floor(8 + ring * 1.5);
+            {/* Create semicircle of dots that hugs the curve */}
+            {Array.from({ length: 10 }).map((_, ring) => {
+              const baseRadius = 50 + ring * 10;
+              const dotsInArc = Math.floor(6 + ring * 1.2);
               return Array.from({ length: dotsInArc }).map((_, dot) => {
-                // Arc from -80 degrees to +80 degrees (facing left)
-                const startAngle = -1.4; // radians
-                const endAngle = 1.4;
+                // Semicircle from -90 to +90 degrees (facing left, π/2 to -π/2)
+                const startAngle = -Math.PI / 2;
+                const endAngle = Math.PI / 2;
                 const angle = startAngle + (dot / (dotsInArc - 1)) * (endAngle - startAngle);
-                const x = Math.cos(angle) * baseRadius;
-                const y = 140 + Math.sin(angle) * baseRadius;
+                const x = 10 + Math.cos(angle) * baseRadius;
+                const y = 90 + Math.sin(angle) * baseRadius;
                 return (
                   <circle
                     key={`${ring}-${dot}`}
-                    cx={x + 20}
+                    cx={x}
                     cy={y}
-                    r={2.5}
+                    r={2}
                     className="fill-primary"
                   />
                 );

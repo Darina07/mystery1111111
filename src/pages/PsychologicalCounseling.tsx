@@ -358,13 +358,10 @@ const PsychologicalCounseling = () => {
 
       {/* How to Know Section - Testimonial Style */}
       <section className="relative py-8 md:py-10 overflow-visible">
-        {/* Lavender circular background on the right */}
-        <div 
-          className="absolute -right-32 md:-right-20 top-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full bg-primary/80"
-        >
-          {/* Decorative dots on the circular background */}
+        {/* Decorative dots pattern on the right - no background */}
+        <div className="absolute -right-32 md:-right-20 top-1/2 -translate-y-1/2">
           <svg 
-            className="absolute inset-0 w-full h-full"
+            className="w-[280px] h-[280px] md:w-[350px] md:h-[350px]"
             viewBox="0 0 350 350" 
             fill="none"
           >
@@ -382,7 +379,7 @@ const PsychologicalCounseling = () => {
                       cx={x}
                       cy={y}
                       r={2.5}
-                      className="fill-white/40"
+                      className="fill-primary"
                     />
                   );
                 }
@@ -398,24 +395,17 @@ const PsychologicalCounseling = () => {
         />
         
         <div className="container relative z-10">
-          <div className="max-w-xl mx-auto text-center py-4 pr-16 md:pr-24">
-            {/* Avatar/Icon */}
-            <div className="mb-4 flex justify-center">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-lavender to-soft-blue flex items-center justify-center shadow-lg border-3 border-white/20">
-                <MessageCircle className="h-7 w-7 text-white" />
-              </div>
-            </div>
-            
+          <div className="max-w-2xl py-6 pr-32 md:pr-48 text-left">
             <h2 className="text-xl md:text-2xl font-heading font-bold mb-3 text-white">
               Как да разберете какво е{" "}
               <span className="text-lavender-light">подходящо за вас?</span>
             </h2>
-            <p className="text-sm text-white/80 mb-6 leading-relaxed max-w-md mx-auto">
+            <p className="text-sm text-white/80 mb-6 leading-relaxed">
               Ако не сте сигурни дали имате нужда от психологично консултиране или психотерапия, това е напълно нормално. В първата среща можем да изясним:
             </p>
             
-            {/* Three items in a row */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-5">
+            {/* Three items */}
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-5">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-primary" />
                 <p className="text-white text-xs font-medium">Какво ви води при нас</p>

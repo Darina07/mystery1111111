@@ -29,12 +29,13 @@ export const Header = () => {
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 group">
+        <a href="#home" className="flex items-center gap-3 group relative">
           <img
             src={darLogo}
             alt="Дар - Психологичен център"
-            className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 absolute -top-4"
           />
+          <div className="h-12 w-24" /> {/* Spacer to maintain header size */}
         </a>
 
         {/* Desktop Navigation */}

@@ -396,27 +396,26 @@ const PsychologicalCounseling = () => {
         />
         
         <div className="container relative z-10">
-          <div className="max-w-2xl py-6 pr-32 md:pr-48 text-left">
-            <h2 className="text-xl md:text-2xl font-heading font-bold mb-3 text-white">
-              Как да разберете какво е{" "}
-              <span className="text-lavender-light">подходящо за вас?</span>
+          <div className="max-w-3xl py-6 pr-32 md:pr-48 text-left">
+            <h2 className="text-xl md:text-2xl font-heading font-bold mb-3 text-white whitespace-nowrap">
+              Как да разберете какво е <span className="text-lavender-light">подходящо за вас?</span>
             </h2>
             <p className="text-sm text-white/80 mb-6 leading-relaxed">
               Ако не сте сигурни дали имате нужда от психологично консултиране или психотерапия, това е напълно нормално. В първата среща можем да изясним:
             </p>
             
-            {/* Three items */}
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-5">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary" />
+            {/* Three items - always in a row */}
+            <div className="flex flex-row items-center gap-5 flex-wrap md:flex-nowrap">
+              <div className="flex items-center gap-2 whitespace-nowrap">
+                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                 <p className="text-white text-xs font-medium">Какво ви води при нас</p>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary" />
+              <div className="flex items-center gap-2 whitespace-nowrap">
+                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                 <p className="text-white text-xs font-medium">Какво искате да се промени</p>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary" />
+              <div className="flex items-center gap-2 whitespace-nowrap">
+                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                 <p className="text-white text-xs font-medium">Какъв тип работа е най-подходящ</p>
               </div>
             </div>

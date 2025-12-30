@@ -27,19 +27,19 @@ const professionalDevelopment = [
 export const Footer = () => {
   return (
     <footer className="bg-indigo text-primary-foreground">
-      <div className="container py-16">
+      <div className="container py-12">
         {/* Logo */}
-        <div className="mb-12">
+        <div className="mb-8 text-center">
           <a href="#home" className="inline-block">
             <img
               src={darLogo}
               alt="Дар - Психологичен център"
-              className="h-20 w-auto"
+              className="h-28 w-auto mx-auto"
             />
           </a>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Popular Therapies */}
           <div>
             <h4 className="font-heading text-lg font-semibold mb-6">

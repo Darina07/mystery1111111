@@ -6,14 +6,20 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0.3)), url(${illustrationSupport})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center right',
-      }}
+      className="relative min-h-screen overflow-hidden"
     >
-      <div className="container relative z-10">
+      {/* Background Image - full visibility */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${illustrationSupport})`,
+        }}
+      />
+      
+      {/* White overlay at the top for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-transparent" style={{ height: '70%' }} />
+      
+      <div className="container relative z-10 pt-32 pb-16">
         <div className="max-w-2xl">
           {/* Content */}
           <div className="flex flex-col gap-8">

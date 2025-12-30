@@ -28,6 +28,17 @@ export const Footer = () => {
   return (
     <footer className="bg-indigo text-primary-foreground">
       <div className="container py-16">
+        {/* Logo */}
+        <div className="mb-12">
+          <a href="#home" className="inline-block">
+            <img
+              src={darLogo}
+              alt="Дар - Психологичен център"
+              className="h-20 w-auto brightness-0 invert"
+            />
+          </a>
+        </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Popular Therapies */}
           <div>
@@ -100,6 +111,15 @@ export const Footer = () => {
                 info@darpsiholog.bg
               </a>
               
+              <div className="pt-2">
+                <a 
+                  href="#prices"
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-medium"
+                >
+                  Цени
+                </a>
+              </div>
+
               <div className="pt-2">
                 <p className="text-primary-foreground/70 text-sm mb-1">Работно време:</p>
                 <p className="text-primary-foreground/70">Понеделник – Неделя: 08:00 – 22:00</p>

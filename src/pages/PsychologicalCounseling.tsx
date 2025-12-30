@@ -357,39 +357,32 @@ const PsychologicalCounseling = () => {
       </section>
 
       {/* How to Know Section - Testimonial Style */}
-      <section className="relative py-12 md:py-16 overflow-hidden">
-        {/* Background with curved right edge */}
+      <section className="relative py-8 md:py-10 overflow-visible">
+        {/* Lavender circular background on the right */}
         <div 
-          className="absolute inset-0 bg-gradient-to-br from-indigo via-deep-navy to-indigo"
-          style={{
-            clipPath: 'ellipse(95% 100% at 30% 50%)',
-          }}
-        />
-        
-        {/* Decorative circular dots pattern on the right */}
-        <div className="absolute -right-20 top-1/2 -translate-y-1/2">
+          className="absolute -right-32 md:-right-20 top-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[350px] md:h-[350px] rounded-full bg-primary/80"
+        >
+          {/* Decorative dots on the circular background */}
           <svg 
-            className="w-[300px] h-[300px] md:w-[400px] md:h-[400px]"
-            viewBox="0 0 400 400" 
+            className="absolute inset-0 w-full h-full"
+            viewBox="0 0 350 350" 
             fill="none"
           >
-            {/* Create circular dot pattern */}
-            {Array.from({ length: 12 }).map((_, ring) => {
-              const radius = 50 + ring * 15;
-              const dotsInRing = Math.floor(8 + ring * 2);
+            {Array.from({ length: 10 }).map((_, ring) => {
+              const radius = 40 + ring * 15;
+              const dotsInRing = Math.floor(6 + ring * 2);
               return Array.from({ length: dotsInRing }).map((_, dot) => {
                 const angle = (dot / dotsInRing) * Math.PI * 2 - Math.PI / 2;
-                const x = 200 + Math.cos(angle) * radius;
-                const y = 200 + Math.sin(angle) * radius;
-                // Only show right half of the circle
-                if (x >= 180) {
+                const x = 175 + Math.cos(angle) * radius;
+                const y = 175 + Math.sin(angle) * radius;
+                if (x >= 150) {
                   return (
                     <circle
                       key={`${ring}-${dot}`}
                       cx={x}
                       cy={y}
-                      r={3}
-                      className="fill-primary"
+                      r={2.5}
+                      className="fill-white/40"
                     />
                   );
                 }
@@ -398,37 +391,42 @@ const PsychologicalCounseling = () => {
             })}
           </svg>
         </div>
+
+        {/* Dark background with concave curve on right */}
+        <div 
+          className="absolute inset-y-0 left-0 right-24 md:right-32 bg-gradient-to-br from-indigo via-deep-navy to-indigo rounded-r-[100px]"
+        />
         
         <div className="container relative z-10">
-          <div className="max-w-2xl mx-auto text-center py-6">
+          <div className="max-w-xl mx-auto text-center py-4 pr-16 md:pr-24">
             {/* Avatar/Icon */}
-            <div className="mb-6 flex justify-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-lavender to-soft-blue flex items-center justify-center shadow-lg border-4 border-white/20">
-                <MessageCircle className="h-8 w-8 text-white" />
+            <div className="mb-4 flex justify-center">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-lavender to-soft-blue flex items-center justify-center shadow-lg border-3 border-white/20">
+                <MessageCircle className="h-7 w-7 text-white" />
               </div>
             </div>
             
-            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4 text-white">
+            <h2 className="text-xl md:text-2xl font-heading font-bold mb-3 text-white">
               Как да разберете какво е{" "}
               <span className="text-lavender-light">подходящо за вас?</span>
             </h2>
-            <p className="text-base text-white/80 mb-8 leading-relaxed max-w-xl mx-auto">
+            <p className="text-sm text-white/80 mb-6 leading-relaxed max-w-md mx-auto">
               Ако не сте сигурни дали имате нужда от психологично консултиране или психотерапия, това е напълно нормално. В първата среща можем да изясним:
             </p>
             
             {/* Three items in a row */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-5">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                <p className="text-white text-sm font-medium">Какво ви води при нас</p>
+                <p className="text-white text-xs font-medium">Какво ви води при нас</p>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                <p className="text-white text-sm font-medium">Какво искате да се промени</p>
+                <p className="text-white text-xs font-medium">Какво искате да се промени</p>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                <p className="text-white text-sm font-medium">Какъв тип работа би бил най-подходящ</p>
+                <p className="text-white text-xs font-medium">Какъв тип работа е най-подходящ</p>
               </div>
             </div>
           </div>

@@ -33,7 +33,7 @@ export const Header = () => {
           <img
             src={darLogo}
             alt="Дар - Психологичен център"
-            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </a>
 

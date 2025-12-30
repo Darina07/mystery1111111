@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import illustrationSupport from "@/assets/illustration-support.jpg";
 
 export const Hero = () => {
@@ -17,7 +17,7 @@ export const Hero = () => {
       />
       
       {/* White overlay at the top for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-transparent" style={{ height: '70%' }} />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent" style={{ height: '60%' }} />
       
       <div className="container relative z-10 pt-32 pb-16">
         <div className="max-w-2xl">
@@ -41,27 +41,14 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
-              <Button variant="hero" size="xl">
-                Запазете час
+              <Button variant="hero" size="xl" className="uppercase">
+                КОНТАКТИ
                 <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button variant="hero-outline" size="xl">
-                Вижте услугите
+              <Button variant="hero-outline" size="xl" className="uppercase">
+                ВИЖТЕ УСЛУГИТЕ
               </Button>
             </div>
-
-            <a
-              href="tel:+359887079256"
-              className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors group animate-fade-up delay-400"
-            >
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                <Phone className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Обадете се сега</p>
-                <p className="text-lg font-semibold">+359 887 079 256</p>
-              </div>
-            </a>
           </div>
         </div>
       </div>

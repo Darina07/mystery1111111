@@ -33,7 +33,7 @@ const groupPrograms: SubMenuItem[] = [
 ];
 
 const servicesSubmenu: SubMenuItem[] = [
-  { label: "Психологично консултиране и психотерапия", href: "#psychotherapy" },
+  { label: "Психологично консултиране и психотерапия", href: "/services/psychological-counseling" },
   { label: "Семейно и партньорско консултиране", href: "#family-counseling" },
   { label: "Детско - юношеско консултиране", href: "#child-counseling" },
   { label: "Групови програми", href: "#group-programs", hasSubmenu: true, submenu: groupPrograms },

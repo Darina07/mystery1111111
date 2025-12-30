@@ -5,6 +5,7 @@ import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield } from "lu
 import { Link } from "react-router-dom";
 import illustrationTherapy from "@/assets/illustration-therapy.jpg";
 import counselingImage from "@/assets/counseling-image.jpg";
+import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
 
 const conditions = [
   { name: "Депресия", slug: "depression" },
@@ -133,42 +134,42 @@ const PsychologicalCounseling = () => {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Image */}
-              <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-card">
-                  <img 
-                    src={counselingImage} 
-                    alt="Психологично консултиране" 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              </div>
-              
+            {/* Text with Image Side by Side */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
               {/* Content */}
               <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   Психологичното консултиране и психотерапията помагат при тревожност, депресивни състояния, стрес, панически атаки и други трудни преживявания. В център „Дар" предлагаме спокойна и подкрепяща среда, в която разговорът води до повече яснота, разбиране и устойчиви промени – без осъждане и с уважение към вашето темпо.
                 </p>
-                
-                <div className="space-y-6">
-                  <div className="bg-lavender/5 rounded-2xl p-6 border border-lavender/10">
-                    <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
-                      <span className="gradient-text">Психологично консултиране</span>
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Подходящо при конкретни трудности и периоди на промяна, когато имате нужда да подредите мислите си и да намерите посока.
-                    </p>
-                  </div>
-                  <div className="bg-soft-blue/5 rounded-2xl p-6 border border-soft-blue/10">
-                    <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
-                      <span className="gradient-text">Психотерапия</span>
-                    </h3>
-                    <p className="text-muted-foreground">
-                      По-задълбочен процес, насочен към повтарящи се модели, вътрешни конфликти и по-трайна лична промяна.
-                    </p>
-                  </div>
-                </div>
+              </div>
+              
+              {/* Image */}
+              <div className="relative">
+                <img 
+                  src={counselingTherapyImage} 
+                  alt="Психологично консултиране и психотерапия" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Counseling and Therapy Cards Side by Side */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-lavender/5 rounded-2xl p-6 border border-lavender/10">
+                <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
+                  <span className="gradient-text">Психологично консултиране</span>
+                </h3>
+                <p className="text-muted-foreground">
+                  Подходящо при конкретни трудности и периоди на промяна, когато имате нужда да подредите мислите си и да намерите посока.
+                </p>
+              </div>
+              <div className="bg-soft-blue/5 rounded-2xl p-6 border border-soft-blue/10">
+                <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
+                  <span className="gradient-text">Психотерапия</span>
+                </h3>
+                <p className="text-muted-foreground">
+                  По-задълбочен процес, насочен към повтарящи се модели, вътрешни конфликти и по-трайна лична промяна.
+                </p>
               </div>
             </div>
 

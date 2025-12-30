@@ -1,89 +1,74 @@
 import { Heart, Shield, Award, Clock } from "lucide-react";
-import illustrationTherapy from "@/assets/illustration-therapy.jpg";
 
 const values = [
   {
     icon: Heart,
     title: "Емпатия и разбиране",
-    description: "Слушаме без осъждане и създаваме безопасно пространство",
+    description: "Всеки клиент е уникален. Слушаме без осъждане и създаваме безопасно пространство.",
   },
   {
     icon: Shield,
     title: "Конфиденциалност",
-    description: "Гарантираме пълна дискретност",
+    description: "Гарантираме пълна дискретност и защита на личната информация.",
   },
   {
     icon: Award,
     title: "Професионализъм",
-    description: "Работа с утвърдени методи и постоянна квалификация",
+    description: "Работим с доказани методи и непрекъснато надграждаме квалификацията си.",
   },
   {
     icon: Clock,
     title: "Гъвкавост",
-    description: "Удобни часове, включително вечер и в почивни дни",
+    description: "Предлагаме удобни часове, включително вечер и в почивни дни.",
   },
 ];
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 overflow-hidden">
+    <section id="about" className="py-24 bg-background">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
-          <div className="relative order-2 lg:order-1">
-            <div className="absolute -inset-6 bg-gradient-to-br from-lavender/15 to-accent/15 rounded-3xl blur-2xl" />
-            <img
-              src={illustrationTherapy}
-              alt="Терапевтична сесия"
-              className="relative w-full rounded-2xl shadow-card"
-            />
-          </div>
-
-          {/* Content */}
-          <div className="order-1 lg:order-2 space-y-8">
-            <div className="space-y-4">
-              <p className="text-primary font-medium tracking-wide uppercase text-sm">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div className="inline-block">
+              <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
                 За нас
-              </p>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-                Център „Дар" –{" "}
-                <span className="gradient-text">вашият партньор</span> в грижата
-                за психичното здраве
-              </h2>
+              </span>
             </div>
+            
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+              Център „Дар" – вашият{" "}
+              <span className="gradient-text">партньор</span> в грижата за психичното здраве
+            </h2>
 
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Дар е психологичен и консултативен център, който предоставя
-                професионални услуги в областта на психологията, консултирането
-                и обучението.
+                Психологичен и консултативен център „Дар" предоставя професионални услуги в областта на психологията, консултирането и обучението. Работим с индивидуални клиенти, деца, семейства и бизнес организации.
               </p>
               <p>
-                Работим с индивидуални клиенти, двойки, деца, семейства и бизнес
-                организации. Нашата мисия е да предоставяме качествена
-                психологична подкрепа, базирана на доверие, уважение и доказани
-                терапевтични подходи.
+                Нашата мисия е да предоставяме качествена психологическа подкрепа, базирана на доверие, уважение и доказани терапевтични методи.
               </p>
             </div>
+          </div>
 
-            {/* Values Grid */}
-            <div className="grid sm:grid-cols-2 gap-6 pt-4">
-              {values.map((value) => (
-                <div key={value.title} className="flex gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <value.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-semibold text-foreground">
-                      {value.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {value.description}
-                    </p>
-                  </div>
+          {/* Right - Values Grid */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            {values.map((value) => (
+              <div 
+                key={value.title} 
+                className="p-6 rounded-2xl bg-card border border-border/50 hover:shadow-card transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
+                  <value.icon className="h-7 w-7 text-primary" />
                 </div>
-              ))}
-            </div>
+                <h4 className="font-heading font-semibold text-foreground text-lg mb-2">
+                  {value.title}
+                </h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

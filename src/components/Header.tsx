@@ -145,19 +145,14 @@ export const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* CTA Buttons */}
-        <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="tel:+359887079256"
-            className="flex items-center gap-2 text-sm font-medium text-white hover:text-white/80 transition-colors"
-          >
-            <Phone className="h-4 w-4" />
-            <span>+359 887 079 256</span>
-          </a>
-          <Button variant="outline" size="default" className="border-white text-white hover:bg-white hover:text-header uppercase tracking-wider font-semibold">
-            Запазете час
-          </Button>
-        </div>
+        {/* Phone Icon */}
+        <a
+          href="tel:+359887079256"
+          className="hidden lg:flex items-center justify-center p-2 text-white hover:text-white/80 transition-colors"
+          aria-label="Обадете се"
+        >
+          <Phone className="h-5 w-5" />
+        </a>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -232,7 +227,7 @@ export const Header = () => {
               )}
             </div>
           ))}
-          <div className="pt-4 border-t border-white/20 flex flex-col gap-3">
+          <div className="pt-4 border-t border-white/20">
             <a
               href="tel:+359887079256"
               className="flex items-center gap-2 text-base font-medium text-white hover:text-white/80 transition-colors"
@@ -240,9 +235,6 @@ export const Header = () => {
               <Phone className="h-5 w-5" />
               <span>+359 887 079 256</span>
             </a>
-            <Button variant="outline" size="lg" className="w-full border-white text-white hover:bg-white hover:text-header uppercase tracking-wider font-semibold">
-              Запазете час
-            </Button>
           </div>
         </nav>
       </div>

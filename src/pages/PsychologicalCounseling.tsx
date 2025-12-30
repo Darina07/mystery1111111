@@ -7,7 +7,7 @@ import therapyHeader from "@/assets/therapy-header.jpg";
 import counselingImage from "@/assets/counseling-image.jpg";
 import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
 import psiSupportImage from "@/assets/psi-support.jpg";
-import mindIllustration from "@/assets/mind-illustration.png";
+import conditionsSticker from "@/assets/conditions-sticker.png";
 import addictionsSticker from "@/assets/addictions-sticker.png";
 import lgbtSticker1 from "@/assets/lgbt-sticker-1.png";
 import lgbtSticker2 from "@/assets/lgbt-sticker-2.png";
@@ -265,11 +265,11 @@ const PsychologicalCounseling = () => {
           
           {/* Main Conditions */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <img 
-                src={mindIllustration} 
+                src={conditionsSticker} 
                 alt="Психологична подкрепа" 
-                className="w-full rounded-lg shadow-lg"
+                className="w-full max-w-md"
               />
             </div>
             

@@ -291,14 +291,6 @@ const PsychologicalCounseling = () => {
 
           {/* Addictions */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
-            <div className="relative">
-              <img 
-                src={conditionsSupport} 
-                alt="Зависимости" 
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
-            
             <div>
               <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
                 Зависимости
@@ -316,6 +308,14 @@ const PsychologicalCounseling = () => {
                   </Link>
                 ))}
               </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src={conditionsSupport} 
+                alt="Зависимости" 
+                className="w-full rounded-lg shadow-lg"
+              />
             </div>
           </div>
 

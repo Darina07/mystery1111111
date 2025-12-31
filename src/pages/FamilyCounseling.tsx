@@ -240,8 +240,16 @@ const FamilyCounseling = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${marriageRings})` }}
+        />
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-background/85" />
+        
+        <div className="container relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
               Как протича{" "}
@@ -255,7 +263,7 @@ const FamilyCounseling = () => {
               {processSteps.map((step, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow text-center"
+                  className="bg-card/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow text-center"
                 >
                   <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                     <step.icon className="h-7 w-7 text-primary" />
@@ -271,7 +279,7 @@ const FamilyCounseling = () => {
             </div>
 
             <div className="mt-12 text-center">
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground bg-card/80 backdrop-blur-sm rounded-lg px-6 py-4 inline-block">
                 Консултирането може да бъде: <strong>за двойки</strong> (партньори или съпрузи), <strong>за семейства с деца</strong>, <strong>за родители</strong> във връзка с отношенията с децата.
               </p>
             </div>

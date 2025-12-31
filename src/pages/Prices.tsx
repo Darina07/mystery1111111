@@ -205,11 +205,22 @@ const Prices = () => {
       {/* English Consultation Note */}
       <section className="py-12 bg-background">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center bg-lavender/20 rounded-2xl p-8">
-            <p className="text-lg text-foreground">
-              Консултациите на <span className="font-semibold">английски език</span> се провеждат срещу допълнително заплащане от{" "}
-              <span className="font-bold text-primary">+10 евро</span> към посочената цена.
-            </p>
+          <div className="max-w-4xl mx-auto flex items-center justify-center gap-4">
+            <div className="flex gap-2">
+              <div className="w-2 h-2 rounded-full bg-primary" />
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <div className="w-2 h-2 rounded-full bg-lavender" />
+            </div>
+            <div className="bg-deep-navy rounded-full px-8 py-4">
+              <p className="text-center text-white font-medium uppercase tracking-wide text-sm">
+                Консултациите на английски език се провеждат срещу допълнително заплащане от +10 евро към посочената цена.
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <div className="w-2 h-2 rounded-full bg-lavender" />
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <div className="w-2 h-2 rounded-full bg-primary" />
+            </div>
           </div>
         </div>
       </section>

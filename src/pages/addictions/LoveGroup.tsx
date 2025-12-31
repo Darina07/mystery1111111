@@ -236,9 +236,8 @@ const LoveGroup = () => {
         
         <div className="container relative z-10">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-              Заслужавате{" "}
-              <span className="gradient-text">здрава любов</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 uppercase tracking-wide">
+              <span className="gradient-text">Свържете се</span> с нас
             </h2>
             <p className="text-muted-foreground mb-8">
               Свържете се с нас за повече информация или за да се запишете. 

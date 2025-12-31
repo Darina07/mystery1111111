@@ -87,7 +87,7 @@ const Services = () => {
           className="absolute inset-0 bg-cover bg-center bg-top"
           style={{ backgroundImage: `url(${servicesHeader})` }}
         />
-        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-background/50" />
         
         <div className="container relative z-10 h-full flex items-center justify-center min-h-[400px]">
           <div className="text-center space-y-6 max-w-3xl">

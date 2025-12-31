@@ -410,7 +410,7 @@ const ChildCounseling = () => {
               <img 
                 src={socialAdaptationSticker} 
                 alt="Социална адаптация" 
-                className="w-full max-w-xs"
+                className="w-full max-w-sm"
               />
             </div>
           </div>

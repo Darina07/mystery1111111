@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Users, Heart, Shield, Brain, Baby, MessageCircle, Target, Sparkles, Clock, Lock, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
-
+import groupProgramsHeader from "@/assets/group-programs-header.jpg";
 const groupBenefits = [
   { text: "да не останете сами със своите трудности", icon: Users },
   { text: "да получите разбиране и подкрепа от хора в сходна ситуация", icon: Heart },
@@ -98,7 +98,15 @@ const GroupPrograms = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] overflow-hidden bg-gradient-to-br from-lavender/30 via-background to-soft-blue/30">
+      <section className="relative min-h-[60vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${groupProgramsHeader})` }}
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-background/70" />
+        
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
           <div className="max-w-3xl text-center">
             <p className="text-primary font-medium mb-4">Дар Консулт</p>

@@ -54,9 +54,9 @@ const addictions = [
 
 const lgbtSupport = [
   { name: "Психологична подкрепа за ЛГБТ+ хора", slug: "lgbt-support" },
-  { name: "Идентичност и себеприемане", slug: "identity-acceptance" },
+  { name: "Идентичност и себеприемане", slug: "identity-self-acceptance" },
   { name: "Разкриване на идентичността (coming out)", slug: "coming-out" },
-  { name: "Стрес от социално отхвърляне", slug: "social-rejection" },
+  { name: "Стрес от социално отхвърляне", slug: "social-rejection-stress" },
   { name: "Взаимоотношения при ЛГБТ+ хора", slug: "lgbt-relationships" },
 ];
 

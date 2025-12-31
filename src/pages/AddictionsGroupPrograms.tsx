@@ -230,7 +230,31 @@ const AddictionsGroupPrograms = () => {
       <section className="py-12">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-foreground/90 rounded-[10rem] p-8 md:p-10">
+            <div className="bg-foreground/90 rounded-[10rem] p-8 md:p-10 relative overflow-hidden">
+              {/* Left decorative dots */}
+              <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col gap-2">
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary-foreground/30" />
+                  <div className="w-2 h-2 rounded-full bg-primary-foreground/30" />
+                </div>
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary-foreground/30" />
+                  <div className="w-2 h-2 rounded-full bg-primary-foreground/30" />
+                </div>
+              </div>
+              
+              {/* Right decorative dots */}
+              <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col gap-2">
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary-foreground/30" />
+                  <div className="w-2 h-2 rounded-full bg-primary-foreground/30" />
+                </div>
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary-foreground/30" />
+                  <div className="w-2 h-2 rounded-full bg-primary-foreground/30" />
+                </div>
+              </div>
+              
               <div className="flex items-center justify-center gap-4 mb-4">
                 <Lock className="h-10 w-10 text-primary-foreground" />
                 <h3 className="text-xl md:text-2xl font-heading font-semibold uppercase tracking-wide text-primary-foreground">

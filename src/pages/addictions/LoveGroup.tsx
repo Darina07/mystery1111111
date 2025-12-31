@@ -170,8 +170,12 @@ const LoveGroup = () => {
       </section>
 
       {/* What to Expect */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10" />
+        <div className="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        
+        <div className="container relative z-10">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
               Какво да{" "}
@@ -182,7 +186,7 @@ const LoveGroup = () => {
               {whatToExpect.map((item) => (
                 <div 
                   key={item.title}
-                  className="bg-card rounded-2xl p-6 border border-border"
+                  className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center">

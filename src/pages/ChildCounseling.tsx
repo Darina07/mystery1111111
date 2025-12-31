@@ -323,7 +323,7 @@ const ChildCounseling = () => {
               <img 
                 src={learningDifficulties} 
                 alt="Обучителни затруднения" 
-                className="w-full max-w-sm"
+                className="w-full max-w-xs"
               />
             </div>
             
@@ -362,7 +362,7 @@ const ChildCounseling = () => {
               <img 
                 src={speechTherapy} 
                 alt="Говорни затруднения" 
-                className="w-full max-w-sm rounded-2xl"
+                className="w-full max-w-xs rounded-2xl"
               />
             </div>
           </div>

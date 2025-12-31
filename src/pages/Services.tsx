@@ -98,7 +98,7 @@ const Services = () => {
               Професионални{" "}
               <span className="text-primary">психологични услуги</span>
             </h1>
-            <p className="text-foreground/70 text-xl">
+            <p className="text-foreground text-xl">
               Подкрепа за всеки етап от живота
             </p>
           </div>

@@ -121,6 +121,14 @@ import ParentsDivorce from "./pages/conditions/ParentsDivorce";
 import NewFamilyMember from "./pages/conditions/NewFamilyMember";
 import Relocation from "./pages/conditions/Relocation";
 import ChildStress from "./pages/conditions/ChildStress";
+import MuscularDystrophy from "./pages/conditions/MuscularDystrophy";
+import Epilepsy from "./pages/conditions/Epilepsy";
+import ChronicIllness from "./pages/conditions/ChronicIllness";
+import SpecialEducationalNeeds from "./pages/conditions/SpecialEducationalNeeds";
+import LGBTYouth from "./pages/conditions/LGBTYouth";
+import YouthIdentity from "./pages/conditions/YouthIdentity";
+import SocialRejectionSupport from "./pages/conditions/SocialRejectionSupport";
+import ComingOutSupport from "./pages/conditions/ComingOutSupport";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -254,6 +262,16 @@ const App = () => (
           <Route path="/conditions/new-family-member" element={<NewFamilyMember />} />
           <Route path="/conditions/relocation" element={<Relocation />} />
           <Route path="/conditions/child-stress" element={<ChildStress />} />
+          {/* Special physical conditions */}
+          <Route path="/conditions/muscular-dystrophy" element={<MuscularDystrophy />} />
+          <Route path="/conditions/epilepsy" element={<Epilepsy />} />
+          <Route path="/conditions/chronic-illness" element={<ChronicIllness />} />
+          <Route path="/conditions/special-educational-needs" element={<SpecialEducationalNeeds />} />
+          {/* LGBT+ youth conditions */}
+          <Route path="/conditions/lgbt-youth" element={<LGBTYouth />} />
+          <Route path="/conditions/youth-identity" element={<YouthIdentity />} />
+          <Route path="/conditions/social-rejection-support" element={<SocialRejectionSupport />} />
+          <Route path="/conditions/coming-out-support" element={<ComingOutSupport />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

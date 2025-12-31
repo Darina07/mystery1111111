@@ -85,6 +85,11 @@ import InternetAddiction from "./pages/conditions/InternetAddiction";
 import SocialMediaAddiction from "./pages/conditions/SocialMediaAddiction";
 import Workaholism from "./pages/conditions/Workaholism";
 import CompulsiveBehavior from "./pages/conditions/CompulsiveBehavior";
+import LGBTSupport from "./pages/conditions/LGBTSupport";
+import IdentitySelfAcceptance from "./pages/conditions/IdentitySelfAcceptance";
+import ComingOut from "./pages/conditions/ComingOut";
+import SocialRejectionStress from "./pages/conditions/SocialRejectionStress";
+import LGBTRelationships from "./pages/conditions/LGBTRelationships";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -177,6 +182,12 @@ const App = () => (
           <Route path="/conditions/social-media-addiction" element={<SocialMediaAddiction />} />
           <Route path="/conditions/workaholism" element={<Workaholism />} />
           <Route path="/conditions/compulsive-behavior" element={<CompulsiveBehavior />} />
+          {/* LGBT+ conditions */}
+          <Route path="/conditions/lgbt-support" element={<LGBTSupport />} />
+          <Route path="/conditions/identity-self-acceptance" element={<IdentitySelfAcceptance />} />
+          <Route path="/conditions/coming-out" element={<ComingOut />} />
+          <Route path="/conditions/social-rejection-stress" element={<SocialRejectionStress />} />
+          <Route path="/conditions/lgbt-relationships" element={<LGBTRelationships />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

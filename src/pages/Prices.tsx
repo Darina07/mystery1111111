@@ -228,7 +228,7 @@ const Prices = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${specialServicesBg})` }}
         />
-        <div className="absolute inset-0 bg-background/60" />
+        <div className="absolute inset-0 bg-background/40" />
         
         <div className="container relative z-10">
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

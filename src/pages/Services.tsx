@@ -141,7 +141,7 @@ const Services = () => {
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3 text-primary">
+                  <h3 className="font-heading text-xl font-semibold mb-3 text-primary text-center">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
@@ -191,7 +191,7 @@ const Services = () => {
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3 text-primary">
+                  <h3 className="font-heading text-xl font-semibold mb-3 text-primary text-center">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6 flex-1">

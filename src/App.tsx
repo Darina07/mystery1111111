@@ -40,6 +40,7 @@ import CorporateServices from "./pages/CorporateServices";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Prices from "./pages/Prices";
+import Services from "./pages/Services";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -51,6 +52,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/services/psychological-counseling" element={<PsychologicalCounseling />} />
           <Route path="/services/family-counseling" element={<FamilyCounseling />} />
           <Route path="/services/child-counseling" element={<ChildCounseling />} />

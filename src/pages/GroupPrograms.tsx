@@ -5,6 +5,10 @@ import { Phone, Calendar, Users, Heart, Shield, Brain, Baby, MessageCircle, Targ
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupProgramsHeader from "@/assets/group-programs-header.jpg";
+import groupAddictions from "@/assets/group-addictions.jpg";
+import groupRelationships from "@/assets/group-relationships.jpg";
+import groupParenting from "@/assets/group-parenting.jpg";
+import groupNlp from "@/assets/group-nlp.jpg";
 const groupBenefits = [
   { text: "да не останете сами със своите трудности", icon: Users },
   { text: "да получите разбиране и подкрепа от хора в сходна ситуация", icon: Heart },
@@ -234,154 +238,188 @@ const GroupPrograms = () => {
               <span className="gradient-text">групови програми</span>
             </h2>
 
-            {/* Addictions Group */}
-            <div className="bg-card rounded-2xl p-8 border border-border mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Shield className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-2xl font-heading font-semibold text-foreground">
-                  {addictionsGroup.title}
-                </h3>
-              </div>
-              <p className="text-muted-foreground mb-6">{addictionsGroup.description}</p>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">Характеристики:</h4>
-                  <ul className="space-y-2">
-                    {addictionsGroup.characteristics.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">Подходящи при:</h4>
-                  <ul className="space-y-2">
-                    {addictionsGroup.suitable.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              
-              <Button variant="outline" className="mt-6">
-                Научи повече за групите при зависимости →
-              </Button>
-            </div>
-
-            {/* Relationships Group */}
-            <div className="bg-card rounded-2xl p-8 border border-border mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Heart className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="text-2xl font-heading font-semibold text-foreground">
-                  {relationshipsGroup.title}
-                </h3>
-              </div>
-              <p className="text-muted-foreground mb-6">{relationshipsGroup.description}</p>
-              
-              <div className="mb-6">
-                <h4 className="font-semibold text-foreground mb-3">Фокус на групите:</h4>
-                <div className="grid md:grid-cols-2 gap-2">
-                  {relationshipsGroup.focus.map((item, index) => (
-                    <div key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <div className="w-2 h-2 rounded-full bg-accent" />
-                      {item}
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Addictions Group */}
+              <div className="relative rounded-2xl overflow-hidden group">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${groupAddictions})` }}
+                />
+                <div className="absolute inset-0 bg-background/85 group-hover:bg-background/80 transition-colors duration-300" />
+                
+                <div className="relative z-10 p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <Shield className="h-6 w-6 text-primary" />
                     </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="bg-accent/10 rounded-xl p-4 mb-6">
-                <p className="text-foreground text-sm italic">{relationshipsGroup.note}</p>
-              </div>
-              
-              <Button variant="outline" className="mt-2">
-                Научи повече за групите за необвързани →
-              </Button>
-            </div>
-
-            {/* Parenting Group */}
-            <div className="bg-card rounded-2xl p-8 border border-border mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Baby className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-2xl font-heading font-semibold text-foreground">
-                  {parentingGroup.title}
-                </h3>
-              </div>
-              <p className="text-muted-foreground mb-6">{parentingGroup.description}</p>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">Групите са подходящи за:</h4>
-                  <ul className="space-y-2">
-                    {parentingGroup.suitable.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">Акцентът е върху:</h4>
-                  <ul className="space-y-2">
-                    {parentingGroup.focus.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              
-              <Button variant="outline" className="mt-6">
-                Научи повече за групите за бременност и родителство →
-              </Button>
-            </div>
-
-            {/* NLP Group */}
-            <div className="bg-card rounded-2xl p-8 border border-border">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Sparkles className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="text-2xl font-heading font-semibold text-foreground">
-                  {nlpGroup.title}
-                </h3>
-              </div>
-              <p className="text-muted-foreground mb-6">{nlpGroup.description}</p>
-              
-              <div className="mb-6">
-                <h4 className="font-semibold text-foreground mb-3">НЛП групите подпомагат работа върху:</h4>
-                <div className="grid md:grid-cols-2 gap-2">
-                  {nlpGroup.topics.map((item, index) => (
-                    <div key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <div className="w-2 h-2 rounded-full bg-accent" />
-                      {item}
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      {addictionsGroup.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4 text-sm">{addictionsGroup.description}</p>
+                  
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Характеристики:</h4>
+                      <ul className="space-y-1">
+                        {addictionsGroup.characteristics.map((item, index) => (
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  ))}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Подходящи при:</h4>
+                      <ul className="space-y-1">
+                        {addictionsGroup.suitable.map((item, index) => (
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                            <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <Button variant="default" size="sm" className="gap-2">
+                    Научи повече →
+                  </Button>
                 </div>
               </div>
-              
-              <div className="bg-primary/10 rounded-xl p-4 mb-6">
-                <p className="text-foreground text-sm">{nlpGroup.note}</p>
+
+              {/* Relationships Group */}
+              <div className="relative rounded-2xl overflow-hidden group">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${groupRelationships})` }}
+                />
+                <div className="absolute inset-0 bg-background/85 group-hover:bg-background/80 transition-colors duration-300" />
+                
+                <div className="relative z-10 p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <Heart className="h-6 w-6 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      {relationshipsGroup.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4 text-sm">{relationshipsGroup.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-foreground mb-2 text-sm">Фокус на групите:</h4>
+                    <ul className="space-y-1">
+                      {relationshipsGroup.focus.map((item, index) => (
+                        <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-accent/10 backdrop-blur-sm rounded-xl p-3 mb-6">
+                    <p className="text-foreground text-xs italic">{relationshipsGroup.note}</p>
+                  </div>
+                  
+                  <Button variant="default" size="sm" className="gap-2">
+                    Научи повече →
+                  </Button>
+                </div>
               </div>
-              
-              <Button variant="outline" className="mt-2">
-                Научи повече за НЛП групите →
-              </Button>
+
+              {/* Parenting Group */}
+              <div className="relative rounded-2xl overflow-hidden group">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${groupParenting})` }}
+                />
+                <div className="absolute inset-0 bg-background/85 group-hover:bg-background/80 transition-colors duration-300" />
+                
+                <div className="relative z-10 p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <Baby className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      {parentingGroup.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4 text-sm">{parentingGroup.description}</p>
+                  
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Групите са подходящи за:</h4>
+                      <ul className="space-y-1">
+                        {parentingGroup.suitable.map((item, index) => (
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">Акцентът е върху:</h4>
+                      <ul className="space-y-1">
+                        {parentingGroup.focus.map((item, index) => (
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                            <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <Button variant="default" size="sm" className="gap-2">
+                    Научи повече →
+                  </Button>
+                </div>
+              </div>
+
+              {/* NLP Group */}
+              <div className="relative rounded-2xl overflow-hidden group">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${groupNlp})` }}
+                />
+                <div className="absolute inset-0 bg-background/85 group-hover:bg-background/80 transition-colors duration-300" />
+                
+                <div className="relative z-10 p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <Sparkles className="h-6 w-6 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-heading font-semibold text-foreground">
+                      {nlpGroup.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4 text-sm">{nlpGroup.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-foreground mb-2 text-sm">НЛП групите подпомагат работа върху:</h4>
+                    <ul className="space-y-1">
+                      {nlpGroup.topics.map((item, index) => (
+                        <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-primary/10 backdrop-blur-sm rounded-xl p-3 mb-6">
+                    <p className="text-foreground text-xs">{nlpGroup.note}</p>
+                  </div>
+                  
+                  <Button variant="default" size="sm" className="gap-2">
+                    Научи повече →
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

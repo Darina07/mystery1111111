@@ -163,7 +163,7 @@ const FamilyCounseling = () => {
                     <div className="absolute inset-0 bg-background/70 group-hover:bg-background/60 transition-colors duration-300" />
                     
                     {/* Content */}
-                    <div className="relative z-10 p-8 text-center min-h-[160px] flex flex-col items-center justify-center">
+                    <div className="relative z-10 p-8 text-center min-h-[200px] flex flex-col items-center justify-center">
                       <div className="w-14 h-14 mx-auto mb-4 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                         <item.icon className="h-7 w-7 text-primary" />
                       </div>

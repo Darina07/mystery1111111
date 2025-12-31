@@ -1,9 +1,10 @@
-import { Check, Phone, Users, Building2, Euro, Monitor, Brain, Palette } from "lucide-react";
+import { Check, Phone, Mail, MapPin, Clock, Users, Building2, Euro, Monitor, Brain, Palette, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import pricesHeaderImage from "@/assets/prices-header.jpg";
 
 const pricingItems = [
@@ -244,26 +245,167 @@ const Prices = () => {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-16 bg-background">
+      {/* Contact Section */}
+      <section className="py-24 bg-background">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="font-heading text-2xl sm:text-3xl font-semibold">
-              Имате въпроси относно цените?
-            </h2>
-            <p className="text-muted-foreground">
-              Свържете се с нас за допълнителна информация или за да запазите час.
+          {/* Section Header */}
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <p className="text-primary font-medium tracking-wide uppercase text-sm">
+              Контакти
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" size="lg" asChild>
-                <a href="tel:+359887079256" className="flex items-center gap-2">
-                  <Phone className="h-5 w-5" />
-                  +359 887 079 256
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="#contact">Изпратете съобщение</a>
-              </Button>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
+              Свържете се{" "}
+              <span className="gradient-text">с нас</span>
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Имате въпроси относно цените? Свържете се с нас за консултация или запазете час.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: Phone,
+                    label: "Телефон",
+                    value: "+359 887 079 256",
+                    href: "tel:+359887079256",
+                  },
+                  {
+                    icon: Mail,
+                    label: "Имейл",
+                    value: "info@darpsiholog.bg",
+                    href: "mailto:info@darpsiholog.bg",
+                  },
+                  {
+                    icon: MapPin,
+                    label: "Адрес",
+                    value: "България, София, квартал Лозенец, улица Кишинев 18",
+                    href: "https://maps.google.com/?q=Sofia,Bulgaria,Kishinev+18",
+                  },
+                  {
+                    icon: Clock,
+                    label: "Работно време",
+                    value: "Понеделник – Неделя | 08:00 – 22:00",
+                    href: null,
+                  },
+                ].map((item) => (
+                  <div key={item.label} className="flex gap-4 group">
+                    <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                      <item.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <p className="text-sm text-muted-foreground">
+                        {item.label}
+                      </p>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          target={item.href.startsWith("http") ? "_blank" : undefined}
+                          rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                          className="font-medium text-foreground hover:text-primary transition-colors"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="font-medium text-foreground">{item.value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Map */}
+              <div className="relative rounded-2xl overflow-hidden h-64 bg-muted">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.1234567890123!2d23.3219!3d42.6751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDQwJzMwLjQiTiAyM8KwMTknMTguOCJF!5e0!3m2!1sen!2sbg!4v1234567890123"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Локация на център Дар"
+                  className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                />
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-card rounded-2xl p-8 shadow-card">
+              <h3 className="font-heading text-2xl font-semibold mb-6">
+                Запазете час
+              </h3>
+              <form className="space-y-5">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    Име
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                    placeholder="Вашето име"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    Имейл
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                    placeholder="email@example.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    Телефон
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                    placeholder="+359 888 123 456"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    Съобщение
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
+                    placeholder="Как можем да ви помогнем?"
+                  />
+                </div>
+
+                <Button variant="cta" size="lg" className="w-full">
+                  Изпратете запитване
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </form>
             </div>
           </div>
         </div>

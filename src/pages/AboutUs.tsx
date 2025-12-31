@@ -334,7 +334,7 @@ const AboutUs = () => {
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                     <specialist.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3 uppercase">
+                  <h3 className="font-heading text-xl font-semibold mb-3 uppercase gradient-text">
                     {specialist.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">

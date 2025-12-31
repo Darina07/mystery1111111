@@ -77,6 +77,14 @@ import LifeCrisis from "./pages/conditions/LifeCrisis";
 import Loss from "./pages/conditions/Loss";
 import Separation from "./pages/conditions/Separation";
 import Adaptation from "./pages/conditions/Adaptation";
+import AlcoholAddiction from "./pages/conditions/AlcoholAddiction";
+import DrugAddiction from "./pages/conditions/DrugAddiction";
+import GamblingAddiction from "./pages/conditions/GamblingAddiction";
+import MedicationAddiction from "./pages/conditions/MedicationAddiction";
+import InternetAddiction from "./pages/conditions/InternetAddiction";
+import SocialMediaAddiction from "./pages/conditions/SocialMediaAddiction";
+import Workaholism from "./pages/conditions/Workaholism";
+import CompulsiveBehavior from "./pages/conditions/CompulsiveBehavior";
 const queryClient = new QueryClient();
 
 const App = () => (

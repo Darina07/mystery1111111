@@ -100,21 +100,17 @@ const Prices = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-[#f8f9fa]">
-        <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[400px]">
-            {/* Left - Illustration */}
-            <div className="flex justify-center lg:justify-start">
-              <img 
-                src={pricesHeaderImage} 
-                alt="Онлайн консултации" 
-                className="max-w-full h-auto max-h-[400px] object-contain"
-              />
-            </div>
-            
-            {/* Right - Content */}
-            <div className="text-center lg:text-right space-y-4">
-              <PageBreadcrumb items={breadcrumbItems} className="justify-center lg:justify-end" />
+      <section className="relative pt-32 pb-20 min-h-[500px] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-no-repeat bg-left bg-contain"
+          style={{ backgroundImage: `url(${pricesHeaderImage})` }}
+        />
+        
+        <div className="container relative z-10 h-full">
+          <div className="flex justify-end">
+            <div className="text-right space-y-4 max-w-xl">
+              <PageBreadcrumb items={breadcrumbItems} className="justify-end" />
               <p className="text-primary font-medium tracking-wide uppercase text-sm mt-4">
                 Цени
               </p>
@@ -122,7 +118,7 @@ const Prices = () => {
                 Ясни и{" "}
                 <span className="gradient-text">прозрачни условия</span>
               </h1>
-              <p className="text-muted-foreground text-lg max-w-xl ml-auto">
+              <p className="text-muted-foreground text-lg">
                 В Психологичен и консултативен център „Дар" държим на открита и ясна
                 информация за цените на нашите услуги.
               </p>

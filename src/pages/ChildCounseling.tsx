@@ -309,9 +309,9 @@ const ChildCounseling = () => {
             
             <div className="relative flex items-center justify-center">
               <img 
-                src={conditionsSticker} 
+                src={specialNeedsSticker} 
                 alt="Невроразвитийни състояния" 
-                className="w-full max-w-md"
+                className="w-full max-w-sm"
               />
             </div>
           </div>

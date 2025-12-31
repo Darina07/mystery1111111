@@ -218,31 +218,83 @@ const AddictionsGroupPrograms = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${contactBg})` }}
         />
-        <div className="absolute inset-0 bg-background/90" />
+        <div className="absolute inset-0 bg-background/60" />
         
         <div className="container relative z-10">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 uppercase tracking-wide">
-              <span className="gradient-text">Свържете се</span> с нас
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Свържете се с нас за повече информация или за да се запишете в група. 
-              Вашето обаждане е напълно конфиденциално.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button variant="hero" size="lg" className="gap-2">
-                <Calendar className="h-5 w-5" />
-                Запиши се
-              </Button>
-              <Button variant="hero-outline" size="lg" className="gap-2">
-                <Phone className="h-5 w-5" />
-                +359 887 079 256
-              </Button>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
+                <span className="gradient-text">Свържете се</span> с нас
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Свържете се с нас за повече информация или за да се запишете в група. 
+                Вашето обаждане е напълно конфиденциално.
+              </p>
+            </div>
+
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg shadow-lg p-8 md:p-10">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="Име" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="Фамилия" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <input 
+                      type="email" 
+                      placeholder="Имейл" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                  <div>
+                    <input 
+                      type="tel" 
+                      placeholder="Телефон" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <textarea 
+                    placeholder="Съобщение" 
+                    rows={4}
+                    className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground resize-none"
+                  />
+                </div>
+
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
+                  <Button type="submit" variant="hero" size="lg" className="px-10">
+                    Изпрати
+                  </Button>
+                  
+                  <a 
+                    href="tel:+359887079256" 
+                    className="flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg"
+                    aria-label="Обадете се на +359 887 079 256"
+                  >
+                    <Phone className="h-8 w-8 text-primary-foreground" />
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
         </div>

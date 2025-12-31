@@ -186,12 +186,14 @@ const CoupleConflicts = () => {
                   key={index}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-                    <item.icon className="h-6 w-6 text-primary" />
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-heading font-semibold">
+                      {item.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-heading font-semibold mb-2">
-                    {item.title}
-                  </h3>
                   <p className="text-white/70">
                     {item.description}
                   </p>

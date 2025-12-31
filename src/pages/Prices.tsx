@@ -186,13 +186,13 @@ const Prices = () => {
                     ))}
                   </ul>
 
-                  <Button
-                    variant={item.popular ? "cta" : "outline"}
+                <Button
+                    variant="cta"
                     className="w-full"
                     size="lg"
                     asChild
                   >
-                    <a href="#contact">Запазете час</a>
+                    <a href="#contact">Свържете се с нас</a>
                   </Button>
                 </div>
               </div>
@@ -256,7 +256,7 @@ const Prices = () => {
                     </p>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full" asChild>
+                <Button variant="cta" className="w-full" asChild>
                   <Link to={service.href}>{service.linkText}</Link>
                 </Button>
               </div>
@@ -358,7 +358,7 @@ const Prices = () => {
               background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
             }}>
               <h3 className="font-heading text-2xl font-semibold mb-6">
-                Запазете час
+                СВЪРЖЕТЕ СЕ С НАС
               </h3>
               <form className="space-y-5">
                 <div>

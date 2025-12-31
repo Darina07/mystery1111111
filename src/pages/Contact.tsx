@@ -198,7 +198,7 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-12 h-12 rounded-xl bg-background border-2 border-primary flex items-center justify-center transition-all duration-300 ${social.color} hover:text-white text-primary`}
+                      className="w-12 h-12 rounded-xl bg-background border-2 border-primary flex items-center justify-center transition-all duration-300 hover:bg-primary hover:text-white text-primary"
                       aria-label={social.label}
                     >
                       <social.icon className="h-5 w-5" />

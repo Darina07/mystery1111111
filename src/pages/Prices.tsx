@@ -6,6 +6,7 @@ import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import pricesHeaderImage from "@/assets/prices-header.png";
+import specialServicesBg from "@/assets/special-services-bg.jpg";
 
 const pricingItems = [
   {
@@ -221,8 +222,15 @@ const Prices = () => {
       </section>
 
       {/* Special Services */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container">
+      <section className="relative py-16 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${specialServicesBg})` }}
+        />
+        <div className="absolute inset-0 bg-background/60" />
+        
+        <div className="container relative z-10">
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {specialServices.map((service) => (
               <div

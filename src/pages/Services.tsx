@@ -131,26 +131,28 @@ const Services = () => {
               <a
                 key={service.title}
                 href={service.href}
-                className="group relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden bg-card border border-border/50"
+                className="group relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden bg-card border border-border/50 flex flex-col"
               >
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 
                 {/* Content */}
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col flex-1">
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="font-heading text-xl font-semibold mb-3 text-primary">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                     {service.description}
                   </p>
-                  <Button variant="outline" size="sm" className="uppercase tracking-wide">
-                    Научете повече
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <div className="text-center mt-auto">
+                    <Button size="sm" className="uppercase tracking-wide">
+                      Научете повече
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
                 </div>
               </a>
             ))}
@@ -179,26 +181,28 @@ const Services = () => {
               <a
                 key={service.title}
                 href={service.href}
-                className="group relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden bg-card border border-border/50"
+                className="group relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden bg-card border border-border/50 flex flex-col"
               >
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 
                 {/* Content */}
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col flex-1">
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="font-heading text-xl font-semibold mb-3 text-primary">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                     {service.description}
                   </p>
-                  <Button variant="outline" size="sm" className="uppercase tracking-wide">
-                    Научете повече
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <div className="text-center mt-auto">
+                    <Button size="sm" className="uppercase tracking-wide">
+                      Научете повече
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
                 </div>
               </a>
             ))}

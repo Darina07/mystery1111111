@@ -7,7 +7,7 @@ import {
   Baby, MessageCircle, ClipboardList, Briefcase, Building2, ArrowRight
 } from "lucide-react";
 
-import counselingHeader from "@/assets/counseling-header.png";
+import servicesHeader from "@/assets/services-header.jpg";
 
 const services = [
   {
@@ -84,8 +84,8 @@ const Services = () => {
       {/* Hero Section */}
       <section className="relative pt-24 min-h-[500px] overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${counselingHeader})` }}
+          className="absolute inset-0 bg-cover bg-center bg-top"
+          style={{ backgroundImage: `url(${servicesHeader})` }}
         />
         <div className="absolute inset-0 bg-deep-navy/60" />
         

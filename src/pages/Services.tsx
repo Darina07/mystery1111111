@@ -161,8 +161,8 @@ const Services = () => {
               <div className="w-2 h-2 rounded-full bg-accent" />
               <div className="w-2 h-2 rounded-full bg-lavender" />
             </div>
-            <div className="bg-deep-navy rounded-full px-8 py-4">
-              <p className="text-center text-white font-medium uppercase tracking-wide text-sm">
+            <div className="bg-deep-navy rounded-full px-10 py-6">
+              <p className="text-center text-white font-medium uppercase tracking-wide text-lg sm:text-xl">
                 Не сте сигурни коя услуга е за вас? <a href="tel:+359887079256" className="text-accent hover:underline">Обадете се сега</a> или <a href="/prices" className="text-accent hover:underline">вижте цените</a>
               </p>
             </div>

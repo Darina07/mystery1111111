@@ -153,38 +153,23 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container">
-          <div 
-            className="rounded-3xl p-12 text-center"
-            style={{
-              background: "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(270 50% 40%) 100%)"
-            }}
-          >
-            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-white mb-4">
-              Не сте сигурни коя услуга е за вас?
-            </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Свържете се с нас за безплатна първоначална консултация. Ще ви помогнем да изберете 
-              най-подходящата услуга за вашите нужди.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="text-primary font-semibold"
-                onClick={() => window.location.href = '/prices'}
-              >
-                Вижте цените
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white/10"
-                onClick={() => window.location.href = 'tel:+359887079256'}
-              >
-                Обадете се сега
-              </Button>
+          <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="hidden sm:flex gap-2">
+              <div className="w-2 h-2 rounded-full bg-primary" />
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <div className="w-2 h-2 rounded-full bg-lavender" />
+            </div>
+            <div className="bg-deep-navy rounded-full px-8 py-4">
+              <p className="text-center text-white font-medium uppercase tracking-wide text-sm">
+                Не сте сигурни коя услуга е за вас? <a href="tel:+359887079256" className="text-accent hover:underline">Обадете се сега</a> или <a href="/prices" className="text-accent hover:underline">вижте цените</a>
+              </p>
+            </div>
+            <div className="hidden sm:flex gap-2">
+              <div className="w-2 h-2 rounded-full bg-lavender" />
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <div className="w-2 h-2 rounded-full bg-primary" />
             </div>
           </div>
         </div>

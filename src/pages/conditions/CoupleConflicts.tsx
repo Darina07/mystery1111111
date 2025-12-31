@@ -113,15 +113,6 @@ const CoupleConflicts = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center">
           <div className="max-w-2xl">
-            <div className="mb-6">
-              <PageBreadcrumb 
-                items={[
-                  { label: "Услуги", href: "/#services" },
-                  { label: data.parentService.name, href: data.parentService.href },
-                  { label: data.title }
-                ]} 
-              />
-            </div>
             <p className="text-primary font-medium mb-4">{data.subtitle}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-white">
               {data.title}
@@ -143,6 +134,17 @@ const CoupleConflicts = () => {
         </div>
       </section>
 
+      {/* Breadcrumb under hero */}
+      <div className="container py-4">
+        <PageBreadcrumb 
+          items={[
+            { label: "Услуги", href: "/#services" },
+            { label: data.parentService.name, href: data.parentService.href },
+            { label: data.title }
+          ]} 
+        />
+      </div>
+
       {/* What Is Section */}
       <section className="py-16 md:py-24">
         <div className="container">
@@ -160,65 +162,6 @@ const CoupleConflicts = () => {
         </div>
       </section>
 
-      {/* Signs Section */}
-      <section className="py-16 md:py-24 bg-secondary/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Признаци и{" "}
-              <span className="gradient-text">симптоми</span>
-            </h2>
-            <p className="text-center text-muted-foreground mb-12">
-              Разпознайте сигналите, които показват нужда от професионална подкрепа
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-4">
-              {data.signs.map((sign, index) => (
-                <div 
-                  key={index}
-                  className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border/50 shadow-sm"
-                >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                  </div>
-                  <p className="text-foreground">{sign}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Causes Section */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Възможни{" "}
-              <span className="gradient-text">причини</span>
-            </h2>
-            <p className="text-center text-muted-foreground mb-12">
-              Разбирането на причините е първата стъпка към промяната
-            </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {data.causes.map((cause, index) => (
-                <div 
-                  key={index}
-                  className="bg-gradient-to-br from-card to-secondary/30 rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
-                    {cause.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {cause.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* How We Help Section */}
       <section className="py-16 md:py-24 bg-deep-navy text-white">
@@ -283,37 +226,6 @@ const CoupleConflicts = () => {
         </div>
       </section>
 
-      {/* Related Conditions */}
-      <section className="py-16 md:py-24 bg-secondary/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Свързани{" "}
-              <span className="gradient-text">теми</span>
-            </h2>
-            <p className="text-center text-muted-foreground mb-12">
-              Други области, в които можем да помогнем
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-3">
-              {data.relatedConditions.map((condition, index) => (
-                <Link
-                  key={condition.slug}
-                  to={`/conditions/${condition.slug}`}
-                  className={`group px-5 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center gap-2 ${
-                    index % 2 === 0 
-                      ? 'bg-primary text-primary-foreground' 
-                      : 'bg-accent text-accent-foreground'
-                  }`}
-                >
-                  {condition.name}
-                  <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">

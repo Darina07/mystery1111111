@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, BookOpen, Users, Baby, GraduationCap, Heart, Check, Mic, Brain, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import speechTherapyHeader from "@/assets/speech-therapy-header.jpg";
 import speechTherapyBg from "@/assets/speech-therapy-bg.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
@@ -99,6 +100,14 @@ const SpeechTherapy = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-end">
           <div className="max-w-xl text-right">
+            <div className="flex justify-end mb-6">
+              <PageBreadcrumb 
+                items={[
+                  { label: "Услуги", href: "/#services" },
+                  { label: "Логопед" }
+                ]} 
+              />
+            </div>
             <p className="text-primary font-medium mb-4">Логопедична подкрепа за деца, юноши и възрастни</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Подкрепа при{" "}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ArrowLeft, ArrowRight } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { getBlogPostBySlug, getRelatedPosts, blogPosts } from "@/data/blogPosts";
 import ReactMarkdown from "react-markdown";
 
@@ -39,10 +40,14 @@ const BlogPost = () => {
         </div>
         <div className="absolute bottom-0 left-0 right-0 pb-12">
           <div className="container mx-auto px-4">
-            <Link to="/blog" className="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Обратно към блога
-            </Link>
+            <div className="mb-4">
+              <PageBreadcrumb 
+                items={[
+                  { label: "Блог", href: "/blog" },
+                  { label: post.title }
+                ]} 
+              />
+            </div>
             <Badge className="mb-4 bg-[#8F7BBF]/20 text-white border-white/30">
               {post.categoryLabel}
             </Badge>

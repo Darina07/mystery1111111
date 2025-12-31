@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Calendar, ArrowRight, Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { blogPosts, categories, Category } from "@/data/blogPosts";
 
 const POSTS_PER_PAGE = 9;
@@ -45,6 +46,13 @@ const Blog = () => {
       
       <section className="relative py-20 bg-gradient-to-br from-[#221A42] via-[#3B3A64] to-[#221A42]">
         <div className="container mx-auto px-4 text-center">
+          <div className="flex justify-center mb-6">
+            <PageBreadcrumb 
+              items={[
+                { label: "Блог" }
+              ]} 
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-playfair">БЛОГ</h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">Полезни статии, съвети и ресурси за личностно и професионално развитие</p>
         </div>

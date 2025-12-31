@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, Baby, BookOpen, Brain, Smile, AlertTriangle, GraduationCap, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import childHeader from "@/assets/child-header-sticker.png";
 import contactBg from "@/assets/contact-bg.jpg";
 import pencilIllustration from "@/assets/pencil-illustration.png";
@@ -135,6 +136,14 @@ const ChildCounseling = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-end">
           <div className="max-w-xl text-right">
+            <div className="flex justify-end mb-6">
+              <PageBreadcrumb 
+                items={[
+                  { label: "Услуги", href: "/#services" },
+                  { label: "Детско-юношеско консултиране" }
+                ]} 
+              />
+            </div>
             <p className="text-primary font-medium mb-4">Подкрепа от детски психолог</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Детско – юношеско{" "}

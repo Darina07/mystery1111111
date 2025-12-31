@@ -168,6 +168,15 @@ const App = () => (
           <Route path="/conditions/loss" element={<Loss />} />
           <Route path="/conditions/separation" element={<Separation />} />
           <Route path="/conditions/adaptation" element={<Adaptation />} />
+          {/* Addiction conditions */}
+          <Route path="/conditions/alcohol-addiction" element={<AlcoholAddiction />} />
+          <Route path="/conditions/drug-addiction" element={<DrugAddiction />} />
+          <Route path="/conditions/gambling-addiction" element={<GamblingAddiction />} />
+          <Route path="/conditions/medication-addiction" element={<MedicationAddiction />} />
+          <Route path="/conditions/internet-addiction" element={<InternetAddiction />} />
+          <Route path="/conditions/social-media-addiction" element={<SocialMediaAddiction />} />
+          <Route path="/conditions/workaholism" element={<Workaholism />} />
+          <Route path="/conditions/compulsive-behavior" element={<CompulsiveBehavior />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

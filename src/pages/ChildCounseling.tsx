@@ -16,6 +16,7 @@ import lgbtCounseling from "@/assets/lgbt-counseling.jpg";
 import specialNeedsSticker from "@/assets/special-needs-sticker.png";
 import lifeCrisisSticker from "@/assets/life-crisis-sticker.png";
 import socialAdaptationSticker from "@/assets/social-adaptation-sticker.png";
+import learningDifficulties from "@/assets/learning-difficulties.jpg";
 
 const workIncludes = [
   { text: "срещи с детето или юношата", icon: Baby },
@@ -319,9 +320,9 @@ const ChildCounseling = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div className="relative flex items-center justify-center order-2 lg:order-1">
               <img 
-                src={childProcessSticker} 
+                src={learningDifficulties} 
                 alt="Обучителни затруднения" 
-                className="w-full max-w-md"
+                className="w-full max-w-sm"
               />
             </div>
             

@@ -213,7 +213,7 @@ const Prices = () => {
             </div>
             <div className="bg-deep-navy rounded-full px-8 py-4">
               <p className="text-center text-white font-medium uppercase tracking-wide text-sm">
-                Консултациите на английски език се провеждат срещу допълнително заплащане от +10 евро към посочената цена.
+                Консултациите на английски език се провеждат срещу допълнително заплащане от <span className="text-lg font-bold text-accent">+10 ЕВРО</span> към посочената цена.
               </p>
             </div>
             <div className="flex gap-2">

@@ -36,8 +36,8 @@ const conditions = [
   { name: "Самота", slug: "loneliness" },
   { name: "Трудности в общуването", slug: "communication-difficulties" },
   { name: "Житейски кризи", slug: "life-crisis" },
-  { name: "Загуба", slug: "grief" },
-  { name: "Раздяла", slug: "divorce" },
+  { name: "Загуба", slug: "loss" },
+  { name: "Раздяла", slug: "separation" },
   { name: "Адаптация към промени", slug: "adaptation" },
 ];
 

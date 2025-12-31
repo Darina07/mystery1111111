@@ -356,7 +356,7 @@ const FamilyCounseling = () => {
               {difficulties.map((difficulty, index) => (
                 <Link
                   key={difficulty.slug}
-                  to={`/conditions/${difficulty.slug}`}
+                  to={difficulty.slug === "couple-conflicts" ? "/conditions/couple-conflicts" : `/conditions/${difficulty.slug}`}
                   className={`px-5 py-3 rounded-full text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                     index % 2 === 0 ? 'bg-primary' : 'bg-accent'
                   }`}

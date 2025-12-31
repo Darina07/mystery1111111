@@ -9,6 +9,7 @@ import PsychologicalCounseling from "./pages/PsychologicalCounseling";
 import FamilyCounseling from "./pages/FamilyCounseling";
 import ChildCounseling from "./pages/ChildCounseling";
 import GroupPrograms from "./pages/GroupPrograms";
+import SpeechTherapy from "./pages/SpeechTherapy";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/services/family-counseling" element={<FamilyCounseling />} />
           <Route path="/services/child-counseling" element={<ChildCounseling />} />
           <Route path="/services/group-programs" element={<GroupPrograms />} />
+          <Route path="/services/speech-therapy" element={<SpeechTherapy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

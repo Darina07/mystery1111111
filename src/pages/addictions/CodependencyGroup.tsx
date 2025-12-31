@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Shield, Lock, Users, Heart, CheckCircle, Clock, HandHeart } from "lucide-react";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
+import groupCodependencyWho from "@/assets/group-codependency-who.jpg";
 import groupAddictions from "@/assets/group-addictions.jpg";
 import {
   Breadcrumb,
@@ -227,23 +228,33 @@ const CodependencyGroup = () => {
       {/* Who Is It For */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
               За кого е{" "}
               <span className="gradient-text">групата?</span>
             </h2>
             
-            <div className="bg-card rounded-2xl p-8 border border-border">
-              <ul className="space-y-4">
-                {whoIsItFor.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="w-6 h-6 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mt-0.5">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                    </div>
-                    <p className="text-foreground">{item}</p>
-                  </li>
-                ))}
-              </ul>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="relative">
+                <img 
+                  src={groupCodependencyWho} 
+                  alt="Илюстрация за съзависимост" 
+                  className="rounded-2xl shadow-lg w-full object-cover aspect-square"
+                />
+              </div>
+              
+              <div className="bg-card rounded-2xl p-8 border border-border">
+                <ul className="space-y-4">
+                  {whoIsItFor.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-6 h-6 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center mt-0.5">
+                        <div className="w-2 h-2 rounded-full bg-primary" />
+                      </div>
+                      <p className="text-foreground">{item}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

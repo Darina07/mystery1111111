@@ -153,7 +153,7 @@ const Prices = () => {
                       <item.icon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                    <h3 className="font-heading text-xl font-semibold gradient-text">
+                    <h3 className="font-heading text-2xl font-semibold gradient-text uppercase">
                         {item.title}
                       </h3>
                       {item.subtitle && (
@@ -188,7 +188,7 @@ const Prices = () => {
 
                 <Button
                     variant="cta"
-                    className="w-full"
+                    className="w-full uppercase"
                     size="lg"
                     asChild
                   >
@@ -248,7 +248,7 @@ const Prices = () => {
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl font-semibold gradient-text">
+                    <h3 className="font-heading text-2xl font-semibold gradient-text uppercase">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground text-sm mt-2">
@@ -256,7 +256,7 @@ const Prices = () => {
                     </p>
                   </div>
                 </div>
-                <Button variant="cta" className="w-full" asChild>
+                <Button variant="cta" className="w-full uppercase" asChild>
                   <Link to={service.href}>{service.linkText}</Link>
                 </Button>
               </div>

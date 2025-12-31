@@ -2,6 +2,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 import { 
   Briefcase, 
   Target, 
@@ -16,7 +21,8 @@ import {
   MapPin,
   Lightbulb,
   BarChart,
-  FileText
+  FileText,
+  Send
 } from "lucide-react";
 import careerHeader from "@/assets/career-consulting-header.jpg";
 
@@ -240,44 +246,160 @@ const CareerConsulting = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Contact Form Section */}
       <section className="py-16 bg-gradient-to-br from-[#8F7BBF]/10 via-white to-[#7F96C3]/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#221A42] mb-6 font-playfair">
-              Готови ли сте за следващата стъпка?
-            </h2>
-            <p className="text-lg text-[#3B3A64] mb-8">
-              Свържете се с нас за безплатна първоначална консултация и заедно да планираме вашето кариерно развитие.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center gap-3 p-4 bg-white rounded-xl shadow-md">
-                <Phone className="w-6 h-6 text-[#8F7BBF]" />
-                <span className="text-[#3B3A64]">+359 88 888 8888</span>
-              </div>
-              <div className="flex items-center justify-center gap-3 p-4 bg-white rounded-xl shadow-md">
-                <Mail className="w-6 h-6 text-[#8F7BBF]" />
-                <span className="text-[#3B3A64]">info@dar.bg</span>
-              </div>
-              <div className="flex items-center justify-center gap-3 p-4 bg-white rounded-xl shadow-md">
-                <MapPin className="w-6 h-6 text-[#8F7BBF]" />
-                <span className="text-[#3B3A64]">София, България</span>
-              </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#221A42] mb-6 font-playfair">
+                Готови ли сте за следващата стъпка?
+              </h2>
+              <p className="text-lg text-[#3B3A64]">
+                Свържете се с нас за безплатна първоначална консултация и заедно да планираме вашето кариерно развитие.
+              </p>
             </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Contact Info */}
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-[#221A42] font-playfair">Контакти</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#8F7BBF] to-[#5E82AA] rounded-full flex items-center justify-center">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-[#3B3A64]/70">Телефон</p>
+                      <p className="text-[#221A42] font-medium">+359 88 888 8888</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#8F7BBF] to-[#5E82AA] rounded-full flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-[#3B3A64]/70">Имейл</p>
+                      <p className="text-[#221A42] font-medium">info@dar.bg</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#8F7BBF] to-[#5E82AA] rounded-full flex items-center justify-center">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-[#3B3A64]/70">Адрес</p>
+                      <p className="text-[#221A42] font-medium">София, България</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            <Button 
-              size="lg" 
-              className="bg-[#8F7BBF] hover:bg-[#7F96C3] text-white px-10 py-6 text-lg"
-            >
-              Запазете консултация
-            </Button>
+              {/* Contact Form */}
+              <Card className="border-none shadow-xl">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-semibold text-[#221A42] mb-6 font-playfair">Изпратете запитване</h3>
+                  <ContactForm />
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
 
       <Footer />
     </div>
+  );
+};
+
+const ContactForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    toast({
+      title: "Съобщението е изпратено!",
+      description: "Ще се свържем с вас възможно най-скоро.",
+    });
+
+    setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(false);
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="space-y-2">
+        <Label htmlFor="name" className="text-[#221A42]">Име *</Label>
+        <Input
+          id="name"
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          placeholder="Вашето име"
+          required
+          className="border-[#8F7BBF]/30 focus:border-[#8F7BBF]"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="email" className="text-[#221A42]">Имейл *</Label>
+        <Input
+          id="email"
+          type="email"
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          placeholder="your@email.com"
+          required
+          className="border-[#8F7BBF]/30 focus:border-[#8F7BBF]"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="phone" className="text-[#221A42]">Телефон</Label>
+        <Input
+          id="phone"
+          type="tel"
+          value={formData.phone}
+          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+          placeholder="+359 88 888 8888"
+          className="border-[#8F7BBF]/30 focus:border-[#8F7BBF]"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="message" className="text-[#221A42]">Съобщение *</Label>
+        <Textarea
+          id="message"
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          placeholder="Опишете вашето запитване..."
+          rows={4}
+          required
+          className="border-[#8F7BBF]/30 focus:border-[#8F7BBF] resize-none"
+        />
+      </div>
+      <Button 
+        type="submit" 
+        disabled={isSubmitting}
+        className="w-full bg-[#8F7BBF] hover:bg-[#7F96C3] text-white py-6"
+      >
+        {isSubmitting ? (
+          "Изпращане..."
+        ) : (
+          <>
+            <Send className="w-5 h-5 mr-2" />
+            Изпратете съобщение
+          </>
+        )}
+      </Button>
+    </form>
   );
 };
 

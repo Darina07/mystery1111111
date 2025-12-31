@@ -464,12 +464,13 @@ const GroupPrograms = () => {
         
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Header */}
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
-                <span className="gradient-text">Направете</span> първата стъпка
+                <span className="gradient-text">Свържете се</span> с нас
               </h2>
               <p className="text-sm text-muted-foreground">
-                Ако се колебаете дали дадена групова програма е подходяща за вас, можете да се свържете с нас за допълнителна информация.
+                Ако се колебаете дали дадена групова програма е подходяща за вас, можете да се свържете с нас за допълнителна информация или записване.
               </p>
             </div>
 

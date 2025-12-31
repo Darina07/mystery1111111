@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, Baby, BookOpen, Brain, Smile, AlertTriangle, GraduationCap, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import childHeader from "@/assets/child-header-sticker.png";
+import childHeader from "@/assets/child-counseling-header.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import pencilIllustration from "@/assets/pencil-illustration.png";
 import childrenGroupIllustration from "@/assets/children-group-illustration.png";

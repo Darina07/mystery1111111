@@ -5,7 +5,7 @@ import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, HeartHand
 import { Link } from "react-router-dom";
 import familyHeader from "@/assets/family-counseling-header.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
-
+import marriageRings from "@/assets/marriage-rings.jpg";
 const workWith = [
   { name: "партньори и съпрузи", icon: HeartHandshake },
   { name: "ЛГБТ+ двойки", icon: Heart },
@@ -162,8 +162,16 @@ const FamilyCounseling = () => {
       </section>
 
       {/* When Useful Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${marriageRings})` }}
+        />
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-background/85" />
+        
+        <div className="container relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
               Кога е подходящо{" "}
@@ -177,7 +185,7 @@ const FamilyCounseling = () => {
               {whenUseful.map((item, index) => (
                 <div 
                   key={index}
-                  className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border"
+                  className="flex items-start gap-3 bg-card/90 backdrop-blur-sm rounded-xl p-4 border border-border"
                 >
                   <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-primary" />
                   <p className="text-foreground">{item}</p>
@@ -186,7 +194,7 @@ const FamilyCounseling = () => {
             </div>
 
             <div className="mt-10 text-center">
-              <p className="text-muted-foreground italic">
+              <p className="text-muted-foreground italic bg-card/80 backdrop-blur-sm rounded-lg px-6 py-4 inline-block">
                 Не е нужно да чакате сериозна криза – много двойки търсят брачен консултант или семеен психолог превантивно, за да подобрят връзката си.
               </p>
             </div>

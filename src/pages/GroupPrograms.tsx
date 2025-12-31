@@ -454,35 +454,83 @@ const GroupPrograms = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section 
-        className="relative py-20 overflow-hidden"
-        style={{ backgroundImage: `url(${contactBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/90" />
+      {/* CTA Section - Contact Form */}
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${contactBg})` }}
+        />
+        <div className="absolute inset-0 bg-background/60" />
+        
         <div className="container relative z-10">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-              Направете първата стъпка
-            </h2>
-            <p className="text-lg mb-8 opacity-90">
-              Ако се колебаете дали дадена групова програма е подходяща за вас, можете да се свържете с нас за допълнителна информация.
-            </p>
-            
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Clock className="h-5 w-5" />
-              <span>Работно време: Понеделник – Неделя | 08:00 – 22:00</span>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
+                <span className="gradient-text">Направете</span> първата стъпка
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Ако се колебаете дали дадена групова програма е подходяща за вас, можете да се свържете с нас за допълнителна информация.
+              </p>
             </div>
-            
-            <div className="flex flex-wrap gap-4 justify-center mt-8">
-              <Button variant="secondary" size="lg" className="gap-2 bg-white text-primary hover:bg-white/90">
-                <Calendar className="h-5 w-5" />
-                Запиши се за групова програма
-              </Button>
-              <Button variant="outline" size="lg" className="gap-2 border-white text-white hover:bg-white/10">
-                <Phone className="h-5 w-5" />
-                Свържи се с нас
-              </Button>
+
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg shadow-lg p-8 md:p-10">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="Име" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="Фамилия" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <input 
+                      type="email" 
+                      placeholder="Имейл" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                  <div>
+                    <input 
+                      type="tel" 
+                      placeholder="Телефон" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <textarea 
+                    placeholder="Съобщение" 
+                    rows={4}
+                    className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground resize-none"
+                  />
+                </div>
+
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
+                  <Button type="submit" variant="hero" size="lg" className="px-10">
+                    Изпрати
+                  </Button>
+                  
+                  <a 
+                    href="tel:+359887079256" 
+                    className="flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg"
+                    aria-label="Обадете се на +359 887 079 256"
+                  >
+                    <Phone className="h-8 w-8 text-primary-foreground" />
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
         </div>

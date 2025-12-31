@@ -53,6 +53,25 @@ import Postpartum from "./pages/conditions/Postpartum";
 import ParentChildRelations from "./pages/conditions/ParentChildRelations";
 import BlendedFamilies from "./pages/conditions/BlendedFamilies";
 import SeparationLoss from "./pages/conditions/SeparationLoss";
+import Depression from "./pages/conditions/Depression";
+import Anxiety from "./pages/conditions/Anxiety";
+import PanicAttacks from "./pages/conditions/PanicAttacks";
+import Phobias from "./pages/conditions/Phobias";
+import Hypochondria from "./pages/conditions/Hypochondria";
+import OCD from "./pages/conditions/OCD";
+import Bipolar from "./pages/conditions/Bipolar";
+import Anger from "./pages/conditions/Anger";
+import Stress from "./pages/conditions/Stress";
+import PTSD from "./pages/conditions/PTSD";
+import Burnout from "./pages/conditions/Burnout";
+import EmotionalExhaustion from "./pages/conditions/EmotionalExhaustion";
+import Insomnia from "./pages/conditions/Insomnia";
+import Psychosomatic from "./pages/conditions/Psychosomatic";
+import Fatigue from "./pages/conditions/Fatigue";
+import Insecurity from "./pages/conditions/Insecurity";
+import Perfectionism from "./pages/conditions/Perfectionism";
+import Boundaries from "./pages/conditions/Boundaries";
+import Loneliness from "./pages/conditions/Loneliness";
 import CommunicationDifficulties from "./pages/conditions/CommunicationDifficulties";
 import LifeCrisis from "./pages/conditions/LifeCrisis";
 import Loss from "./pages/conditions/Loss";
@@ -116,7 +135,26 @@ const App = () => (
           <Route path="/conditions/parent-child-relations" element={<ParentChildRelations />} />
           <Route path="/conditions/blended-families" element={<BlendedFamilies />} />
           <Route path="/conditions/separation-loss" element={<SeparationLoss />} />
-          {/* Psychological Counseling conditions - partial */}
+          {/* Psychological Counseling conditions */}
+          <Route path="/conditions/depression" element={<Depression />} />
+          <Route path="/conditions/anxiety" element={<Anxiety />} />
+          <Route path="/conditions/panic-attacks" element={<PanicAttacks />} />
+          <Route path="/conditions/phobias" element={<Phobias />} />
+          <Route path="/conditions/hypochondria" element={<Hypochondria />} />
+          <Route path="/conditions/ocd" element={<OCD />} />
+          <Route path="/conditions/bipolar" element={<Bipolar />} />
+          <Route path="/conditions/anger" element={<Anger />} />
+          <Route path="/conditions/stress" element={<Stress />} />
+          <Route path="/conditions/ptsd" element={<PTSD />} />
+          <Route path="/conditions/burnout" element={<Burnout />} />
+          <Route path="/conditions/emotional-exhaustion" element={<EmotionalExhaustion />} />
+          <Route path="/conditions/insomnia" element={<Insomnia />} />
+          <Route path="/conditions/psychosomatic" element={<Psychosomatic />} />
+          <Route path="/conditions/fatigue" element={<Fatigue />} />
+          <Route path="/conditions/insecurity" element={<Insecurity />} />
+          <Route path="/conditions/perfectionism" element={<Perfectionism />} />
+          <Route path="/conditions/boundaries" element={<Boundaries />} />
+          <Route path="/conditions/loneliness" element={<Loneliness />} />
           <Route path="/conditions/communication-difficulties" element={<CommunicationDifficulties />} />
           <Route path="/conditions/life-crisis" element={<LifeCrisis />} />
           <Route path="/conditions/loss" element={<Loss />} />

@@ -153,7 +153,7 @@ const Prices = () => {
                       <item.icon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-heading text-xl font-semibold">
+                    <h3 className="font-heading text-xl font-semibold gradient-text">
                         {item.title}
                       </h3>
                       {item.subtitle && (
@@ -248,7 +248,7 @@ const Prices = () => {
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl font-semibold">
+                    <h3 className="font-heading text-xl font-semibold gradient-text">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground text-sm mt-2">

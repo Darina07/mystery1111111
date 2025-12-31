@@ -288,9 +288,23 @@ const CareerConsulting = () => {
                     </div>
                     <div>
                       <p className="text-sm text-[#3B3A64]/70">Адрес</p>
-                      <p className="text-[#221A42] font-medium">София, България</p>
+                      <p className="text-[#221A42] font-medium">кв. Лозенец, ул. Кишинев 18, София</p>
                     </div>
                   </div>
+                </div>
+                
+                {/* Map */}
+                <div className="mt-6 rounded-xl overflow-hidden shadow-md">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.123456789!2d23.3134!3d42.6731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa856b5f5f5f5f%3A0x1234567890abcdef!2z0YPQuy4g0JrQuNGI0LjQvdC10LIgMTgsINCh0L7RhNC40Y8!5e0!3m2!1sbg!2sbg!4v1234567890"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Карта - ул. Кишинев 18, кв. Лозенец, София"
+                  />
                 </div>
               </div>
 

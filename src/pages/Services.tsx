@@ -14,43 +14,37 @@ const services = [
     icon: Brain,
     title: "Психологично консултиране и психотерапия",
     description: "Индивидуална работа с психолог за справяне с тревожност, депресия, стрес и други предизвикателства.",
-    href: "/services/psychological-counseling",
-    color: "from-purple-500/20 to-purple-600/10"
+    href: "/services/psychological-counseling"
   },
   {
     icon: Heart,
     title: "Семейно и партньорско консултиране",
     description: "Подкрепа за двойки и семейства при комуникационни проблеми, кризи и важни решения.",
-    href: "/services/family-counseling",
-    color: "from-pink-500/20 to-pink-600/10"
+    href: "/services/family-counseling"
   },
   {
     icon: Baby,
     title: "Детско-юношеско консултиране",
     description: "Специализирана помощ за деца и юноши при поведенчески, емоционални и учебни трудности.",
-    href: "/services/child-counseling",
-    color: "from-blue-500/20 to-blue-600/10"
+    href: "/services/child-counseling"
   },
   {
     icon: Users,
     title: "Групови програми",
     description: "Тематични групи за зависимости, взаимоотношения, родителство и личностно развитие.",
-    href: "/services/group-programs",
-    color: "from-green-500/20 to-green-600/10"
+    href: "/services/group-programs"
   },
   {
     icon: MessageCircle,
     title: "Логопед",
     description: "Диагностика и терапия на говорни и езикови нарушения за деца и възрастни.",
-    href: "/services/speech-therapy",
-    color: "from-orange-500/20 to-orange-600/10"
+    href: "/services/speech-therapy"
   },
   {
     icon: ClipboardList,
     title: "Психодиагностика",
     description: "Професионална оценка на интелектуални способности, личностни характеристики и емоционално състояние.",
-    href: "/services/psychodiagnostics",
-    color: "from-teal-500/20 to-teal-600/10"
+    href: "/services/psychodiagnostics"
   }
 ];
 
@@ -59,15 +53,13 @@ const professionalServices = [
     icon: Briefcase,
     title: "Кариерно консултиране",
     description: "Професионално ориентиране, развитие на кариерата и подготовка за интервюта.",
-    href: "/services/career-consulting",
-    color: "from-indigo-500/20 to-indigo-600/10"
+    href: "/services/career-consulting"
   },
   {
     icon: Building2,
     title: "Корпоративни услуги",
     description: "Обучения, тиймбилдинг, управление на стреса и организационно консултиране за компании.",
-    href: "/services/corporate-services",
-    color: "from-slate-500/20 to-slate-600/10"
+    href: "/services/corporate-services"
   }
 ];
 
@@ -131,10 +123,8 @@ const Services = () => {
               <a
                 key={service.title}
                 href={service.href}
-                className="group relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden bg-card border border-border/50 flex flex-col"
+                className="group relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden bg-primary/5 border border-primary/20 flex flex-col hover:bg-primary/10"
               >
-                {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col flex-1">
@@ -183,10 +173,8 @@ const Services = () => {
               <a
                 key={service.title}
                 href={service.href}
-                className="group relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden bg-card border border-border/50 flex flex-col"
+                className="group relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden bg-primary/5 border border-primary/20 flex flex-col hover:bg-primary/10"
               >
-                {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col flex-1">

@@ -7,7 +7,7 @@ import childHeader from "@/assets/child-counseling-header.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import pencilIllustration from "@/assets/pencil-illustration.png";
 import childrenGroupIllustration from "@/assets/children-group-illustration.png";
-import childTherapyProcess from "@/assets/child-therapy-process.jpg";
+import childProcessSticker from "@/assets/child-process-sticker.png";
 
 const workIncludes = [
   { text: "срещи с детето или юношата", icon: Baby },
@@ -233,9 +233,9 @@ const ChildCounseling = () => {
               {/* Image Left */}
               <div className="relative">
                 <img 
-                  src={childTherapyProcess} 
+                  src={childProcessSticker} 
                   alt="Детско консултиране процес" 
-                  className="rounded-2xl shadow-lg w-full"
+                  className="w-full max-w-md mx-auto"
                 />
               </div>
               

@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import contactBg from "@/assets/contact-bg.jpg";
+import contactHeaderBg from "@/assets/contact-header-bg.png";
 
 const breadcrumbItems = [
   { label: "Начало", href: "/" },
@@ -99,15 +99,14 @@ const Contact = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-24 min-h-[500px] overflow-hidden">
+      <section className="relative pt-24 min-h-[500px] overflow-hidden bg-deep-navy">
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${contactBg})` }}
+          className="absolute inset-0 bg-contain bg-left bg-no-repeat"
+          style={{ backgroundImage: `url(${contactHeaderBg})` }}
         />
-        <div className="absolute inset-0 bg-deep-navy/60" />
         
-        <div className="container relative z-10 h-full flex items-center justify-center min-h-[400px]">
-          <div className="text-center space-y-6 max-w-3xl">
+        <div className="container relative z-10 h-full flex items-center justify-end min-h-[400px]">
+          <div className="text-right space-y-6 max-w-2xl">
             <p className="text-white/80 font-medium tracking-wide uppercase text-sm">
               Контакти
             </p>

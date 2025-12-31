@@ -20,8 +20,8 @@ interface PageBreadcrumbProps {
 
 export const PageBreadcrumb = ({ items, className = "" }: PageBreadcrumbProps) => {
   return (
-    <Breadcrumb className={className}>
-      <BreadcrumbList>
+    <Breadcrumb>
+      <BreadcrumbList className={className}>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
             <Link to="/" className="text-muted-foreground hover:text-foreground">

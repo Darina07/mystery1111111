@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import pricesHeaderImage from "@/assets/prices-header.jpg";
+import pricesHeaderImage from "@/assets/prices-header.png";
 
 const pricingItems = [
   {
@@ -100,31 +100,33 @@ const Prices = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            src={pricesHeaderImage} 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-        </div>
-        
+      <section className="relative pt-32 pb-20 overflow-hidden bg-[#f8f9fa]">
         <div className="container relative z-10">
-          <PageBreadcrumb items={breadcrumbItems} />
-          <div className="text-center max-w-3xl mx-auto mt-8 space-y-4">
-            <p className="text-primary font-medium tracking-wide uppercase text-sm">
-              Цени
-            </p>
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-              Ясни и{" "}
-              <span className="gradient-text">прозрачни условия</span>
-            </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              В Психологичен и консултативен център „Дар" държим на открита и ясна
-              информация за цените на нашите услуги.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[400px]">
+            {/* Left - Illustration */}
+            <div className="flex justify-center lg:justify-start">
+              <img 
+                src={pricesHeaderImage} 
+                alt="Онлайн консултации" 
+                className="max-w-full h-auto max-h-[400px] object-contain"
+              />
+            </div>
+            
+            {/* Right - Content */}
+            <div className="text-center lg:text-right space-y-4">
+              <PageBreadcrumb items={breadcrumbItems} className="justify-center lg:justify-end" />
+              <p className="text-primary font-medium tracking-wide uppercase text-sm mt-4">
+                Цени
+              </p>
+              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
+                Ясни и{" "}
+                <span className="gradient-text">прозрачни условия</span>
+              </h1>
+              <p className="text-muted-foreground text-lg max-w-xl ml-auto">
+                В Психологичен и консултативен център „Дар" държим на открита и ясна
+                информация за цените на нашите услуги.
+              </p>
+            </div>
           </div>
         </div>
       </section>

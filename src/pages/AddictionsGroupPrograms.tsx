@@ -5,6 +5,11 @@ import { Phone, Calendar, Shield, Lock, Users, Heart, CheckCircle, ArrowRight } 
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupAddictions from "@/assets/group-addictions.jpg";
+import groupAlcoholBg from "@/assets/group-alcohol-bg.jpg";
+import groupSubstancesBg from "@/assets/group-substances-bg.jpg";
+import groupGamblingBg from "@/assets/group-gambling-bg.jpg";
+import groupLoveBg from "@/assets/group-love-bg.jpg";
+import groupCodependencyBg from "@/assets/group-codependency-bg.jpg";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -20,30 +25,35 @@ const addictionGroups = [
     description: "Подкрепяща група за хора, които искат да преодолеят проблемната употреба на алкохол в безопасна и анонимна среда.",
     link: "/services/group-programs/addictions/alcohol",
     icon: Shield,
+    image: groupAlcoholBg,
   },
   {
     title: "Анонимна група за зависимости към вещества",
     description: "Терапевтична група за хора, преживяващи зависимост към различни вещества, с фокус върху възстановяване и подкрепа.",
     link: "/services/group-programs/addictions/substances",
     icon: Shield,
+    image: groupSubstancesBg,
   },
   {
     title: "Анонимна група за хазартна зависимост",
     description: "Подкрепа за хора, борещи се с хазартна зависимост, чрез споделяне на опит и изграждане на стратегии за промяна.",
     link: "/services/group-programs/addictions/gambling",
     icon: Shield,
+    image: groupGamblingBg,
   },
   {
     title: "Анонимна група за любовна зависимост",
     description: "Група за хора, които изпитват нездравословни модели в любовните си взаимоотношения и търсят баланс.",
     link: "/services/group-programs/addictions/love",
     icon: Heart,
+    image: groupLoveBg,
   },
   {
     title: "Група за близки на хора със зависимости (съзависимост)",
     description: "Подкрепа за семейства и близки на хора със зависимости, работа върху съзависими модели на поведение.",
     link: "/services/group-programs/addictions/codependency",
     icon: Users,
+    image: groupCodependencyBg,
   },
 ];
 
@@ -167,30 +177,37 @@ const AddictionsGroupPrograms = () => {
       {/* Groups List Section */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
               Нашите{" "}
               <span className="gradient-text">групи</span>
             </h2>
             
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {addictionGroups.map((group) => (
                 <Link 
                   key={group.title}
                   to={group.link}
-                  className="block bg-card rounded-2xl p-6 border border-border hover:shadow-lg hover:border-primary/30 transition-all group"
+                  className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary/30 transition-all group relative h-72"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <group.icon className="h-7 w-7 text-primary" />
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${group.image})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+                  
+                  <div className="relative h-full flex flex-col justify-end p-6">
+                    <div className="w-12 h-12 mb-3 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                      <group.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <div className="flex-grow">
-                      <h3 className="text-lg font-heading font-semibold mb-1 group-hover:text-primary transition-colors">
-                        {group.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">{group.description}</p>
+                    <h3 className="text-lg font-heading font-semibold mb-2 group-hover:text-primary transition-colors leading-tight">
+                      {group.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm line-clamp-2">{group.description}</p>
+                    <div className="mt-3 flex items-center gap-2 text-primary text-sm font-medium">
+                      <span>Научи повече</span>
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </div>
-                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
                   </div>
                 </Link>
               ))}

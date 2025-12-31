@@ -163,11 +163,11 @@ const FamilyCounseling = () => {
                     <div className="absolute inset-0 bg-background/70 group-hover:bg-background/60 transition-colors duration-300" />
                     
                     {/* Content */}
-                    <div className="relative z-10 p-6 text-center">
-                      <div className="w-12 h-12 mx-auto mb-3 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <item.icon className="h-6 w-6 text-primary" />
+                    <div className="relative z-10 p-8 text-center min-h-[160px] flex flex-col items-center justify-center">
+                      <div className="w-14 h-14 mx-auto mb-4 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <item.icon className="h-7 w-7 text-primary" />
                       </div>
-                      <p className="text-foreground font-medium text-sm">{item.name}</p>
+                      <p className="text-foreground font-semibold">{item.name}</p>
                     </div>
                   </div>
                 ))}

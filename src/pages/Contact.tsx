@@ -3,6 +3,12 @@ import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import contactBg from "@/assets/contact-bg.jpg";
 
 const breadcrumbItems = [
@@ -61,6 +67,29 @@ const socialLinks = [
     label: "LinkedIn",
     href: "https://linkedin.com/company/darpsiholog",
     color: "hover:bg-blue-700"
+  },
+];
+
+const faqItems = [
+  {
+    question: "Как да запазя час за консултация?",
+    answer: "Можете да запазите час като ни се обадите на телефон +359 887 079 256, напишете ни на WhatsApp или като попълните контактната форма на тази страница. Ще се свържем с вас в рамките на 24 часа."
+  },
+  {
+    question: "Колко време отнема да получа отговор?",
+    answer: "Стараем се да отговаряме на всички запитвания в рамките на 24 часа в работни дни. При спешни случаи, моля обадете ни се директно на телефона."
+  },
+  {
+    question: "Предлагате ли онлайн консултации?",
+    answer: "Да, предлагаме пълноценни онлайн консултации чрез Viber, WhatsApp, Skype или Google Meet. Онлайн сесиите са също толкова ефективни и са подходящи за клиенти извън София."
+  },
+  {
+    question: "Има ли паркинг наблизо?",
+    answer: "Да, в района има няколко възможности за паркиране – както платен паркинг, така и улично паркиране в близките улици. Центърът е лесно достъпен и с обществен транспорт."
+  },
+  {
+    question: "Какви са цените на услугите?",
+    answer: "Цените варират в зависимост от вида на услугата. Можете да видите пълния ценоразпис на страницата Цени или да се свържете с нас за конкретна информация."
   },
 ];
 
@@ -320,8 +349,48 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <p className="text-primary font-medium tracking-wide uppercase text-sm">
+              Въпроси
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
+              Често задавани{" "}
+              <span className="gradient-text">въпроси</span>
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Отговори на най-честите въпроси относно връзката с нас.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqItems.map((item, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="rounded-2xl px-6 border border-border/50 shadow-card overflow-hidden"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
+                  }}
+                >
+                  <AccordionTrigger className="text-left font-heading font-semibold text-lg hover:no-underline py-6">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-12 bg-background">
+      <section className="py-12 bg-secondary/30">
         <div className="container">
           <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
             <div className="hidden sm:flex gap-2">

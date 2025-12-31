@@ -47,8 +47,8 @@ const professionalSubmenu: SubMenuItem[] = [
 ];
 
 const navItems: NavItem[] = [
-  { label: "Начало", href: "#home" },
-  { label: "За нас", href: "#about" },
+  { label: "Начало", href: "/" },
+  { label: "За нас", href: "/about" },
   { label: "Услуги", href: "#services", hasSubmenu: true, submenu: servicesSubmenu },
   { label: "Професионално развитие", href: "#professional", hasSubmenu: true, submenu: professionalSubmenu },
   { label: "Цени", href: "/prices" },

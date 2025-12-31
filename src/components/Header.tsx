@@ -26,19 +26,19 @@ interface NavItem {
 }
 
 const groupPrograms: SubMenuItem[] = [
-  { label: "Зависимости", href: "#group-addictions" },
-  { label: "Необвързани и взаимоотношения (matchmaking)", href: "#group-matchmaking" },
-  { label: "Бременност и родителство", href: "#group-parenting" },
-  { label: "НЛП и личностно развитие", href: "#group-nlp" },
+  { label: "Зависимости", href: "/services/group-programs/addictions" },
+  { label: "Необвързани и взаимоотношения (matchmaking)", href: "/services/group-programs/relationships" },
+  { label: "Бременност и родителство", href: "/services/group-programs/parenting" },
+  { label: "НЛП и личностно развитие", href: "/services/group-programs/nlp" },
 ];
 
 const servicesSubmenu: SubMenuItem[] = [
   { label: "Психологично консултиране и психотерапия", href: "/services/psychological-counseling" },
   { label: "Семейно и партньорско консултиране", href: "/services/family-counseling" },
   { label: "Детско - юношеско консултиране", href: "/services/child-counseling" },
-  { label: "Групови програми", href: "#group-programs", hasSubmenu: true, submenu: groupPrograms },
-  { label: "Логопед", href: "#speech-therapy" },
-  { label: "Психодиагностика", href: "#psychodiagnostics" },
+  { label: "Групови програми", href: "/services/group-programs", hasSubmenu: true, submenu: groupPrograms },
+  { label: "Логопед", href: "/services/speech-therapy" },
+  { label: "Психодиагностика", href: "/services/psychodiagnostics" },
 ];
 
 const professionalSubmenu: SubMenuItem[] = [

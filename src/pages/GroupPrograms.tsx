@@ -283,9 +283,11 @@ const GroupPrograms = () => {
                     </div>
                   </div>
                   
-                  <Button variant="default" size="sm" className="gap-2">
-                    Научи повече →
-                  </Button>
+                  <Link to="/services/group-programs/addictions">
+                    <Button variant="default" size="sm" className="gap-2">
+                      Научи повече →
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -324,9 +326,11 @@ const GroupPrograms = () => {
                     <p className="text-foreground text-sm italic">{relationshipsGroup.note}</p>
                   </div>
                   
-                  <Button variant="default" size="sm" className="gap-2">
-                    Научи повече →
-                  </Button>
+                  <Link to="/services/group-programs/relationships">
+                    <Button variant="default" size="sm" className="gap-2">
+                      Научи повече →
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -374,9 +378,11 @@ const GroupPrograms = () => {
                     </div>
                   </div>
                   
-                  <Button variant="default" size="sm" className="gap-2">
-                    Научи повече →
-                  </Button>
+                  <Link to="/services/group-programs/parenting">
+                    <Button variant="default" size="sm" className="gap-2">
+                      Научи повече →
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -415,9 +421,11 @@ const GroupPrograms = () => {
                     <p className="text-foreground text-sm">{nlpGroup.note}</p>
                   </div>
                   
-                  <Button variant="default" size="sm" className="gap-2">
-                    Научи повече →
-                  </Button>
+                  <Link to="/services/group-programs/nlp">
+                    <Button variant="default" size="sm" className="gap-2">
+                      Научи повече →
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

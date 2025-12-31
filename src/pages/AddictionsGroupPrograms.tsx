@@ -230,7 +230,7 @@ const AddictionsGroupPrograms = () => {
       <section className="py-12">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-foreground/90 rounded-[5rem] p-8 md:p-10">
+            <div className="bg-foreground/90 rounded-[10rem] p-8 md:p-10">
               <div className="flex items-center justify-center gap-4 mb-4">
                 <Lock className="h-10 w-10 text-primary-foreground" />
                 <h3 className="text-xl md:text-2xl font-heading font-semibold uppercase tracking-wide text-primary-foreground">

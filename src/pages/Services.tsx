@@ -152,6 +152,44 @@ const Services = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div 
+            className="rounded-3xl p-12 text-center"
+            style={{
+              background: "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(270 50% 40%) 100%)"
+            }}
+          >
+            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-white mb-4">
+              Не сте сигурни коя услуга е за вас?
+            </h2>
+            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+              Свържете се с нас за безплатна първоначална консултация. Ще ви помогнем да изберете 
+              най-подходящата услуга за вашите нужди.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button 
+                size="lg" 
+                variant="secondary"
+                className="text-primary font-semibold"
+                onClick={() => window.location.href = '/prices'}
+              >
+                Вижте цените
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+                onClick={() => window.location.href = 'tel:+359887079256'}
+              >
+                Обадете се сега
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Professional Services Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container">
@@ -198,44 +236,6 @@ const Services = () => {
                 </div>
               </a>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div 
-            className="rounded-3xl p-12 text-center"
-            style={{
-              background: "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(270 50% 40%) 100%)"
-            }}
-          >
-            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-white mb-4">
-              Не сте сигурни коя услуга е за вас?
-            </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Свържете се с нас за безплатна първоначална консултация. Ще ви помогнем да изберете 
-              най-подходящата услуга за вашите нужди.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="text-primary font-semibold"
-                onClick={() => window.location.href = '/prices'}
-              >
-                Вижте цените
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white/10"
-                onClick={() => window.location.href = 'tel:+359887079256'}
-              >
-                Обадете се сега
-              </Button>
-            </div>
           </div>
         </div>
       </section>

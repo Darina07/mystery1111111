@@ -101,6 +101,15 @@ import Dysgraphia from "./pages/conditions/Dysgraphia";
 import Dyscalculia from "./pages/conditions/Dyscalculia";
 import Dyspraxia from "./pages/conditions/Dyspraxia";
 import MemoryConcentration from "./pages/conditions/MemoryConcentration";
+import Stuttering from "./pages/conditions/Stuttering";
+import SelectiveMutism from "./pages/conditions/SelectiveMutism";
+import SpeechDisorders from "./pages/conditions/SpeechDisorders";
+import ChildPTSD from "./pages/conditions/ChildPTSD";
+import TicsTourette from "./pages/conditions/TicsTourette";
+import AggressionSelfHarm from "./pages/conditions/AggressionSelfHarm";
+import ChildFears from "./pages/conditions/ChildFears";
+import ChildSleepProblems from "./pages/conditions/ChildSleepProblems";
+import ChildPsychosomatic from "./pages/conditions/ChildPsychosomatic";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -212,6 +221,16 @@ const App = () => (
           <Route path="/conditions/dyscalculia" element={<Dyscalculia />} />
           <Route path="/conditions/dyspraxia" element={<Dyspraxia />} />
           <Route path="/conditions/memory-concentration" element={<MemoryConcentration />} />
+          {/* Child behavioral and emotional conditions */}
+          <Route path="/conditions/stuttering" element={<Stuttering />} />
+          <Route path="/conditions/selective-mutism" element={<SelectiveMutism />} />
+          <Route path="/conditions/speech-disorders" element={<SpeechDisorders />} />
+          <Route path="/conditions/child-ptsd" element={<ChildPTSD />} />
+          <Route path="/conditions/tics-tourette" element={<TicsTourette />} />
+          <Route path="/conditions/aggression-self-harm" element={<AggressionSelfHarm />} />
+          <Route path="/conditions/child-fears" element={<ChildFears />} />
+          <Route path="/conditions/child-sleep-problems" element={<ChildSleepProblems />} />
+          <Route path="/conditions/child-psychosomatic" element={<ChildPsychosomatic />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

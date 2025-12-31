@@ -325,7 +325,7 @@ const AboutUs = () => {
               >
                 {/* Background Image */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-15"
+                  className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
                   style={{ backgroundImage: `url(${specialist.image})` }}
                 />
                 

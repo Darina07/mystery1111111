@@ -110,6 +110,17 @@ import AggressionSelfHarm from "./pages/conditions/AggressionSelfHarm";
 import ChildFears from "./pages/conditions/ChildFears";
 import ChildSleepProblems from "./pages/conditions/ChildSleepProblems";
 import ChildPsychosomatic from "./pages/conditions/ChildPsychosomatic";
+import AdaptationDifficulties from "./pages/conditions/AdaptationDifficulties";
+import PeerCommunication from "./pages/conditions/PeerCommunication";
+import LowSelfEsteem from "./pages/conditions/LowSelfEsteem";
+import ConflictRelationships from "./pages/conditions/ConflictRelationships";
+import RunningAway from "./pages/conditions/RunningAway";
+import RiskyBehavior from "./pages/conditions/RiskyBehavior";
+import ChildGrief from "./pages/conditions/ChildGrief";
+import ParentsDivorce from "./pages/conditions/ParentsDivorce";
+import NewFamilyMember from "./pages/conditions/NewFamilyMember";
+import Relocation from "./pages/conditions/Relocation";
+import ChildStress from "./pages/conditions/ChildStress";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -231,6 +242,18 @@ const App = () => (
           <Route path="/conditions/child-fears" element={<ChildFears />} />
           <Route path="/conditions/child-sleep-problems" element={<ChildSleepProblems />} />
           <Route path="/conditions/child-psychosomatic" element={<ChildPsychosomatic />} />
+          {/* Child social and life conditions */}
+          <Route path="/conditions/adaptation-difficulties" element={<AdaptationDifficulties />} />
+          <Route path="/conditions/peer-communication" element={<PeerCommunication />} />
+          <Route path="/conditions/low-self-esteem" element={<LowSelfEsteem />} />
+          <Route path="/conditions/conflict-relationships" element={<ConflictRelationships />} />
+          <Route path="/conditions/running-away" element={<RunningAway />} />
+          <Route path="/conditions/risky-behavior" element={<RiskyBehavior />} />
+          <Route path="/conditions/child-grief" element={<ChildGrief />} />
+          <Route path="/conditions/parents-divorce" element={<ParentsDivorce />} />
+          <Route path="/conditions/new-family-member" element={<NewFamilyMember />} />
+          <Route path="/conditions/relocation" element={<Relocation />} />
+          <Route path="/conditions/child-stress" element={<ChildStress />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

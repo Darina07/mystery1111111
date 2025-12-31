@@ -112,7 +112,7 @@ const Contact = () => {
             </p>
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-balance">
               Свържете се{" "}
-              <span className="text-accent">с нас</span>
+              <span className="text-primary">с нас</span>
             </h1>
             <p className="text-white/90 text-xl">
               Ние сме тук, за да ви помогнем. Свържете се с нас по удобен за вас начин.

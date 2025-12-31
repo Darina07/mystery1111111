@@ -138,12 +138,14 @@ const Services = () => {
                 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col flex-1">
-                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="h-8 w-8 text-primary" />
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                      <service.icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <h3 className="font-heading text-xl font-semibold text-primary">
+                      {service.title}
+                    </h3>
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3 text-primary text-center">
-                    {service.title}
-                  </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                     {service.description}
                   </p>
@@ -188,12 +190,14 @@ const Services = () => {
                 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col flex-1">
-                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="h-8 w-8 text-primary" />
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                      <service.icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <h3 className="font-heading text-xl font-semibold text-primary">
+                      {service.title}
+                    </h3>
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3 text-primary text-center">
-                    {service.title}
-                  </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                     {service.description}
                   </p>

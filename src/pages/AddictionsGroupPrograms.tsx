@@ -230,12 +230,14 @@ const AddictionsGroupPrograms = () => {
       <section className="py-12">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-primary/5 rounded-2xl p-8 border border-primary/10 text-center">
-              <Lock className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-heading font-semibold mb-3">
-                Пълна конфиденциалност
-              </h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+            <div className="bg-foreground/90 rounded-[2rem] p-8 md:p-10">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <Lock className="h-10 w-10 text-primary-foreground" />
+                <h3 className="text-xl md:text-2xl font-heading font-semibold uppercase tracking-wide text-primary-foreground">
+                  Пълна конфиденциалност
+                </h3>
+              </div>
+              <p className="text-primary-foreground/80 max-w-2xl mx-auto text-center">
                 Всички групи се провеждат при стриктни правила за анонимност. Не се изискват лични данни, 
                 не се записват имена и не се разкрива информация за участниците. Вашата поверителност е наш приоритет.
               </p>

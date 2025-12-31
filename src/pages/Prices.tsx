@@ -132,7 +132,7 @@ const Prices = () => {
             {pricingItems.map((item) => (
               <div
                 key={item.title}
-                className={`relative rounded-2xl p-8 shadow-card transition-all duration-500 hover:-translate-y-1 ${
+                className={`relative rounded-2xl p-8 shadow-card transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${
                   item.popular ? "ring-2 ring-primary shadow-glow" : ""
                 }`}
                 style={{
@@ -147,13 +147,13 @@ const Prices = () => {
                   </div>
                 )}
 
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="flex flex-col flex-grow space-y-6 text-center">
+                  <div className="flex flex-col items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                       <item.icon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                    <h3 className="font-heading text-2xl font-semibold gradient-text uppercase">
+                      <h3 className="font-heading text-2xl font-semibold gradient-text uppercase">
                         {item.title}
                       </h3>
                       {item.subtitle && (
@@ -164,7 +164,7 @@ const Prices = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-baseline gap-2">
+                  <div className="flex items-baseline justify-center gap-2">
                     <span className="font-heading text-4xl font-bold text-primary">
                       {item.price}
                     </span>
@@ -173,22 +173,22 @@ const Prices = () => {
                     </span>
                   </div>
 
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 flex-grow">
                     {item.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-3">
+                      <li key={feature} className="flex items-start justify-center gap-3">
                         <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                           <Check className="h-3 w-3 text-primary" />
                         </div>
-                        <span className="text-sm text-muted-foreground">
+                        <span className="text-sm text-muted-foreground text-left">
                           {feature}
                         </span>
                       </li>
                     ))}
                   </ul>
 
-                <Button
+                  <Button
                     variant="cta"
-                    className="w-full uppercase"
+                    className="w-full uppercase mt-auto"
                     size="lg"
                     asChild
                   >
@@ -238,13 +238,13 @@ const Prices = () => {
             {specialServices.map((service) => (
               <div
                 key={service.title}
-                className="rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300"
+                className="rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300 flex flex-col h-full"
                 style={{
                   background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
                 }}
               >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="flex flex-col items-center text-center gap-4 mb-6 flex-grow">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
@@ -256,7 +256,7 @@ const Prices = () => {
                     </p>
                   </div>
                 </div>
-                <Button variant="cta" className="w-full uppercase" asChild>
+                <Button variant="cta" className="w-full uppercase mt-auto" asChild>
                   <Link to={service.href}>{service.linkText}</Link>
                 </Button>
               </div>

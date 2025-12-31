@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Users, Heart, Shield, Brain, Baby, MessageCircle, Target, Sparkles, Clock, Lock, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupProgramsHeader from "@/assets/group-programs-header.jpg";
 import groupAddictions from "@/assets/group-addictions.jpg";
@@ -113,6 +114,14 @@ const GroupPrograms = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
           <div className="max-w-3xl text-center">
+            <div className="flex justify-center mb-6">
+              <PageBreadcrumb 
+                items={[
+                  { label: "Услуги", href: "/#services" },
+                  { label: "Групови програми" }
+                ]} 
+              />
+            </div>
             <p className="text-primary font-medium mb-4">Дар Консулт</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Групови{" "}

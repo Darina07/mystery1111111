@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import therapyHeader from "@/assets/therapy-header.jpg";
 import counselingImage from "@/assets/counseling-image.jpg";
 import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
@@ -115,6 +116,14 @@ const PsychologicalCounseling = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-end">
           <div className="max-w-xl text-right">
+            <div className="flex justify-end mb-6">
+              <PageBreadcrumb 
+                items={[
+                  { label: "Услуги", href: "/#services" },
+                  { label: "Психологично консултиране и психотерапия" }
+                ]} 
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Психологично консултиране и{" "}
               <span className="gradient-text">психотерапия</span>

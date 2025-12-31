@@ -111,8 +111,8 @@ const CoupleConflicts = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent" />
         
-        <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center">
-          <div className="max-w-2xl">
+        <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
+          <div className="max-w-2xl text-center">
             <p className="text-primary font-medium mb-4">{data.subtitle}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               {data.title.split(" ").slice(0, -1).join(" ")}{" "}
@@ -121,7 +121,7 @@ const CoupleConflicts = () => {
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               {data.description}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact">
                 <Button variant="hero" size="lg" className="gap-2">
                   КОНТАКТИ

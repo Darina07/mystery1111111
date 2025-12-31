@@ -5,7 +5,6 @@ import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, Baby, Boo
 import { Link } from "react-router-dom";
 import childHeader from "@/assets/child-counseling-header.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
-import childrenIllustration from "@/assets/children-illustration.png";
 
 const workIncludes = [
   { text: "срещи с детето или юношата", icon: Baby },
@@ -158,13 +157,8 @@ const ChildCounseling = () => {
       </section>
 
       {/* What Is Section */}
-      <section className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-contain bg-bottom bg-no-repeat opacity-20 pointer-events-none"
-          style={{ backgroundImage: `url(${childrenIllustration})` }}
-        />
-        <div className="container relative z-10">
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
               Какво представлява{" "}

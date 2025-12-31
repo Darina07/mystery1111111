@@ -191,18 +191,20 @@ const AddictionsGroupPrograms = () => {
                   className="block rounded-2xl overflow-hidden border border-border hover:shadow-xl hover:border-primary/30 transition-all group relative h-72"
                 >
                   <div 
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105 opacity-30"
                     style={{ backgroundImage: `url(${group.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
                   
                   <div className="relative h-full flex flex-col justify-end p-6">
-                    <div className="w-12 h-12 mb-3 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                      <group.icon className="h-6 w-6 text-primary" />
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 flex-shrink-0 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                        <group.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <h3 className="text-lg font-heading font-semibold group-hover:text-primary transition-colors leading-tight">
+                        {group.title}
+                      </h3>
                     </div>
-                    <h3 className="text-lg font-heading font-semibold mb-2 group-hover:text-primary transition-colors leading-tight">
-                      {group.title}
-                    </h3>
                     <p className="text-muted-foreground text-sm line-clamp-2">{group.description}</p>
                     <div className="mt-3 flex items-center gap-2 text-primary text-sm font-medium">
                       <span>Научи повече</span>

@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Phone, Calendar, Heart, Users, MessageCircle, Shield, ArrowRight, CheckCircle } from "lucide-react";
+import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
@@ -122,13 +122,13 @@ const CoupleConflicts = () => {
               {data.description}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="gap-2">
-                <Calendar className="h-5 w-5" />
-                Запази час
-              </Button>
+              <Link to="/contact">
+                <Button variant="hero" size="lg" className="gap-2">
+                  КОНТАКТИ
+                </Button>
+              </Link>
               <Button variant="hero-outline" size="lg" className="gap-2">
                 <Phone className="h-5 w-5" />
-                +359 887 079 256
               </Button>
             </div>
           </div>

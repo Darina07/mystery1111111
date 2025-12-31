@@ -141,16 +141,16 @@ const Services = () => {
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="font-heading text-xl font-semibold mb-3 text-primary">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {service.description}
                   </p>
-                  <div className="flex items-center text-primary font-medium">
-                    <span>Научете повече</span>
+                  <Button variant="outline" size="sm" className="uppercase tracking-wide">
+                    Научете повече
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  </Button>
                 </div>
               </a>
             ))}
@@ -189,16 +189,16 @@ const Services = () => {
                   <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                     <service.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="font-heading text-xl font-semibold mb-3 text-primary">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {service.description}
                   </p>
-                  <div className="flex items-center text-primary font-medium">
-                    <span>Научете повече</span>
+                  <Button variant="outline" size="sm" className="uppercase tracking-wide">
+                    Научете повече
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  </Button>
                 </div>
               </a>
             ))}

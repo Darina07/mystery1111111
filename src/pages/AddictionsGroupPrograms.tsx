@@ -175,14 +175,20 @@ const AddictionsGroupPrograms = () => {
       </section>
 
       {/* Groups List Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/15" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/15 via-transparent to-transparent" />
+        
+        <div className="container relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
               Нашите{" "}
               <span className="gradient-text">групи</span>
             </h2>
-            
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Изберете групата, която отговаря на вашите нужди. Всички групи са анонимни и се водят от квалифицирани специалисти.
+            </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {addictionGroups.map((group) => (
                 <Link 

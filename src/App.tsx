@@ -90,6 +90,12 @@ import IdentitySelfAcceptance from "./pages/conditions/IdentitySelfAcceptance";
 import ComingOut from "./pages/conditions/ComingOut";
 import SocialRejectionStress from "./pages/conditions/SocialRejectionStress";
 import LGBTRelationships from "./pages/conditions/LGBTRelationships";
+import Autism from "./pages/conditions/Autism";
+import ADHD from "./pages/conditions/ADHD";
+import Asperger from "./pages/conditions/Asperger";
+import DownSyndrome from "./pages/conditions/DownSyndrome";
+import IntellectualDisability from "./pages/conditions/IntellectualDisability";
+import RettSyndrome from "./pages/conditions/RettSyndrome";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -188,6 +194,13 @@ const App = () => (
           <Route path="/conditions/coming-out" element={<ComingOut />} />
           <Route path="/conditions/social-rejection-stress" element={<SocialRejectionStress />} />
           <Route path="/conditions/lgbt-relationships" element={<LGBTRelationships />} />
+          {/* Special needs conditions */}
+          <Route path="/conditions/autism" element={<Autism />} />
+          <Route path="/conditions/adhd" element={<ADHD />} />
+          <Route path="/conditions/asperger" element={<Asperger />} />
+          <Route path="/conditions/down-syndrome" element={<DownSyndrome />} />
+          <Route path="/conditions/intellectual-disability" element={<IntellectualDisability />} />
+          <Route path="/conditions/rett-syndrome" element={<RettSyndrome />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

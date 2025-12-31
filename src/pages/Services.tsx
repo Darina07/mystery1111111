@@ -161,10 +161,18 @@ const Services = () => {
               <div className="w-2 h-2 rounded-full bg-accent" />
               <div className="w-2 h-2 rounded-full bg-lavender" />
             </div>
-            <div className="bg-deep-navy rounded-full px-10 py-6">
+            <div className="bg-deep-navy rounded-3xl px-10 py-8 flex flex-col items-center gap-4">
               <p className="text-center text-white font-medium uppercase tracking-wide text-lg sm:text-xl">
-                Не сте сигурни коя услуга е за вас? <a href="tel:+359887079256" className="text-accent hover:underline">Обадете се сега</a> или <a href="/prices" className="text-accent hover:underline">вижте цените</a>
+                Не сте сигурни коя услуга е за вас?
               </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button size="lg" variant="secondary" className="uppercase" asChild>
+                  <a href="tel:+359887079256">Обадете се сега</a>
+                </Button>
+                <Button size="lg" variant="outline" className="uppercase border-white text-white hover:bg-white/10" asChild>
+                  <a href="/prices">Вижте цените</a>
+                </Button>
+              </div>
             </div>
             <div className="hidden sm:flex gap-2">
               <div className="w-2 h-2 rounded-full bg-lavender" />

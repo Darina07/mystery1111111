@@ -15,6 +15,12 @@ import SubstancesGroup from "./pages/addictions/SubstancesGroup";
 import GamblingGroup from "./pages/addictions/GamblingGroup";
 import LoveGroup from "./pages/addictions/LoveGroup";
 import CodependencyGroup from "./pages/addictions/CodependencyGroup";
+import RelationshipsGroupPrograms from "./pages/RelationshipsGroupPrograms";
+import AttachmentGroup from "./pages/relationships/AttachmentGroup";
+import EmotionalReadinessGroup from "./pages/relationships/EmotionalReadinessGroup";
+import SocialSkillsGroup from "./pages/relationships/SocialSkillsGroup";
+import BreakupRecoveryGroup from "./pages/relationships/BreakupRecoveryGroup";
+import MatchmakingGroup from "./pages/relationships/MatchmakingGroup";
 import SpeechTherapy from "./pages/SpeechTherapy";
 import Psychodiagnostics from "./pages/Psychodiagnostics";
 import CareerConsulting from "./pages/CareerConsulting";
@@ -42,6 +48,12 @@ const App = () => (
           <Route path="/services/group-programs/addictions/gambling" element={<GamblingGroup />} />
           <Route path="/services/group-programs/addictions/love" element={<LoveGroup />} />
           <Route path="/services/group-programs/addictions/codependency" element={<CodependencyGroup />} />
+          <Route path="/services/group-programs/relationships" element={<RelationshipsGroupPrograms />} />
+          <Route path="/services/group-programs/relationships/attachment" element={<AttachmentGroup />} />
+          <Route path="/services/group-programs/relationships/emotional-readiness" element={<EmotionalReadinessGroup />} />
+          <Route path="/services/group-programs/relationships/social-skills" element={<SocialSkillsGroup />} />
+          <Route path="/services/group-programs/relationships/breakup-recovery" element={<BreakupRecoveryGroup />} />
+          <Route path="/services/group-programs/relationships/matchmaking" element={<MatchmakingGroup />} />
           <Route path="/services/speech-therapy" element={<SpeechTherapy />} />
           <Route path="/services/psychodiagnostics" element={<Psychodiagnostics />} />
           <Route path="/services/career-consulting" element={<CareerConsulting />} />

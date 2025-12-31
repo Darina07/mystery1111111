@@ -423,31 +423,86 @@ const PsychologicalCounseling = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-background to-accent/10">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">Свържете се с нас</span>
-            </h2>
-            <p className="text-lg text-muted-foreground mb-10">
-              Ако усещате, че е време да направите първата стъпка, можете да се свържете с нас още днес.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="hero" size="xl" className="gap-2">
-                <Calendar className="h-5 w-5" />
-                Запази час
-              </Button>
-              <Button variant="hero-outline" size="xl" className="gap-2">
-                <MessageCircle className="h-5 w-5" />
-                Свържи се с нас
-              </Button>
-              <a href="tel:+359887079256">
-                <Button variant="ghost" size="xl" className="gap-2">
-                  <Phone className="h-5 w-5" />
-                  +359 887 079 256
-                </Button>
-              </a>
+      {/* CTA Section - Contact Form */}
+      <section className="py-16 md:py-24 relative">
+        {/* Background with subtle overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-muted/30 via-background to-muted/20" />
+        
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
+                Свържете се с нас
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Ако усещате, че е време да направите първата стъпка, можете да се свържете с нас още днес.
+              </p>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg shadow-lg p-8 md:p-10">
+              <form className="space-y-6">
+                {/* Row 1: First Name & Last Name */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="Име" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="Фамилия" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                </div>
+
+                {/* Row 2: Email & Phone */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <input 
+                      type="email" 
+                      placeholder="Имейл" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                  <div>
+                    <input 
+                      type="tel" 
+                      placeholder="Телефон" 
+                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                </div>
+
+                {/* Row 3: Message */}
+                <div>
+                  <textarea 
+                    placeholder="Съобщение" 
+                    rows={4}
+                    className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground resize-none"
+                  />
+                </div>
+
+                {/* Submit Button & Phone Icon */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
+                  <Button type="submit" variant="hero" size="lg" className="px-10">
+                    Изпрати
+                  </Button>
+                  
+                  <a 
+                    href="tel:+359887079256" 
+                    className="flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg"
+                    aria-label="Обадете се на +359 887 079 256"
+                  >
+                    <Phone className="h-8 w-8 text-primary-foreground" />
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
         </div>

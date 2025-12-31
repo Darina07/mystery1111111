@@ -12,6 +12,7 @@ import GroupPrograms from "./pages/GroupPrograms";
 import SpeechTherapy from "./pages/SpeechTherapy";
 import Psychodiagnostics from "./pages/Psychodiagnostics";
 import CareerConsulting from "./pages/CareerConsulting";
+import CorporateServices from "./pages/CorporateServices";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/services/speech-therapy" element={<SpeechTherapy />} />
           <Route path="/services/psychodiagnostics" element={<Psychodiagnostics />} />
           <Route path="/services/career-consulting" element={<CareerConsulting />} />
+          <Route path="/services/corporate-services" element={<CorporateServices />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

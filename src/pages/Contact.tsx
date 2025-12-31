@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import contactBg from "@/assets/contact-bg.jpg";
 
 const breadcrumbItems = [
@@ -55,6 +55,12 @@ const socialLinks = [
     label: "YouTube",
     href: "https://youtube.com/@darpsiholog",
     color: "hover:bg-red-600"
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://linkedin.com/company/darpsiholog",
+    color: "hover:bg-blue-700"
   },
 ];
 

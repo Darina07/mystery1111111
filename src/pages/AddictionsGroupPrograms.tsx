@@ -197,15 +197,15 @@ const AddictionsGroupPrograms = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90" />
                   
                   <div className="relative h-full flex flex-col p-6">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 flex-shrink-0 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                        <group.icon className="h-5 w-5 text-primary" />
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="w-12 h-12 flex-shrink-0 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                        <group.icon className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-lg font-heading font-semibold group-hover:text-primary transition-colors leading-tight">
+                      <h3 className="text-xl font-heading font-semibold group-hover:text-primary transition-colors leading-tight">
                         {group.title}
                       </h3>
                     </div>
-                    <p className="text-muted-foreground text-sm line-clamp-3 flex-grow">{group.description}</p>
+                    <p className="text-muted-foreground text-base line-clamp-3 flex-grow">{group.description}</p>
                     <div className="mt-4">
                       <Button variant="outline" size="sm" className="gap-2 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                         Научи повече

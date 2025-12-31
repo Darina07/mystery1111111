@@ -103,7 +103,7 @@ const Prices = () => {
       <section className="relative pt-32 pb-20 min-h-[500px] overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-no-repeat bg-center bg-contain opacity-30"
+          className="absolute inset-0 bg-no-repeat bg-center bg-contain"
           style={{ backgroundImage: `url(${pricesHeaderImage})` }}
         />
         

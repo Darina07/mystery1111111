@@ -7,6 +7,7 @@ import childHeader from "@/assets/child-counseling-header.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import pencilIllustration from "@/assets/pencil-illustration.png";
 import childrenGroupIllustration from "@/assets/children-group-illustration.png";
+import childTherapyProcess from "@/assets/child-therapy-process.jpg";
 
 const workIncludes = [
   { text: "срещи с детето или юношата", icon: Baby },
@@ -227,32 +228,46 @@ const ChildCounseling = () => {
       {/* Process Section */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Как протича{" "}
-              <span className="gradient-text">работата?</span>
-            </h2>
-            <p className="text-center text-muted-foreground mb-12">
-              Процесът е гъвкав и се съобразява с възрастта, нуждите и темпото на детето.
-            </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {processSteps.map((step, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow text-center"
-                >
-                  <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                    <step.icon className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-base font-heading font-semibold text-foreground mb-1">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {step.description}
-                  </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Image Left */}
+              <div className="relative">
+                <img 
+                  src={childTherapyProcess} 
+                  alt="Детско консултиране процес" 
+                  className="rounded-2xl shadow-lg w-full"
+                />
+              </div>
+              
+              {/* Content Right */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+                  Как протича{" "}
+                  <span className="gradient-text">работата?</span>
+                </h2>
+                <p className="text-muted-foreground mb-8">
+                  Процесът е гъвкав и се съобразява с възрастта, нуждите и темпото на детето.
+                </p>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  {processSteps.map((step, index) => (
+                    <div
+                      key={index}
+                      className="bg-card rounded-2xl p-5 shadow-sm border border-border hover:shadow-md transition-shadow"
+                    >
+                      <div className="w-12 h-12 mb-3 bg-primary/10 rounded-full flex items-center justify-center">
+                        <step.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="text-sm font-heading font-semibold text-foreground mb-1">
+                        {step.title}
+                      </h3>
+                      <p className="text-muted-foreground text-xs">
+                        {step.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>

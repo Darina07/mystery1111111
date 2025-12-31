@@ -87,18 +87,18 @@ const Services = () => {
           className="absolute inset-0 bg-cover bg-center bg-top"
           style={{ backgroundImage: `url(${servicesHeader})` }}
         />
-        <div className="absolute inset-0 bg-deep-navy/60" />
+        <div className="absolute inset-0 bg-background/70" />
         
         <div className="container relative z-10 h-full flex items-center justify-center min-h-[400px]">
           <div className="text-center space-y-6 max-w-3xl">
-            <p className="text-white/80 font-medium tracking-wide uppercase text-sm">
+            <p className="text-primary font-medium tracking-wide uppercase text-sm">
               Нашите услуги
             </p>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-balance">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground text-balance">
               Професионални{" "}
-              <span className="text-accent">психологични услуги</span>
+              <span className="text-primary">психологични услуги</span>
             </h1>
-            <p className="text-white/90 text-xl">
+            <p className="text-muted-foreground text-xl">
               Подкрепа за всеки етап от живота
             </p>
           </div>

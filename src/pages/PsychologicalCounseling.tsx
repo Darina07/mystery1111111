@@ -11,6 +11,7 @@ import conditionsSticker from "@/assets/conditions-sticker.png";
 import addictionsSticker from "@/assets/addictions-sticker.png";
 import lgbtSticker1 from "@/assets/lgbt-sticker-1.png";
 import lgbtSticker2 from "@/assets/lgbt-sticker-2.png";
+import contactBg from "@/assets/contact-bg.jpg";
 
 const conditions = [
   { name: "Депресия", slug: "depression" },
@@ -424,9 +425,14 @@ const PsychologicalCounseling = () => {
       </section>
 
       {/* CTA Section - Contact Form */}
-      <section className="py-16 md:py-24 relative">
-        {/* Background with subtle overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-muted/30 via-background to-muted/20" />
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${contactBg})` }}
+        />
+        {/* Light overlay for readability */}
+        <div className="absolute inset-0 bg-background/60" />
         
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto">

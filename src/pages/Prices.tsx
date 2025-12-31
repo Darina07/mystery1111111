@@ -107,22 +107,20 @@ const Prices = () => {
           style={{ backgroundImage: `url(${pricesHeaderImage})` }}
         />
         
-        <div className="container relative z-10 h-full">
-          <div className="flex justify-end">
-            <div className="text-right space-y-4 max-w-xl">
-              <PageBreadcrumb items={breadcrumbItems} className="justify-end" />
-              <p className="text-primary font-medium tracking-wide uppercase text-sm mt-4">
-                Цени
-              </p>
-              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-                Ясни и{" "}
-                <span className="gradient-text">прозрачни условия</span>
-              </h1>
-              <p className="text-muted-foreground text-lg">
-                В Психологичен и консултативен център „Дар" държим на открита и ясна
-                информация за цените на нашите услуги.
-              </p>
-            </div>
+        <div className="container relative z-10 h-full flex items-center justify-center">
+          <div className="text-center space-y-4 max-w-2xl">
+            <PageBreadcrumb items={breadcrumbItems} className="justify-center" />
+            <p className="text-primary font-medium tracking-wide uppercase text-sm mt-4">
+              Цени
+            </p>
+            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground text-balance">
+              Ясни и{" "}
+              <span className="gradient-text">прозрачни условия</span>
+            </h1>
+            <p className="text-foreground/70 text-lg">
+              В Психологичен и консултативен център „Дар" държим на открита и ясна
+              информация за цените на нашите услуги.
+            </p>
           </div>
         </div>
       </section>

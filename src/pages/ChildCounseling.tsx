@@ -314,7 +314,7 @@ const ChildCounseling = () => {
               <img 
                 src={specialNeedsSticker} 
                 alt="Невроразвитийни състояния" 
-                className="w-full max-w-[180px]"
+                className="w-full max-w-[240px]"
               />
             </div>
           </div>

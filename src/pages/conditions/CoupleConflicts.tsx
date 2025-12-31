@@ -109,23 +109,24 @@ const CoupleConflicts = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${data.heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/90 via-deep-navy/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent" />
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center">
-          <div className="max-w-2xl bg-deep-navy/80 backdrop-blur-sm rounded-2xl p-8 md:p-10">
+          <div className="max-w-2xl">
             <p className="text-primary font-medium mb-4">{data.subtitle}</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-accent">
-              {data.title}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+              {data.title.split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="gradient-text">{data.title.split(" ").slice(-1)}</span>
             </h1>
-            <p className="text-lg md:text-xl text-secondary mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               {data.description}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="cta" size="lg" className="gap-2">
+              <Button variant="hero" size="lg" className="gap-2">
                 <Calendar className="h-5 w-5" />
                 Запази час
               </Button>
-              <Button variant="outline" size="lg" className="gap-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button variant="hero-outline" size="lg" className="gap-2">
                 <Phone className="h-5 w-5" />
                 +359 887 079 256
               </Button>

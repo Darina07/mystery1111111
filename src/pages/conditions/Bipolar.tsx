@@ -1,100 +1,49 @@
-import { Link } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Phone, Activity, Brain, Heart, Shield, Sparkles } from "lucide-react";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
+import { Activity, Brain, Heart, Shield } from "lucide-react";
 import conditionsHeader from "@/assets/conditions-support.jpg";
 
-const conditionData = {
+const conditionData: ConditionData = {
   title: "Биполярно афективно разстройство",
-  subtitle: "Подкрепа при биполярно разстройство",
+  subtitle: "Психологично консултиране",
   description: "Помощ за стабилизиране на настроението и управление на симптомите.",
   heroImage: conditionsHeader,
-  parentService: { title: "Психологично консултиране", path: "/services/psychological-counseling" },
+  parentService: {
+    name: "Психологично консултиране",
+    href: "/services/psychological-counseling"
+  },
   whatIs: {
     title: "Какво представлява биполярното разстройство?",
-    content: "Биполярното афективно разстройство се характеризира с екстремни промени в настроението – от маниакални епизоди (повишена енергия, еуфория, намалена нужда от сън) до депресивни епизоди. С правилно лечение и психологична подкрепа е възможно да се постигне стабилност и пълноценен живот."
+    content: `Биполярното афективно разстройство се характеризира с екстремни промени в настроението – от маниакални до депресивни епизоди.
+
+Симптоми при мания:
+• Повишена енергия и еуфория
+• Намалена нужда от сън
+• Бързо говорене и мисли
+• Импулсивно поведение
+
+Симптоми при депресия:
+• Тъга и безнадеждност
+• Загуба на интерес
+• Умора и липса на енергия
+• Мисли за смърт
+
+С правилно лечение и психологична подкрепа е възможно да се постигне стабилност и пълноценен живот.`
   },
   howWeHelp: [
     { icon: Activity, title: "Мониторинг на настроението", description: "Научаване да разпознавате ранните признаци на епизоди." },
     { icon: Brain, title: "Психоедукация", description: "Разбиране на разстройството и неговото управление." },
-    { icon: Heart, title: "Управление на стреса", description: "Техники за намаляване на тригерите." },
+    { icon: Heart, title: "Управление на стреса", description: "Техники за намаляване на тригерите на епизоди." },
     { icon: Shield, title: "Подкрепа за близките", description: "Помощ за семейството в справянето с предизвикателствата." }
   ],
-  benefits: ["Стабилизиране на настроението", "Ранно разпознаване на симптомите", "Подобрени взаимоотношения", "По-предвидим ежедневен живот", "Намален риск от епизоди"]
+  benefits: [
+    "Стабилизиране на настроението",
+    "Ранно разпознаване на симптомите",
+    "Подобрени взаимоотношения",
+    "По-предвидим ежедневен живот",
+    "Намален риск от епизоди",
+    "По-добро качество на живот"
+  ]
 };
 
-const Bipolar = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${conditionData.heroImage})` }}>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/80" />
-        </div>
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">{conditionData.title}</h1>
-          <p className="text-xl md:text-2xl mb-4 opacity-90">{conditionData.subtitle}</p>
-          <p className="text-lg max-w-3xl mx-auto mb-8 opacity-80">{conditionData.description}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8" asChild><Link to="/contact">Запазете час</Link></Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 border-white text-white hover:bg-white/20" asChild>
-              <a href="tel:+359888123456"><Phone className="mr-2 h-5 w-5" />Обадете се</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-      <div className="container mx-auto px-4 py-4">
-        <PageBreadcrumb items={[{ label: "Начало", href: "/" }, { label: conditionData.parentService.title, href: conditionData.parentService.path }, { label: conditionData.title }]} />
-      </div>
-      <section className="py-16 bg-gradient-to-br from-accent/10 to-secondary/10">
-        <div className="container mx-auto px-4"><div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">{conditionData.whatIs.title}</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">{conditionData.whatIs.content}</p>
-        </div></div>
-      </section>
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Как можем да помогнем?</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {conditionData.howWeHelp.map((item, index) => (
-              <div key={index} className="bg-card rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"><item.icon className="w-6 h-6 text-primary" /></div>
-                  <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                </div>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="py-16 bg-primary/5">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Какво ще постигнете?</h2>
-          <div className="max-w-3xl mx-auto"><div className="grid gap-4">
-            {conditionData.benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-4 bg-card rounded-lg p-4 shadow">
-                <Sparkles className="w-6 h-6 text-accent flex-shrink-0" /><span className="text-foreground">{benefit}</span>
-              </div>
-            ))}
-          </div></div>
-        </div>
-      </section>
-      <section className="py-16">
-        <div className="container mx-auto px-4"><div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-primary mb-6">Готови ли сте да направите първата стъпка?</h2>
-          <p className="text-muted-foreground mb-8">Свържете се с нас за консултация.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild><Link to="/contact">Свържете се с нас</Link></Button>
-            <Button size="lg" variant="outline" asChild><a href="tel:+359888123456"><Phone className="mr-2 h-5 w-5" />+359 888 123 456</a></Button>
-          </div>
-        </div></div>
-      </section>
-      <Footer />
-    </div>
-  );
-};
-
+const Bipolar = () => <ConditionPageTemplate data={conditionData} />;
 export default Bipolar;

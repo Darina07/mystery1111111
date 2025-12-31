@@ -349,8 +349,31 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-12 bg-background">
+        <div className="container">
+          <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="hidden sm:flex gap-2">
+              <div className="w-2 h-2 rounded-full bg-primary" />
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <div className="w-2 h-2 rounded-full bg-lavender" />
+            </div>
+            <div className="bg-deep-navy rounded-full px-10 py-6">
+              <p className="text-center text-white font-medium uppercase tracking-wide text-lg">
+                Работим всеки ден от <span className="text-accent">08:00</span> до <span className="text-accent">22:00</span>
+              </p>
+            </div>
+            <div className="hidden sm:flex gap-2">
+              <div className="w-2 h-2 rounded-full bg-lavender" />
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <div className="w-2 h-2 rounded-full bg-primary" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary/30">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <p className="text-primary font-medium tracking-wide uppercase text-sm">
@@ -385,29 +408,6 @@ const Contact = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-12 bg-secondary/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4">
-            <div className="hidden sm:flex gap-2">
-              <div className="w-2 h-2 rounded-full bg-primary" />
-              <div className="w-2 h-2 rounded-full bg-accent" />
-              <div className="w-2 h-2 rounded-full bg-lavender" />
-            </div>
-            <div className="bg-deep-navy rounded-full px-10 py-6">
-              <p className="text-center text-white font-medium uppercase tracking-wide text-lg">
-                Работим всеки ден от <span className="text-accent">08:00</span> до <span className="text-accent">22:00</span>
-              </p>
-            </div>
-            <div className="hidden sm:flex gap-2">
-              <div className="w-2 h-2 rounded-full bg-lavender" />
-              <div className="w-2 h-2 rounded-full bg-accent" />
-              <div className="w-2 h-2 rounded-full bg-primary" />
-            </div>
           </div>
         </div>
       </section>

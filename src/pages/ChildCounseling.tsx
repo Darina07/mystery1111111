@@ -458,7 +458,7 @@ const ChildCounseling = () => {
               <img 
                 src={specialNeedsSticker} 
                 alt="Специални потребности" 
-                className="w-full max-w-md"
+                className="w-full max-w-xs"
               />
             </div>
           </div>
@@ -469,7 +469,7 @@ const ChildCounseling = () => {
               <img 
                 src={lgbtCounseling} 
                 alt="ЛГБТ+ подкрепа" 
-                className="w-full max-w-md rounded-2xl"
+                className="w-full max-w-xs rounded-2xl"
               />
             </div>
             

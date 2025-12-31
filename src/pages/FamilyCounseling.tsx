@@ -6,11 +6,16 @@ import { Link } from "react-router-dom";
 import familyHeader from "@/assets/family-counseling-header.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import marriageRings from "@/assets/marriage-rings.jpg";
+import couplesPartners from "@/assets/couples-partners.jpg";
+import lgbtCouple from "@/assets/lgbt-couple.jpg";
+import parentsChildren from "@/assets/parents-children.jpg";
+import newPartners from "@/assets/new-partners.jpg";
+
 const workWith = [
-  { name: "партньори и съпрузи", icon: HeartHandshake },
-  { name: "ЛГБТ+ двойки", icon: Heart },
-  { name: "родители и деца", icon: Baby },
-  { name: "нови партньори и смесени семейства", icon: Users },
+  { name: "партньори и съпрузи", icon: HeartHandshake, image: couplesPartners },
+  { name: "ЛГБТ+ двойки", icon: Heart, image: lgbtCouple },
+  { name: "родители и деца", icon: Baby, image: parentsChildren },
+  { name: "нови партньори и смесени семейства", icon: Users, image: newPartners },
 ];
 
 const whenUseful = [
@@ -147,12 +152,23 @@ const FamilyCounseling = () => {
                 {workWith.map((item) => (
                   <div 
                     key={item.name}
-                    className="bg-gradient-to-br from-lavender/10 to-soft-blue/10 rounded-2xl p-6 text-center border border-lavender/20 hover:shadow-md transition-shadow"
+                    className="relative rounded-2xl overflow-hidden border border-lavender/20 hover:shadow-lg transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-full flex items-center justify-center">
-                      <item.icon className="h-6 w-6 text-primary" />
+                    {/* Background Image */}
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                      style={{ backgroundImage: `url(${item.image})` }}
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-background/70 group-hover:bg-background/60 transition-colors duration-300" />
+                    
+                    {/* Content */}
+                    <div className="relative z-10 p-6 text-center">
+                      <div className="w-12 h-12 mx-auto mb-3 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <item.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <p className="text-foreground font-medium text-sm">{item.name}</p>
                     </div>
-                    <p className="text-foreground font-medium text-sm">{item.name}</p>
                   </div>
                 ))}
               </div>

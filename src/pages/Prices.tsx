@@ -132,9 +132,12 @@ const Prices = () => {
             {pricingItems.map((item) => (
               <div
                 key={item.title}
-                className={`relative bg-card rounded-2xl p-8 shadow-card transition-all duration-500 hover:-translate-y-1 ${
+                className={`relative rounded-2xl p-8 shadow-card transition-all duration-500 hover:-translate-y-1 ${
                   item.popular ? "ring-2 ring-primary shadow-glow" : ""
                 }`}
+                style={{
+                  background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
+                }}
               >
                 {item.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -235,7 +238,10 @@ const Prices = () => {
             {specialServices.map((service) => (
               <div
                 key={service.title}
-                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300"
+                className="rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300"
+                style={{
+                  background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
+                }}
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -348,7 +354,9 @@ const Prices = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-card rounded-2xl p-8 shadow-card">
+            <div className="rounded-2xl p-8 shadow-card" style={{
+              background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
+            }}>
               <h3 className="font-heading text-2xl font-semibold mb-6">
                 Запазете час
               </h3>

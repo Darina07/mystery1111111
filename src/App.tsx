@@ -42,6 +42,7 @@ import BlogPost from "./pages/BlogPost";
 import Prices from "./pages/Prices";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import CoupleConflicts from "./pages/conditions/CoupleConflicts";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -89,6 +90,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/conditions/couple-conflicts" element={<CoupleConflicts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

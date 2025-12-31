@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import childHeader from "@/assets/child-counseling-header.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import pencilIllustration from "@/assets/pencil-illustration.png";
+import childrenGroupIllustration from "@/assets/children-group-illustration.png";
 
 const workIncludes = [
   { text: "срещи с детето или юношата", icon: Baby },
@@ -395,8 +396,12 @@ const ChildCounseling = () => {
       </section>
 
       {/* For Whom Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container">
+      <section 
+        className="py-16 md:py-24 bg-muted/30 relative overflow-hidden"
+        style={{ backgroundImage: `url(${childrenGroupIllustration})`, backgroundPosition: 'bottom center', backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}
+      >
+        <div className="absolute inset-0 bg-muted/80" />
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
               За кого е <span className="gradient-text">подходящо?</span>

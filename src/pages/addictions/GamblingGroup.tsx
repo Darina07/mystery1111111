@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupGamblingWho from "@/assets/group-gambling-who.jpg";
 import groupAddictions from "@/assets/group-addictions.jpg";
+import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -55,6 +56,8 @@ const whatToExpect = [
 ];
 
 const GamblingGroup = () => {
+  const { containerRef, visibleItems } = useScrollAnimationGroup(whatToExpect.length, { staggerDelay: 150 });
+  
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -182,11 +185,15 @@ const GamblingGroup = () => {
               <span className="gradient-text">очаквате?</span>
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              {whatToExpect.map((item) => (
+            <div ref={containerRef} className="grid md:grid-cols-2 gap-6">
+              {whatToExpect.map((item, index) => (
                 <div 
                   key={item.title}
-                  className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-lg hover:shadow-xl transition-shadow"
+                  className={`bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-lg hover:shadow-xl transition-all duration-500 ${
+                    visibleItems[index] 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-0 translate-y-8'
+                  }`}
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center">

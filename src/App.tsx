@@ -21,6 +21,11 @@ import EmotionalReadinessGroup from "./pages/relationships/EmotionalReadinessGro
 import SocialSkillsGroup from "./pages/relationships/SocialSkillsGroup";
 import BreakupRecoveryGroup from "./pages/relationships/BreakupRecoveryGroup";
 import MatchmakingGroup from "./pages/relationships/MatchmakingGroup";
+import ParentingGroupPrograms from "./pages/ParentingGroupPrograms";
+import PregnantMothersGroup from "./pages/parenting/PregnantMothersGroup";
+import PostpartumGroup from "./pages/parenting/PostpartumGroup";
+import ToddlerParentsGroup from "./pages/parenting/ToddlerParentsGroup";
+import DifficultSituationsGroup from "./pages/parenting/DifficultSituationsGroup";
 import SpeechTherapy from "./pages/SpeechTherapy";
 import Psychodiagnostics from "./pages/Psychodiagnostics";
 import CareerConsulting from "./pages/CareerConsulting";
@@ -54,6 +59,11 @@ const App = () => (
           <Route path="/services/group-programs/relationships/social-skills" element={<SocialSkillsGroup />} />
           <Route path="/services/group-programs/relationships/breakup-recovery" element={<BreakupRecoveryGroup />} />
           <Route path="/services/group-programs/relationships/matchmaking" element={<MatchmakingGroup />} />
+          <Route path="/services/group-programs/parenting" element={<ParentingGroupPrograms />} />
+          <Route path="/services/group-programs/parenting/pregnant-mothers" element={<PregnantMothersGroup />} />
+          <Route path="/services/group-programs/parenting/postpartum" element={<PostpartumGroup />} />
+          <Route path="/services/group-programs/parenting/toddler-parents" element={<ToddlerParentsGroup />} />
+          <Route path="/services/group-programs/parenting/difficult-situations" element={<DifficultSituationsGroup />} />
           <Route path="/services/speech-therapy" element={<SpeechTherapy />} />
           <Route path="/services/psychodiagnostics" element={<Psychodiagnostics />} />
           <Route path="/services/career-consulting" element={<CareerConsulting />} />

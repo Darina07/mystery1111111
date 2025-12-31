@@ -325,7 +325,7 @@ const ChildCounseling = () => {
               <img 
                 src={learningSticker} 
                 alt="Обучителни затруднения" 
-                className="w-full max-w-[180px]"
+                className="w-full max-w-[240px]"
               />
             </div>
             

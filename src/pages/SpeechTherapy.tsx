@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, BookOpen, Users, Baby, GraduationCap, Heart, Check, Mic, Brain, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import speechTherapyHeader from "@/assets/speech-therapy.jpg";
+import speechTherapyBg from "@/assets/speech-therapy-bg.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 
 const targetAudience = [
@@ -167,7 +168,7 @@ const SpeechTherapy = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${speechTherapyHeader})` }}
+          style={{ backgroundImage: `url(${speechTherapyBg})` }}
         />
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-background/85" />
@@ -242,7 +243,7 @@ const SpeechTherapy = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${speechTherapyHeader})` }}
+          style={{ backgroundImage: `url(${speechTherapyBg})` }}
         />
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-background/85" />

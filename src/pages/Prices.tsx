@@ -147,9 +147,9 @@ const Prices = () => {
                   </div>
                 )}
 
-                <div className="flex flex-col flex-grow space-y-6 text-center">
-                  <div className="flex flex-col items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="flex flex-col flex-grow space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                       <item.icon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
@@ -164,7 +164,7 @@ const Prices = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-baseline justify-center gap-2">
+                  <div className="flex items-baseline gap-2">
                     <span className="font-heading text-4xl font-bold text-primary">
                       {item.price}
                     </span>
@@ -175,11 +175,11 @@ const Prices = () => {
 
                   <ul className="space-y-3 flex-grow">
                     {item.features.map((feature) => (
-                      <li key={feature} className="flex items-start justify-center gap-3">
+                      <li key={feature} className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                           <Check className="h-3 w-3 text-primary" />
                         </div>
-                        <span className="text-sm text-muted-foreground text-left">
+                        <span className="text-sm text-muted-foreground">
                           {feature}
                         </span>
                       </li>
@@ -243,8 +243,8 @@ const Prices = () => {
                   background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
                 }}
               >
-                <div className="flex flex-col items-center text-center gap-4 mb-6 flex-grow">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="flex items-start gap-4 mb-6 flex-grow">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>

@@ -206,13 +206,6 @@ const Contact = () => {
                   ))}
                 </div>
               </div>
-
-              {/* See Prices Button */}
-              <div className="pt-6">
-                <Button size="lg" variant="cta" className="w-full uppercase text-lg py-6" asChild>
-                  <a href="/prices">Виж цени</a>
-                </Button>
-              </div>
             </div>
 
             {/* Contact Form */}

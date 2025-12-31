@@ -96,6 +96,11 @@ import Asperger from "./pages/conditions/Asperger";
 import DownSyndrome from "./pages/conditions/DownSyndrome";
 import IntellectualDisability from "./pages/conditions/IntellectualDisability";
 import RettSyndrome from "./pages/conditions/RettSyndrome";
+import Dyslexia from "./pages/conditions/Dyslexia";
+import Dysgraphia from "./pages/conditions/Dysgraphia";
+import Dyscalculia from "./pages/conditions/Dyscalculia";
+import Dyspraxia from "./pages/conditions/Dyspraxia";
+import MemoryConcentration from "./pages/conditions/MemoryConcentration";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -201,6 +206,12 @@ const App = () => (
           <Route path="/conditions/down-syndrome" element={<DownSyndrome />} />
           <Route path="/conditions/intellectual-disability" element={<IntellectualDisability />} />
           <Route path="/conditions/rett-syndrome" element={<RettSyndrome />} />
+          {/* Learning difficulties conditions */}
+          <Route path="/conditions/dyslexia" element={<Dyslexia />} />
+          <Route path="/conditions/dysgraphia" element={<Dysgraphia />} />
+          <Route path="/conditions/dyscalculia" element={<Dyscalculia />} />
+          <Route path="/conditions/dyspraxia" element={<Dyspraxia />} />
+          <Route path="/conditions/memory-concentration" element={<MemoryConcentration />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

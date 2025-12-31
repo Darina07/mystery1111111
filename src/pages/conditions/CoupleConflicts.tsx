@@ -106,7 +106,7 @@ const CoupleConflicts = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${data.heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent" />

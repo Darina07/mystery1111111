@@ -53,6 +53,11 @@ import Postpartum from "./pages/conditions/Postpartum";
 import ParentChildRelations from "./pages/conditions/ParentChildRelations";
 import BlendedFamilies from "./pages/conditions/BlendedFamilies";
 import SeparationLoss from "./pages/conditions/SeparationLoss";
+import CommunicationDifficulties from "./pages/conditions/CommunicationDifficulties";
+import LifeCrisis from "./pages/conditions/LifeCrisis";
+import Loss from "./pages/conditions/Loss";
+import Separation from "./pages/conditions/Separation";
+import Adaptation from "./pages/conditions/Adaptation";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -111,6 +116,12 @@ const App = () => (
           <Route path="/conditions/parent-child-relations" element={<ParentChildRelations />} />
           <Route path="/conditions/blended-families" element={<BlendedFamilies />} />
           <Route path="/conditions/separation-loss" element={<SeparationLoss />} />
+          {/* Psychological Counseling conditions - partial */}
+          <Route path="/conditions/communication-difficulties" element={<CommunicationDifficulties />} />
+          <Route path="/conditions/life-crisis" element={<LifeCrisis />} />
+          <Route path="/conditions/loss" element={<Loss />} />
+          <Route path="/conditions/separation" element={<Separation />} />
+          <Route path="/conditions/adaptation" element={<Adaptation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

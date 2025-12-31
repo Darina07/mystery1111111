@@ -439,7 +439,7 @@ const PsychologicalCounseling = () => {
             {/* Header */}
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
-                Свържете се с нас
+                <span className="gradient-text">Свържете се</span> с нас
               </h2>
               <p className="text-sm text-muted-foreground">
                 Ако усещате, че е време да направите първата стъпка, можете да се свържете с нас още днес.

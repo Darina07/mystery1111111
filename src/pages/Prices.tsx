@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { Link } from "react-router-dom";
+import pricesHeaderImage from "@/assets/prices-header.jpg";
 
 const pricingItems = [
   {
@@ -98,8 +99,18 @@ const Prices = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-primary/10 via-lavender/20 to-sage/10">
-        <div className="container">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={pricesHeaderImage} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+        </div>
+        
+        <div className="container relative z-10">
           <PageBreadcrumb items={breadcrumbItems} />
           <div className="text-center max-w-3xl mx-auto mt-8 space-y-4">
             <p className="text-primary font-medium tracking-wide uppercase text-sm">

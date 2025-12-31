@@ -70,6 +70,12 @@ const App = () => (
           <Route path="/services/group-programs/parenting/postpartum" element={<PostpartumGroup />} />
           <Route path="/services/group-programs/parenting/toddler-parents" element={<ToddlerParentsGroup />} />
           <Route path="/services/group-programs/parenting/difficult-situations" element={<DifficultSituationsGroup />} />
+          <Route path="/services/group-programs/nlp" element={<NLPGroupPrograms />} />
+          <Route path="/services/group-programs/nlp/personal-effectiveness" element={<PersonalEffectivenessGroup />} />
+          <Route path="/services/group-programs/nlp/anxiety-blocks" element={<AnxietyBlocksGroup />} />
+          <Route path="/services/group-programs/nlp/goals-motivation" element={<GoalsMotivationGroup />} />
+          <Route path="/services/group-programs/nlp/communication-skills" element={<CommunicationSkillsGroup />} />
+          <Route path="/services/group-programs/nlp/habits" element={<HabitsGroup />} />
           <Route path="/services/speech-therapy" element={<SpeechTherapy />} />
           <Route path="/services/psychodiagnostics" element={<Psychodiagnostics />} />
           <Route path="/services/career-consulting" element={<CareerConsulting />} />

@@ -17,6 +17,12 @@ import {
 import counselingHeader from "@/assets/counseling-header.png";
 import therapyHeader from "@/assets/therapy-header.jpg";
 import familyCounselingHeader from "@/assets/family-counseling-header.jpg";
+import specialistClinicalPsychologist from "@/assets/specialist-clinical-psychologist.jpg";
+import specialistPsychotherapist from "@/assets/specialist-psychotherapist.jpg";
+import specialistFamilyCounselor from "@/assets/specialist-family-counselor.jpg";
+import specialistChildPsychologist from "@/assets/specialist-child-psychologist.jpg";
+import specialistSpeechTherapist from "@/assets/specialist-speech-therapist.jpg";
+import specialistCareerConsultant from "@/assets/specialist-career-consultant.jpg";
 
 const heroSlides = [
   {
@@ -66,32 +72,38 @@ const specialists = [
   {
     icon: Brain,
     title: "Клинични психолози",
-    description: "Специалисти с опит в диагностика и терапия на различни психични състояния."
+    description: "Специалисти с опит в диагностика и терапия на различни психични състояния.",
+    image: specialistClinicalPsychologist
   },
   {
     icon: Heart,
     title: "Психотерапевти",
-    description: "Обучени в различни терапевтични модалности - когнитивно-поведенческа, психоаналитична, системна терапия."
+    description: "Обучени в различни терапевтични модалности - когнитивно-поведенческа, психоаналитична, системна терапия.",
+    image: specialistPsychotherapist
   },
   {
     icon: Users,
     title: "Семейни консултанти",
-    description: "Експерти в работата с двойки и семейства, разрешаване на конфликти и подобряване на комуникацията."
+    description: "Експерти в работата с двойки и семейства, разрешаване на конфликти и подобряване на комуникацията.",
+    image: specialistFamilyCounselor
   },
   {
     icon: Sparkles,
     title: "Детски психолози",
-    description: "Специализирани в работа с деца и юноши, развитие и поведенчески проблеми."
+    description: "Специализирани в работа с деца и юноши, развитие и поведенчески проблеми.",
+    image: specialistChildPsychologist
   },
   {
     icon: GraduationCap,
     title: "Логопеди",
-    description: "Професионалисти в областта на говорната и езикова терапия за деца и възрастни."
+    description: "Професионалисти в областта на говорната и езикова терапия за деца и възрастни.",
+    image: specialistSpeechTherapist
   },
   {
     icon: Award,
     title: "Кариерни консултанти",
-    description: "Специалисти по професионално ориентиране и развитие на кариерата."
+    description: "Специалисти по професионално ориентиране и развитие на кариерата.",
+    image: specialistCareerConsultant
   }
 ];
 
@@ -306,20 +318,29 @@ const AboutUs = () => {
             {specialists.map((specialist) => (
               <div
                 key={specialist.title}
-                className="p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300"
+                className="relative p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 overflow-hidden"
                 style={{
                   background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
                 }}
               >
-                <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                  <specialist.icon className="h-8 w-8 text-primary" />
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-15"
+                  style={{ backgroundImage: `url(${specialist.image})` }}
+                />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                    <specialist.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-xl font-semibold mb-3 uppercase">
+                    {specialist.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {specialist.description}
+                  </p>
                 </div>
-                <h3 className="font-heading text-xl font-semibold mb-3 uppercase">
-                  {specialist.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {specialist.description}
-                </p>
               </div>
             ))}
           </div>

@@ -151,14 +151,14 @@ const CoupleConflicts = () => {
       </div>
 
       {/* What Is Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/10">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-center">
               {data.whatIs.title.split(" ").slice(0, -1).join(" ")}{" "}
               <span className="gradient-text">{data.whatIs.title.split(" ").slice(-1)}</span>
             </h2>
-            <div className="bg-card rounded-2xl p-8 md:p-10 shadow-card border border-border/50">
+            <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-card border border-border/50">
               <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                 {data.whatIs.content}
               </p>

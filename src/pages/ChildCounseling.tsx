@@ -249,21 +249,23 @@ const ChildCounseling = () => {
                   Процесът е гъвкав и се съобразява с възрастта, нуждите и темпото на детето.
                 </p>
                 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-3">
                   {processSteps.map((step, index) => (
                     <div
                       key={index}
-                      className="bg-card rounded-2xl p-5 shadow-sm border border-border hover:shadow-md transition-shadow"
+                      className="bg-card rounded-xl p-4 shadow-sm border border-border hover:shadow-md transition-shadow flex items-center gap-4"
                     >
-                      <div className="w-12 h-12 mb-3 bg-primary/10 rounded-full flex items-center justify-center">
-                        <step.icon className="h-6 w-6 text-primary" />
+                      <div className="w-10 h-10 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center">
+                        <step.icon className="h-5 w-5 text-primary" />
                       </div>
-                      <h3 className="text-sm font-heading font-semibold text-foreground mb-1">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-xs">
-                        {step.description}
-                      </p>
+                      <div>
+                        <h3 className="text-sm font-heading font-semibold text-foreground">
+                          {step.title}
+                        </h3>
+                        <p className="text-muted-foreground text-xs">
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>

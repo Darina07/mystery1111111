@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Youtube } from "lucide-react";
 import contactBg from "@/assets/contact-bg.jpg";
 
 const breadcrumbItems = [
@@ -34,6 +34,27 @@ const contactInfo = [
     label: "Работно време",
     value: "Понеделник – Неделя | 08:00 – 22:00",
     href: null,
+  },
+];
+
+const socialLinks = [
+  {
+    icon: Facebook,
+    label: "Facebook",
+    href: "https://facebook.com/darpsiholog",
+    color: "hover:bg-blue-600"
+  },
+  {
+    icon: Instagram,
+    label: "Instagram", 
+    href: "https://instagram.com/darpsiholog",
+    color: "hover:bg-pink-600"
+  },
+  {
+    icon: Youtube,
+    label: "YouTube",
+    href: "https://youtube.com/@darpsiholog",
+    color: "hover:bg-red-600"
   },
 ];
 
@@ -128,6 +149,27 @@ const Contact = () => {
                     WhatsApp
                   </a>
                 </Button>
+              </div>
+
+              {/* Social Media */}
+              <div className="pt-6">
+                <h3 className="font-heading text-lg font-semibold mb-4 uppercase">
+                  Последвайте ни
+                </h3>
+                <div className="flex gap-4">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center transition-all duration-300 ${social.color} hover:text-white`}
+                      aria-label={social.label}
+                    >
+                      <social.icon className="h-5 w-5" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 

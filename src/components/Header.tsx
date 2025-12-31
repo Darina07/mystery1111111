@@ -52,8 +52,8 @@ const navItems: NavItem[] = [
   { label: "Услуги", href: "/services", hasSubmenu: true, submenu: servicesSubmenu },
   { label: "Професионално развитие", href: "#professional", hasSubmenu: true, submenu: professionalSubmenu },
   { label: "Цени", href: "/prices" },
-  { label: "Блог", href: "#blog" },
-  { label: "Контакти", href: "#contact" },
+  { label: "Блог", href: "/blog" },
+  { label: "Контакти", href: "/contact" },
 ];
 
 export const Header = () => {

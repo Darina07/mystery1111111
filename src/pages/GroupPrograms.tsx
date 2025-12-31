@@ -158,9 +158,11 @@ const GroupPrograms = () => {
               </div>
             </div>
 
-            <p className="text-center text-muted-foreground mt-8 font-medium">
-              Всички групи се провеждат при ясни правила за конфиденциалност, уважение и сигурност.
-            </p>
+            <div className="mt-8 bg-deep-purple rounded-xl p-6">
+              <p className="text-center text-white font-medium uppercase tracking-wide">
+                Всички групи се провеждат при ясни правила за конфиденциалност, уважение и сигурност.
+              </p>
+            </div>
           </div>
         </div>
       </section>

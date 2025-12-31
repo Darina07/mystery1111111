@@ -17,6 +17,7 @@ import specialNeedsSticker from "@/assets/special-needs-sticker.png";
 import lifeCrisisSticker from "@/assets/life-crisis-sticker.png";
 import socialAdaptationSticker from "@/assets/social-adaptation-sticker.png";
 import learningDifficulties from "@/assets/learning-difficulties.jpg";
+import speechTherapy from "@/assets/speech-therapy.jpg";
 
 const workIncludes = [
   { text: "срещи с детето или юношата", icon: Baby },
@@ -359,9 +360,9 @@ const ChildCounseling = () => {
             
             <div className="relative flex items-center justify-center">
               <img 
-                src={mindIllustration} 
+                src={speechTherapy} 
                 alt="Говорни затруднения" 
-                className="w-full max-w-md"
+                className="w-full max-w-sm rounded-2xl"
               />
             </div>
           </div>

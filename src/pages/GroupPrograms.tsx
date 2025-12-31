@@ -245,7 +245,7 @@ const GroupPrograms = () => {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${groupAddictions})` }}
                 />
-                <div className="absolute inset-0 bg-background/85 group-hover:bg-background/80 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-background/90 group-hover:bg-background/85 transition-colors duration-300" />
                 
                 <div className="relative z-10 p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -256,14 +256,14 @@ const GroupPrograms = () => {
                       {addictionsGroup.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground mb-4 text-sm">{addictionsGroup.description}</p>
+                  <p className="text-muted-foreground mb-4">{addictionsGroup.description}</p>
                   
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Характеристики:</h4>
-                      <ul className="space-y-1">
+                      <h4 className="font-semibold text-foreground mb-2">Характеристики:</h4>
+                      <ul className="space-y-1.5">
                         {addictionsGroup.characteristics.map((item, index) => (
-                          <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground">
                             <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                             {item}
                           </li>
@@ -271,10 +271,10 @@ const GroupPrograms = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Подходящи при:</h4>
-                      <ul className="space-y-1">
+                      <h4 className="font-semibold text-foreground mb-2">Подходящи при:</h4>
+                      <ul className="space-y-1.5">
                         {addictionsGroup.suitable.map((item, index) => (
-                          <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground">
                             <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                             {item}
                           </li>
@@ -295,7 +295,7 @@ const GroupPrograms = () => {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${groupRelationships})` }}
                 />
-                <div className="absolute inset-0 bg-background/85 group-hover:bg-background/80 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-background/90 group-hover:bg-background/85 transition-colors duration-300" />
                 
                 <div className="relative z-10 p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -306,13 +306,13 @@ const GroupPrograms = () => {
                       {relationshipsGroup.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground mb-4 text-sm">{relationshipsGroup.description}</p>
+                  <p className="text-muted-foreground mb-4">{relationshipsGroup.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold text-foreground mb-2 text-sm">Фокус на групите:</h4>
-                    <ul className="space-y-1">
+                    <h4 className="font-semibold text-foreground mb-2">Фокус на групите:</h4>
+                    <ul className="space-y-1.5">
                       {relationshipsGroup.focus.map((item, index) => (
-                        <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                        <li key={index} className="flex items-center gap-2 text-muted-foreground">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                           {item}
                         </li>
@@ -321,7 +321,7 @@ const GroupPrograms = () => {
                   </div>
                   
                   <div className="bg-accent/10 backdrop-blur-sm rounded-xl p-3 mb-6">
-                    <p className="text-foreground text-xs italic">{relationshipsGroup.note}</p>
+                    <p className="text-foreground text-sm italic">{relationshipsGroup.note}</p>
                   </div>
                   
                   <Button variant="default" size="sm" className="gap-2">
@@ -336,7 +336,7 @@ const GroupPrograms = () => {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${groupParenting})` }}
                 />
-                <div className="absolute inset-0 bg-background/85 group-hover:bg-background/80 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-background/90 group-hover:bg-background/85 transition-colors duration-300" />
                 
                 <div className="relative z-10 p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -347,14 +347,14 @@ const GroupPrograms = () => {
                       {parentingGroup.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground mb-4 text-sm">{parentingGroup.description}</p>
+                  <p className="text-muted-foreground mb-4">{parentingGroup.description}</p>
                   
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Групите са подходящи за:</h4>
-                      <ul className="space-y-1">
+                      <h4 className="font-semibold text-foreground mb-2">Групите са подходящи за:</h4>
+                      <ul className="space-y-1.5">
                         {parentingGroup.suitable.map((item, index) => (
-                          <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground">
                             <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                             {item}
                           </li>
@@ -362,10 +362,10 @@ const GroupPrograms = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2 text-sm">Акцентът е върху:</h4>
-                      <ul className="space-y-1">
+                      <h4 className="font-semibold text-foreground mb-2">Акцентът е върху:</h4>
+                      <ul className="space-y-1.5">
                         {parentingGroup.focus.map((item, index) => (
-                          <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                          <li key={index} className="flex items-center gap-2 text-muted-foreground">
                             <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                             {item}
                           </li>
@@ -386,7 +386,7 @@ const GroupPrograms = () => {
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${groupNlp})` }}
                 />
-                <div className="absolute inset-0 bg-background/85 group-hover:bg-background/80 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-background/90 group-hover:bg-background/85 transition-colors duration-300" />
                 
                 <div className="relative z-10 p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -397,13 +397,13 @@ const GroupPrograms = () => {
                       {nlpGroup.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground mb-4 text-sm">{nlpGroup.description}</p>
+                  <p className="text-muted-foreground mb-4">{nlpGroup.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold text-foreground mb-2 text-sm">НЛП групите подпомагат работа върху:</h4>
-                    <ul className="space-y-1">
+                    <h4 className="font-semibold text-foreground mb-2">НЛП групите подпомагат работа върху:</h4>
+                    <ul className="space-y-1.5">
                       {nlpGroup.topics.map((item, index) => (
-                        <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                        <li key={index} className="flex items-center gap-2 text-muted-foreground">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                           {item}
                         </li>
@@ -412,7 +412,7 @@ const GroupPrograms = () => {
                   </div>
                   
                   <div className="bg-primary/10 backdrop-blur-sm rounded-xl p-3 mb-6">
-                    <p className="text-foreground text-xs">{nlpGroup.note}</p>
+                    <p className="text-foreground text-sm">{nlpGroup.note}</p>
                   </div>
                   
                   <Button variant="default" size="sm" className="gap-2">

@@ -43,6 +43,16 @@ import Prices from "./pages/Prices";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import CoupleConflicts from "./pages/conditions/CoupleConflicts";
+import MaritalCrisis from "./pages/conditions/MaritalCrisis";
+import JealousyTrust from "./pages/conditions/JealousyTrust";
+import Infidelity from "./pages/conditions/Infidelity";
+import SexualProblems from "./pages/conditions/SexualProblems";
+import LackOfIntimacy from "./pages/conditions/LackOfIntimacy";
+import FamilyViolence from "./pages/conditions/FamilyViolence";
+import Postpartum from "./pages/conditions/Postpartum";
+import ParentChildRelations from "./pages/conditions/ParentChildRelations";
+import BlendedFamilies from "./pages/conditions/BlendedFamilies";
+import SeparationLoss from "./pages/conditions/SeparationLoss";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -91,6 +101,16 @@ const App = () => (
           <Route path="/prices" element={<Prices />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/conditions/couple-conflicts" element={<CoupleConflicts />} />
+          <Route path="/conditions/marital-crisis" element={<MaritalCrisis />} />
+          <Route path="/conditions/jealousy-trust" element={<JealousyTrust />} />
+          <Route path="/conditions/infidelity" element={<Infidelity />} />
+          <Route path="/conditions/sexual-problems" element={<SexualProblems />} />
+          <Route path="/conditions/lack-of-intimacy" element={<LackOfIntimacy />} />
+          <Route path="/conditions/family-violence" element={<FamilyViolence />} />
+          <Route path="/conditions/postpartum" element={<Postpartum />} />
+          <Route path="/conditions/parent-child-relations" element={<ParentChildRelations />} />
+          <Route path="/conditions/blended-families" element={<BlendedFamilies />} />
+          <Route path="/conditions/separation-loss" element={<SeparationLoss />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

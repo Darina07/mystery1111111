@@ -8,6 +8,12 @@ import contactBg from "@/assets/contact-bg.jpg";
 import pencilIllustration from "@/assets/pencil-illustration.png";
 import childrenGroupIllustration from "@/assets/children-group-illustration.png";
 import childProcessSticker from "@/assets/child-process-sticker.png";
+import conditionsSticker from "@/assets/conditions-sticker.png";
+import mindIllustration from "@/assets/mind-illustration.png";
+import conditionsSupport from "@/assets/conditions-support.jpg";
+import conditionsLgbt from "@/assets/conditions-lgbt.jpg";
+import lgbtSticker1 from "@/assets/lgbt-sticker-1.png";
+import lgbtSticker2 from "@/assets/lgbt-sticker-2.png";
 
 const workIncludes = [
   { text: "срещи с детето или юношата", icon: Baby },
@@ -278,19 +284,16 @@ const ChildCounseling = () => {
       {/* Conditions Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              <span className="gradient-text">Състояния</span>, при които можем да помогнем
-            </h2>
-            <p className="text-center text-muted-foreground mb-12">
-              Изберете състояние, за да прочетете повече.
-            </p>
-
-            {/* Neuro Conditions */}
-            <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12">
+            <span className="gradient-text">Състояния</span>, при които можем да помогнем
+          </h2>
+          
+          {/* Neuro Conditions - Image Right */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <div>
               <div className="flex items-center gap-3 mb-6">
                 <Brain className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-2xl font-heading font-semibold text-foreground">
                   Невроразвитийни и генетични състояния
                 </h3>
               </div>
@@ -300,12 +303,30 @@ const ChildCounseling = () => {
                 ))}
               </div>
             </div>
+            
+            <div className="relative flex items-center justify-center">
+              <img 
+                src={conditionsSticker} 
+                alt="Невроразвитийни състояния" 
+                className="w-full max-w-md"
+              />
+            </div>
+          </div>
 
-            {/* Learning Conditions */}
-            <div className="mb-12">
+          {/* Learning Conditions - Image Left */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <div className="relative flex items-center justify-center order-2 lg:order-1">
+              <img 
+                src={childProcessSticker} 
+                alt="Обучителни затруднения" 
+                className="w-full max-w-md"
+              />
+            </div>
+            
+            <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-6">
                 <BookOpen className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-2xl font-heading font-semibold text-foreground">
                   Обучителни и специфични затруднения
                 </h3>
               </div>
@@ -315,12 +336,14 @@ const ChildCounseling = () => {
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Speech Conditions */}
-            <div className="mb-12">
+          {/* Speech Conditions - Image Right */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <div>
               <div className="flex items-center gap-3 mb-6">
                 <MessageCircle className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-2xl font-heading font-semibold text-foreground">
                   Говорни и комуникативни затруднения
                 </h3>
               </div>
@@ -330,12 +353,30 @@ const ChildCounseling = () => {
                 ))}
               </div>
             </div>
+            
+            <div className="relative flex items-center justify-center">
+              <img 
+                src={mindIllustration} 
+                alt="Говорни затруднения" 
+                className="w-full max-w-md"
+              />
+            </div>
+          </div>
 
-            {/* Emotional Conditions */}
-            <div className="mb-12">
+          {/* Emotional Conditions - Image Left */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <div className="relative flex items-center justify-center order-2 lg:order-1">
+              <img 
+                src={pencilIllustration} 
+                alt="Емоционални затруднения" 
+                className="w-full max-w-md"
+              />
+            </div>
+            
+            <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-6">
                 <Heart className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-2xl font-heading font-semibold text-foreground">
                   Емоционални и поведенчески затруднения
                 </h3>
               </div>
@@ -345,12 +386,14 @@ const ChildCounseling = () => {
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Social Conditions */}
-            <div className="mb-12">
+          {/* Social Conditions - Image Right */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <div>
               <div className="flex items-center gap-3 mb-6">
                 <Users className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-2xl font-heading font-semibold text-foreground">
                   Социална адаптация и семейни трудности
                 </h3>
               </div>
@@ -360,12 +403,30 @@ const ChildCounseling = () => {
                 ))}
               </div>
             </div>
+            
+            <div className="relative flex items-center justify-center">
+              <img 
+                src={childrenGroupIllustration} 
+                alt="Социална адаптация" 
+                className="w-full max-w-md"
+              />
+            </div>
+          </div>
 
-            {/* Life Conditions */}
-            <div className="mb-12">
+          {/* Life Conditions - Image Left */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <div className="relative flex items-center justify-center order-2 lg:order-1">
+              <img 
+                src={conditionsSupport} 
+                alt="Житейски кризи" 
+                className="w-full max-w-md rounded-2xl"
+              />
+            </div>
+            
+            <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-6">
                 <AlertTriangle className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-2xl font-heading font-semibold text-foreground">
                   Житейски кризи и стресови ситуации
                 </h3>
               </div>
@@ -375,12 +436,14 @@ const ChildCounseling = () => {
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Special Conditions */}
-            <div className="mb-12">
+          {/* Special Conditions - Image Right */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            <div>
               <div className="flex items-center gap-3 mb-6">
                 <GraduationCap className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-2xl font-heading font-semibold text-foreground">
                   Физически заболявания и специални потребности
                 </h3>
               </div>
@@ -390,12 +453,35 @@ const ChildCounseling = () => {
                 ))}
               </div>
             </div>
+            
+            <div className="relative flex items-center justify-center">
+              <img 
+                src={conditionsLgbt} 
+                alt="Специални потребности" 
+                className="w-full max-w-md rounded-2xl"
+              />
+            </div>
+          </div>
 
-            {/* LGBT Conditions */}
-            <div className="mb-12">
+          {/* LGBT Conditions - Image Left */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="relative flex items-center justify-center order-2 lg:order-1">
+              <img 
+                src={lgbtSticker1} 
+                alt="ЛГБТ+ подкрепа" 
+                className="max-w-[300px] -mr-8"
+              />
+              <img 
+                src={lgbtSticker2} 
+                alt="ЛГБТ+ подкрепа" 
+                className="max-w-[150px] -ml-8"
+              />
+            </div>
+            
+            <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-6">
                 <Sparkles className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-2xl font-heading font-semibold text-foreground">
                   ЛГБТ+ деца и юноши
                 </h3>
               </div>

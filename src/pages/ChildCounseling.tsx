@@ -72,10 +72,10 @@ const speechConditions = [
 
 const emotionalConditions = [
   { name: "Посттравматично стресово разстройство", slug: "child-ptsd" },
-  { name: "Тикове и синдром на Турет", slug: "tourette" },
-  { name: "Агресия и автоагресия", slug: "child-aggression" },
+  { name: "Тикове и синдром на Турет", slug: "tics-tourette" },
+  { name: "Агресия и автоагресия", slug: "aggression-self-harm" },
   { name: "Страхове и фобии", slug: "child-fears" },
-  { name: "Проблеми със съня", slug: "child-sleep" },
+  { name: "Проблеми със съня", slug: "child-sleep-problems" },
   { name: "Психосоматични състояния", slug: "child-psychosomatic" },
 ];
 

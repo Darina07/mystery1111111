@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PsychologicalCounseling from "./pages/PsychologicalCounseling";
 import FamilyCounseling from "./pages/FamilyCounseling";
+import ChildCounseling from "./pages/ChildCounseling";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services/psychological-counseling" element={<PsychologicalCounseling />} />
           <Route path="/services/family-counseling" element={<FamilyCounseling />} />
+          <Route path="/services/child-counseling" element={<ChildCounseling />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

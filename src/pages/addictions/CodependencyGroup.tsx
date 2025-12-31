@@ -133,15 +133,37 @@ const CodependencyGroup = () => {
               </p>
             </div>
             
-            <div className="mt-12 bg-primary/5 rounded-2xl p-8 border border-primary/10">
-              <div className="flex items-center gap-3 mb-4 justify-center">
-                <Lock className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-heading font-semibold">Пълна анонимност</h3>
+            <div className="mt-12 relative">
+              {/* Left decorative dots arc */}
+              <div className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+                <div className="w-3 h-3 rounded-full bg-primary/40 translate-x-6" />
+                <div className="w-3 h-3 rounded-full bg-primary/50 translate-x-3" />
+                <div className="w-3 h-3 rounded-full bg-primary/60" />
+                <div className="w-3 h-3 rounded-full bg-primary/50 translate-x-3" />
+                <div className="w-3 h-3 rounded-full bg-primary/40 translate-x-6" />
               </div>
-              <p className="text-center text-muted-foreground">
-                Разбираме колко чувствителна е тази тема. Вашето участие остава напълно конфиденциално. 
-                Не се изискват лични данни на вас или на вашия близък.
-              </p>
+              
+              {/* Right decorative dots arc */}
+              <div className="absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+                <div className="w-3 h-3 rounded-full bg-primary/40 -translate-x-6" />
+                <div className="w-3 h-3 rounded-full bg-primary/50 -translate-x-3" />
+                <div className="w-3 h-3 rounded-full bg-primary/60" />
+                <div className="w-3 h-3 rounded-full bg-primary/50 -translate-x-3" />
+                <div className="w-3 h-3 rounded-full bg-primary/40 -translate-x-6" />
+              </div>
+              
+              <div className="bg-foreground/90 rounded-[10rem] p-8 md:p-10">
+                <div className="flex items-center justify-center gap-4 mb-4">
+                  <Lock className="h-10 w-10 text-primary-foreground" />
+                  <h3 className="text-xl md:text-2xl font-heading font-semibold uppercase tracking-wide text-primary-foreground">
+                    Пълна конфиденциалност
+                  </h3>
+                </div>
+                <p className="text-center text-primary-foreground/90 max-w-2xl mx-auto">
+                  Всички групи се провеждат при стриктни правила за анонимност. Не се изискват лични данни, 
+                  не се записват имена и не се разкрива информация за участниците. Вашата поверителност е наш приоритет.
+                </p>
+              </div>
             </div>
           </div>
         </div>

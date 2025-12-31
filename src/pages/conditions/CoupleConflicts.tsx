@@ -115,15 +115,6 @@ const CoupleConflicts = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
           <div className="max-w-3xl text-center">
-            <div className="flex justify-center mb-6">
-              <PageBreadcrumb 
-                items={[
-                  { label: "Услуги", href: "/#services" },
-                  { label: data.parentService.name, href: data.parentService.href },
-                  { label: data.title }
-                ]} 
-              />
-            </div>
             <p className="text-primary font-medium mb-4">{data.subtitle}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               {data.title.split(" ").slice(0, -1).join(" ")}{" "}
@@ -145,6 +136,17 @@ const CoupleConflicts = () => {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumb under hero */}
+      <div className="container py-4">
+        <PageBreadcrumb 
+          items={[
+            { label: "Услуги", href: "/#services" },
+            { label: data.parentService.name, href: data.parentService.href },
+            { label: data.title }
+          ]} 
+        />
+      </div>
 
       {/* What Is Section */}
       <section className="py-16 md:py-24">

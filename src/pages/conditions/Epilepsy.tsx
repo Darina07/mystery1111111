@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Shield, Sparkles } from "lucide-react";
-import childCounselingHeader from "@/assets/child-counseling-header.jpg";
+import epilepsyHeader from "@/assets/epilepsy-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Деца с епилепсия",
   subtitle: "Детско консултиране",
   description: "Психологическа подкрепа за деца с епилепсия и техните семейства.",
-  heroImage: childCounselingHeader,
+  heroImage: epilepsyHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

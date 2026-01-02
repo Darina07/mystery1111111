@@ -214,47 +214,46 @@ const TherapeuticApproaches = () => {
         </div>
       </section>
 
-      {/* Approach Categories */}
-      {approachCategories.map((category, categoryIndex) => (
-        <section 
-          key={category.title}
-          className={`py-16 md:py-20 ${categoryIndex % 2 === 0 ? 'bg-muted/30' : 'bg-background'}`}
-        >
-          <div className="container">
-            <div className="max-w-5xl mx-auto">
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-10">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg`}>
-                  <category.icon className="h-7 w-7 text-white" />
-                </div>
-                <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
-                  {category.title}
-                </h2>
-              </div>
-              
-              {/* Approaches Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.approaches.map((approach, approachIndex) => (
-                  <div 
-                    key={approach.name}
-                    className="group bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300"
-                  >
-                    <div className="flex items-start gap-3 mb-4">
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mt-2.5 flex-shrink-0`} />
-                      <h3 className="text-lg font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
-                        {approach.name}
-                      </h3>
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed pl-5">
-                      {approach.description}
-                    </p>
+      {/* Approach Categories - 2 per row */}
+      <section className="py-16 md:py-20 bg-muted/30">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-8">
+            {approachCategories.map((category) => (
+              <div key={category.title} className="bg-card rounded-2xl p-8 shadow-sm border border-border">
+                {/* Category Header */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg`}>
+                    <category.icon className="h-6 w-6 text-white" />
                   </div>
-                ))}
+                  <h2 className="text-xl md:text-2xl font-heading font-bold text-foreground">
+                    {category.title}
+                  </h2>
+                </div>
+                
+                {/* Approaches List */}
+                <div className="space-y-4">
+                  {category.approaches.map((approach) => (
+                    <div 
+                      key={approach.name}
+                      className="group"
+                    >
+                      <div className="flex items-start gap-3 mb-2">
+                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mt-2 flex-shrink-0`} />
+                        <h3 className="text-base font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+                          {approach.name}
+                        </h3>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed pl-5">
+                        {approach.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       {/* Final CTA Section */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-lavender/10 via-background to-soft-blue/10 relative overflow-hidden">

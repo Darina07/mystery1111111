@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import bodyPsychotherapyHeader from "@/assets/body-psychotherapy-header.jpg";
 
 const BodyPsychotherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Телесна психотерапия"
       subtitle="Холистичен подход, който работи с телесните усещания като ключ към емоционалното осъзнаване"
-      headerImage={psychoanalysisHeader}
+      headerImage={bodyPsychotherapyHeader}
       description={[
         "Телесната психотерапия е широка категория терапевтични подходи, които признават централната роля на тялото в психологичното здраве. Този подход се основава на разбирането, че емоциите, мислите и телесните усещания са неразривно свързани.",
         "В телесната психотерапия работим с различни аспекти на телесното преживяване - поза, дишане, движение, мускулно напрежение и вътрешни усещания. Чрез внимателно наблюдение и работа с тялото можем да достигнем до емоционални съдържания, които са трудно достъпни само чрез разговор.",

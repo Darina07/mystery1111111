@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Zap, Heart, Wind, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import panicAttacksHeader from "@/assets/panic-attacks-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Паник атаки",
   subtitle: "Психологично консултиране",
   description: "Научете се да управлявате и преодолявате паническите атаки с доказани методи.",
-  heroImage: conditionsHeader,
+  heroImage: panicAttacksHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

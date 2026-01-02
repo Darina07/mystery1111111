@@ -109,9 +109,9 @@ export const Footer = () => {
               <a
                 href="tel:+359887079256"
                 className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                aria-label="Обадете се"
               >
                 <Phone className="h-5 w-5" />
-                +359 887 079 256
               </a>
               <a
                 href="mailto:info@darpsiholog.bg"

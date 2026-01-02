@@ -114,10 +114,11 @@ const GamblingGroup = () => {
                 <Calendar className="h-5 w-5" />
                 Запиши се
               </Button>
-              <Button variant="hero-outline" size="lg" className="gap-2">
-                <Phone className="h-5 w-5" />
-                +359 887 079 256
-              </Button>
+              <a href="tel:+359887079256" aria-label="Обадете се">
+                <Button variant="hero-outline" size="lg">
+                  <Phone className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>

@@ -231,9 +231,9 @@ export const Header = () => {
             <a
               href="tel:+359887079256"
               className="flex items-center gap-2 text-base font-medium text-white hover:text-white/80 transition-colors"
+              aria-label="Обадете се на +359 887 079 256"
             >
               <Phone className="h-5 w-5" />
-              <span>+359 887 079 256</span>
             </a>
           </div>
         </nav>

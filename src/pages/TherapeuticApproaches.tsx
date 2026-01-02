@@ -1,6 +1,131 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap, TreePine } from "lucide-react";
+
+const approachCategories = [
+  {
+    title: "Класически психотерапевтични подходи",
+    icon: Brain,
+    color: "from-indigo to-indigo-light",
+    approaches: [
+      {
+        name: "Психоанализа",
+        description: "Психоанализата изследва дълбоките, често несъзнавани процеси, които влияят върху мислите, емоциите и поведението ни. Този подход помага за по-дълбоко разбиране на вътрешните конфликти, ранните преживявания и повтарящите се житейски модели."
+      },
+      {
+        name: "Психодинамична терапия",
+        description: "Психодинамичната терапия се фокусира върху връзката между минал опит и настоящи трудности. Чрез изследване на емоциите, взаимоотношенията и вътрешните конфликти се постига по-добро себепознание и промяна."
+      }
+    ]
+  },
+  {
+    title: "Когнитивни и поведенчески подходи",
+    icon: Zap,
+    color: "from-primary to-accent",
+    approaches: [
+      {
+        name: "Когнитивно-поведенческа терапия (КПТ)",
+        description: "КПТ е структуриран и практичен подход, насочен към връзката между мисли, емоции и поведение. Той подпомага изграждането на по-адаптивни начини на мислене и справяне с тревожност, депресия, стрес и други трудности."
+      },
+      {
+        name: "Схема терапия",
+        description: "Схема терапията работи с дълбоко вкоренени емоционални модели, формирани още в детството. Подходяща е при повтарящи се житейски и релационни трудности, ниска самооценка и емоционални блокажи."
+      }
+    ]
+  },
+  {
+    title: "Хуманистични и екзистенциални подходи",
+    icon: Heart,
+    color: "from-lavender to-lavender-light",
+    approaches: [
+      {
+        name: "Гещалт терапия",
+        description: "Гещалт терапията поставя акцент върху осъзнаването \"тук и сега\", личната отговорност и автентичния контакт със себе си и другите."
+      },
+      {
+        name: "Екзистенциална психотерапия",
+        description: "Този подход изследва теми като смисъл, избор, свобода, отговорност и идентичност. Подходящ е при житейски кризи и търсене на посока."
+      },
+      {
+        name: "Позитивна психотерапия (Пезешкиан)",
+        description: "Фокусира се върху ресурсите, силните страни и потенциала на личността, като подпомага баланса в различните области на живота."
+      }
+    ]
+  },
+  {
+    title: "Системни и семейни подходи",
+    icon: Users,
+    color: "from-soft-blue to-muted-teal",
+    approaches: [
+      {
+        name: "Семейна терапия",
+        description: "Работи с взаимоотношенията в семейството като система и подпомага подобряването на комуникацията и разрешаването на конфликти."
+      },
+      {
+        name: "Трансгенерационна терапия",
+        description: "Изследва влиянието на семейната история и моделите, предавани през поколенията."
+      },
+      {
+        name: "Терапия на двойки",
+        description: "Насочена към партньорските взаимоотношения, комуникацията и възстановяването на близостта и доверието."
+      }
+    ]
+  },
+  {
+    title: "Травма-фокусирани подходи",
+    icon: Sparkles,
+    color: "from-deep-navy to-indigo",
+    approaches: [
+      {
+        name: "EMDR (Десензитизация и преработка чрез движение на очите)",
+        description: "EMDR е доказан метод за работа с психологична травма и посттравматичен стрес."
+      },
+      {
+        name: "Соматично преживяване (Somatic Experiencing)",
+        description: "Работи с връзката между тялото и психиката за освобождаване на натрупано напрежение и травматичен стрес."
+      }
+    ]
+  },
+  {
+    title: "Телесно-ориентирани подходи",
+    icon: Hand,
+    color: "from-accent to-soft-blue",
+    approaches: [
+      {
+        name: "Биоенергийна терапия",
+        description: "Свързва емоционалните преживявания с телесните реакции и подпомага освобождаването на напрежение."
+      },
+      {
+        name: "Телесна психотерапия",
+        description: "Работи с телесните усещания като важна част от емоционалното осъзнаване."
+      },
+      {
+        name: "Танцово-двигателна терапия",
+        description: "Използва движението като средство за изразяване, осъзнаване и личностно развитие."
+      }
+    ]
+  },
+  {
+    title: "Креативни и експресивни подходи",
+    icon: Palette,
+    color: "from-lavender-dark to-primary",
+    approaches: [
+      {
+        name: "Арт терапия",
+        description: "Позволява изразяване на вътрешни преживявания чрез творчество."
+      },
+      {
+        name: "Музикотерапия",
+        description: "Използва музиката като средство за емоционална регулация и подкрепа."
+      },
+      {
+        name: "Игрова терапия",
+        description: "Подходяща за деца, като използва играта като естествен начин за изразяване и терапевтична работа."
+      }
+    ]
+  }
+];
 
 const TherapeuticApproaches = () => {
   return (
@@ -8,8 +133,13 @@ const TherapeuticApproaches = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-b from-cream to-background">
-        <div className="container">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-br from-lavender/10 via-background to-soft-blue/10" />
+        <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+        
+        <div className="container relative z-10">
           <PageBreadcrumb 
             items={[
               { label: "Начало", href: "/" },
@@ -17,260 +147,129 @@ const TherapeuticApproaches = () => {
             ]} 
           />
           <div className="max-w-4xl mx-auto text-center mt-8">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Терапевтични подходи
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+              Терапевтични{" "}
+              <span className="gradient-text">подходи</span>
             </h1>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Избираме подхода индивидуално – спрямо вашите нужди, цели и конкретна ситуация
+            </p>
           </div>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-12 bg-background">
-        <div className="container">
-          <div className="max-w-4xl mx-auto prose prose-lg">
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              В нашата практика вярваме, че няма универсален подход, който да е подходящ за всеки човек. Всеки клиент идва със своя житейска история, преживявания, ресурси и темпо на промяна. Затова работим с различни психотерапевтични подходи, като изборът на подход се съобразява индивидуално – спрямо нуждите, целите и конкретната ситуация на всеки човек.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Екипът ни се състои от различни специалисти, всеки от които е обучен и специализиран в конкретни терапевтични подходи. Това ни позволява да насочваме клиентите към най-подходящия специалист и подход, в зависимост от заявените трудности, цели и предпочитания.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Терапевтичната работа може да включва един основен подход или интеграция на няколко подхода, когато това е най-полезно и ефективно за клиента.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Classical Approaches */}
-      <section className="py-12 bg-cream/50">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-8 text-center">
-              Класически психотерапевтични подходи
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Психоанализа</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Психоанализата изследва дълбоките, често несъзнавани процеси, които влияят върху мислите, емоциите и поведението ни. Този подход помага за по-дълбоко разбиране на вътрешните конфликти, ранните преживявания и повтарящите се житейски модели.
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="bg-gradient-to-br from-lavender/10 to-lavender/5 rounded-2xl p-6 border border-lavender/20">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-heading font-semibold text-foreground mb-2">Индивидуален подход</h3>
+                <p className="text-muted-foreground text-sm">
+                  Всеки клиент идва със своя история, преживявания и темпо на промяна.
                 </p>
               </div>
               
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Психодинамична терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Психодинамичната терапия се фокусира върху връзката между минал опит и настоящи трудности. Чрез изследване на емоциите, взаимоотношенията и вътрешните конфликти се постига по-добро себепознание и промяна.
+              <div className="bg-gradient-to-br from-soft-blue/10 to-soft-blue/5 rounded-2xl p-6 border border-soft-blue/20">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="font-heading font-semibold text-foreground mb-2">Екип от специалисти</h3>
+                <p className="text-muted-foreground text-sm">
+                  Насочваме към най-подходящия специалист според трудностите и целите.
                 </p>
               </div>
+              
+              <div className="bg-gradient-to-br from-indigo/10 to-indigo/5 rounded-2xl p-6 border border-indigo/20">
+                <div className="w-12 h-12 bg-indigo/10 rounded-xl flex items-center justify-center mb-4">
+                  <TreePine className="h-6 w-6 text-indigo" />
+                </div>
+                <h3 className="font-heading font-semibold text-foreground mb-2">Интегративен подход</h3>
+                <p className="text-muted-foreground text-sm">
+                  Работата може да включва интеграция на няколко подхода, когато е полезно.
+                </p>
+              </div>
+            </div>
+            
+            <div className="prose prose-lg max-w-none text-center">
+              <p className="text-muted-foreground leading-relaxed">
+                В нашата практика вярваме, че няма универсален подход, който да е подходящ за всеки човек. Затова работим с различни психотерапевтични подходи, съобразени с конкретните нужди на всеки клиент.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cognitive and Behavioral Approaches */}
-      <section className="py-12 bg-background">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-8 text-center">
-              Когнитивни и поведенчески подходи
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-cream/30 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Когнитивно-поведенческа терапия (КПТ)</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  КПТ е структуриран и практичен подход, насочен към връзката между мисли, емоции и поведение. Той подпомага изграждането на по-адаптивни начини на мислене и справяне с тревожност, депресия, стрес и други трудности.
-                </p>
+      {/* Approach Categories */}
+      {approachCategories.map((category, categoryIndex) => (
+        <section 
+          key={category.title}
+          className={`py-16 md:py-20 ${categoryIndex % 2 === 0 ? 'bg-muted/30' : 'bg-background'}`}
+        >
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              {/* Category Header */}
+              <div className="flex items-center gap-4 mb-10">
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg`}>
+                  <category.icon className="h-7 w-7 text-white" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
+                  {category.title}
+                </h2>
               </div>
               
-              <div className="bg-cream/30 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Схема терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Схема терапията работи с дълбоко вкоренени емоционални модели, формирани още в детството. Подходяща е при повтарящи се житейски и релационни трудности, ниска самооценка и емоционални блокажи.
-                </p>
+              {/* Approaches Grid */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {category.approaches.map((approach, approachIndex) => (
+                  <div 
+                    key={approach.name}
+                    className="group bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-lg hover:border-primary/20 transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mt-2.5 flex-shrink-0`} />
+                      <h3 className="text-lg font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {approach.name}
+                      </h3>
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed pl-5">
+                      {approach.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
-      {/* Humanistic and Existential Approaches */}
-      <section className="py-12 bg-cream/50">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-8 text-center">
-              Хуманистични и екзистенциални подходи
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Гещалт терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Гещалт терапията поставя акцент върху осъзнаването „тук и сега", личната отговорност и автентичния контакт със себе си и другите.
-                </p>
-              </div>
-              
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Екзистенциална психотерапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Този подход изследва теми като смисъл, избор, свобода, отговорност и идентичност. Подходящ е при житейски кризи и търсене на посока.
-                </p>
-              </div>
-              
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Позитивна психотерапия (Пезешкиан)</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Фокусира се върху ресурсите, силните страни и потенциала на личността, като подпомага баланса в различните области на живота.
-                </p>
-              </div>
+      {/* Final CTA Section */}
+      <section className="py-20 md:py-28 bg-indigo text-primary-foreground relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-lavender/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-soft-blue/10 rounded-full blur-3xl" />
+        
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
+              <Heart className="h-8 w-8 text-white" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Systemic and Family Approaches */}
-      <section className="py-12 bg-background">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-8 text-center">
-              Системни и семейни подходи
-            </h2>
             
-            <div className="space-y-8">
-              <div className="bg-cream/30 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Семейна терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Работи с взаимоотношенията в семейството като система и подпомага подобряването на комуникацията и разрешаването на конфликти.
-                </p>
-              </div>
-              
-              <div className="bg-cream/30 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Трансгенерационна терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Изследва влиянието на семейната история и моделите, предавани през поколенията.
-                </p>
-              </div>
-              
-              <div className="bg-cream/30 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Терапия на двойки</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Насочена към партньорските взаимоотношения, комуникацията и възстановяването на близостта и доверието.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trauma-Focused Approaches */}
-      <section className="py-12 bg-cream/50">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-8 text-center">
-              Травма-фокусирани подходи
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">EMDR (Десензитизация и преработка чрез движение на очите)</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  EMDR е доказан метод за работа с психологична травма и посттравматичен стрес.
-                </p>
-              </div>
-              
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Соматично преживяване (Somatic Experiencing)</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Работи с връзката между тялото и психиката за освобождаване на натрупано напрежение и травматичен стрес.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Body-Oriented Approaches */}
-      <section className="py-12 bg-background">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-8 text-center">
-              Телесно-ориентирани подходи
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-cream/30 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Биоенергийна терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Свързва емоционалните преживявания с телесните реакции и подпомага освобождаването на напрежение.
-                </p>
-              </div>
-              
-              <div className="bg-cream/30 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Телесна психотерапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Работи с телесните усещания като важна част от емоционалното осъзнаване.
-                </p>
-              </div>
-              
-              <div className="bg-cream/30 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Танцово-двигателна терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Използва движението като средство за изразяване, осъзнаване и личностно развитие.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Creative and Expressive Approaches */}
-      <section className="py-12 bg-cream/50">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-8 text-center">
-              Креативни и експресивни подходи
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Арт терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Позволява изразяване на вътрешни преживявания чрез творчество.
-                </p>
-              </div>
-              
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Музикотерапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Използва музиката като средство за емоционална регулация и подкрепа.
-                </p>
-              </div>
-              
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-4">Игрова терапия</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Подходяща за деца, като използва играта като естествен начин за изразяване и терапевтична работа.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Integrative Approach */}
-      <section className="py-16 bg-indigo text-primary-foreground">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-heading font-bold mb-8">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
               Индивидуален, екипен и интегративен подход
             </h2>
-            <p className="text-primary-foreground/80 leading-relaxed mb-6">
+            
+            <p className="text-primary-foreground/80 leading-relaxed mb-6 text-lg">
               Нашата работа се основава на екипно сътрудничество и индивидуален подход. Благодарение на различните специалисти в екипа ни и техните професионални специализации, можем да предложим цялостна и гъвкава подкрепа, съобразена с конкретните нужди на всеки клиент.
             </p>
-            <p className="text-primary-foreground/80 leading-relaxed">
-              Най-важното за нас е създаването на безопасно, подкрепящо и неосъждащо пространство, в което промяната да се случва с уважение към личното темпо и вътрешния процес на всеки човек.
-            </p>
+            
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
+              <p className="text-primary-foreground/90 leading-relaxed italic">
+                Най-важното за нас е създаването на <strong className="text-white">безопасно, подкрепящо и неосъждащо пространство</strong>, в което промяната да се случва с уважение към личното темпо и вътрешния процес на всеки човек.
+              </p>
+            </div>
           </div>
         </div>
       </section>

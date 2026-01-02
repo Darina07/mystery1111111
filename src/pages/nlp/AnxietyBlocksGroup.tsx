@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Brain, Shield, Sparkles, Users, CheckCircle, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
-import groupNLPAnxietyBg from "@/assets/group-nlp-anxiety-bg.jpg";
+import groupNLPAnxietyWho from "@/assets/group-nlp-anxiety-who.jpg";
 import groupNLPHeader from "@/assets/group-nlp-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
@@ -249,7 +249,7 @@ const AnxietyBlocksGroup = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative">
                 <img 
-                  src={groupNLPAnxietyBg} 
+                  src={groupNLPAnxietyWho} 
                   alt="НЛП при тревожност" 
                   className="rounded-2xl shadow-lg w-full object-cover aspect-square"
                 />

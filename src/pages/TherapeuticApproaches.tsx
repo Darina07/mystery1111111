@@ -224,7 +224,7 @@ const TherapeuticApproaches = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {approachCategories.map((category) => (
-              <div key={category.title} className="bg-card rounded-2xl p-8 shadow-sm border border-border">
+              <div key={category.title} className="bg-gradient-to-br from-lavender/5 via-card to-soft-blue/5 rounded-2xl p-8 shadow-md border border-primary/10 hover:shadow-lg transition-shadow">
                 {/* Category Header */}
                 <div className="flex items-center gap-4 mb-6">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg`}>

@@ -125,7 +125,7 @@ export const TherapeuticApproachesSection = () => {
             to="/therapeutic-approaches"
             className="flex items-center justify-center"
           >
-            <Button variant="default" size="lg" className="uppercase font-semibold">
+            <Button variant="default" size="lg" className="uppercase font-semibold bg-gradient-to-r from-indigo to-primary hover:from-indigo-light hover:to-primary/90">
               ВИЖТЕ ВСИЧКИ ПОДХОДИ
             </Button>
           </Link>

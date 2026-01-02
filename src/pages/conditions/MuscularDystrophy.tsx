@@ -1,6 +1,6 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Users, Sparkles } from "lucide-react";
-import muscularDystrophyHeader from "@/assets/muscular-dystrophy-header.jpg";
+import muscularDystrophyHeader from "@/assets/muscular-dystrophy-header.png";
 
 const conditionData: ConditionData = {
   title: "Деца с мускулна дистрофия",

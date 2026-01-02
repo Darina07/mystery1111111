@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import familyTherapyHeader from "@/assets/family-therapy-header.jpg";
 
 const FamilyTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Семейна терапия"
       subtitle="Работа с взаимоотношенията в семейството за подобряване на комуникацията и разрешаване на конфликти"
-      headerImage={psychoanalysisHeader}
+      headerImage={familyTherapyHeader}
       description={[
         "Семейната терапия е форма на психотерапия, която разглежда семейството като система и работи с взаимоотношенията между членовете му. Вместо да се фокусира върху един \"проблемен\" член, този подход изследва как семейната динамика влияе върху всички.",
         "В семейната терапия се работи с комуникационните модели, ролите, границите и правилата в семейството. Терапевтът помага на членовете да разберат как техните взаимодействия поддържат или разрешават проблемите.",

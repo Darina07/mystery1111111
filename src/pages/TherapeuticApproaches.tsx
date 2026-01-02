@@ -217,6 +217,10 @@ const TherapeuticApproaches = () => {
       {/* Approach Categories - 2 per row */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
+            Психотерапевтични подходи, в които{" "}
+            <span className="gradient-text">нашите специалисти са специализирани</span>
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {approachCategories.map((category) => (
               <div key={category.title} className="bg-card rounded-2xl p-8 shadow-sm border border-border">

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Heart, Sunrise, Shield, Users, CheckCircle, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
-import groupBreakupRecoveryBg from "@/assets/group-breakup-recovery-bg.jpg";
+import groupBreakupWho from "@/assets/group-breakup-who.jpg";
 import groupRelationshipsHeader from "@/assets/group-relationships-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
@@ -249,7 +249,7 @@ const BreakupRecoveryGroup = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative">
                 <img 
-                  src={groupBreakupRecoveryBg} 
+                  src={groupBreakupWho} 
                   alt="Възстановяване след раздяла" 
                   className="rounded-2xl shadow-lg w-full object-cover aspect-square"
                 />

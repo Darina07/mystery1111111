@@ -116,14 +116,6 @@ const PsychologicalCounseling = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-end">
           <div className="max-w-xl text-right">
-            <div className="flex justify-end mb-6">
-              <PageBreadcrumb 
-                items={[
-                  { label: "Услуги", href: "/#services" },
-                  { label: "Психологично консултиране и психотерапия" }
-                ]} 
-              />
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Психологично консултиране и{" "}
               <span className="gradient-text">психотерапия</span>
@@ -145,6 +137,16 @@ const PsychologicalCounseling = () => {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container pt-8">
+        <PageBreadcrumb 
+          items={[
+            { label: "Услуги", href: "/#services" },
+            { label: "Психологично консултиране и психотерапия" }
+          ]} 
+        />
+      </div>
 
       {/* Introduction Section with Image */}
       <section className="py-16 md:py-24">

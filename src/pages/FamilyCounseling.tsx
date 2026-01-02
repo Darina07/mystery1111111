@@ -114,14 +114,6 @@ const FamilyCounseling = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-end">
           <div className="max-w-xl text-right">
-            <div className="flex justify-end mb-6">
-              <PageBreadcrumb 
-                items={[
-                  { label: "Услуги", href: "/#services" },
-                  { label: "Семейно и партньорско консултиране" }
-                ]} 
-              />
-            </div>
             <p className="text-primary font-medium mb-4">Брачен консултант, семеен психолог и сексолог</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Консултиране за{" "}
@@ -144,6 +136,16 @@ const FamilyCounseling = () => {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container pt-8">
+        <PageBreadcrumb 
+          items={[
+            { label: "Услуги", href: "/#services" },
+            { label: "Семейно и партньорско консултиране" }
+          ]} 
+        />
+      </div>
 
       {/* Introduction Section */}
       <section className="py-16 md:py-24">

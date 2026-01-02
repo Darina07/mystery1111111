@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import bioenergeticTherapyHeader from "@/assets/bioenergetic-therapy-header.jpg";
 
 const BioenergeticTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Биоенергийна терапия"
       subtitle="Интегративен подход, който свързва емоционалните преживявания с телесните реакции"
-      headerImage={psychoanalysisHeader}
+      headerImage={bioenergeticTherapyHeader}
       description={[
         "Биоенергийната терапия е създадена от Александър Лоуен, ученик на Вилхелм Райх, и се основава на идеята, че тялото и умът са неразривно свързани. Според този подход, потиснатите емоции се съхраняват в тялото под формата на хронично мускулно напрежение, което Райх нарича характерова броня.",
         "В биоенергийната терапия работим едновременно с тялото и психиката. Чрез специфични позиции, дишане и движения помагаме за освобождаване на блокираната енергия и потиснатите емоции. Това води до по-голяма жизненост, спонтанност и способност за удоволствие.",

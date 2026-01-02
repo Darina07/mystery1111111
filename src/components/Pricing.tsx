@@ -21,7 +21,7 @@ const pricingItems = [
   },
   {
     title: "Онлайн консултации",
-    subtitle: "(телефон, Viber, WhatsApp, Skype)",
+    subtitle: "(телефон, Viber, WhatsApp, Skype, Google Meet)",
     price: "35",
     currency: "евро",
     duration: "60 минути",
@@ -43,6 +43,20 @@ const pricingItems = [
       "Самостоятелен терапевтичен метод",
       "Допълващ метод при определени теми",
       "След предварителна консултация",
+    ],
+    popular: false,
+  },
+  {
+    title: "Арт терапия и музикотерапия",
+    subtitle: "",
+    price: "50",
+    currency: "евро",
+    duration: "60 минути",
+    features: [
+      "Изразяване на емоции чрез творчество",
+      "Намаляване на напрежението",
+      "Подкрепа на емоционалния баланс",
+      "Подходящо за деца, юноши и възрастни",
     ],
     popular: false,
   },
@@ -68,7 +82,7 @@ export const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {pricingItems.map((item) => (
             <div
               key={item.title}

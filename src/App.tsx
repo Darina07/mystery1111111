@@ -87,7 +87,7 @@ import MedicationAddiction from "./pages/conditions/MedicationAddiction";
 import InternetAddiction from "./pages/conditions/InternetAddiction";
 import SocialMediaAddiction from "./pages/conditions/SocialMediaAddiction";
 import Workaholism from "./pages/conditions/Workaholism";
-import CompulsiveBehavior from "./pages/conditions/CompulsiveBehavior";
+import LoveAddiction from "./pages/conditions/LoveAddiction";
 import LGBTSupport from "./pages/conditions/LGBTSupport";
 import IdentitySelfAcceptance from "./pages/conditions/IdentitySelfAcceptance";
 import ComingOut from "./pages/conditions/ComingOut";
@@ -228,7 +228,7 @@ const App = () => (
           <Route path="/conditions/internet-addiction" element={<InternetAddiction />} />
           <Route path="/conditions/social-media-addiction" element={<SocialMediaAddiction />} />
           <Route path="/conditions/workaholism" element={<Workaholism />} />
-          <Route path="/conditions/compulsive-behavior" element={<CompulsiveBehavior />} />
+          <Route path="/conditions/love-addiction" element={<LoveAddiction />} />
           {/* LGBT+ conditions */}
           <Route path="/conditions/lgbt-support" element={<LGBTSupport />} />
           <Route path="/conditions/identity-self-acceptance" element={<IdentitySelfAcceptance />} />

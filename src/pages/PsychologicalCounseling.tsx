@@ -49,7 +49,7 @@ const addictions = [
   { name: "Интернет и дигитална зависимост", slug: "internet-addiction" },
   { name: "Зависимост към социални мрежи", slug: "social-media-addiction" },
   { name: "Работохолизъм", slug: "workaholism" },
-  { name: "Компулсивно поведение", slug: "compulsive-behavior" },
+  { name: "Любовна зависимост", slug: "love-addiction" },
 ];
 
 const lgbtSupport = [

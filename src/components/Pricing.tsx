@@ -50,7 +50,7 @@ const pricingItems = [
 
 export const Pricing = () => {
   return (
-    <section id="prices" className="py-24 bg-secondary/30">
+    <section id="prices" className="py-16 bg-secondary/30">
       <div className="container">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">

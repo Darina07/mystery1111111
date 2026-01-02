@@ -24,8 +24,8 @@ export const Business = () => {
       <div className="container">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-            За бизнеса
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium uppercase">
+            ЗА БИЗНЕСА
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold">
             Професионално развитие

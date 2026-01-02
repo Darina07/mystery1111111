@@ -10,7 +10,6 @@ const popularTherapies = [
   { name: "Зависимости", path: "/services/group-programs/addictions" },
   { name: "Бърнаут", path: "/conditions/burnout" },
   { name: "Заекване", path: "/conditions/stuttering" },
-  { name: "Терапевтични подходи", path: "/therapeutic-approaches" },
 ];
 
 const services = [
@@ -45,7 +44,7 @@ export const Footer = () => {
           {/* Popular Therapies */}
           <div>
             <h4 className="font-heading text-lg font-semibold mb-6">
-              Най-търсени терапии
+              Най-търсени
             </h4>
             <ul className="space-y-3">
               {popularTherapies.map((therapy) => (
@@ -59,6 +58,12 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
+            <Link 
+              to="/therapeutic-approaches"
+              className="font-heading text-lg font-semibold mt-6 block hover:text-primary-foreground/80 transition-colors"
+            >
+              Терапевтични подходи
+            </Link>
           </div>
 
           {/* Services */}

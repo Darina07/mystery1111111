@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Contact } from "@/components/Contact";
 import { Button } from "@/components/ui/button";
 import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap, TreePine, Phone } from "lucide-react";
 import therapeuticApproachesHeader from "@/assets/therapeutic-approaches-header.jpg";
@@ -288,6 +289,8 @@ const TherapeuticApproaches = () => {
           </div>
         </div>
       </section>
+
+      <Contact />
 
       <Footer />
     </div>

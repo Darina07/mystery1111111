@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 
 const CookiePolicy = () => {
   return (
@@ -9,13 +8,6 @@ const CookiePolicy = () => {
       
       <main className="pt-24">
         <div className="container py-12">
-          <PageBreadcrumb 
-            items={[
-              { label: "Начало", href: "/" },
-              { label: "Политика за бисквитки" }
-            ]} 
-          />
-          
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-8">
             Политика за бисквитки
           </h1>

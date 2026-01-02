@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Heart, Shield, Compass, Sunrise } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import separationHeader from "@/assets/separation-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Раздяла",
   subtitle: "Психологично консултиране",
   description: "Професионална помощ при преживяване на раздяла и възстановяване на емоционалното благополучие.",
-  heroImage: conditionsHeader,
+  heroImage: separationHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

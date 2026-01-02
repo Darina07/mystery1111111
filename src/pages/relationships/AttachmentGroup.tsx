@@ -5,7 +5,7 @@ import { Phone, Calendar, Heart, Clock, Shield, Users, CheckCircle, Target } fro
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupAttachmentWho from "@/assets/group-attachment-who.jpg";
-import groupRelationshipsHeader from "@/assets/group-relationships-header.jpg";
+import groupAttachmentHeader from "@/assets/group-attachment-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const AttachmentGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupRelationshipsHeader})` }}
+          style={{ backgroundImage: `url(${groupAttachmentHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

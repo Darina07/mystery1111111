@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import cbtHeader from "@/assets/cbt-header.jpg";
 
 const CBT = () => {
   return (
     <TherapeuticApproachTemplate
       title="Когнитивно-поведенческа терапия"
       subtitle="Структуриран и практичен подход за промяна на мисловните и поведенческите модели"
-      headerImage={psychoanalysisHeader}
+      headerImage={cbtHeader}
       description={[
         "Когнитивно-поведенческата терапия (КПТ) е един от най-изследваните и доказано ефективни психотерапевтични подходи. Тя се основава на идеята, че нашите мисли, емоции и поведение са взаимосвързани и че промяната в един от тези компоненти води до промяна в останалите.",
         "КПТ е структуриран, целенасочен и практически ориентиран подход. Работата е фокусирана върху настоящето и конкретните проблеми, като се използват специфични техники за идентифициране и промяна на негативните мисловни модели и неадаптивните поведения.",

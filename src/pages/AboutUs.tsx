@@ -178,7 +178,7 @@ const AboutUs = () => {
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
-            <div className="absolute inset-0 bg-deep-navy/60" />
+            <div className="absolute inset-0 bg-background/80" />
           </div>
         ))}
         

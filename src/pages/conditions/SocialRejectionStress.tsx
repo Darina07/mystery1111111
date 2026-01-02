@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Shield, Users } from "lucide-react";
-import lgbtCounseling from "@/assets/lgbt-counseling.jpg";
+import socialRejectionStressHeader from "@/assets/social-rejection-stress-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Стрес от социално отхвърляне",
   subtitle: "Психологично консултиране за ЛГБТ+",
   description: "Професионална подкрепа за справяне със стреса от дискриминация и социално отхвърляне.",
-  heroImage: lgbtCounseling,
+  heroImage: socialRejectionStressHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

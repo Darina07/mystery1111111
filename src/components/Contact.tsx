@@ -128,7 +128,7 @@ export const Contact = () => {
           {/* Contact Form */}
           <div className="bg-card rounded-2xl p-8 shadow-card">
             <h3 className="font-heading text-2xl font-semibold mb-6">
-              Запазете час
+              Изпратете запитване
             </h3>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>

@@ -1,42 +1,49 @@
 import { Brain, Users, Baby, UsersRound, Mic2, ClipboardCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const services = [
   {
     icon: Brain,
     title: "Психологично консултиране и психотерапия",
     description:
       "Индивидуална психологична подкрепа при тревожност, депресия, стрес, бърнаут, житейски кризи и други емоционални затруднения.",
+    link: "/services/psychological-counseling",
   },
   {
     icon: Users,
     title: "За двойки и семейства",
     description:
       "Консултиране за двойки и семейства с брачен консултант, семеен психолог и сексолог – при партньорски, семейни и интимни проблеми.",
+    link: "/services/family-counseling",
   },
   {
     icon: Baby,
     title: "Детско-юношеско консултиране",
     description:
       "Психологична подкрепа за деца и тийнейджъри с емоционални, поведенчески, социални и училищни затруднения.",
+    link: "/services/child-counseling",
   },
   {
     icon: UsersRound,
     title: "Групови програми",
     description:
       "Групови програми за споделяне, подкрепа и развитие – зависимости, отношения, родителство и личностно развитие.",
+    link: "/services/group-programs",
   },
   {
     icon: Mic2,
     title: "Логопед",
     description:
       "Диагностика и терапия на говорни, езикови и комуникативни нарушения при деца и възрастни.",
+    link: "/services/speech-therapy",
   },
   {
     icon: ClipboardCheck,
     title: "Психодиагностика",
     description:
       "Психологични оценки и изследвания на когнитивни способности, емоционално състояние и личностови характеристики.",
+    link: "/services/psychodiagnostics",
   },
 ];
 
@@ -62,9 +69,10 @@ export const Services = () => {
         {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <div
+            <Link
+              to={service.link}
               key={service.title}
-              className="group relative bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1"
+              className="group relative bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-lavender/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -82,12 +90,12 @@ export const Services = () => {
                   {service.description}
                 </p>
 
-                <button className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all duration-300">
+                <span className="inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all duration-300">
                   Научи повече
                   <ArrowRight className="h-4 w-4" />
-                </button>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

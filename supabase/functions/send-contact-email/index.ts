@@ -61,7 +61,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Център Дар <onboarding@resend.dev>",
-        to: ["info@darpsiholog.bg"],
+        to: ["info@dar-psiholog.com"],
         subject: `Ново запитване от ${name}`,
         html: `
           <h2>Ново запитване от уебсайта</h2>

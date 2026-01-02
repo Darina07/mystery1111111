@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import gestaltTherapyHeader from "@/assets/gestalt-therapy-header.jpg";
 
 const GestaltTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Гещалт терапия"
       subtitle="Осъзнаване в момента, личната отговорност и автентичният контакт със себе си"
-      headerImage={psychoanalysisHeader}
+      headerImage={gestaltTherapyHeader}
       description={[
         "Гещалт терапията е хуманистичен психотерапевтичен подход, разработен от Фриц Пърлс, който поставя акцент върху осъзнаването \"тук и сега\", личната отговорност и автентичния контакт със себе си и другите.",
         "Думата \"гещалт\" означава \"цяло\" на немски, отразявайки философията, че човек трябва да бъде разбиран като цялостно същество - тяло, емоции, мисли и поведение са неразделно свързани. Терапията работи с това, което се случва в настоящия момент, вместо да анализира миналото.",

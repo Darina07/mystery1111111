@@ -423,8 +423,8 @@ const AboutUs = () => {
                   {
                     icon: Mail,
                     label: "Имейл",
-                    value: "info@darpsiholog.bg",
-                    href: "mailto:info@darpsiholog.bg",
+                    value: "info@dar-psiholog.com",
+                    href: "mailto:info@dar-psiholog.com",
                   },
                   {
                     icon: MapPin,

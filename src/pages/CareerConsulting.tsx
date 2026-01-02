@@ -289,7 +289,7 @@ const CareerConsulting = () => {
                     </div>
                     <div>
                       <p className="text-sm text-[#3B3A64]/70">Имейл</p>
-                      <p className="text-[#221A42] font-medium">info@darpsiholog.bg</p>
+                      <p className="text-[#221A42] font-medium">info@dar-psiholog.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md">

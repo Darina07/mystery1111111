@@ -121,11 +121,11 @@ export const Footer = () => {
                 <span>+359 887 079 256</span>
               </a>
               <a
-                href="mailto:info@darpsiholog.bg"
+                href="mailto:info@dar-psiholog.com"
                 className="flex items-center gap-3 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
               >
                 <Mail className="h-5 w-5" />
-                info@darpsiholog.bg
+                info@dar-psiholog.com
               </a>
               
               <div className="pt-2">

@@ -114,7 +114,7 @@ const CookiePolicy = () => {
                 Ако имате въпроси относно нашата политика за бисквитки, моля свържете се с нас:
               </p>
               <p className="mt-4">
-                <strong>Имейл:</strong> info@darpsiholog.bg<br />
+                <strong>Имейл:</strong> info@dar-psiholog.com<br />
                 <strong>Телефон:</strong> +359 887 079 256<br />
                 <strong>Адрес:</strong> София, кв. Лозенец, ул. Кишинев 18
               </p>

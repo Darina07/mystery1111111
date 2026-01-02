@@ -209,12 +209,16 @@ const BlogPost = () => {
             Свържете се с нас за консултация или запишете час при наш специалист.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-[#8F7BBF] hover:bg-[#7F96C3] text-white">
-              Запишете консултация
-            </Button>
-            <Button variant="outline" className="border-[#8F7BBF] text-[#8F7BBF] hover:bg-[#8F7BBF]/10">
-              Вижте услугите ни
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-[#8F7BBF] hover:bg-[#7F96C3] text-white">
+                КОНТАКТИ
+              </Button>
+            </Link>
+            <Link to="/services">
+              <Button variant="outline" className="border-[#8F7BBF] text-[#8F7BBF] hover:bg-[#8F7BBF]/10">
+                УСЛУГИ
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

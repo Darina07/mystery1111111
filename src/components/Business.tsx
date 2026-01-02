@@ -20,7 +20,7 @@ const services = [
 
 export const Business = () => {
   return (
-    <section id="business" className="py-24 bg-background">
+    <section id="business" className="py-16 bg-background">
       <div className="container">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">

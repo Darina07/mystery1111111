@@ -25,7 +25,7 @@ const values = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-16 bg-background">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Content */}

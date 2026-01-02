@@ -112,7 +112,7 @@ const BlogPost = () => {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="prose prose-lg max-w-none [&_h2]:font-playfair [&_h2]:text-[#8F7BBF] [&_h2]:text-3xl [&_h2]:md:text-4xl [&_h2]:font-bold [&_h2]:mt-16 [&_h2]:mb-8 [&_h3]:font-playfair [&_h3]:text-[#8F7BBF] [&_h3]:text-xl [&_h3]:md:text-2xl [&_h3]:font-semibold [&_h3]:mt-12 [&_h3]:mb-6 [&_p]:text-[#3B3A64] [&_p]:mb-8 [&_p]:leading-loose [&_p]:text-lg [&_li]:text-[#3B3A64] [&_li]:mb-4 [&_li]:text-lg [&_strong]:text-[#221A42] [&_ul]:my-8 [&_ul]:pl-6 [&_ul]:list-disc [&_ul_li::marker]:text-[#8F7BBF] [&_blockquote]:border-l-4 [&_blockquote]:border-[#8F7BBF] [&_blockquote]:bg-[#8F7BBF]/5 [&_blockquote]:py-4 [&_blockquote]:px-6 [&_blockquote]:rounded-r-lg [&_blockquote]:italic [&_blockquote]:my-10 [&_hr]:my-14 [&_hr]:border-[#8F7BBF]/20">
+            <div className="prose prose-lg max-w-none [&_h2]:font-playfair [&_h2]:text-[#8F7BBF] [&_h2]:text-3xl [&_h2]:md:text-4xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-6 [&_h3]:font-playfair [&_h3]:text-[#8F7BBF] [&_h3]:text-xl [&_h3]:md:text-2xl [&_h3]:font-semibold [&_h3]:mt-8 [&_h3]:mb-4 [&_p]:text-[#3B3A64] [&_p]:mb-8 [&_p]:leading-loose [&_p]:text-lg [&_li]:text-[#3B3A64] [&_li]:mb-4 [&_li]:text-lg [&_strong]:text-[#221A42] [&_ul]:my-8 [&_ul]:pl-6 [&_ul]:list-disc [&_ul_li::marker]:text-[#8F7BBF] [&_blockquote]:border-l-4 [&_blockquote]:border-[#8F7BBF] [&_blockquote]:bg-[#8F7BBF]/5 [&_blockquote]:py-4 [&_blockquote]:px-6 [&_blockquote]:rounded-r-lg [&_blockquote]:italic [&_blockquote]:my-10 [&_hr]:my-14 [&_hr]:border-[#8F7BBF]/20">
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
             

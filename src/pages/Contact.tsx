@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Youtube, Linkedin, Loader2 } from "lucide-react";
 import {
@@ -14,10 +14,6 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
-const breadcrumbItems = [
-  { label: "Начало", href: "/" },
-  { label: "Контакти" }
-];
 
 const contactInfo = [
   {
@@ -154,10 +150,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <div className="container pt-8">
-        <PageBreadcrumb items={breadcrumbItems} />
-      </div>
 
       {/* Contact Section */}
       <section className="py-20 bg-background">

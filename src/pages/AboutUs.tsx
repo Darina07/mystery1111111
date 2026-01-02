@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { Button } from "@/components/ui/button";
 import { 
   Phone, Mail, MapPin, Clock, ChevronLeft, ChevronRight,
@@ -142,10 +142,6 @@ const faqItems = [
   }
 ];
 
-const breadcrumbItems = [
-  { label: "Начало", href: "/" },
-  { label: "За нас" }
-];
 
 const AboutUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -234,10 +230,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <div className="container pt-8">
-        <PageBreadcrumb items={breadcrumbItems} />
-      </div>
 
       {/* About Section */}
       <section className="py-20 bg-background">

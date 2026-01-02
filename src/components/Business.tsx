@@ -41,21 +41,21 @@ export const Business = () => {
             <Link 
               to={service.link}
               key={service.title}
-              className="p-8 rounded-2xl bg-lavender/30 border border-primary/10 hover:shadow-card transition-all duration-300 group block"
+              className="p-5 rounded-xl bg-lavender/30 border border-primary/10 hover:shadow-card transition-all duration-300 group block"
             >
-              <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                <service.icon className="h-8 w-8 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                <service.icon className="h-6 w-6 text-primary" />
               </div>
               
-              <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
+              <h3 className="font-heading text-lg font-semibold text-foreground mb-3">
                 {service.title}
               </h3>
               
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
                 {service.description}
               </p>
               
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.map((tag) => (
                   <span 
                     key={tag}

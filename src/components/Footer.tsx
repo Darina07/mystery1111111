@@ -29,12 +29,12 @@ export const Footer = () => {
     <footer className="bg-indigo text-primary-foreground">
       <div className="container py-10">
         {/* Logo */}
-        <div className="mb-4 text-center">
+        <div className="mb-2 text-center">
           <a href="#home" className="inline-block">
             <img
               src={darLogo}
               alt="Дар - Психологичен център"
-              className="h-44 w-auto mx-auto -my-6"
+              className="h-44 w-auto mx-auto -my-10"
             />
           </a>
         </div>

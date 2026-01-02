@@ -13,10 +13,6 @@ const PrivacyPolicy = () => {
           </h1>
           
           <div className="prose prose-lg max-w-none text-muted-foreground">
-            <p className="text-lg mb-6">
-              Последна актуализация: Януари 2025
-            </p>
-            
             <section className="mb-8">
               <h2 className="font-heading text-2xl font-semibold text-foreground mb-4">
                 1. Въведение

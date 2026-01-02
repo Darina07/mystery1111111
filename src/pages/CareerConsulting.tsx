@@ -280,7 +280,7 @@ const CareerConsulting = () => {
                     </div>
                     <div>
                       <p className="text-sm text-[#3B3A64]/70">Телефон</p>
-                      <p className="text-[#221A42] font-medium">+359 88 888 8888</p>
+                      <p className="text-[#221A42] font-medium">+359 887 079 256</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md">
@@ -289,7 +289,7 @@ const CareerConsulting = () => {
                     </div>
                     <div>
                       <p className="text-sm text-[#3B3A64]/70">Имейл</p>
-                      <p className="text-[#221A42] font-medium">info@dar.bg</p>
+                      <p className="text-[#221A42] font-medium">info@darpsiholog.bg</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-md">
@@ -298,7 +298,7 @@ const CareerConsulting = () => {
                     </div>
                     <div>
                       <p className="text-sm text-[#3B3A64]/70">Адрес</p>
-                      <p className="text-[#221A42] font-medium">кв. Лозенец, ул. Кишинев 18, София</p>
+                      <p className="text-[#221A42] font-medium">България, София, ж.к. Лозенец, ул. Кишинев 18</p>
                     </div>
                   </div>
                 </div>
@@ -306,14 +306,14 @@ const CareerConsulting = () => {
                 {/* Map */}
                 <div className="mt-6 rounded-xl overflow-hidden shadow-md">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.123456789!2d23.3134!3d42.6731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa856b5f5f5f5f%3A0x1234567890abcdef!2z0YPQuy4g0JrQuNGI0LjQvdC10LIgMTgsINCh0L7RhNC40Y8!5e0!3m2!1sbg!2sbg!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.0!2d23.3176!3d42.6765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa859f0c0c0c0f%3A0x0!2sKishinev%2018%2C%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sbg!4v1704200000000"
                     width="100%"
                     height="200"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Карта - ул. Кишинев 18, кв. Лозенец, София"
+                    title="Карта - ул. Кишинев 18, ж.к. Лозенец, София"
                   />
                 </div>
               </div>
@@ -393,7 +393,7 @@ const ContactForm = () => {
           type="tel"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          placeholder="+359 88 888 8888"
+          placeholder="+359 887 079 256"
           className="border-[#8F7BBF]/30 focus:border-[#8F7BBF]"
         />
       </div>

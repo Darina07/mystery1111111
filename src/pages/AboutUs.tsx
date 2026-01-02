@@ -461,14 +461,14 @@ const AboutUs = () => {
               {/* Map */}
               <div className="relative rounded-2xl overflow-hidden h-64 bg-muted">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.1234567890123!2d23.3219!3d42.6751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDQwJzMwLjQiTiAyM8KwMTknMTguOCJF!5e0!3m2!1sen!2sbg!4v1234567890123"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.0!2d23.3176!3d42.6765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa859f0c0c0c0f%3A0x0!2sKishinev%2018%2C%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sbg!4v1704200000000"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Локация на център Дар"
+                  title="Локация на център Дар - ул. Кишинев 18, ж.к. Лозенец, София"
                   className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
                 />
               </div>

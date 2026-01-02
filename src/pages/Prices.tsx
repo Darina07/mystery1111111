@@ -423,9 +423,8 @@ const Prices = () => {
                   />
                 </div>
 
-                <Button variant="cta" size="lg" className="w-full">
-                  Изпратете запитване
-                  <ArrowRight className="h-4 w-4" />
+                <Button variant="cta" size="lg" className="w-full uppercase">
+                  ИЗПРАТИ
                 </Button>
               </form>
             </div>

@@ -5,7 +5,7 @@ import { Phone, Calendar, MessageCircle, Users, Shield, Smile, CheckCircle, Star
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupSocialSkillsBg from "@/assets/group-social-skills-bg.jpg";
-import groupRelationshipsHeader from "@/assets/group-relationships-header.jpg";
+import groupSocialSkillsHeader from "@/assets/group-social-skills-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const SocialSkillsGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupRelationshipsHeader})` }}
+          style={{ backgroundImage: `url(${groupSocialSkillsHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

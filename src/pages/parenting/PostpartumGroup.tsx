@@ -5,7 +5,7 @@ import { Phone, Calendar, Heart, Users, Shield, Sparkles, CheckCircle, Baby } fr
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupPostpartumBg from "@/assets/group-postpartum-bg.jpg";
-import groupParentingHeader from "@/assets/group-parenting-header.jpg";
+import groupPostpartumHeader from "@/assets/group-postpartum-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const PostpartumGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupParentingHeader})` }}
+          style={{ backgroundImage: `url(${groupPostpartumHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

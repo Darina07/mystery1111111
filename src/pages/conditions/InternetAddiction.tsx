@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Target, Shield, Users } from "lucide-react";
-import conditionsSupport from "@/assets/conditions-support.jpg";
+import internetAddictionHeader from "@/assets/internet-addiction-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Интернет и дигитална зависимост",
   subtitle: "Психологично консултиране",
   description: "Професионална подкрепа за възстановяване на здравословен баланс с технологиите.",
-  heroImage: conditionsSupport,
+  heroImage: internetAddictionHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

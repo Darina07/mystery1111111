@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Zap, Brain, Heart, Sun } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import fatigueHeader from "@/assets/fatigue-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Умора",
   subtitle: "Психологично консултиране",
   description: "Възстановяване на енергията и жизнеността чрез разбиране на причините за умората.",
-  heroImage: conditionsHeader,
+  heroImage: fatigueHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

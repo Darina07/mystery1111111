@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Users, Sparkles } from "lucide-react";
-import childCounselingHeader from "@/assets/child-counseling-header.jpg";
+import rettSyndromeHeader from "@/assets/rett-syndrome-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Синдром на Рет",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца със синдром на Рет и техните семейства.",
-  heroImage: childCounselingHeader,
+  heroImage: rettSyndromeHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

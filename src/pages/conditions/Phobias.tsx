@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Eye, Target, Heart, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import phobiasHeader from "@/assets/phobias-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Фобии",
   subtitle: "Психологично консултиране",
   description: "Доказани методи за освобождаване от ирационални страхове и фобии.",
-  heroImage: conditionsHeader,
+  heroImage: phobiasHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

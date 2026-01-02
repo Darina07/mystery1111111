@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import playTherapyHeader from "@/assets/play-therapy-header.jpg";
 
 const PlayTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Игрова терапия"
       subtitle="Естествен начин за изразяване и терапевтична работа с деца чрез играта"
-      headerImage={psychoanalysisHeader}
+      headerImage={playTherapyHeader}
       description={[
         "Игровата терапия е специализиран психотерапевтичен подход, който използва играта като основно средство за комуникация и изцеление. За децата играта е естественият език - чрез нея те изразяват чувства, преработват преживявания и разбират света около себе си.",
         "В игровата терапия детето избира играчки и занимания от специално оборудвана игрова стая. Терапевтът създава безопасна среда, в която детето може свободно да изследва, да изразява емоциите си и да работи с трудни преживявания по свой собствен начин.",

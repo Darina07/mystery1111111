@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, BookOpen, Sparkles } from "lucide-react";
-import learningDifficulties from "@/assets/learning-difficulties.jpg";
+import specialEducationalNeedsHeader from "@/assets/special-educational-needs-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Специални образователни потребности (СОП)",
   subtitle: "Детско консултиране",
   description: "Психологическа подкрепа за деца със специални образователни потребности.",
-  heroImage: learningDifficulties,
+  heroImage: specialEducationalNeedsHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

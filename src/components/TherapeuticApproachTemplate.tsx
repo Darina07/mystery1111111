@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, Users, Target } from "lucide-react";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
-import therapyBg from "@/assets/therapeutic-approaches-header.jpg";
+import suitableForBg from "@/assets/suitable-for-bg.jpg";
 
 interface Benefit {
   title: string;
@@ -133,7 +133,7 @@ export const TherapeuticApproachTemplate = ({
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${therapyBg})` }}
+          style={{ backgroundImage: `url(${suitableForBg})` }}
         />
         <div className="absolute inset-0 bg-deep-navy/85" />
         

@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import artTherapyHeader from "@/assets/art-therapy-header.jpg";
 
 const ArtTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Арт терапия"
       subtitle="Творческо изразяване на вътрешни преживявания чрез изобразително изкуство"
-      headerImage={psychoanalysisHeader}
+      headerImage={artTherapyHeader}
       description={[
         "Арт терапията е форма на психотерапия, която използва творческия процес на създаване на изкуство за подобряване на психичното, емоционалното и физическото благополучие. Не е необходимо да имате художествен талант – важен е процесът, а не крайният резултат.",
         "Чрез рисуване, живопис, скулптура, колаж и други художествени техники можете да изразите чувства и мисли, които са трудни за вербализиране. Арт терапията предоставя безопасен начин за изследване на емоциите, разрешаване на конфликти и развиване на себепознание.",

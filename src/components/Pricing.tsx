@@ -1,6 +1,6 @@
 import { Check, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { Link } from "react-router-dom";
 const pricingItems = [
   {
     title: "Индивидуални и семейни консултации",
@@ -120,10 +120,11 @@ export const Pricing = () => {
 
                 <Button
                   variant={item.popular ? "cta" : "outline"}
-                  className="w-full"
+                  className="w-full uppercase"
                   size="lg"
+                  asChild
                 >
-                  Запазете час
+                  <Link to="/contact">СВЪРЖЕТЕ СЕ С НАС ЗА ЧАС</Link>
                 </Button>
               </div>
             </div>

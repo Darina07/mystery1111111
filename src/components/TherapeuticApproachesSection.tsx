@@ -95,13 +95,13 @@ export const TherapeuticApproachesSection = () => {
           {approachCategories.map((category) => (
             <div
               key={category.title}
-              className="bg-card rounded-2xl p-6 shadow-sm border border-primary/10 hover:shadow-card transition-all duration-300"
+              className="bg-card rounded-xl p-4 shadow-sm border border-primary/10 hover:shadow-card transition-all duration-300"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-md`}>
-                  <category.icon className="h-5 w-5 text-white" />
+              <div className="flex items-center gap-2 mb-3">
+                <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center shadow-md`}>
+                  <category.icon className="h-4 w-4 text-white" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-foreground">
+                <h3 className="font-heading text-base font-semibold text-foreground">
                   {category.title}
                 </h3>
               </div>

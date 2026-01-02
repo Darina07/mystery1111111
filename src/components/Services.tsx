@@ -72,14 +72,14 @@ export const Services = () => {
             <Link
               to={service.link}
               key={service.title}
-              className="group relative bg-card rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 block"
+              className="group relative bg-card rounded-xl p-5 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-lavender/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-lavender/5 to-accent/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative space-y-4">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="h-7 w-7 text-primary" />
+              <div className="relative space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <service.icon className="h-6 w-6 text-primary" />
                 </div>
 
                 <h3 className="font-heading text-xl font-semibold">

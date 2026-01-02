@@ -1,7 +1,7 @@
-import { Calendar, ArrowRight, User } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
+import { Link } from "react-router-dom";
 interface BlogPost {
   id: number;
   title: string;
@@ -73,10 +73,6 @@ export const Blog = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                   <span className="flex items-center gap-1">
-                    <User className="h-4 w-4" />
-                    {post.author}
-                  </span>
-                  <span className="flex items-center gap-1">
                     <Calendar className="h-4 w-4" />
                     {post.date}
                   </span>
@@ -100,9 +96,8 @@ export const Blog = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            Всички статии
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase" asChild>
+            <Link to="/blog">ВСИЧКИ СТАТИИ</Link>
           </Button>
         </div>
       </div>

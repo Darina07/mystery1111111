@@ -1,6 +1,6 @@
 import { Brain, Users, Baby, UsersRound, Mic2, ClipboardCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { Link } from "react-router-dom";
 const services = [
   {
     icon: Brain,
@@ -93,9 +93,8 @@ export const Services = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
-            Вижте всички услуги
-            <ArrowRight className="h-4 w-4" />
+          <Button variant="outline" size="lg" className="uppercase" asChild>
+            <Link to="/services">ВИЖТЕ ВСИЧКИ УСЛУГИ</Link>
           </Button>
         </div>
       </div>

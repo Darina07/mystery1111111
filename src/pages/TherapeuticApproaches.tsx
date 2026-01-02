@@ -267,13 +267,14 @@ const TherapeuticApproaches = () => {
         
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
-              <Heart className="h-8 w-8 text-primary" />
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
+                <Heart className="h-7 w-7 text-primary" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold gradient-text">
+                Индивидуален, екипен и интегративен подход
+              </h2>
             </div>
-            
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              Индивидуален, екипен и интегративен подход
-            </h2>
             
             <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
               Нашата работа се основава на екипно сътрудничество и индивидуален подход. Благодарение на различните специалисти в екипа ни и техните професионални специализации, можем да предложим цялостна и гъвкава подкрепа, съобразена с конкретните нужди на всеки клиент.

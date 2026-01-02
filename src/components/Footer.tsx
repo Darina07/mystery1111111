@@ -1,27 +1,28 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import darLogo from "@/assets/dar-logo-transparent.svg";
 
 const popularTherapies = [
-  "Аутизъм и аутистичен спектър",
-  "Хиперактивност (ADHD)",
-  "Тревожност и паник атаки",
-  "Депресивни състояния",
-  "Зависимости",
-  "Бърнаут",
-  "Заекване",
+  { name: "Аутизъм и аутистичен спектър", path: "/conditions/autism" },
+  { name: "Хиперактивност (ADHD)", path: "/conditions/adhd" },
+  { name: "Тревожност и паник атаки", path: "/conditions/anxiety" },
+  { name: "Депресивни състояния", path: "/conditions/depression" },
+  { name: "Зависимости", path: "/group-programs/addictions" },
+  { name: "Бърнаут", path: "/conditions/burnout" },
+  { name: "Заекване", path: "/conditions/stuttering" },
 ];
 
 const services = [
-  "Индивидуално консултиране и психотерапия",
-  "Семейно и брачно консултиране",
-  "Детски и юношески услуги",
-  "Логопедия",
-  "Психодиагностика",
+  { name: "Индивидуално консултиране и психотерапия", path: "/services/psychological-counseling" },
+  { name: "Семейно и брачно консултиране", path: "/services/family-counseling" },
+  { name: "Детски и юношески услуги", path: "/services/child-counseling" },
+  { name: "Логопедия", path: "/services/speech-therapy" },
+  { name: "Психодиагностика", path: "/services/psychodiagnostics" },
 ];
 
 const professionalDevelopment = [
-  "Кариерно и професионално развитие",
-  "Работа с екипи и организации",
+  { name: "Кариерно и професионално развитие", path: "/services/career-consulting" },
+  { name: "Работа с екипи и организации", path: "/services/corporate-services" },
 ];
 
 export const Footer = () => {
@@ -47,10 +48,13 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {popularTherapies.map((therapy) => (
-                <li key={therapy}>
-                  <span className="text-primary-foreground/70 hover:text-primary-foreground transition-colors cursor-default">
-                    {therapy}
-                  </span>
+                <li key={therapy.name}>
+                  <Link 
+                    to={therapy.path}
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                  >
+                    {therapy.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -61,10 +65,13 @@ export const Footer = () => {
             <h4 className="font-heading text-lg font-semibold mb-6">Услуги</h4>
             <ul className="space-y-3">
               {services.map((service) => (
-                <li key={service}>
-                  <span className="text-primary-foreground/70 hover:text-primary-foreground transition-colors cursor-default">
-                    {service}
-                  </span>
+                <li key={service.name}>
+                  <Link 
+                    to={service.path}
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,10 +84,13 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {professionalDevelopment.map((item) => (
-                <li key={item}>
-                  <span className="text-primary-foreground/70 hover:text-primary-foreground transition-colors cursor-default">
-                    {item}
-                  </span>
+                <li key={item.name}>
+                  <Link 
+                    to={item.path}
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -112,12 +122,12 @@ export const Footer = () => {
               </a>
               
               <div className="pt-2">
-                <a 
-                  href="#prices"
+                <Link 
+                  to="/prices"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-medium"
                 >
                   Цени
-                </a>
+                </Link>
               </div>
 
               <div className="pt-2">

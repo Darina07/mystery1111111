@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { RefreshCw, Brain, Target, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import ocdHeader from "@/assets/ocd-header.jpg";
 
 const conditionData: ConditionData = {
   title: "ОКР",
   subtitle: "Психологично консултиране",
   description: "Специализирана помощ за управление на натрапчивите мисли и ритуали.",
-  heroImage: conditionsHeader,
+  heroImage: ocdHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

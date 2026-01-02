@@ -147,6 +147,14 @@ import PositiveTherapy from "./pages/approaches/PositiveTherapy";
 import FamilyTherapy from "./pages/approaches/FamilyTherapy";
 import TransgenerationalTherapy from "./pages/approaches/TransgenerationalTherapy";
 import CouplesTherapy from "./pages/approaches/CouplesTherapy";
+import EMDR from "./pages/approaches/EMDR";
+import SomaticExperiencing from "./pages/approaches/SomaticExperiencing";
+import BioenergeticTherapy from "./pages/approaches/BioenergticTherapy";
+import BodyPsychotherapy from "./pages/approaches/BodyPsychotherapy";
+import DanceMovementTherapy from "./pages/approaches/DanceMovementTherapy";
+import ArtTherapy from "./pages/approaches/ArtTherapy";
+import MusicTherapy from "./pages/approaches/MusicTherapy";
+import PlayTherapy from "./pages/approaches/PlayTherapy";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -309,6 +317,14 @@ const App = () => (
           <Route path="/approaches/family-therapy" element={<FamilyTherapy />} />
           <Route path="/approaches/transgenerational-therapy" element={<TransgenerationalTherapy />} />
           <Route path="/approaches/couples-therapy" element={<CouplesTherapy />} />
+          <Route path="/approaches/emdr" element={<EMDR />} />
+          <Route path="/approaches/somatic-experiencing" element={<SomaticExperiencing />} />
+          <Route path="/approaches/bioenergetic-therapy" element={<BioenergeticTherapy />} />
+          <Route path="/approaches/body-psychotherapy" element={<BodyPsychotherapy />} />
+          <Route path="/approaches/dance-movement-therapy" element={<DanceMovementTherapy />} />
+          <Route path="/approaches/art-therapy" element={<ArtTherapy />} />
+          <Route path="/approaches/music-therapy" element={<MusicTherapy />} />
+          <Route path="/approaches/play-therapy" element={<PlayTherapy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

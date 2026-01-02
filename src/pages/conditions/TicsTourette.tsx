@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Shield, Users } from "lucide-react";
-import childCounselingHeader from "@/assets/child-counseling-header.jpg";
+import childTicsHeader from "@/assets/child-tics-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Тикове и синдром на Турет",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца с тикове и синдром на Турет.",
-  heroImage: childCounselingHeader,
+  heroImage: childTicsHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

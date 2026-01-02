@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Shield, Users } from "lucide-react";
-import childCounselingHeader from "@/assets/child-counseling-header.jpg";
+import childSelfEsteemHeader from "@/assets/child-self-esteem-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Занижена самооценка",
   subtitle: "Детско консултиране",
   description: "Подкрепа за деца с ниска самооценка и липса на увереност.",
-  heroImage: childCounselingHeader,
+  heroImage: childSelfEsteemHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

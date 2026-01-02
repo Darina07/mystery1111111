@@ -46,11 +46,16 @@ const BlogPost = () => {
         </div>
       </section>
 
-      {/* Date below header */}
+      {/* Date and category below header */}
       <div className="container mx-auto px-4 py-6">
-        <div className="max-w-3xl mx-auto flex items-center gap-2 text-[#3B3A64]/70">
-          <Calendar className="w-4 h-4" />
-          <span>{post.date}</span>
+        <div className="max-w-3xl mx-auto flex items-center gap-4">
+          <Badge className="bg-[#8F7BBF]/20 text-[#8F7BBF] hover:bg-[#8F7BBF]/30">
+            {post.categoryLabel}
+          </Badge>
+          <div className="flex items-center gap-2 text-[#3B3A64]/70">
+            <Calendar className="w-4 h-4" />
+            <span>{post.date}</span>
+          </div>
         </div>
       </div>
 

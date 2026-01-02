@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import danceMovementTherapyHeader from "@/assets/dance-movement-therapy-header.jpg";
 
 const DanceMovementTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Танцово-двигателна терапия"
       subtitle="Използване на движението като средство за изразяване, осъзнаване и личностно развитие"
-      headerImage={psychoanalysisHeader}
+      headerImage={danceMovementTherapyHeader}
       description={[
         "Танцово-двигателната терапия (ТДТ) е форма на психотерапия, която използва движението и танца като основни терапевтични инструменти. Този подход се основава на разбирането, че тялото и умът са взаимосвързани и че движението може да води до емоционални, когнитивни и социални промени.",
         "В ТДТ не е нужно да имате танцов опит или специални умения. Движението е естествен израз на човека и всеки може да участва. Терапевтът създава безопасно пространство, в което можете да изследвате своите чувства, мисли и взаимоотношения чрез движение.",

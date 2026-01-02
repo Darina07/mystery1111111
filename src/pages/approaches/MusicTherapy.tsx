@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import musicTherapyHeader from "@/assets/music-therapy-header.jpg";
 
 const MusicTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Музикотерапия"
       subtitle="Използване на музиката като средство за емоционална регулация, комуникация и личностно развитие"
-      headerImage={psychoanalysisHeader}
+      headerImage={musicTherapyHeader}
       description={[
         "Музикотерапията е научно обоснована терапевтична практика, която използва музиката за постигане на терапевтични цели. Не е необходимо да имате музикални умения или познания – музиката е универсален език, достъпен за всеки.",
         "В музикотерапията можете да слушате музика, да пеете, да свирите на инструменти или да създавате музика спонтанно. Музиката има уникалната способност да достига до дълбоки емоционални слоеве и да активира спомени, чувства и преживявания по начин, недостъпен за вербалната терапия.",

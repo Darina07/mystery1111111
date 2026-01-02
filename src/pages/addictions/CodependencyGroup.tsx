@@ -5,7 +5,7 @@ import { Phone, Calendar, Shield, Lock, Users, Heart, CheckCircle, Clock, HandHe
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupCodependencyWho from "@/assets/group-codependency-who.jpg";
-import groupAddictions from "@/assets/group-addictions.jpg";
+import groupCodependencyHeader from "@/assets/group-codependency-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -67,7 +67,7 @@ const CodependencyGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupAddictions})` }}
+          style={{ backgroundImage: `url(${groupCodependencyHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

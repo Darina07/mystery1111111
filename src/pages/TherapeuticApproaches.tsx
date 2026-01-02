@@ -246,28 +246,28 @@ const TherapeuticApproaches = () => {
       ))}
 
       {/* Final CTA Section */}
-      <section className="py-20 md:py-28 bg-indigo text-primary-foreground relative overflow-hidden">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-lavender/10 via-background to-soft-blue/10 relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-lavender/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-soft-blue/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
         
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
-              <Heart className="h-8 w-8 text-white" />
+            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
+              <Heart className="h-8 w-8 text-primary" />
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
               Индивидуален, екипен и интегративен подход
             </h2>
             
-            <p className="text-primary-foreground/80 leading-relaxed mb-6 text-lg">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
               Нашата работа се основава на екипно сътрудничество и индивидуален подход. Благодарение на различните специалисти в екипа ни и техните професионални специализации, можем да предложим цялостна и гъвкава подкрепа, съобразена с конкретните нужди на всеки клиент.
             </p>
             
-            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-              <p className="text-primary-foreground/90 leading-relaxed italic">
-                Най-важното за нас е създаването на <strong className="text-white">безопасно, подкрепящо и неосъждащо пространство</strong>, в което промяната да се случва с уважение към личното темпо и вътрешния процес на всеки човек.
+            <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
+              <p className="text-muted-foreground leading-relaxed italic">
+                Най-важното за нас е създаването на <strong className="text-foreground">безопасно, подкрепящо и неосъждащо пространство</strong>, в което промяната да се случва с уважение към личното темпо и вътрешния процес на всеки човек.
               </p>
             </div>
           </div>

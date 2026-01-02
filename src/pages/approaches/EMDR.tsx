@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import emdrHeader from "@/assets/emdr-header.jpg";
 
 const EMDR = () => {
   return (
     <TherapeuticApproachTemplate
       title="EMDR терапия"
       subtitle="Десензитизация и преработка чрез движение на очите – доказан метод за работа с травма и посттравматичен стрес"
-      headerImage={psychoanalysisHeader}
+      headerImage={emdrHeader}
       description={[
         "EMDR (Eye Movement Desensitization and Reprocessing) е психотерапевтичен метод, разработен от Франсин Шапиро през 1987 г. Този подход е научно доказан за лечение на посттравматично стресово разстройство (ПТСР) и други състояния, свързани с травматични преживявания.",
         "EMDR работи чрез активиране на естествените способности на мозъка за преработка на информация. По време на сесията терапевтът насочва пациента да следва определени стимули (обикновено движение на очите), докато се фокусира върху травматичния спомен. Това позволява преработването на спомена по начин, който намалява емоционалния му заряд.",

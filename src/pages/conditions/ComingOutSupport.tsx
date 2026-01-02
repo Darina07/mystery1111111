@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Heart, Users, MessageCircle, Sparkles } from "lucide-react";
-import lgbtCounseling from "@/assets/lgbt-counseling.jpg";
+import comingOutHeader from "@/assets/coming-out-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Coming out подкрепа",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца и юноши в процеса на coming out.",
-  heroImage: lgbtCounseling,
+  heroImage: comingOutHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

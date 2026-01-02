@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Gauge, Brain, Heart, Wind } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import stressHeader from "@/assets/stress-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Стрес",
   subtitle: "Психологично консултиране",
   description: "Ефективни стратегии за справяне с ежедневния и хроничния стрес.",
-  heroImage: conditionsHeader,
+  heroImage: stressHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

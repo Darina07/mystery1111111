@@ -112,7 +112,7 @@ const BlogPost = () => {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="prose prose-lg max-w-none prose-headings:font-playfair prose-headings:text-[#221A42] prose-p:text-[#3B3A64] prose-p:mb-6 prose-p:leading-relaxed prose-li:text-[#3B3A64] prose-li:mb-3 prose-strong:text-[#221A42] prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-ul:my-6 prose-ul:space-y-2 prose-blockquote:border-l-4 prose-blockquote:border-[#8F7BBF] prose-blockquote:bg-[#8F7BBF]/5 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:italic prose-blockquote:my-8 prose-hr:my-10">
+            <div className="prose prose-lg max-w-none prose-headings:font-playfair prose-headings:text-[#221A42] prose-p:text-[#3B3A64] prose-p:mb-8 prose-p:leading-loose prose-li:text-[#3B3A64] prose-li:mb-4 prose-li:pl-2 prose-strong:text-[#221A42] prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-8 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-5 prose-ul:my-8 prose-ul:space-y-3 prose-ul:list-disc prose-ul:marker:text-[#8F7BBF] prose-ul:marker:text-lg prose-blockquote:border-l-4 prose-blockquote:border-[#8F7BBF] prose-blockquote:bg-[#8F7BBF]/5 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:italic prose-blockquote:my-10 prose-hr:my-12">
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
             

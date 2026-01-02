@@ -5,7 +5,7 @@ import { Phone, Calendar, Target, Rocket, Sparkles, Users, CheckCircle, Mountain
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPGoalsBg from "@/assets/group-nlp-goals-bg.jpg";
-import groupNLPHeader from "@/assets/group-nlp-header.jpg";
+import groupNLPGoalsHeader from "@/assets/group-nlp-goals-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const GoalsMotivationGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupNLPHeader})` }}
+          style={{ backgroundImage: `url(${groupNLPGoalsHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

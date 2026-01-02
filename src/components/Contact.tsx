@@ -214,17 +214,14 @@ export const Contact = () => {
                 />
               </div>
 
-              <Button variant="cta" size="lg" className="w-full" disabled={isSubmitting}>
+              <Button variant="cta" size="lg" className="w-full uppercase" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" />
-                    Изпращане...
+                    ИЗПРАЩАНЕ...
                   </>
                 ) : (
-                  <>
-                    Изпратете запитване
-                    <ArrowRight className="h-4 w-4" />
-                  </>
+                  "ИЗПРАТИ"
                 )}
               </Button>
             </form>

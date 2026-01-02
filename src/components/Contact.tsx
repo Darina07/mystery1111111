@@ -65,7 +65,7 @@ export const Contact = () => {
     <section id="contact" className="py-12">
       <div className="container">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 space-y-4">
+        <div className="text-center max-w-2xl mx-auto mb-8 space-y-3">
           <p className="text-primary font-medium tracking-wide uppercase text-sm">
             Контакти
           </p>

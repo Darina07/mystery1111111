@@ -29,7 +29,7 @@ export const About = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             <div className="inline-block">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium uppercase">
                 ЗА НАС

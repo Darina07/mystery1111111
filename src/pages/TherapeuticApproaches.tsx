@@ -229,7 +229,7 @@ const TherapeuticApproaches = () => {
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg`}>
                     <category.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h2 className="text-xl md:text-2xl font-heading font-bold text-foreground">
+                  <h2 className="text-xl md:text-2xl font-heading font-bold gradient-text">
                     {category.title}
                   </h2>
                 </div>

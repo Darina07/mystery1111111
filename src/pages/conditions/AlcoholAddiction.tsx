@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Target, Shield, Heart } from "lucide-react";
-import groupAlcoholBg from "@/assets/group-alcohol-bg.jpg";
+import alcoholAddictionHeader from "@/assets/alcohol-addiction-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Алкохолна зависимост",
   subtitle: "Психологично консултиране",
   description: "Професионална подкрепа за преодоляване на алкохолната зависимост и възстановяване на контрола върху живота ви.",
-  heroImage: groupAlcoholBg,
+  heroImage: alcoholAddictionHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

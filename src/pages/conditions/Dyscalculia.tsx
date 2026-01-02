@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Target, Calculator, Sparkles } from "lucide-react";
-import learningDifficulties from "@/assets/learning-difficulties.jpg";
+import dyscalculiaHeader from "@/assets/dyscalculia-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Дискалкулия",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца с дискалкулия и математически затруднения.",
-  heroImage: learningDifficulties,
+  heroImage: dyscalculiaHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

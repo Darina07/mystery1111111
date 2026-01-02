@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
 import { Button } from "@/components/ui/button";
 import { 
   Phone, Mail, MapPin, Clock, ChevronLeft, ChevronRight,
@@ -184,16 +184,26 @@ const AboutUs = () => {
         
         <div className="container relative z-10 h-full flex items-center justify-center min-h-[500px]">
           <div className="text-center space-y-6 max-w-3xl">
-            <p className="text-white/80 font-medium tracking-wide uppercase text-sm">
-              За нас
-            </p>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-balance">
+            <p className="text-primary font-medium mb-4">За нас</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-white">
               {heroSlides[currentSlide].title}{" "}
-              <span className="text-accent">{heroSlides[currentSlide].highlight}</span>
+              <span className="gradient-text">{heroSlides[currentSlide].highlight}</span>
             </h1>
-            <p className="text-white/90 text-xl">
+            <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
               {heroSlides[currentSlide].subtitle}
             </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to="/contact">
+                <Button variant="hero" size="lg">
+                  КОНТАКТИ
+                </Button>
+              </Link>
+              <a href="tel:+359887079256" aria-label="Обадете се">
+                <Button variant="hero-outline" size="lg">
+                  <Phone className="h-5 w-5" />
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
 

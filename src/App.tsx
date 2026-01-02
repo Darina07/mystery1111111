@@ -136,6 +136,7 @@ import SpeechDelay from "./pages/conditions/SpeechDelay";
 import Articulation from "./pages/conditions/Articulation";
 import SpecialNeedsSpeech from "./pages/conditions/SpecialNeedsSpeech";
 import { CookieConsent } from "./components/CookieConsent";
+import TherapeuticApproaches from "./pages/TherapeuticApproaches";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -287,6 +288,7 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/therapeutic-approaches" element={<TherapeuticApproaches />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

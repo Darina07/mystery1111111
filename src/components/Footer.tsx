@@ -10,6 +10,7 @@ const popularTherapies = [
   { name: "Зависимости", path: "/services/group-programs/addictions" },
   { name: "Бърнаут", path: "/conditions/burnout" },
   { name: "Заекване", path: "/conditions/stuttering" },
+  { name: "Терапевтични подходи", path: "/therapeutic-approaches" },
 ];
 
 const services = [

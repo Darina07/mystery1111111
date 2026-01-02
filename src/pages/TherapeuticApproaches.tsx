@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap, TreePine } from "lucide-react";
+import therapeuticApproachesHeader from "@/assets/therapeutic-approaches-header.jpg";
 
 const approachCategories = [
   {
@@ -133,27 +134,32 @@ const TherapeuticApproaches = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-br from-lavender/10 via-background to-soft-blue/10" />
-        <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+      <section className="relative min-h-[50vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${therapeuticApproachesHeader})` }}
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
         
-        <div className="container relative z-10">
-          <PageBreadcrumb 
-            items={[
-              { label: "Начало", href: "/" },
-              { label: "Терапевтични подходи" }
-            ]} 
-          />
-          <div className="max-w-4xl mx-auto text-center mt-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
-              Терапевтични{" "}
-              <span className="gradient-text">подходи</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Избираме подхода индивидуално – спрямо вашите нужди, цели и конкретна ситуация
-            </p>
+        <div className="container relative z-10 pt-32 pb-20 min-h-[50vh] flex items-center">
+          <div className="max-w-2xl">
+            <PageBreadcrumb 
+              items={[
+                { label: "Начало", href: "/" },
+                { label: "Терапевтични подходи" }
+              ]} 
+            />
+            <div className="mt-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+                Терапевтични{" "}
+                <span className="gradient-text">подходи</span>
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                Избираме подхода индивидуално – спрямо вашите нужди, цели и конкретна ситуация
+              </p>
+            </div>
           </div>
         </div>
       </section>

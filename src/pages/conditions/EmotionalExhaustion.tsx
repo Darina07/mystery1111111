@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { BatteryLow, Heart, Sun, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import emotionalExhaustionHeader from "@/assets/emotional-exhaustion-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Емоционално изчерпване",
   subtitle: "Психологично консултиране",
   description: "Помощ при преодоляване на емоционалното изтощение и възстановяване на вътрешния баланс.",
-  heroImage: conditionsHeader,
+  heroImage: emotionalExhaustionHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

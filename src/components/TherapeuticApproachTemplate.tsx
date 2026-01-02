@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Contact } from "@/components/Contact";
 import { Button } from "@/components/ui/button";
-import { Phone, CheckCircle, Users, Clock, Target } from "lucide-react";
+import { Phone, CheckCircle, Users, Target } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 interface Benefit {
@@ -24,8 +24,6 @@ interface TherapeuticApproachProps {
   benefits: Benefit[];
   suitableFor: string[];
   processSteps?: ProcessStep[];
-  duration?: string;
-  frequency?: string;
 }
 
 export const TherapeuticApproachTemplate = ({
@@ -36,8 +34,6 @@ export const TherapeuticApproachTemplate = ({
   benefits,
   suitableFor,
   processSteps,
-  duration,
-  frequency,
 }: TherapeuticApproachProps) => {
   return (
     <div className="min-h-screen bg-background">
@@ -185,69 +181,6 @@ export const TherapeuticApproachTemplate = ({
           </div>
         </section>
       )}
-
-      {/* Duration and Frequency Section */}
-      {(duration || frequency) && (
-        <section className="py-16 md:py-20 bg-background">
-          <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
-                  <Clock className="h-7 w-7 text-primary" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-heading font-bold">
-                  Продължителност и <span className="gradient-text">честота</span>
-                </h2>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                {duration && (
-                  <div className="bg-gradient-to-br from-lavender/10 to-lavender/5 rounded-2xl p-6 border border-lavender/20">
-                    <h3 className="font-heading font-semibold text-foreground mb-2">
-                      Продължителност на сесия
-                    </h3>
-                    <p className="text-muted-foreground">{duration}</p>
-                  </div>
-                )}
-                {frequency && (
-                  <div className="bg-gradient-to-br from-soft-blue/10 to-soft-blue/5 rounded-2xl p-6 border border-soft-blue/20">
-                    <h3 className="font-heading font-semibold text-foreground mb-2">
-                      Честота на сесии
-                    </h3>
-                    <p className="text-muted-foreground">{frequency}</p>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-lavender/10 via-background to-soft-blue/10">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-              Готови ли сте да <span className="gradient-text">започнете</span>?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Свържете се с нас, за да научите повече за {title.toLowerCase()} и да запазите първата си консултация.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/contact">
-                <Button variant="hero" size="lg">
-                  СВЪРЖЕТЕ СЕ С НАС
-                </Button>
-              </Link>
-              <a href="tel:+359887079256" aria-label="Обадете се">
-                <Button variant="hero-outline" size="lg" className="gap-2">
-                  <Phone className="h-5 w-5" />
-                  +359 887 079 256
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Contact />
       <Footer />

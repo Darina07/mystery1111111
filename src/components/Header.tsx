@@ -234,6 +234,7 @@ export const Header = () => {
               aria-label="Обадете се на +359 887 079 256"
             >
               <Phone className="h-5 w-5" />
+              <span>+359 887 079 256</span>
             </a>
           </div>
         </nav>

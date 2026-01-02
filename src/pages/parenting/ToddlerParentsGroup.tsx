@@ -5,7 +5,7 @@ import { Phone, Calendar, Heart, Users, Shield, Sparkles, CheckCircle } from "lu
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupToddlerWho from "@/assets/group-toddler-who.jpg";
-import groupParentingHeader from "@/assets/group-parenting-header.jpg";
+import groupToddlerParentsHeader from "@/assets/group-toddler-parents-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const ToddlerParentsGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupParentingHeader})` }}
+          style={{ backgroundImage: `url(${groupToddlerParentsHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

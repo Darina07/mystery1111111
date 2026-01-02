@@ -14,9 +14,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import counselingHeader from "@/assets/counseling-header.png";
-import therapyHeader from "@/assets/therapy-header.jpg";
-import familyCounselingHeader from "@/assets/family-counseling-header.jpg";
+import aboutSlider1 from "@/assets/about-slider-1.jpg";
+import aboutSlider2 from "@/assets/about-slider-2.jpg";
+import aboutSlider3 from "@/assets/about-slider-3.jpg";
 import specialistClinicalPsychologist from "@/assets/specialist-clinical-psychologist.jpg";
 import specialistPsychotherapist from "@/assets/specialist-psychotherapist.jpg";
 import specialistFamilyCounselor from "@/assets/specialist-family-counselor.jpg";
@@ -26,19 +26,19 @@ import specialistCareerConsultant from "@/assets/specialist-career-consultant.jp
 
 const heroSlides = [
   {
-    image: counselingHeader,
+    image: aboutSlider1,
     title: "Вашият път към",
     highlight: "психично здраве",
     subtitle: "Професионална подкрепа в центъра на София"
   },
   {
-    image: therapyHeader,
+    image: aboutSlider2,
     title: "Екип от",
     highlight: "специалисти",
     subtitle: "Психолози, терапевти, логопеди и консултанти"
   },
   {
-    image: familyCounselingHeader,
+    image: aboutSlider3,
     title: "Грижа за",
     highlight: "цялото семейство",
     subtitle: "Индивидуални и семейни консултации"

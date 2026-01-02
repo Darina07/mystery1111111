@@ -5,13 +5,13 @@ import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
-import coupleConflictsHeader from "@/assets/couple-conflicts-header.jpg";
+import lackOfIntimacyHeader from "@/assets/lack-of-intimacy-header.jpg";
 
 const conditionData = {
   title: "Липса на интимност",
   subtitle: "Семейно консултиране",
   description: "Възстановяване на емоционалната и физическа близост във вашата връзка.",
-  heroImage: coupleConflictsHeader,
+  heroImage: lackOfIntimacyHeader,
   parentService: {
     name: "Семейно и партньорско консултиране",
     href: "/services/family-counseling"

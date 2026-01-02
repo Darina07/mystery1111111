@@ -5,13 +5,13 @@ import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
-import coupleConflictsHeader from "@/assets/couple-conflicts-header.jpg";
+import parentChildHeader from "@/assets/parent-child-header.jpg";
 
 const conditionData = {
   title: "Отношения родители – деца",
   subtitle: "Семейно консултиране",
   description: "Подкрепа за изграждане на по-здрава връзка между родители и деца.",
-  heroImage: coupleConflictsHeader,
+  heroImage: parentChildHeader,
   parentService: {
     name: "Семейно и партньорско консултиране",
     href: "/services/family-counseling"

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import illustrationSupport from "@/assets/illustration-support.jpg";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -25,7 +25,7 @@ export const Hero = () => {
           <div className="flex flex-col gap-8">
             <div className="space-y-2 animate-fade-up">
               <p className="text-muted-foreground font-medium tracking-wide uppercase text-sm">
-                Психологичен и консултативен център
+                Психологичен и консултативен център ДАР
               </p>
             </div>
 
@@ -41,12 +41,11 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
-              <Button variant="hero" size="xl" className="uppercase">
-                КОНТАКТИ
-                <ArrowRight className="h-5 w-5" />
+              <Button variant="hero" size="xl" className="uppercase" asChild>
+                <Link to="/contact">КОНТАКТИ</Link>
               </Button>
-              <Button variant="hero-outline" size="xl" className="uppercase">
-                ВИЖТЕ УСЛУГИТЕ
+              <Button variant="hero-outline" size="xl" className="uppercase" asChild>
+                <Link to="/services">УСЛУГИ</Link>
               </Button>
             </div>
           </div>

@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Flame, Brain, Heart, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import angerHeader from "@/assets/anger-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Гняв и автоагресия",
   subtitle: "Психологично консултиране",
   description: "Научете се да управлявате интензивните емоции по здравословен начин.",
-  heroImage: conditionsHeader,
+  heroImage: angerHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

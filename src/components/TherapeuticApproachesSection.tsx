@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap, ArrowRight } from "lucide-react";
+import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const approachCategories = [
@@ -90,8 +90,8 @@ export const TherapeuticApproachesSection = () => {
           </p>
         </div>
 
-        {/* Categories Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-10">
+        {/* Categories Grid with CTA */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {approachCategories.map((category) => (
             <div
               key={category.title}
@@ -119,14 +119,14 @@ export const TherapeuticApproachesSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          <Link to="/therapeutic-approaches">
-            <Button variant="default" size="lg" className="gap-2 group">
-              Вижте всички подходи
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          
+          {/* CTA Card */}
+          <Link 
+            to="/therapeutic-approaches"
+            className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 shadow-sm border border-primary/20 hover:shadow-card transition-all duration-300 flex items-center justify-center"
+          >
+            <Button variant="default" size="lg" className="uppercase font-semibold">
+              ВИЖТЕ ВСИЧКИ ПОДХОДИ
             </Button>
           </Link>
         </div>

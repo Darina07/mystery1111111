@@ -5,7 +5,7 @@ import { Phone, Calendar, Heart, Sunrise, Shield, Users, CheckCircle, Sparkles }
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupBreakupWho from "@/assets/group-breakup-who.jpg";
-import groupRelationshipsHeader from "@/assets/group-relationships-header.jpg";
+import groupBreakupRecoveryHeader from "@/assets/group-breakup-recovery-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const BreakupRecoveryGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupRelationshipsHeader})` }}
+          style={{ backgroundImage: `url(${groupBreakupRecoveryHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

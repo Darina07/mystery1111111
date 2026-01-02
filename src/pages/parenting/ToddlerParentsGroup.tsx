@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Heart, Users, Shield, Sparkles, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
-import groupToddlerParentsBg from "@/assets/group-toddler-parents-bg.jpg";
+import groupToddlerWho from "@/assets/group-toddler-who.jpg";
 import groupParentingHeader from "@/assets/group-parenting-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
@@ -249,7 +249,7 @@ const ToddlerParentsGroup = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative">
                 <img 
-                  src={groupToddlerParentsBg} 
+                  src={groupToddlerWho} 
                   alt="Родители на малки деца" 
                   className="rounded-2xl shadow-lg w-full object-cover aspect-square"
                 />

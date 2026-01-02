@@ -120,10 +120,10 @@ export const TherapeuticApproachesSection = () => {
             </div>
           ))}
           
-          {/* CTA Card */}
+          {/* CTA */}
           <Link 
             to="/therapeutic-approaches"
-            className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 shadow-sm border border-primary/20 hover:shadow-card transition-all duration-300 flex items-center justify-center"
+            className="flex items-center justify-center"
           >
             <Button variant="default" size="lg" className="uppercase font-semibold">
               ВИЖТЕ ВСИЧКИ ПОДХОДИ

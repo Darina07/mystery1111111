@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Target, Focus, Sparkles } from "lucide-react";
-import learningDifficulties from "@/assets/learning-difficulties.jpg";
+import memoryConcentrationHeader from "@/assets/memory-concentration-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Нарушена памет и концентрация",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца с проблеми с паметта и концентрацията.",
-  heroImage: learningDifficulties,
+  heroImage: memoryConcentrationHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

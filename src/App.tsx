@@ -138,6 +138,15 @@ import SpecialNeedsSpeech from "./pages/conditions/SpecialNeedsSpeech";
 import { CookieConsent } from "./components/CookieConsent";
 import TherapeuticApproaches from "./pages/TherapeuticApproaches";
 import Psychoanalysis from "./pages/approaches/Psychoanalysis";
+import PsychodynamicTherapy from "./pages/approaches/PsychodynamicTherapy";
+import CBT from "./pages/approaches/CBT";
+import SchemaTherapy from "./pages/approaches/SchemaTherapy";
+import GestaltTherapy from "./pages/approaches/GestaltTherapy";
+import ExistentialTherapy from "./pages/approaches/ExistentialTherapy";
+import PositiveTherapy from "./pages/approaches/PositiveTherapy";
+import FamilyTherapy from "./pages/approaches/FamilyTherapy";
+import TransgenerationalTherapy from "./pages/approaches/TransgenerationalTherapy";
+import CouplesTherapy from "./pages/approaches/CouplesTherapy";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -291,6 +300,15 @@ const App = () => (
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/therapeutic-approaches" element={<TherapeuticApproaches />} />
           <Route path="/approaches/psychoanalysis" element={<Psychoanalysis />} />
+          <Route path="/approaches/psychodynamic-therapy" element={<PsychodynamicTherapy />} />
+          <Route path="/approaches/cbt" element={<CBT />} />
+          <Route path="/approaches/schema-therapy" element={<SchemaTherapy />} />
+          <Route path="/approaches/gestalt-therapy" element={<GestaltTherapy />} />
+          <Route path="/approaches/existential-therapy" element={<ExistentialTherapy />} />
+          <Route path="/approaches/positive-therapy" element={<PositiveTherapy />} />
+          <Route path="/approaches/family-therapy" element={<FamilyTherapy />} />
+          <Route path="/approaches/transgenerational-therapy" element={<TransgenerationalTherapy />} />
+          <Route path="/approaches/couples-therapy" element={<CouplesTherapy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

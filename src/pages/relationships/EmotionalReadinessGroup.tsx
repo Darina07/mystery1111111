@@ -5,7 +5,7 @@ import { Phone, Calendar, Heart, Sparkles, Shield, Users, CheckCircle, Brain } f
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupEmotionalReadinessBg from "@/assets/group-emotional-readiness-bg.jpg";
-import groupRelationshipsHeader from "@/assets/group-relationships-header.jpg";
+import groupEmotionalReadinessHeader from "@/assets/group-emotional-readiness-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const EmotionalReadinessGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupRelationshipsHeader})` }}
+          style={{ backgroundImage: `url(${groupEmotionalReadinessHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

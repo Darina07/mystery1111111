@@ -110,10 +110,11 @@ const DifficultSituationsGroup = () => {
               За родители, преминаващи през трудни житейски ситуации
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button variant="hero" size="lg" className="gap-2">
-                <Calendar className="h-5 w-5" />
-                Запиши се
-              </Button>
+              <Link to="/contact">
+                <Button variant="hero" size="lg">
+                  КОНТАКТИ
+                </Button>
+              </Link>
               <a href="tel:+359887079256" aria-label="Обадете се">
                 <Button variant="hero-outline" size="lg">
                   <Phone className="h-5 w-5" />

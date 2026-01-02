@@ -131,14 +131,16 @@ const GroupPrograms = () => {
               Подкрепа, споделяне и промяна в сигурна и професионална среда
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button variant="hero" size="lg" className="gap-2">
-                <Calendar className="h-5 w-5" />
-                Запиши се
-              </Button>
-              <Button variant="hero-outline" size="lg" className="gap-2">
-                <Phone className="h-5 w-5" />
-                +359 887 079 256
-              </Button>
+              <Link to="/contact">
+                <Button variant="hero" size="lg">
+                  КОНТАКТИ
+                </Button>
+              </Link>
+              <a href="tel:+359887079256" aria-label="Обадете се">
+                <Button variant="hero-outline" size="lg">
+                  <Phone className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>

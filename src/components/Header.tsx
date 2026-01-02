@@ -106,7 +106,7 @@ export const Header = () => {
                                   {subItem.label}
                                   <ChevronRight className="h-4 w-4" />
                                 </a>
-                                <ul className="absolute left-full top-0 -ml-1 w-[280px] bg-white rounded-lg shadow-lg p-3 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all z-50 before:content-[''] before:absolute before:left-0 before:top-0 before:w-4 before:h-full before:-translate-x-full">
+                                <ul className="absolute left-full top-0 ml-1 w-[280px] bg-white rounded-lg shadow-lg p-3 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all z-[100] border border-gray-100">
                                   {subItem.submenu?.map((nestedItem) => (
                                     <li key={nestedItem.label}>
                                       <a

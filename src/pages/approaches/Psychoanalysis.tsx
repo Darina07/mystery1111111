@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import therapeuticApproachesHeader from "@/assets/therapeutic-approaches-header.jpg";
+import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
 
 const Psychoanalysis = () => {
   return (
     <TherapeuticApproachTemplate
       title="Психоанализа"
       subtitle="Дълбочинен подход за разбиране на несъзнаваните процеси, които влияят върху мислите, емоциите и поведението"
-      headerImage={therapeuticApproachesHeader}
+      headerImage={psychoanalysisHeader}
       description={[
         "Психоанализата е психотерапевтичен метод, разработен от Зигмунд Фройд в края на 19-ти век. Този подход се основава на идеята, че голяма част от нашия психичен живот протича несъзнавано и че ранните детски преживявания оформят личността и поведението ни в зряла възраст.",
         "В психоанализата пациентът и терапевтът работят заедно, за да изследват несъзнаваните мисли, чувства и спомени, които влияят върху настоящото поведение. Чрез техники като свободни асоциации, анализ на сънища и изследване на преноса, пациентът постепенно придобива по-дълбоко разбиране за себе си.",

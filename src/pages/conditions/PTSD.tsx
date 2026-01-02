@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Shield, Brain, Heart, Eye } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import ptsdHeader from "@/assets/ptsd-header.jpg";
 
 const conditionData: ConditionData = {
   title: "ПТСР",
   subtitle: "Психологично консултиране",
   description: "Специализирана помощ за възстановяване след травматични преживявания.",
-  heroImage: conditionsHeader,
+  heroImage: ptsdHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

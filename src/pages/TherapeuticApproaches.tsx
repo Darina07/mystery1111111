@@ -145,21 +145,13 @@ const TherapeuticApproaches = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[50vh] flex items-center">
           <div className="max-w-2xl">
-            <PageBreadcrumb 
-              items={[
-                { label: "Начало", href: "/" },
-                { label: "Терапевтични подходи" }
-              ]} 
-            />
-            <div className="mt-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
-                Терапевтични{" "}
-                <span className="gradient-text">подходи</span>
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Избираме подхода индивидуално – спрямо вашите нужди, цели и конкретна ситуация
-              </p>
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+              Терапевтични{" "}
+              <span className="gradient-text">подходи</span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              Избираме подхода индивидуално – спрямо вашите нужди, цели и конкретна ситуация
+            </p>
           </div>
         </div>
       </section>

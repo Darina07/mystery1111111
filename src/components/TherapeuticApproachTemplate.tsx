@@ -176,7 +176,7 @@ export const TherapeuticApproachTemplate = ({
                 {processSteps.map((step, index) => (
                   <div
                     key={index}
-                    className="bg-card rounded-xl p-4 shadow-sm border border-border"
+                    className="bg-gradient-to-br from-lavender/10 via-card to-soft-blue/10 rounded-xl p-4 shadow-sm border border-primary/10"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm">

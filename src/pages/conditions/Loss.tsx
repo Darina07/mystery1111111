@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Heart, Shield, Sunrise, Users } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import lossHeader from "@/assets/loss-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Загуба и скръб",
   subtitle: "Психологично консултиране",
   description: "Професионална помощ при преживяване на загуба и намиране на път към изцеление.",
-  heroImage: conditionsHeader,
+  heroImage: lossHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

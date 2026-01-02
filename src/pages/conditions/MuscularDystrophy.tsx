@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Users, Sparkles } from "lucide-react";
-import childCounselingHeader from "@/assets/child-counseling-header.jpg";
+import muscularDystrophyHeader from "@/assets/muscular-dystrophy-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Деца с мускулна дистрофия",
   subtitle: "Детско консултиране",
   description: "Психологическа подкрепа за деца с мускулна дистрофия и техните семейства.",
-  heroImage: childCounselingHeader,
+  heroImage: muscularDystrophyHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

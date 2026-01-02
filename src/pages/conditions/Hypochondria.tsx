@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Stethoscope, Brain, Heart, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import hypochondriaHeader from "@/assets/hypochondria-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Хипохондрия",
   subtitle: "Психологично консултиране",
   description: "Помощ при преодоляване на страха от болести и прекомерната загриженост за здравето.",
-  heroImage: conditionsHeader,
+  heroImage: hypochondriaHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

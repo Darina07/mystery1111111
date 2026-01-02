@@ -145,34 +145,29 @@ export const TherapeuticApproachTemplate = ({
 
       {/* Process Steps Section */}
       {processSteps && processSteps.length > 0 && (
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section className="py-12 md:py-16 bg-muted/30">
           <div className="container">
             <div className="max-w-4xl mx-auto">
-              <div className="flex items-center gap-4 mb-12">
-                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
-                  <Target className="h-7 w-7 text-primary" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-heading font-bold">
-                  Как протича <span className="gradient-text">процесът</span>?
-                </h2>
-              </div>
-              <div className="space-y-6">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 text-center">
+                Как протича <span className="gradient-text">процесът</span>?
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {processSteps.map((step, index) => (
                   <div
                     key={index}
-                    className="bg-card rounded-2xl p-6 shadow-sm border border-border flex gap-6"
+                    className="bg-card rounded-xl p-4 shadow-sm border border-border"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-lg">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        {index + 1}
+                      </div>
+                      <h3 className="text-base font-heading font-semibold text-foreground">
                         {step.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {step.description}
-                      </p>
                     </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed pl-11">
+                      {step.description}
+                    </p>
                   </div>
                 ))}
               </div>

@@ -5,14 +5,14 @@ import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
-import couplesPartners from "@/assets/couples-partners.jpg";
+import coupleConflictsHeader from "@/assets/couple-conflicts-header.jpg";
 
 // This data structure can be reused for all condition pages
 const conditionData = {
   title: "Конфликти и проблеми в двойката",
   subtitle: "Семейно консултиране",
   description: "Професионална подкрепа за преодоляване на конфликти и възстановяване на хармонията във вашата връзка.",
-  heroImage: couplesPartners,
+  heroImage: coupleConflictsHeader,
   parentService: {
     name: "Семейно и партньорско консултиране",
     href: "/services/family-counseling"

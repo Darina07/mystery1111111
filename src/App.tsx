@@ -129,6 +129,9 @@ import LGBTYouth from "./pages/conditions/LGBTYouth";
 import YouthIdentity from "./pages/conditions/YouthIdentity";
 import SocialRejectionSupport from "./pages/conditions/SocialRejectionSupport";
 import ComingOutSupport from "./pages/conditions/ComingOutSupport";
+import SpeechDelay from "./pages/conditions/SpeechDelay";
+import Articulation from "./pages/conditions/Articulation";
+import SpecialNeedsSpeech from "./pages/conditions/SpecialNeedsSpeech";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -272,6 +275,10 @@ const App = () => (
           <Route path="/conditions/youth-identity" element={<YouthIdentity />} />
           <Route path="/conditions/social-rejection-support" element={<SocialRejectionSupport />} />
           <Route path="/conditions/coming-out-support" element={<ComingOutSupport />} />
+          {/* Speech therapy specific conditions */}
+          <Route path="/conditions/speech-delay" element={<SpeechDelay />} />
+          <Route path="/conditions/articulation" element={<Articulation />} />
+          <Route path="/conditions/special-needs" element={<SpecialNeedsSpeech />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

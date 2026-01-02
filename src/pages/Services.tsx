@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { Button } from "@/components/ui/button";
 import { 
   Brain, Heart, Users, 
@@ -97,10 +97,6 @@ const faqItems = [
   }
 ];
 
-const breadcrumbItems = [
-  { label: "Начало", href: "/" },
-  { label: "Услуги" }
-];
 
 const Services = () => {
   return (
@@ -131,10 +127,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <div className="container pt-8">
-        <PageBreadcrumb items={breadcrumbItems} />
-      </div>
 
       {/* Main Services Section */}
       <section className="py-20 bg-background">

@@ -237,22 +237,32 @@ const TherapeuticApproaches = () => {
                 
                 {/* Approaches List */}
                 <div className="space-y-4">
-                  {category.approaches.map((approach) => (
-                    <div 
-                      key={approach.name}
-                      className="group"
-                    >
-                      <div className="flex items-start gap-3 mb-2">
-                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mt-2 flex-shrink-0`} />
-                        <h3 className="text-base font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
-                          {approach.name}
-                        </h3>
+                  {category.approaches.map((approach) => {
+                    const hasLink = approach.name === "Психоанализа";
+                    const content = (
+                      <div 
+                        className="group"
+                      >
+                        <div className="flex items-start gap-3 mb-2">
+                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mt-2 flex-shrink-0`} />
+                          <h3 className="text-base font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+                            {approach.name}
+                          </h3>
+                        </div>
+                        <p className="text-muted-foreground text-sm leading-relaxed pl-5">
+                          {approach.description}
+                        </p>
                       </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed pl-5">
-                        {approach.description}
-                      </p>
-                    </div>
-                  ))}
+                    );
+                    
+                    return hasLink ? (
+                      <Link key={approach.name} to="/approaches/psychoanalysis" className="block hover:bg-primary/5 rounded-lg p-2 -m-2 transition-colors">
+                        {content}
+                      </Link>
+                    ) : (
+                      <div key={approach.name}>{content}</div>
+                    );
+                  })}
                 </div>
               </div>
             ))}

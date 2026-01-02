@@ -5,7 +5,7 @@ import { Phone, Calendar, Brain, Shield, Sparkles, Users, CheckCircle, Heart } f
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPAnxietyWho from "@/assets/group-nlp-anxiety-who.jpg";
-import groupNLPHeader from "@/assets/group-nlp-header.jpg";
+import groupNLPAnxietyHeader from "@/assets/group-nlp-anxiety-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const AnxietyBlocksGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupNLPHeader})` }}
+          style={{ backgroundImage: `url(${groupNLPAnxietyHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

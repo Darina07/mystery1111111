@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import psychodynamicHeader from "@/assets/psychodynamic-therapy-header.jpg";
 
 const PsychodynamicTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Психодинамична терапия"
       subtitle="Изследване на връзката между минал опит и настоящи трудности за постигане на по-добро себепознание"
-      headerImage={psychoanalysisHeader}
+      headerImage={psychodynamicHeader}
       description={[
         "Психодинамичната терапия е форма на дълбочинна психотерапия, която се основава на принципите на психоанализата, но е по-гъвкава и адаптирана към съвременните нужди. Тя изследва как несъзнаваните процеси и ранните преживявания влияят върху настоящото поведение и емоции.",
         "В този подход терапевтът и клиентът работят съвместно, за да разкрият скритите емоционални модели, вътрешните конфликти и защитните механизми, които пречат на пълноценния живот. Особено внимание се отделя на терапевтичната връзка като средство за разбиране на релационните модели.",

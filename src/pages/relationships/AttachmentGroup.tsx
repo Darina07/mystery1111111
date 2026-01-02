@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Heart, Clock, Shield, Users, CheckCircle, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
-import groupAttachmentBg from "@/assets/group-attachment-bg.jpg";
+import groupAttachmentWho from "@/assets/group-attachment-who.jpg";
 import groupRelationshipsHeader from "@/assets/group-relationships-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
@@ -250,7 +250,7 @@ const AttachmentGroup = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative">
                 <img 
-                  src={groupAttachmentBg} 
+                  src={groupAttachmentWho} 
                   alt="Модели на привързаност" 
                   className="rounded-2xl shadow-lg w-full object-cover aspect-square"
                 />

@@ -5,7 +5,7 @@ import { Phone, Calendar, Zap, RefreshCw, Sparkles, Users, CheckCircle, Repeat }
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPHabitsWho from "@/assets/group-nlp-habits-who.jpg";
-import groupNLPHeader from "@/assets/group-nlp-header.jpg";
+import groupNLPHabitsHeader from "@/assets/group-nlp-habits-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const HabitsGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupNLPHeader})` }}
+          style={{ backgroundImage: `url(${groupNLPHabitsHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

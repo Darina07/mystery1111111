@@ -5,7 +5,7 @@ import { Phone, Calendar, MessageCircle, Users, Sparkles, Ear, CheckCircle, Hear
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPCommunicationBg from "@/assets/group-nlp-communication-bg.jpg";
-import groupNLPHeader from "@/assets/group-nlp-header.jpg";
+import groupNLPCommunicationHeader from "@/assets/group-nlp-communication-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const CommunicationSkillsGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupNLPHeader})` }}
+          style={{ backgroundImage: `url(${groupNLPCommunicationHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

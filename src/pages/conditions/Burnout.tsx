@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Battery, Brain, Heart, Target } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import burnoutHeader from "@/assets/burnout-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Бърнаут",
   subtitle: "Психологично консултиране",
   description: "Помощ при преодоляване на бърнаут и възстановяване на енергията и мотивацията.",
-  heroImage: conditionsHeader,
+  heroImage: burnoutHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

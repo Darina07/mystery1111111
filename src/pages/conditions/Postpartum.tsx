@@ -5,13 +5,13 @@ import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
-import coupleConflictsHeader from "@/assets/couple-conflicts-header.jpg";
+import postpartumHeader from "@/assets/postpartum-header.jpg";
 
 const conditionData = {
   title: "Следродилен период и промени в отношенията",
   subtitle: "Семейно консултиране",
   description: "Подкрепа за двойки, адаптиращи се към новата роля на родители.",
-  heroImage: coupleConflictsHeader,
+  heroImage: postpartumHeader,
   parentService: {
     name: "Семейно и партньорско консултиране",
     href: "/services/family-counseling"

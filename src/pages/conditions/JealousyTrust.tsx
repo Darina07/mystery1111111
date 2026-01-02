@@ -5,13 +5,13 @@ import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
-import coupleConflictsHeader from "@/assets/couple-conflicts-header.jpg";
+import jealousyTrustHeader from "@/assets/jealousy-trust-header.jpg";
 
 const conditionData = {
   title: "Ревност и липса на доверие",
   subtitle: "Семейно консултиране",
   description: "Професионална помощ за преодоляване на ревността и изграждане на доверие във връзката.",
-  heroImage: coupleConflictsHeader,
+  heroImage: jealousyTrustHeader,
   parentService: {
     name: "Семейно и партньорско консултиране",
     href: "/services/family-counseling"

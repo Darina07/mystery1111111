@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
-import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap, TreePine } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap, TreePine, Phone } from "lucide-react";
 import therapeuticApproachesHeader from "@/assets/therapeutic-approaches-header.jpg";
 
 const approachCategories = [
@@ -149,9 +150,21 @@ const TherapeuticApproaches = () => {
               Терапевтични{" "}
               <span className="gradient-text">подходи</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mb-8">
               Избираме подхода индивидуално – спрямо вашите нужди, цели и конкретна ситуация
             </p>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact">
+                <Button variant="hero" size="lg">
+                  КОНТАКТИ
+                </Button>
+              </Link>
+              <a href="tel:+359887079256" aria-label="Обадете се">
+                <Button variant="hero-outline" size="lg">
+                  <Phone className="h-5 w-5" />
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

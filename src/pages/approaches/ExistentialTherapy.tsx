@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import existentialTherapyHeader from "@/assets/existential-therapy-header.jpg";
 
 const ExistentialTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Екзистенциална психотерапия"
       subtitle="Изследване на смисъла, свободата, отговорността и автентичността в живота"
-      headerImage={psychoanalysisHeader}
+      headerImage={existentialTherapyHeader}
       description={[
         "Екзистенциалната психотерапия е философски ориентиран терапевтичен подход, който се фокусира върху универсалните теми на човешкото съществуване: смисъл, свобода, отговорност, изолация и смъртност.",
         "Този подход разглежда психологичните трудности не като \"болести\", а като естествени отговори на предизвикателствата на съществуването. Вместо да търси симптоми за отстраняване, екзистенциалната терапия помага на хората да се изправят пред живота с по-голяма яснота, смелост и автентичност.",

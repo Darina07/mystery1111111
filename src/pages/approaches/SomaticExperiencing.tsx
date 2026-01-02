@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import somaticExperiencingHeader from "@/assets/somatic-experiencing-header.jpg";
 
 const SomaticExperiencing = () => {
   return (
     <TherapeuticApproachTemplate
       title="Соматично преживяване"
       subtitle="Somatic Experiencing - телесно-ориентиран подход за освобождаване от травма и натрупано напрежение"
-      headerImage={psychoanalysisHeader}
+      headerImage={somaticExperiencingHeader}
       description={[
         "Соматичното преживяване (Somatic Experiencing) е терапевтичен метод, разработен от д-р Питър Левин, базиран на наблюдението как животните в дивата природа се възстановяват от травматични събития. Този подход разглежда травмата не като събитие, а като незавършен физиологичен отговор в нервната система.",
         "Методът се фокусира върху телесните усещания и помага на тялото да освободи натрупаната енергия от стрес и травма. Вместо да анализираме миналото, работим с това, което се случва в тялото в настоящия момент - напрежение, треперене, топлина, студ и други соматични преживявания.",

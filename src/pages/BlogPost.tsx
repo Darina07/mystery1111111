@@ -3,10 +3,47 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, ArrowLeft, ArrowRight } from "lucide-react";
+import { Calendar, ArrowLeft, ArrowRight, Facebook, Linkedin, Share2 } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { getBlogPostBySlug, getRelatedPosts, blogPosts } from "@/data/blogPosts";
 import ReactMarkdown from "react-markdown";
+
+const ShareButtons = ({ title, url }: { title: string; url: string }) => {
+  const encodedUrl = encodeURIComponent(url);
+  const encodedTitle = encodeURIComponent(title);
+  
+  const shareLinks = {
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+  };
+
+  return (
+    <div className="flex items-center gap-3">
+      <span className="text-sm text-[#3B3A64]/70 flex items-center gap-1">
+        <Share2 className="w-4 h-4" />
+        Сподели:
+      </span>
+      <a
+        href={shareLinks.facebook}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-8 h-8 rounded-full bg-[#1877F2] hover:bg-[#1877F2]/80 flex items-center justify-center transition-colors"
+        aria-label="Сподели във Facebook"
+      >
+        <Facebook className="w-4 h-4 text-white" />
+      </a>
+      <a
+        href={shareLinks.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-8 h-8 rounded-full bg-[#0A66C2] hover:bg-[#0A66C2]/80 flex items-center justify-center transition-colors"
+        aria-label="Сподели в LinkedIn"
+      >
+        <Linkedin className="w-4 h-4 text-white" />
+      </a>
+    </div>
+  );
+};
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -22,6 +59,9 @@ const BlogPost = () => {
   const currentIndex = blogPosts.findIndex(p => p.slug === post.slug);
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
+  
+  // Get current URL for sharing
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
     <div className="min-h-screen">
@@ -74,6 +114,11 @@ const BlogPost = () => {
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg max-w-none prose-headings:font-playfair prose-headings:text-[#221A42] prose-p:text-[#3B3A64] prose-li:text-[#3B3A64] prose-strong:text-[#221A42] prose-h2:text-2xl prose-h3:text-xl">
               <ReactMarkdown>{post.content}</ReactMarkdown>
+            </div>
+            
+            {/* Share buttons after content */}
+            <div className="mt-10 pt-6 border-t border-gray-200">
+              <ShareButtons title={post.title} url={currentUrl} />
             </div>
           </div>
         </div>

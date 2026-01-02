@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Activity, Brain, Heart, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import psychosomaticHeader from "@/assets/psychosomatic-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Психосоматика",
   subtitle: "Психологично консултиране",
   description: "Разбиране и лечение на физически симптоми с психологичен произход.",
-  heroImage: conditionsHeader,
+  heroImage: psychosomaticHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

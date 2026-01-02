@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Activity, Brain, Heart, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import bipolarHeader from "@/assets/bipolar-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Биполярно афективно разстройство",
   subtitle: "Психологично консултиране",
   description: "Помощ за стабилизиране на настроението и управление на симптомите.",
-  heroImage: conditionsHeader,
+  heroImage: bipolarHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

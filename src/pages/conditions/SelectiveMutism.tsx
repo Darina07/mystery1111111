@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Users, Shield } from "lucide-react";
-import childCounselingHeader from "@/assets/child-counseling-header.jpg";
+import selectiveMutismHeader from "@/assets/selective-mutism-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Селективен мутизъм",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца със селективен мутизъм и техните семейства.",
-  heroImage: childCounselingHeader,
+  heroImage: selectiveMutismHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

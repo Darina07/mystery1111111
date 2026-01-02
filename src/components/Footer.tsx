@@ -28,20 +28,16 @@ export const Footer = () => {
   return (
     <footer className="bg-indigo text-primary-foreground">
       <div className="container py-10">
-        {/* Logo */}
-        <div className="mb-6 text-center">
-          <a href="#home" className="inline-block">
-            <img
-              src={darLogo}
-              alt="Дар - Психологичен център"
-              className="h-44 w-auto mx-auto"
-            />
-          </a>
-        </div>
-
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Popular Therapies */}
+          {/* Logo + Popular Therapies */}
           <div>
+            <a href="#home" className="inline-block mb-6">
+              <img
+                src={darLogo}
+                alt="Дар - Психологичен център"
+                className="h-32 w-auto"
+              />
+            </a>
             <h4 className="font-heading text-lg font-semibold mb-6">
               Най-търсени терапии
             </h4>

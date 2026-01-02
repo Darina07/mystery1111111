@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Target, Shield, Heart } from "lucide-react";
-import conditionsSupport from "@/assets/conditions-support.jpg";
+import socialMediaAddictionHeader from "@/assets/social-media-addiction-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Зависимост към социални мрежи",
   subtitle: "Психологично консултиране",
   description: "Професионална подкрепа за освобождаване от зависимостта към социалните мрежи.",
-  heroImage: conditionsSupport,
+  heroImage: socialMediaAddictionHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

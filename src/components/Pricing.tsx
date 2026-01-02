@@ -86,7 +86,7 @@ export const Pricing = () => {
           {pricingItems.map((item) => (
             <div
               key={item.title}
-              className={`relative bg-card rounded-2xl p-8 shadow-card transition-all duration-500 hover:-translate-y-1 ${
+              className={`relative bg-card rounded-2xl p-8 shadow-card transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${
                 item.popular ? "ring-2 ring-primary shadow-glow" : ""
               }`}
             >
@@ -98,7 +98,7 @@ export const Pricing = () => {
                 </div>
               )}
 
-              <div className="space-y-6">
+              <div className="flex flex-col flex-grow">
                 <div>
                   <h3 className="font-heading text-xl font-semibold">
                     {item.title}
@@ -110,7 +110,7 @@ export const Pricing = () => {
                   )}
                 </div>
 
-                <div className="flex items-baseline gap-2">
+                <div className="flex items-baseline gap-2 mt-6">
                   <span className="font-heading text-4xl font-bold text-primary">
                     {item.price}
                   </span>
@@ -119,7 +119,7 @@ export const Pricing = () => {
                   </span>
                 </div>
 
-                <ul className="space-y-3">
+                <ul className="space-y-3 mt-6 flex-grow">
                   {item.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
@@ -134,7 +134,7 @@ export const Pricing = () => {
 
                 <Button
                   variant={item.popular ? "cta" : "outline"}
-                  className="w-full uppercase"
+                  className="w-full uppercase mt-6"
                   size="lg"
                   asChild
                 >

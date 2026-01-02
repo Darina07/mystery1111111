@@ -7,7 +7,7 @@ const popularTherapies = [
   { name: "Хиперактивност (ADHD)", path: "/conditions/adhd" },
   { name: "Тревожност и паник атаки", path: "/conditions/anxiety" },
   { name: "Депресивни състояния", path: "/conditions/depression" },
-  { name: "Зависимости", path: "/group-programs/addictions" },
+  { name: "Зависимости", path: "/services/group-programs/addictions" },
   { name: "Бърнаут", path: "/conditions/burnout" },
   { name: "Заекване", path: "/conditions/stuttering" },
 ];

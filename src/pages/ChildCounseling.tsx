@@ -100,14 +100,14 @@ const specialConditions = [
   { name: "Деца с мускулна дистрофия", slug: "muscular-dystrophy" },
   { name: "Деца с епилепсия", slug: "epilepsy" },
   { name: "Хронични физически заболявания", slug: "chronic-illness" },
-  { name: "Специални образователни потребности (СОП)", slug: "special-needs" },
+  { name: "Специални образователни потребности (СОП)", slug: "special-educational-needs" },
 ];
 
 const lgbtConditions = [
   { name: "Психологична подкрепа за ЛГБТ+ деца и юноши", slug: "lgbt-youth" },
   { name: "Идентичност и себеприемане", slug: "youth-identity" },
-  { name: "Подкрепа при социално отхвърляне", slug: "youth-rejection" },
-  { name: "Coming out подкрепа", slug: "youth-coming-out" },
+  { name: "Подкрепа при социално отхвърляне", slug: "social-rejection-support" },
+  { name: "Coming out подкрепа", slug: "coming-out-support" },
 ];
 
 const ConditionPill = ({ name, slug, colorIndex }: { name: string; slug: string; colorIndex: number }) => (

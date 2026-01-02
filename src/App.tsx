@@ -135,6 +135,7 @@ import ComingOutSupport from "./pages/conditions/ComingOutSupport";
 import SpeechDelay from "./pages/conditions/SpeechDelay";
 import Articulation from "./pages/conditions/Articulation";
 import SpecialNeedsSpeech from "./pages/conditions/SpecialNeedsSpeech";
+import { CookieConsent } from "./components/CookieConsent";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -143,6 +144,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <CookieConsent />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutUs />} />

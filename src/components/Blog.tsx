@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
 
 export const Blog = () => {
   return (
-    <section id="blog" className="py-20 bg-cream">
+    <section id="blog" className="py-12 bg-cream">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">

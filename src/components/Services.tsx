@@ -49,7 +49,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-16 bg-secondary/30">
+    <section id="services" className="py-12 bg-secondary/30">
       <div className="container">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">

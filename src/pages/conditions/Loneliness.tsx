@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Users, Heart, MessageCircle, Target } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import lonelinessHeader from "@/assets/loneliness-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Самота",
   subtitle: "Психологично консултиране",
   description: "Подкрепа за изграждане на значими връзки и преодоляване на чувството за самота.",
-  heroImage: conditionsHeader,
+  heroImage: lonelinessHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

@@ -137,6 +137,7 @@ import Articulation from "./pages/conditions/Articulation";
 import SpecialNeedsSpeech from "./pages/conditions/SpecialNeedsSpeech";
 import { CookieConsent } from "./components/CookieConsent";
 import TherapeuticApproaches from "./pages/TherapeuticApproaches";
+import Psychoanalysis from "./pages/approaches/Psychoanalysis";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -289,6 +290,7 @@ const App = () => (
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/therapeutic-approaches" element={<TherapeuticApproaches />} />
+          <Route path="/approaches/psychoanalysis" element={<Psychoanalysis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

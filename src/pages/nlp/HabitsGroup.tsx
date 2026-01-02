@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Zap, RefreshCw, Sparkles, Users, CheckCircle, Repeat } from "lucide-react";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
-import groupNLPHabitsBg from "@/assets/group-nlp-habits-bg.jpg";
+import groupNLPHabitsWho from "@/assets/group-nlp-habits-who.jpg";
 import groupNLPHeader from "@/assets/group-nlp-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
@@ -249,7 +249,7 @@ const HabitsGroup = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative">
                 <img 
-                  src={groupNLPHabitsBg} 
+                  src={groupNLPHabitsWho} 
                   alt="НЛП за навици и поведение" 
                   className="rounded-2xl shadow-lg w-full object-cover aspect-square"
                 />

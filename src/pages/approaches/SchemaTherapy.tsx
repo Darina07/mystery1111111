@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import schemaTherapyHeader from "@/assets/schema-therapy-header.jpg";
 
 const SchemaTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Схема терапия"
       subtitle="Работа с дълбоко вкоренени емоционални модели от детството за трайна промяна"
-      headerImage={psychoanalysisHeader}
+      headerImage={schemaTherapyHeader}
       description={[
         "Схема терапията е интегративен психотерапевтичен подход, разработен от Джефри Йънг, който съчетава елементи от когнитивно-поведенческата терапия, теорията на привързаността, гещалт терапията и психоанализата.",
         "Централно понятие в този подход са схемите - дълбоко вкоренени емоционални и когнитивни модели, формирани в детството, които продължават да влияят върху поведението и взаимоотношенията ни в зряла възраст. Когато основните емоционални потребности не са били посрещнати в детството, се формират неадаптивни схеми.",

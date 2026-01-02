@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Users, Sparkles } from "lucide-react";
-import childCounselingHeader from "@/assets/child-counseling-header.jpg";
+import downSyndromeHeader from "@/assets/down-syndrome-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Синдром на Даун",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца със синдром на Даун и техните семейства.",
-  heroImage: childCounselingHeader,
+  heroImage: downSyndromeHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

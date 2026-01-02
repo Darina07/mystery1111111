@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Moon, Brain, Clock, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import insomniaHeader from "@/assets/insomnia-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Безсъние",
   subtitle: "Психологично консултиране",
   description: "Ефективни методи за преодоляване на безсънието и подобряване качеството на съня.",
-  heroImage: conditionsHeader,
+  heroImage: insomniaHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

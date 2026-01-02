@@ -129,26 +129,29 @@ export const TherapeuticApproachTemplate = ({
       </section>
 
       {/* Suitable For Section */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-deep-navy text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
+            <div className="flex items-center justify-center gap-4 mb-10">
+              <div className="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center">
                 <Users className="h-7 w-7 text-primary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-heading font-bold">
-                За кого е <span className="gradient-text">подходящ</span>?
+                За кого е <span className="text-primary">подходящ</span>?
               </h2>
             </div>
-            <div className="bg-gradient-to-br from-lavender/10 via-background to-soft-blue/10 rounded-2xl p-8 border border-primary/10">
-              <ul className="space-y-4">
-                {suitableFor.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent mt-2.5 flex-shrink-0" />
-                    <span className="text-muted-foreground leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="grid md:grid-cols-2 gap-4">
+              {suitableFor.map((item, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
+                >
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-xs font-bold">{index + 1}</span>
+                  </div>
+                  <span className="text-white/90 leading-relaxed">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

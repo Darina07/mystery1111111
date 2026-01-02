@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ArrowLeft, ArrowRight } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { getBlogPostBySlug, getRelatedPosts, blogPosts } from "@/data/blogPosts";
 import ReactMarkdown from "react-markdown";
 
@@ -40,27 +39,20 @@ const BlogPost = () => {
         </div>
         <div className="absolute bottom-0 left-0 right-0 pb-12">
           <div className="container mx-auto px-4">
-            <div className="mb-4">
-              <PageBreadcrumb 
-                items={[
-                  { label: "Блог", href: "/blog" },
-                  { label: post.title }
-                ]} 
-              />
-            </div>
-            <Badge className="mb-4 bg-[#8F7BBF]/20 text-white border-white/30">
-              {post.categoryLabel}
-            </Badge>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-playfair max-w-4xl">
               {post.title}
             </h1>
-            <div className="flex items-center gap-2 text-white/80">
-              <Calendar className="w-4 h-4" />
-              <span>{post.date}</span>
-            </div>
           </div>
         </div>
       </section>
+
+      {/* Date below header */}
+      <div className="container mx-auto px-4 py-6">
+        <div className="max-w-3xl mx-auto flex items-center gap-2 text-[#3B3A64]/70">
+          <Calendar className="w-4 h-4" />
+          <span>{post.date}</span>
+        </div>
+      </div>
 
       {/* Content */}
       <section className="py-12 bg-white">

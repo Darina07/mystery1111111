@@ -5,7 +5,7 @@ import { Phone, Calendar, Heart, Users, Shield, Sparkles, CheckCircle } from "lu
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupPregnantMothersBg from "@/assets/group-pregnant-mothers-bg.jpg";
-import groupParentingHeader from "@/assets/group-parenting-header.jpg";
+import groupPregnantMothersHeader from "@/assets/group-pregnant-mothers-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const PregnantMothersGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupParentingHeader})` }}
+          style={{ backgroundImage: `url(${groupPregnantMothersHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

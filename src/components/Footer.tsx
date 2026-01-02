@@ -167,7 +167,7 @@ export const Footer = () => {
           <p className="text-sm text-primary-foreground/60">
             © 2025 Дар – Подкрепа, която работи. Всички права запазени.
           </p>
-          <div className="flex gap-6 text-sm">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 text-sm">
             <Link
               to="/privacy-policy"
               className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"

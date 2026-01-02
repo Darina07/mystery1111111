@@ -333,7 +333,7 @@ const Psychodiagnostics = () => {
       </section>
 
       {/* Assessment Areas Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
@@ -343,17 +343,21 @@ const Psychodiagnostics = () => {
               Предлагаме диагностика в следните области:
             </p>
             
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="grid md:grid-cols-3 gap-6">
               {assessmentAreas.map((area, index) => (
-                <Link
+                <div
                   key={area.slug}
-                  to={`/conditions/${area.slug}`}
-                  className={`px-5 py-3 rounded-full text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
-                    index % 2 === 0 ? 'bg-primary' : 'bg-accent'
-                  }`}
+                  className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  {area.name}
-                </Link>
+                  <div className={`w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center ${
+                    index % 2 === 0 ? 'bg-primary/10' : 'bg-accent/10'
+                  } group-hover:scale-110 transition-transform duration-300`}>
+                    <Brain className={`h-6 w-6 ${index % 2 === 0 ? 'text-primary' : 'text-accent'}`} />
+                  </div>
+                  <h3 className="text-foreground font-heading font-semibold">
+                    {area.name}
+                  </h3>
+                </div>
               ))}
             </div>
           </div>

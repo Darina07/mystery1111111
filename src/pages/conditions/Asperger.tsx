@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Users, MessageCircle } from "lucide-react";
-import childCounselingHeader from "@/assets/child-counseling-header.jpg";
+import aspergerHeader from "@/assets/asperger-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Синдром на Аспергер",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца със синдром на Аспергер и техните семейства.",
-  heroImage: childCounselingHeader,
+  heroImage: aspergerHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

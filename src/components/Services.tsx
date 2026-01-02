@@ -52,7 +52,7 @@ export const Services = () => {
     <section id="services" className="py-12 bg-secondary/30">
       <div className="container">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-4">
+        <div className="text-center max-w-2xl mx-auto mb-8 space-y-4">
           <p className="text-primary font-medium tracking-wide uppercase text-sm">
             Нашите услуги
           </p>

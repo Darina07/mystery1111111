@@ -23,7 +23,7 @@ export const Business = () => {
     <section id="business" className="py-12 bg-background">
       <div className="container">
         {/* Header */}
-        <div className="text-center mb-10 space-y-4">
+        <div className="text-center mb-8 space-y-4">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium uppercase">
             ЗА БИЗНЕСА
           </span>

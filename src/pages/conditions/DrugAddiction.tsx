@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Target, Shield, Users } from "lucide-react";
-import groupSubstancesBg from "@/assets/group-substances-bg.jpg";
+import drugAddictionHeader from "@/assets/drug-addiction-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Зависимост към наркотици",
   subtitle: "Психологично консултиране",
   description: "Професионална подкрепа за преодоляване на наркотичната зависимост и изграждане на нов живот.",
-  heroImage: groupSubstancesBg,
+  heroImage: drugAddictionHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

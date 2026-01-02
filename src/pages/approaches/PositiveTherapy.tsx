@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import positiveTherapyHeader from "@/assets/positive-therapy-header.jpg";
 
 const PositiveTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Позитивна психотерапия"
       subtitle="Фокус върху ресурсите, силните страни и баланса в живота по метода на Пезешкиан"
-      headerImage={psychoanalysisHeader}
+      headerImage={positiveTherapyHeader}
       description={[
         "Позитивната психотерапия е разработена от Носрат Пезешкиан и представлява интегративен подход, който съчетава елементи от различни терапевтични школи с транскултурна перспектива. Името \"позитивна\" идва от латинското \"positum\" - даденото, актуалното.",
         "Този подход се фокусира върху ресурсите и потенциала на човека, вместо върху патологията. Централна е идеята за баланс в четирите измерения на живота: тяло, постижения, контакти и бъдеще/смисъл.",

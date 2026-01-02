@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Compass, Shield, Target, Sunrise } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import adaptationHeader from "@/assets/adaptation-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Адаптация към промени",
   subtitle: "Психологично консултиране",
   description: "Професионална помощ при адаптиране към нови обстоятелства и намиране на баланс в периоди на промяна.",
-  heroImage: conditionsHeader,
+  heroImage: adaptationHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

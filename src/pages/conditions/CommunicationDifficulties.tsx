@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { MessageCircle, Users, Heart, Target } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import communicationHeader from "@/assets/communication-difficulties-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Трудности в общуването",
   subtitle: "Психологично консултиране",
   description: "Професионална помощ за преодоляване на трудности в комуникацията и изграждане на пълноценни взаимоотношения.",
-  heroImage: conditionsHeader,
+  heroImage: communicationHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

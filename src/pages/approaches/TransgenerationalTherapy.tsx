@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import transgenerationalTherapyHeader from "@/assets/transgenerational-therapy-header.jpg";
 
 const TransgenerationalTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Трансгенерационна терапия"
       subtitle="Изследване на семейната история и моделите, предавани през поколенията"
-      headerImage={psychoanalysisHeader}
+      headerImage={transgenerationalTherapyHeader}
       description={[
         "Трансгенерационната терапия изследва как семейните модели, травми, тайни и нерешени конфликти се предават от поколение на поколение. Този подход разкрива невидимите връзки, които свързват членовете на семейството през времето.",
         "Централна идея е, че преживяванията на нашите предци - особено травматичните събития, загубите и нерешените емоционални въпроси - могат несъзнавано да влияят върху нашия живот днес. Чрез изследване на семейната история, можем да разберем и освободим тези наследени модели.",

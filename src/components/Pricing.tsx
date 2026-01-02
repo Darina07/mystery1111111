@@ -138,12 +138,15 @@ export const Pricing = () => {
             заплащане от{" "}
             <span className="font-semibold text-foreground">+10 евро</span>.
           </p>
-          <div className="mt-6 inline-flex items-center gap-3 bg-card rounded-xl px-6 py-4 shadow-soft">
+          <a 
+            href="tel:+359887079256" 
+            className="mt-6 inline-flex items-center gap-3 bg-card rounded-xl px-6 py-4 shadow-soft hover:shadow-card transition-all duration-300"
+          >
             <Phone className="h-5 w-5 text-primary" />
             <span className="text-foreground">
               Свържете се с нас за групови програми и корпоративни услуги
             </span>
-          </div>
+          </a>
         </div>
       </div>
     </section>

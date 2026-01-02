@@ -148,7 +148,7 @@ export const Pricing = () => {
         {/* Additional Note */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground">
-            Консултациите на английски език се провеждат срещу допълнително
+            Консултациите на <span className="font-semibold text-foreground">английски език</span> се провеждат срещу допълнително
             заплащане от{" "}
             <span className="font-semibold text-foreground">+10 евро</span>.
           </p>
@@ -157,8 +157,8 @@ export const Pricing = () => {
             className="mt-6 inline-flex items-center gap-3 bg-card rounded-xl px-6 py-4 shadow-soft hover:shadow-card transition-all duration-300"
           >
             <Phone className="h-5 w-5 text-primary" />
-            <span className="text-foreground">
-              Свържете се с нас за групови програми и корпоративни услуги
+            <span className="text-foreground uppercase font-medium">
+              Попитайте ни за цени за групови програми и корпоративни услуги
             </span>
           </a>
         </div>

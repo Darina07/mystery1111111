@@ -1,12 +1,12 @@
 import { TherapeuticApproachTemplate } from "@/components/TherapeuticApproachTemplate";
-import psychoanalysisHeader from "@/assets/psychoanalysis-header.jpg";
+import couplesTherapyHeader from "@/assets/couples-therapy-header.jpg";
 
 const CouplesTherapy = () => {
   return (
     <TherapeuticApproachTemplate
       title="Терапия на двойки"
       subtitle="Възстановяване на близостта, доверието и комуникацията в партньорските отношения"
-      headerImage={psychoanalysisHeader}
+      headerImage={couplesTherapyHeader}
       description={[
         "Терапията на двойки е специализиран подход, насочен към подобряване на партньорските взаимоотношения. Тя работи с комуникацията, емоционалната връзка, конфликтите и интимността между партньорите.",
         "В терапията двойката се разглежда като система, където поведението на всеки партньор влияе на другия. Терапевтът помага на партньорите да разберат своите модели на взаимодействие и да развият по-здравословни начини за свързване.",

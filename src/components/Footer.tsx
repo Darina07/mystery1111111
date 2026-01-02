@@ -168,24 +168,24 @@ export const Footer = () => {
             © 2025 Дар – Подкрепа, която работи. Всички права запазени.
           </p>
           <div className="flex gap-6 text-sm">
-            <a
-              href="#"
+            <Link
+              to="/privacy-policy"
               className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
             >
               Политика за поверителност
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/terms-conditions"
               className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
             >
               Общи условия
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/cookie-policy"
               className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
             >
               Политика за бисквитки
-            </a>
+            </Link>
           </div>
         </div>
       </div>

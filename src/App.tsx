@@ -42,6 +42,9 @@ import BlogPost from "./pages/BlogPost";
 import Prices from "./pages/Prices";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import CookiePolicy from "./pages/CookiePolicy";
 import CoupleConflicts from "./pages/conditions/CoupleConflicts";
 import MaritalCrisis from "./pages/conditions/MaritalCrisis";
 import JealousyTrust from "./pages/conditions/JealousyTrust";
@@ -279,6 +282,9 @@ const App = () => (
           <Route path="/conditions/speech-delay" element={<SpeechDelay />} />
           <Route path="/conditions/articulation" element={<Articulation />} />
           <Route path="/conditions/special-needs" element={<SpecialNeedsSpeech />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

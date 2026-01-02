@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, Users, Target } from "lucide-react";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
 
 interface Benefit {
@@ -69,6 +70,16 @@ export const TherapeuticApproachTemplate = ({
           </div>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container py-4">
+        <PageBreadcrumb 
+          items={[
+            { label: "Терапевтични подходи", href: "/therapeutic-approaches" },
+            { label: title }
+          ]} 
+        />
+      </div>
 
       {/* Description Section */}
       <section className="py-16 md:py-20 bg-background">

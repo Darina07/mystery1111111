@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Target, BookOpen, Sparkles } from "lucide-react";
-import learningDifficulties from "@/assets/learning-difficulties.jpg";
+import dyslexiaHeader from "@/assets/dyslexia-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Дислексия",
   subtitle: "Детско консултиране",
   description: "Специализирана подкрепа за деца с дислексия и техните семейства.",
-  heroImage: learningDifficulties,
+  heroImage: dyslexiaHeader,
   parentService: {
     name: "Детско и юношеско консултиране",
     href: "/services/child-counseling"

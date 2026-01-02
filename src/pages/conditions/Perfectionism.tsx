@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Target, Brain, Heart, Shield } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import perfectionismHeader from "@/assets/perfectionism-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Перфекционизъм",
   subtitle: "Психологично консултиране",
   description: "Научете се да постигате високи стандарти без самокритика и изтощение.",
-  heroImage: conditionsHeader,
+  heroImage: perfectionismHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

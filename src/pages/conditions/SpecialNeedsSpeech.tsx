@@ -1,12 +1,12 @@
 import ConditionPageTemplate, { ConditionData } from "@/components/ConditionPageTemplate";
 import { Heart, MessageCircle, BookOpen, Users, Sparkles } from "lucide-react";
-import speechTherapyHeader from "@/assets/speech-therapy-header.jpg";
+import specialNeedsSpeechHeader from "@/assets/special-needs-speech-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Деца със СОП",
   subtitle: "Логопедична подкрепа",
   description: "Специализирана логопедична помощ за деца със специални образователни потребности",
-  heroImage: speechTherapyHeader,
+  heroImage: specialNeedsSpeechHeader,
   parentService: {
     name: "Логопед",
     href: "/services/speech-therapy"

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle, Users, Target } from "lucide-react";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import contactBg from "@/assets/contact-bg.jpg";
+import therapyBg from "@/assets/therapeutic-approaches-header.jpg";
 
 interface Benefit {
   title: string;
@@ -129,27 +130,33 @@ export const TherapeuticApproachTemplate = ({
       </section>
 
       {/* Suitable For Section */}
-      <section className="py-16 md:py-20 bg-deep-navy text-white">
-        <div className="container">
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${therapyBg})` }}
+        />
+        <div className="absolute inset-0 bg-deep-navy/85" />
+        
+        <div className="container relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-4 mb-10">
-              <div className="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center">
-                <Users className="h-7 w-7 text-primary" />
+            <div className="flex items-center justify-center gap-4 mb-12">
+              <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center">
+                <Users className="h-8 w-8 text-primary" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold">
-                За кого е <span className="text-primary">подходящ</span>?
+              <h2 className="text-3xl md:text-5xl font-heading font-bold text-white">
+                За кого е <span className="text-primary">подходяща</span>?
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-5">
               {suitableFor.map((item, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
+                  className="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/15"
                 >
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-xs font-bold">{index + 1}</span>
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-sm font-bold">{index + 1}</span>
                   </div>
-                  <span className="text-white/90 leading-relaxed">{item}</span>
+                  <span className="text-white text-lg leading-relaxed">{item}</span>
                 </div>
               ))}
             </div>

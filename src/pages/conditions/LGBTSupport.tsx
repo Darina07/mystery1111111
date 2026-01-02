@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Heart, Shield, Users } from "lucide-react";
-import lgbtCounseling from "@/assets/lgbt-counseling.jpg";
+import lgbtSupportHeader from "@/assets/lgbt-support-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Психологична подкрепа за ЛГБТ+ хора",
   subtitle: "Психологично консултиране",
   description: "Професионална и приемаща подкрепа за ЛГБТ+ хора в безопасна и неосъждаща среда.",
-  heroImage: lgbtCounseling,
+  heroImage: lgbtSupportHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

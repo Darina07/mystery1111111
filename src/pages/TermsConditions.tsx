@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 
 const TermsConditions = () => {
   return (
@@ -9,13 +8,6 @@ const TermsConditions = () => {
       
       <main className="pt-24">
         <div className="container py-12">
-          <PageBreadcrumb 
-            items={[
-              { label: "Начало", href: "/" },
-              { label: "Общи условия" }
-            ]} 
-          />
-          
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-8">
             Общи условия
           </h1>

@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { TherapeuticApproachesSection } from "@/components/TherapeuticApproachesSection";
 
 import aboutSlider1 from "@/assets/about-slider-1.jpg";
 import aboutSlider2 from "@/assets/about-slider-2.jpg";
@@ -348,6 +349,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* Therapeutic Approaches Section */}
+      <TherapeuticApproachesSection />
 
       {/* FAQ Section */}
       <section className="py-20 bg-background">

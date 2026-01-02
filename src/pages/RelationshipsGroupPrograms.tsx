@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Heart, Users, Sparkles, Target, ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
-import groupRelationshipsHeader from "@/assets/group-relationships-header.jpg";
+import groupRelationshipsHeader from "@/assets/group-relationships-header-new.jpg";
 import groupAttachmentBg from "@/assets/group-attachment-bg.jpg";
 import groupEmotionalReadinessBg from "@/assets/group-emotional-readiness-bg.jpg";
 import groupSocialSkillsBg from "@/assets/group-social-skills-bg.jpg";

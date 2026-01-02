@@ -5,7 +5,7 @@ import { Phone, Calendar, Lightbulb, Target, Sparkles, Users, CheckCircle, Star 
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPEffectivenessBg from "@/assets/group-nlp-effectiveness-bg.jpg";
-import groupNLPHeader from "@/assets/group-nlp-header.jpg";
+import groupNLPEffectivenessHeader from "@/assets/group-nlp-effectiveness-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
 import {
   Breadcrumb,
@@ -66,7 +66,7 @@ const PersonalEffectivenessGroup = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${groupNLPHeader})` }}
+          style={{ backgroundImage: `url(${groupNLPEffectivenessHeader})` }}
         />
         <div className="absolute inset-0 bg-background/85" />
         

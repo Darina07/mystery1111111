@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Brain, Target, Shield, Heart } from "lucide-react";
-import conditionsSupport from "@/assets/conditions-support.jpg";
+import workaholismHeader from "@/assets/workaholism-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Работохолизъм",
   subtitle: "Психологично консултиране",
   description: "Професионална подкрепа за постигане на здравословен баланс между работа и живот.",
-  heroImage: conditionsSupport,
+  heroImage: workaholismHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

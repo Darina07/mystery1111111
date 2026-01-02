@@ -1,12 +1,12 @@
 import { ConditionPageTemplate, ConditionData } from "@/components/ConditionPageTemplate";
 import { Shield, Users, Heart, Target } from "lucide-react";
-import conditionsHeader from "@/assets/conditions-support.jpg";
+import boundariesHeader from "@/assets/boundaries-header.jpg";
 
 const conditionData: ConditionData = {
   title: "Лични граници",
   subtitle: "Психологично консултиране",
   description: "Научете се да защитавате своето пространство, време и емоционално благополучие.",
-  heroImage: conditionsHeader,
+  heroImage: boundariesHeader,
   parentService: {
     name: "Психологично консултиране",
     href: "/services/psychological-counseling"

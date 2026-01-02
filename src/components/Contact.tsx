@@ -1,6 +1,8 @@
-import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const contactInfo = [
   {
@@ -36,11 +38,27 @@ export const Contact = () => {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form handling would go here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast.success("Вашето запитване беше изпратено успешно!");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error: any) {
+      console.error("Error sending contact form:", error);
+      toast.error("Възникна грешка при изпращането. Моля, опитайте отново.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -130,6 +148,7 @@ export const Contact = () => {
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                   placeholder="Вашето име"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -150,6 +169,7 @@ export const Contact = () => {
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                   placeholder="email@example.com"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -169,6 +189,7 @@ export const Contact = () => {
                   }
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
                   placeholder="+359 888 123 456"
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -188,12 +209,23 @@ export const Contact = () => {
                   }
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
                   placeholder="Как можем да ви помогнем?"
+                  required
+                  disabled={isSubmitting}
                 />
               </div>
 
-              <Button variant="cta" size="lg" className="w-full">
-                Изпратете запитване
-                <ArrowRight className="h-4 w-4" />
+              <Button variant="cta" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    Изпращане...
+                  </>
+                ) : (
+                  <>
+                    Изпратете запитване
+                    <ArrowRight className="h-4 w-4" />
+                  </>
+                )}
               </Button>
             </form>
           </div>

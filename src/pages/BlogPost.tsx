@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ArticleSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -65,6 +66,29 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title={post.title}
+        description={post.excerpt}
+        url={`/blog/${post.slug}`}
+        type="article"
+        image={post.image}
+        article={{
+          publishedTime: post.date,
+          section: post.categoryLabel,
+        }}
+      />
+      <ArticleSchema 
+        headline={post.title}
+        description={post.excerpt}
+        image={post.image}
+        datePublished={post.date}
+        url={`/blog/${post.slug}`}
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Блог", url: "/blog" },
+        { name: post.title, url: `/blog/${post.slug}` }
+      ]} />
       <Header />
       
       {/* Hero Section */}

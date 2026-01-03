@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+import { SEO, BreadcrumbSchema } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import pricesHeaderImage from "@/assets/prices-header.png";
@@ -98,6 +99,16 @@ const breadcrumbItems = [
 const Prices = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Цени"
+        description="Ясни и прозрачни цени за психологични услуги в Център Дар, София. Индивидуални консултации от 40 евро, онлайн консултации от 35 евро. Вижте пълния ценоразпис."
+        url="/prices"
+        keywords="цени психолог София, колко струва психолог, цена психотерапия, цена семейна терапия, цена логопед"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Цени", url: "/prices" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

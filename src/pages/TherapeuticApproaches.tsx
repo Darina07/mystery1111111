@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Contact } from "@/components/Contact";
+import { SEO, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap, TreePine, Phone } from "lucide-react";
 import therapeuticApproachesHeader from "@/assets/therapeutic-approaches-header.jpg";
@@ -151,6 +152,16 @@ const approachCategories = [
 const TherapeuticApproaches = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Терапевтични подходи"
+        description="Психотерапевтични подходи в Център Дар: КПТ, психоанализа, гещалт терапия, EMDR, семейна терапия, арт терапия и много други. Индивидуален подход за всеки клиент."
+        url="/therapeutic-approaches"
+        keywords="терапевтични подходи, психотерапия методи, КПТ, EMDR, гещалт терапия, семейна терапия, арт терапия"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Терапевтични подходи", url: "/therapeutic-approaches" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

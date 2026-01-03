@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, BreadcrumbSchema } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -42,6 +43,16 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Блог"
+        description="Полезни статии за психология, психотерапия, семейни отношения, детско развитие и личностно израстване от специалистите на Център Дар."
+        url="/blog"
+        keywords="психология блог, статии психолог, съвети психотерапия, семейни отношения, детско развитие"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Блог", url: "/blog" }
+      ]} />
       <Header />
       
       <section className="relative py-20 bg-gradient-to-br from-[#221A42] via-[#3B3A64] to-[#221A42]">

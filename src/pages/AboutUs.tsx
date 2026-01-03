@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, FAQSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { 
   Phone, Mail, MapPin, Clock, ChevronLeft, ChevronRight,
@@ -147,6 +148,11 @@ const faqItems = [
 const AboutUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const faqsForSchema = faqItems.map(item => ({
+    question: item.question,
+    answer: item.answer
+  }));
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -164,6 +170,17 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="За нас"
+        description="Център Дар е психологичен и консултативен център в София с екип от клинични психолози, психотерапевти, семейни консултанти, детски психолози и логопеди."
+        url="/about"
+        keywords="психологичен център София, екип психолози, за нас център Дар, специалисти психология"
+      />
+      <FAQSchema faqs={faqsForSchema} />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "За нас", url: "/about" }
+      ]} />
       <Header />
       
       {/* Hero Slider */}

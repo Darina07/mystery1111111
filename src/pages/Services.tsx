@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ServiceSchema, FAQSchema, BreadcrumbSchema } from "@/components/SEO";
 
 import { Button } from "@/components/ui/button";
 import { 
@@ -99,8 +100,29 @@ const faqItems = [
 
 
 const Services = () => {
+  const faqsForSchema = faqItems.map(item => ({
+    question: item.question,
+    answer: item.answer
+  }));
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Услуги"
+        description="Професионални психологични услуги в София - индивидуално консултиране, семейна терапия, детска психология, логопедия и психодиагностика. Запазете час днес."
+        url="/services"
+        keywords="психологични услуги София, психотерапия, семейно консултиране, детски психолог, логопед, психодиагностика"
+      />
+      <ServiceSchema 
+        name="Психологични услуги"
+        description="Професионални психологични услуги - индивидуално консултиране, семейна терапия, детска психология, логопедия и психодиагностика"
+        url="/services"
+      />
+      <FAQSchema faqs={faqsForSchema} />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

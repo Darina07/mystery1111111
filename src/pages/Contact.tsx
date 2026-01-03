@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, FAQSchema, BreadcrumbSchema } from "@/components/SEO";
 
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Youtube, Linkedin, Loader2 } from "lucide-react";
@@ -102,6 +103,11 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const faqsForSchema = faqItems.map(item => ({
+    question: item.question,
+    answer: item.answer
+  }));
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -125,6 +131,17 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Контакти"
+        description="Свържете се с Център Дар в София. Телефон: +359 887 079 256. Адрес: ул. Кишинев 18, Лозенец. Запазете час за консултация онлайн или на място."
+        url="/contact"
+        keywords="контакти психолог София, запази час психолог, център Дар контакти, психологична консултация София"
+      />
+      <FAQSchema faqs={faqsForSchema} />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Контакти", url: "/contact" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

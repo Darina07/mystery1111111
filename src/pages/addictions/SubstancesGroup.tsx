@@ -1,7 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Phone, Calendar, Shield, Lock, Users, Heart, CheckCircle, Clock } from "lucide-react";
+import { Phone, Shield, Lock, Users, Heart, CheckCircle, Clock } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 import { Link } from "react-router-dom";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupSubstancesWho from "@/assets/group-substances-who.jpg";
@@ -292,63 +293,7 @@ const SubstancesGroup = () => {
             </div>
 
             <div className="bg-card/80 backdrop-blur-sm rounded-lg shadow-lg p-8 md:p-10">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Име" 
-                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
-                    />
-                  </div>
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Фамилия" 
-                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <input 
-                      type="email" 
-                      placeholder="Имейл" 
-                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
-                    />
-                  </div>
-                  <div>
-                    <input 
-                      type="tel" 
-                      placeholder="Телефон" 
-                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <textarea 
-                    placeholder="Съобщение" 
-                    rows={4}
-                    className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground resize-none"
-                  />
-                </div>
-
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
-                  <Button type="submit" variant="hero" size="lg" className="px-10">
-                    Изпрати
-                  </Button>
-                  
-                  <a 
-                    href="tel:+359887079256" 
-                    className="flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg"
-                    aria-label="Обадете се на +359 887 079 256"
-                  >
-                    <Phone className="h-8 w-8 text-primary-foreground" />
-                  </a>
-                </div>
-              </form>
+              <ContactForm serviceName="Анонимна група за зависимости към вещества" buttonVariant="hero" />
             </div>
           </div>
         </div>

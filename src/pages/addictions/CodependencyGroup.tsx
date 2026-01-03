@@ -8,14 +8,6 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupCodependencyWho from "@/assets/group-codependency-who.jpg";
 import groupCodependencyHeader from "@/assets/group-codependency-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 const groupFeatures = [
   "Пълна анонимност и конфиденциалност",
@@ -97,35 +89,6 @@ const CodependencyGroup = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/">Начало</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/services/group-programs">Групови програми</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/services/group-programs/addictions">Зависимости</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Съзависимост</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
 
       {/* Introduction */}
       <section className="py-16 md:py-24">

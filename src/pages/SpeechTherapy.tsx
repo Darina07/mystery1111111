@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, BookOpen, Users, Baby, GraduationCap, Heart, Check, Mic, Brain, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { ContactForm } from "@/components/ContactForm";
 import speechTherapyHeader from "@/assets/speech-therapy-header.jpg";
 import speechTherapyBg from "@/assets/speech-therapy-bg.jpg";
@@ -123,16 +123,6 @@ const SpeechTherapy = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <PageBreadcrumb 
-          items={[
-            { label: "Услуги", href: "/#services" },
-            { label: "Логопед" }
-          ]} 
-        />
-      </div>
 
       {/* Introduction Section */}
       <section className="py-16 md:py-24">

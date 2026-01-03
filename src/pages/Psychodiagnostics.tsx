@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Brain, FileText, Target, Users, Baby, GraduationCap, Heart, Check, ClipboardList, Lightbulb, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import psychodiagnosticsHeader from "@/assets/psychodiagnostics-header.jpg";
 import psychodiagnosticsHeaderBg from "@/assets/psychodiagnostics-header-bg.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
@@ -148,16 +148,6 @@ const Psychodiagnostics = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <PageBreadcrumb 
-          items={[
-            { label: "Услуги", href: "/#services" },
-            { label: "Психодиагностика" }
-          ]} 
-        />
-      </div>
 
       {/* Introduction Section */}
       <section className="py-16 md:py-24">

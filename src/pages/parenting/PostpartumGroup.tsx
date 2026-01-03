@@ -8,14 +8,6 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupPostpartumBg from "@/assets/group-postpartum-bg.jpg";
 import groupPostpartumHeader from "@/assets/group-postpartum-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 const groupFeatures = [
   "Споделяне на преживяванията от следродилния период",
@@ -96,35 +88,6 @@ const PostpartumGroup = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/">Начало</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/services/group-programs">Групови програми</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/services/group-programs/parenting">Родителство</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Следродилен период</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
 
       {/* Introduction */}
       <section className="py-16 md:py-24">

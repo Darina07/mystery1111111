@@ -8,14 +8,6 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPHabitsWho from "@/assets/group-nlp-habits-who.jpg";
 import groupNLPHabitsHeader from "@/assets/group-nlp-habits-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 const groupFeatures = [
   "Разбиране на механизмите на навиците",
@@ -96,35 +88,6 @@ const HabitsGroup = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/">Начало</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/services/group-programs">Групови програми</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/services/group-programs/nlp">НЛП</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Навици и поведение</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
 
       {/* Introduction */}
       <section className="py-16 md:py-24">

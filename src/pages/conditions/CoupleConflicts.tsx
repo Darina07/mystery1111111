@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import contactBg from "@/assets/contact-bg.jpg";
 import coupleConflictsHeader from "@/assets/couple-conflicts-header.jpg";
 
@@ -138,17 +138,6 @@ const CoupleConflicts = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb under hero */}
-      <div className="container py-4">
-        <PageBreadcrumb 
-          items={[
-            { label: "Услуги", href: "/#services" },
-            { label: data.parentService.name, href: data.parentService.href },
-            { label: data.title }
-          ]} 
-        />
-      </div>
 
       {/* What Is Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/10">

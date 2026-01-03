@@ -10,14 +10,6 @@ import groupPregnantMothersBg from "@/assets/group-pregnant-mothers-bg.jpg";
 import groupPostpartumBg from "@/assets/group-postpartum-bg.jpg";
 import groupToddlerParentsBg from "@/assets/group-toddler-parents-bg.jpg";
 import groupDifficultSituationsBg from "@/assets/group-difficult-situations-bg.jpg";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 const parentingGroups = [
   {
@@ -111,29 +103,6 @@ const ParentingGroupPrograms = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/">Начало</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/services/group-programs">Групови програми</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Бременност и родителство</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
 
       {/* Key Points Section */}
       <section className="py-16 md:py-24">

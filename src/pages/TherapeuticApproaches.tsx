@@ -5,6 +5,7 @@ import { Contact } from "@/components/Contact";
 import { SEO, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Brain, Heart, Users, Sparkles, Hand, Palette, Zap, TreePine, Phone } from "lucide-react";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import therapeuticApproachesHeader from "@/assets/therapeutic-approaches-header.jpg";
 
 const approachCategories = [
@@ -198,6 +199,16 @@ const TherapeuticApproaches = () => {
           </div>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container py-4">
+        <PageBreadcrumb 
+          items={[
+            { label: "Начало", href: "/" },
+            { label: "Терапевтични подходи" }
+          ]} 
+        />
+      </div>
 
       {/* Introduction */}
       <section className="py-16 md:py-20 bg-background">

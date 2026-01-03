@@ -136,6 +136,11 @@ const Prices = () => {
         </div>
       </section>
 
+      {/* Breadcrumb */}
+      <div className="container py-4">
+        <PageBreadcrumb items={breadcrumbItems} />
+      </div>
+
       {/* Main Pricing Cards */}
       <section className="py-16 bg-secondary/30">
         <div className="container">

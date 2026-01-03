@@ -125,7 +125,7 @@ const SpeechTherapy = () => {
       </section>
 
       {/* Breadcrumb */}
-      <div className="container pt-8">
+      <div className="container py-4">
         <PageBreadcrumb 
           items={[
             { label: "Услуги", href: "/#services" },

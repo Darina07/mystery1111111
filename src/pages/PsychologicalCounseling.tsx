@@ -99,7 +99,7 @@ const ConditionPill = ({ name, slug }: { name: string; slug: string }) => (
 
 const PsychologicalCounseling = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       
       {/* Hero Section with Background Image */}
@@ -402,7 +402,7 @@ const PsychologicalCounseling = () => {
         
         <div className="container relative z-10">
           <div className="max-w-3xl py-4 pr-28 md:pr-40 text-left">
-            <h2 className="text-xl md:text-2xl font-heading font-bold mb-3 text-white whitespace-nowrap">
+            <h2 className="text-xl md:text-2xl font-heading font-bold mb-3 text-white text-balance">
               Как да разберете какво е <span className="text-lavender-light">подходящо за вас?</span>
             </h2>
             <p className="text-sm text-white/80 mb-6 leading-relaxed">
@@ -411,17 +411,17 @@ const PsychologicalCounseling = () => {
             
             {/* Three items - always in a row */}
             <div className="flex flex-row items-center gap-5 flex-wrap md:flex-nowrap">
-              <div className="flex items-center gap-2 whitespace-nowrap">
-                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                <p className="text-white text-xs font-medium">Какво ви води при нас</p>
+              <div className="flex items-start gap-2">
+                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-xs font-medium leading-snug">Какво ви води при нас</p>
               </div>
-              <div className="flex items-center gap-2 whitespace-nowrap">
-                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                <p className="text-white text-xs font-medium">Какво искате да се промени</p>
+              <div className="flex items-start gap-2">
+                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-xs font-medium leading-snug">Какво искате да се промени</p>
               </div>
-              <div className="flex items-center gap-2 whitespace-nowrap">
-                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                <p className="text-white text-xs font-medium">Какъв тип работа е най-подходящ</p>
+              <div className="flex items-start gap-2">
+                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-xs font-medium leading-snug">Какъв тип работа е най-подходящ</p>
               </div>
             </div>
           </div>

@@ -130,14 +130,6 @@ const CareerConsulting = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#221A42]/90 via-[#3B3A64]/80 to-[#221A42]/90" />
         
         <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <div className="flex justify-center mb-6">
-            <PageBreadcrumb 
-              items={[
-                { label: "Професионално развитие", href: "/#professional" },
-                { label: "Кариерно консултиране" }
-              ]} 
-            />
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-playfair">
             Кариерно консултиране
           </h1>
@@ -152,6 +144,16 @@ const CareerConsulting = () => {
           </Button>
         </div>
       </section>
+
+      {/* Breadcrumb */}
+      <div className="container py-4">
+        <PageBreadcrumb 
+          items={[
+            { label: "Професионално развитие", href: "/#professional" },
+            { label: "Кариерно консултиране" }
+          ]} 
+        />
+      </div>
 
       {/* Introduction */}
       <section className="py-16 bg-white">

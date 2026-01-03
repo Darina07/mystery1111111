@@ -53,6 +53,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     // Send notification email to the business
+    console.log("Sending notification email to business...");
     const notificationRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -83,6 +84,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     // Send confirmation email to the user
+    console.log("Sending confirmation email to user...");
     const confirmationRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {

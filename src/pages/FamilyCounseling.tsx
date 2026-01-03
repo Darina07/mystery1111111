@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, HeartHandshake, Baby, Lock, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+import { ContactForm } from "@/components/ContactForm";
 import familyHeader from "@/assets/family-counseling-header.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import marriageRings from "@/assets/marriage-rings.jpg";
@@ -396,67 +397,7 @@ const FamilyCounseling = () => {
 
             {/* Contact Form */}
             <div className="bg-card/80 backdrop-blur-sm rounded-lg shadow-lg p-8 md:p-10">
-              <form className="space-y-6">
-                {/* Row 1: First Name & Last Name */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Име" 
-                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
-                    />
-                  </div>
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Фамилия" 
-                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
-                    />
-                  </div>
-                </div>
-
-                {/* Row 2: Email & Phone */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <input 
-                      type="email" 
-                      placeholder="Имейл" 
-                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
-                    />
-                  </div>
-                  <div>
-                    <input 
-                      type="tel" 
-                      placeholder="Телефон" 
-                      className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
-                    />
-                  </div>
-                </div>
-
-                {/* Row 3: Message */}
-                <div>
-                  <textarea 
-                    placeholder="Съобщение" 
-                    rows={4}
-                    className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground resize-none"
-                  />
-                </div>
-
-                {/* Submit Button & Phone Icon */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
-                  <Button type="submit" variant="hero" size="lg" className="px-10">
-                    Изпрати
-                  </Button>
-                  
-                  <a 
-                    href="tel:+359887079256" 
-                    className="flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg"
-                    aria-label="Обадете се на +359 887 079 256"
-                  >
-                    <Phone className="h-8 w-8 text-primary-foreground" />
-                  </a>
-                </div>
-              </form>
+              <ContactForm serviceName="Семейно консултиране" buttonVariant="hero" />
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+import { ContactForm } from "@/components/ContactForm";
 import contactBg from "@/assets/contact-bg.jpg";
 import lackOfIntimacyHeader from "@/assets/lack-of-intimacy-header.jpg";
 
@@ -154,23 +155,7 @@ const LackOfIntimacy = () => {
               <p className="text-sm text-muted-foreground">Възстановете близостта във вашата връзка.</p>
             </div>
             <div className="bg-card/80 backdrop-blur-sm rounded-lg shadow-lg p-8 md:p-10">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input type="text" placeholder="Име" className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground" />
-                  <input type="text" placeholder="Фамилия" className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground" />
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input type="email" placeholder="Имейл" className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground" />
-                  <input type="tel" placeholder="Телефон" className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground" />
-                </div>
-                <textarea placeholder="Съобщение" rows={4} className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground resize-none" />
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
-                  <Button type="submit" variant="cta" size="lg" className="px-10">Изпрати</Button>
-                  <a href="tel:+359887079256" className="flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg">
-                    <Phone className="h-8 w-8 text-primary-foreground" />
-                  </a>
-                </div>
-              </form>
+              <ContactForm serviceName="Липса на интимност" buttonVariant="cta" />
             </div>
           </div>
         </div>

@@ -56,9 +56,15 @@ const navItems: NavItem[] = [
   { label: "Контакти", href: "/contact" },
 ];
 
-export const Header = () => {
+interface HeaderProps {
+  variant?: 'default' | 'light';
+}
+
+export const Header = ({ variant = 'default' }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const isLight = variant === 'light';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,7 +76,7 @@ export const Header = () => {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 bg-header py-4"
+      className={`fixed top-0 left-0 right-0 z-50 py-4 ${isLight ? 'bg-white shadow-sm' : 'bg-header'}`}
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
@@ -90,7 +96,7 @@ export const Header = () => {
               <NavigationMenuItem key={item.label}>
                 {item.hasSubmenu ? (
                   <>
-                    <NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10 hover:text-white data-[state=open]:bg-white/10 text-sm font-semibold uppercase tracking-wider">
+                    <NavigationMenuTrigger className={`bg-transparent text-sm font-semibold uppercase tracking-wider ${isLight ? 'text-foreground hover:bg-foreground/10 hover:text-foreground data-[state=open]:bg-foreground/10' : 'text-white hover:bg-white/10 hover:text-white data-[state=open]:bg-white/10'}`}>
                       {item.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -135,7 +141,7 @@ export const Header = () => {
                 ) : (
                   <NavigationMenuLink
                     href={item.href}
-                    className="text-sm font-semibold uppercase tracking-wider text-white hover:text-white/80 transition-colors duration-200 px-3 py-2"
+                    className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 px-3 py-2 ${isLight ? 'text-foreground hover:text-foreground/80' : 'text-white hover:text-white/80'}`}
                   >
                     {item.label}
                   </NavigationMenuLink>
@@ -148,7 +154,7 @@ export const Header = () => {
         {/* Phone Icon */}
         <a
           href="tel:+359887079256"
-          className="hidden lg:flex items-center justify-center p-2 text-white hover:text-white/80 transition-colors"
+          className={`hidden lg:flex items-center justify-center p-2 transition-colors ${isLight ? 'text-foreground hover:text-foreground/80' : 'text-white hover:text-white/80'}`}
           aria-label="Обадете се"
         >
           <Phone className="h-5 w-5" />
@@ -157,7 +163,7 @@ export const Header = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 text-white"
+          className={`lg:hidden p-2 ${isLight ? 'text-foreground' : 'text-white'}`}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -166,7 +172,7 @@ export const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-header shadow-card transition-all duration-300 max-h-[80vh] overflow-y-auto ${
+        className={`lg:hidden absolute top-full left-0 right-0 shadow-card transition-all duration-300 max-h-[80vh] overflow-y-auto ${isLight ? 'bg-white' : 'bg-header'} ${
           isMobileMenuOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"
@@ -177,7 +183,7 @@ export const Header = () => {
             <div key={item.label}>
               {item.hasSubmenu ? (
                 <details className="group">
-                  <summary className="flex items-center justify-between text-base font-semibold uppercase tracking-wider text-white hover:text-white/80 transition-colors py-2 cursor-pointer list-none">
+                  <summary className={`flex items-center justify-between text-base font-semibold uppercase tracking-wider transition-colors py-2 cursor-pointer list-none ${isLight ? 'text-foreground hover:text-foreground/80' : 'text-white hover:text-white/80'}`}>
                     {item.label}
                     <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
                   </summary>
@@ -186,17 +192,17 @@ export const Header = () => {
                       <div key={subItem.label}>
                         {subItem.hasSubmenu ? (
                           <details className="group/nested">
-                            <summary className="flex items-center justify-between text-sm text-white/80 hover:text-white transition-colors py-2 cursor-pointer list-none">
+                            <summary className={`flex items-center justify-between text-sm transition-colors py-2 cursor-pointer list-none ${isLight ? 'text-foreground/80 hover:text-foreground' : 'text-white/80 hover:text-white'}`}>
                               {subItem.label}
                               <ChevronDown className="h-3 w-3 transition-transform group-open/nested:rotate-180" />
                             </summary>
                             <div className="pl-4 mt-1 flex flex-col gap-1">
                               {subItem.submenu?.map((nestedItem) => (
-                                <a
-                                  key={nestedItem.label}
-                                  href={nestedItem.href}
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                  className="text-sm text-white/70 hover:text-white transition-colors py-1"
+                                  <a
+                                    key={nestedItem.label}
+                                    href={nestedItem.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className={`text-sm transition-colors py-1 ${isLight ? 'text-foreground/70 hover:text-foreground' : 'text-white/70 hover:text-white'}`}
                                 >
                                   {nestedItem.label}
                                 </a>
@@ -207,7 +213,7 @@ export const Header = () => {
                           <a
                             href={subItem.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="block text-sm text-white/80 hover:text-white transition-colors py-2"
+                            className={`block text-sm transition-colors py-2 ${isLight ? 'text-foreground/80 hover:text-foreground' : 'text-white/80 hover:text-white'}`}
                           >
                             {subItem.label}
                           </a>
@@ -220,17 +226,17 @@ export const Header = () => {
                 <a
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-base font-semibold uppercase tracking-wider text-white hover:text-white/80 transition-colors py-2"
+                  className={`block text-base font-semibold uppercase tracking-wider transition-colors py-2 ${isLight ? 'text-foreground hover:text-foreground/80' : 'text-white hover:text-white/80'}`}
                 >
                   {item.label}
                 </a>
               )}
             </div>
           ))}
-          <div className="pt-4 border-t border-white/20">
+          <div className={`pt-4 border-t ${isLight ? 'border-foreground/20' : 'border-white/20'}`}>
             <a
               href="tel:+359887079256"
-              className="flex items-center gap-2 text-base font-medium text-white hover:text-white/80 transition-colors"
+              className={`flex items-center gap-2 text-base font-medium transition-colors ${isLight ? 'text-foreground hover:text-foreground/80' : 'text-white hover:text-white/80'}`}
               aria-label="Обадете се на +359 887 079 256"
             >
               <Phone className="h-5 w-5" />

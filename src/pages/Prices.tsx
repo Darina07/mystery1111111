@@ -245,25 +245,25 @@ const Prices = () => {
             {specialServices.map((service) => (
               <div
                 key={service.title}
-                className="rounded-2xl p-8 shadow-card hover:shadow-glow transition-all duration-300 flex flex-col h-full"
+                className="rounded-2xl p-6 md:p-8 shadow-card hover:shadow-glow transition-all duration-300 flex flex-col h-full"
                 style={{
                   background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
                 }}
               >
-                <div className="flex items-start gap-4 mb-6 flex-grow">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <service.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-2xl font-semibold gradient-text uppercase">
+                <div className="mb-6 flex-grow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <service.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+                    </div>
+                    <h3 className="font-heading text-xl md:text-2xl font-semibold gradient-text uppercase">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm mt-2">
-                      {service.description}
-                    </p>
                   </div>
+                  <p className="text-muted-foreground text-sm">
+                    {service.description}
+                  </p>
                 </div>
-                <Button variant="cta" className="w-full uppercase mt-auto" asChild>
+                <Button variant="cta" className="w-full uppercase mt-auto text-sm" asChild>
                   <Link to={service.href}>{service.linkText}</Link>
                 </Button>
               </div>

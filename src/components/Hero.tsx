@@ -10,7 +10,7 @@ export const Hero = () => {
     >
       {/* Background Image - optimized for mobile */}
       <div 
-        className="absolute inset-0 bg-cover bg-no-repeat bg-[85%_top] md:bg-center"
+        className="absolute inset-0 bg-cover bg-no-repeat bg-[right_top] md:bg-center"
         style={{
           backgroundImage: `url(${illustrationSupport})`,
         }}

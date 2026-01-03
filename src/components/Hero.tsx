@@ -8,16 +8,16 @@ export const Hero = () => {
       id="home"
       className="relative min-h-screen overflow-hidden"
     >
-      {/* Background Image - full visibility */}
+      {/* Background Image - optimized for mobile */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-no-repeat bg-[center_top] md:bg-center"
         style={{
           backgroundImage: `url(${illustrationSupport})`,
         }}
       />
       
-      {/* White overlay at the top for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent" style={{ height: '60%' }} />
+      {/* White overlay at the top for text readability - adjusted for mobile */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-transparent md:via-white/80" style={{ height: '70%' }} />
       
       <div className="container relative z-10 pt-32 pb-16">
         <div className="max-w-2xl">

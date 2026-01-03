@@ -42,8 +42,8 @@ const servicesSubmenu: SubMenuItem[] = [
 ];
 
 const professionalSubmenu: SubMenuItem[] = [
-  { label: "Кариерно консултиране", href: "#career-counseling" },
-  { label: "Корпоративни услуги", href: "#corporate-services" },
+  { label: "Кариерно консултиране", href: "/services/career-consulting" },
+  { label: "Корпоративни услуги", href: "/services/corporate-services" },
 ];
 
 const navItems: NavItem[] = [

@@ -142,7 +142,7 @@ const Contact = () => {
         { name: "Начало", url: "/" },
         { name: "Контакти", url: "/contact" }
       ]} />
-      <Header variant="light" />
+      <Header />
       
       {/* Hero Section */}
       <section className="relative pt-24 min-h-[500px] overflow-hidden bg-deep-navy">

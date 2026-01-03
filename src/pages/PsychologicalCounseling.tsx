@@ -5,7 +5,7 @@ import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield } from "lu
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { ContactForm } from "@/components/ContactForm";
-import therapyHeader from "@/assets/therapy-header.jpg";
+import counselingHeaderBg from "@/assets/counseling-header-bg.jpg";
 import counselingImage from "@/assets/counseling-image.jpg";
 import counselingTherapyImage from "@/assets/counseling-therapy-image.jpg";
 import psiSupportImage from "@/assets/psi-support.jpg";
@@ -106,9 +106,9 @@ const PsychologicalCounseling = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         {/* Background Image - positioned to the left */}
         <div 
-          className="absolute inset-0 bg-contain bg-left bg-no-repeat"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${therapyHeader})`,
+            backgroundImage: `url(${counselingHeaderBg})`,
           }}
         />
         

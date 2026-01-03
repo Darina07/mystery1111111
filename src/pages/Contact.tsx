@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import contactHeaderBg from "@/assets/contact-header-bg.png";
+import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -167,6 +168,15 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Breadcrumb */}
+      <div className="container py-4">
+        <PageBreadcrumb 
+          items={[
+            { label: "Начало", href: "/" },
+            { label: "Контакти" }
+          ]} 
+        />
+      </div>
 
       {/* Contact Section */}
       <section className="py-20 bg-background">

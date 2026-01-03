@@ -108,7 +108,7 @@ const handler = async (req: Request): Promise<Response> => {
             <p style="color: #888; font-size: 14px;">
               С уважение,<br>
               Екипът на Център Дар<br>
-              <a href="https://darpsiholog.bg">darpsiholog.bg</a>
+              <a href="https://darpsiholog.com">darpsiholog.com</a>
             </p>
           </div>
         `,

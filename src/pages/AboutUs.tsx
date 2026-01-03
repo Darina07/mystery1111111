@@ -16,7 +16,6 @@ import {
 } from "@/components/ui/accordion";
 import { TherapeuticApproachesSection } from "@/components/TherapeuticApproachesSection";
 
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import aboutSlider1 from "@/assets/about-slider-1.jpg";
 import aboutSlider2 from "@/assets/about-slider-2.jpg";
 import aboutSlider3 from "@/assets/about-slider-3.jpg";
@@ -259,15 +258,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <PageBreadcrumb 
-          items={[
-            { label: "Начало", href: "/" },
-            { label: "За нас" }
-          ]} 
-        />
-      </div>
 
       {/* About Section */}
       <section className="py-20 bg-background">

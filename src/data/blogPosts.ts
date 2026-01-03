@@ -1,3 +1,5 @@
+import blogStressManagement from "@/assets/blog-stress-management.jpg";
+
 export type Category = "all" | "psychology" | "family" | "children" | "career" | "corporate" | "wellness";
 
 export interface BlogPost {
@@ -107,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     category: "wellness",
     categoryLabel: "Благополучие",
     date: "15 Декември 2024",
-    image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&h=500&fit=crop",
+    image: blogStressManagement,
     slug: "stress-management"
   },
   {

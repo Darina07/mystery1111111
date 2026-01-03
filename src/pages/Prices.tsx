@@ -199,7 +199,7 @@ const Prices = () => {
                     size="lg"
                     asChild
                   >
-                    <a href="#contact">Свържете се с нас</a>
+                    <Link to="/contact">Свържете се с нас</Link>
                   </Button>
                 </div>
               </div>

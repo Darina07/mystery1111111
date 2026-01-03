@@ -97,6 +97,9 @@ const handler = async (req: Request): Promise<Response> => {
         subject: "Получихме вашето запитване | Център Дар",
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <div style="text-align: center; padding: 24px 0; border-bottom: 1px solid #eee; margin-bottom: 24px;">
+              <img src="https://darpsiholog.com/dar-logo.jpg" alt="Център Дар" style="max-width: 180px; height: auto;" />
+            </div>
             <h1 style="color: #523A5E;">Благодарим ви, ${name}!</h1>
             <p>Получихме вашето запитване и ще се свържем с вас в рамките на 24 часа.</p>
             <p><strong>Вашето съобщение:</strong></p>

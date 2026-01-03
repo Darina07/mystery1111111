@@ -93,7 +93,7 @@ const BlogPost = () => {
       
       {/* Hero Section */}
       <section className="relative">
-        <div className="aspect-[21/9] max-h-[500px] overflow-hidden">
+        <div className="min-h-[280px] md:min-h-0 md:aspect-[21/9] max-h-[500px] overflow-hidden">
           <img 
             src={post.image} 
             alt={post.title}
@@ -101,9 +101,9 @@ const BlogPost = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#221A42] via-[#221A42]/50 to-transparent" />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 pb-12">
+        <div className="absolute bottom-0 left-0 right-0 pb-6 md:pb-12">
           <div className="container mx-auto px-4">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-playfair max-w-4xl">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-playfair max-w-4xl">
               {post.title}
             </h1>
           </div>

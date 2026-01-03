@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import contactHeaderBg from "@/assets/contact-header-bg.png";
+import contactHeaderBg from "@/assets/contact-header-new.jpg";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -145,11 +145,12 @@ const Contact = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-24 min-h-[500px] overflow-hidden bg-deep-navy">
+      <section className="relative pt-24 min-h-[500px] overflow-hidden">
         <div
-          className="absolute inset-0 bg-contain bg-left bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${contactHeaderBg})` }}
         />
+        <div className="absolute inset-0 bg-deep-navy/60" />
         
         <div className="container relative z-10 h-full flex items-center justify-end min-h-[400px]">
           <div className="text-right space-y-6 max-w-2xl">

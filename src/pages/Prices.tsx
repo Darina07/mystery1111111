@@ -94,7 +94,7 @@ const specialServices = [
 
 const Prices = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <SEO 
         title="Цени"
         description="Ясни и прозрачни цени за психологични услуги в Център Дар, София. Индивидуални консултации от 40 евро, онлайн консултации от 35 евро. Вижте пълния ценоразпис."
@@ -240,30 +240,30 @@ const Prices = () => {
         />
         <div className="absolute inset-0 bg-background/70" />
         
-        <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="container relative z-10 px-4">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {specialServices.map((service) => (
               <div
                 key={service.title}
-                className="rounded-2xl p-6 md:p-8 shadow-card hover:shadow-glow transition-all duration-300 flex flex-col h-full"
+                className="rounded-2xl p-5 md:p-8 shadow-card hover:shadow-glow transition-all duration-300 flex flex-col h-full"
                 style={{
                   background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
                 }}
               >
-                <div className="mb-6 flex-grow">
-                  <div className="flex items-center gap-3 mb-4">
+                <div className="mb-4 md:mb-6 flex-grow">
+                  <div className="flex items-center gap-3 mb-3 md:mb-4">
                     <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                       <service.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                     </div>
-                    <h3 className="font-heading text-xl md:text-2xl font-semibold gradient-text uppercase">
+                    <h3 className="font-heading text-lg md:text-2xl font-semibold gradient-text uppercase">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {service.description}
                   </p>
                 </div>
-                <Button variant="cta" className="w-full uppercase mt-auto text-sm" asChild>
+                <Button variant="cta" className="w-full uppercase mt-auto text-xs md:text-sm py-2 md:py-3" asChild>
                   <Link to={service.href}>{service.linkText}</Link>
                 </Button>
               </div>

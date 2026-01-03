@@ -271,22 +271,22 @@ const Psychodiagnostics = () => {
               Психодиагностичният процес преминава през няколко етапа
             </p>
             
-            <div className="grid md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {processSteps.map((step, index) => (
                 <div
                   key={index}
-                  className="bg-card/90 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-border hover:shadow-md transition-shadow text-center relative"
+                  className="bg-card/90 backdrop-blur-sm rounded-2xl p-4 md:p-5 shadow-sm border border-border hover:shadow-md transition-shadow md:text-center relative flex md:flex-col items-center gap-3 md:gap-0"
                 >
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
+                  <div className="hidden md:flex absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full items-center justify-center text-primary-foreground text-xs font-bold">
                     {index + 1}
                   </div>
-                  <div className="w-12 h-12 mx-auto mb-3 mt-2 bg-primary/10 rounded-full flex items-center justify-center">
-                    <step.icon className="h-6 w-6 text-primary" />
+                  <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 md:mx-auto md:mb-3 md:mt-2 bg-primary/10 rounded-full flex items-center justify-center">
+                    <step.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                   </div>
-                  <h3 className="text-sm font-heading font-semibold text-foreground mb-2">
+                  <h3 className="text-base md:text-sm font-heading font-semibold text-foreground md:mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-xs">
+                  <p className="hidden md:block text-muted-foreground text-sm">
                     {step.description}
                   </p>
                 </div>

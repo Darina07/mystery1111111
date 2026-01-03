@@ -5,6 +5,7 @@ import { Phone, Calendar, Brain, FileText, Target, Users, Baby, GraduationCap, H
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import psychodiagnosticsHeader from "@/assets/psychodiagnostics-header.jpg";
+import psychodiagnosticsHeaderBg from "@/assets/psychodiagnostics-header-bg.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 
 const targetAudience = [
@@ -115,9 +116,9 @@ const Psychodiagnostics = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         {/* Background Image - positioned to the left */}
         <div 
-          className="absolute inset-0 bg-contain bg-left bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${psychodiagnosticsHeader})`,
+            backgroundImage: `url(${psychodiagnosticsHeaderBg})`,
           }}
         />
         

@@ -136,12 +136,14 @@ const CareerConsulting = () => {
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
             Професионална подкрепа за вашето кариерно развитие и успех
           </p>
-          <Button 
-            size="lg" 
-            className="bg-[#8F7BBF] hover:bg-[#7F96C3] text-white px-8 py-6 text-lg"
-          >
-            Запазете час
-          </Button>
+          <Link to="/contact">
+            <Button 
+              size="lg" 
+              className="bg-[#8F7BBF] hover:bg-[#7F96C3] text-white px-8 py-6 text-lg uppercase tracking-wide"
+            >
+              Изпратете запитване
+            </Button>
+          </Link>
         </div>
       </section>
 

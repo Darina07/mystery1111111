@@ -11,14 +11,6 @@ import groupEmotionalReadinessBg from "@/assets/group-emotional-readiness-bg.jpg
 import groupSocialSkillsBg from "@/assets/group-social-skills-bg.jpg";
 import groupBreakupRecoveryBg from "@/assets/group-breakup-recovery-bg.jpg";
 import groupMatchmakingBg from "@/assets/group-matchmaking-bg.jpg";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 const relationshipGroups = [
   {
@@ -119,29 +111,6 @@ const RelationshipsGroupPrograms = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/">Начало</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild>
-                <Link to="/services/group-programs">Групови програми</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Необвързани и взаимоотношения</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
 
       {/* Key Points Section */}
       <section className="py-16 md:py-24">

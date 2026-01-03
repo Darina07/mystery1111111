@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Users, Heart, Shield, Brain, Baby, MessageCircle, Target, Sparkles, Clock, Lock, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { ContactForm } from "@/components/ContactForm";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupProgramsHeader from "@/assets/group-programs-header.jpg";
@@ -139,15 +139,6 @@ const GroupPrograms = () => {
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <PageBreadcrumb 
-          items={[
-            { label: "Услуги", href: "/#services" },
-            { label: "Групови програми" }
-          ]} 
-        />
-      </div>
 
       {/* Introduction Section */}
       <section className="py-16 md:py-24">

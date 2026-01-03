@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { ContactForm } from "@/components/ContactForm";
 import counselingHeaderBg from "@/assets/counseling-header-bg.jpg";
 import counselingImage from "@/assets/counseling-image.jpg";
@@ -138,16 +138,6 @@ const PsychologicalCounseling = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <PageBreadcrumb 
-          items={[
-            { label: "Услуги", href: "/#services" },
-            { label: "Психологично консултиране и психотерапия" }
-          ]} 
-        />
-      </div>
 
       {/* Introduction Section with Image */}
       <section className="py-16 md:py-24">

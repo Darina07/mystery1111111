@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { 
   Briefcase, 
   Target, 
@@ -144,16 +144,6 @@ const CareerConsulting = () => {
           </Button>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <PageBreadcrumb 
-          items={[
-            { label: "Професионално развитие", href: "/#professional" },
-            { label: "Кариерно консултиране" }
-          ]} 
-        />
-      </div>
 
       {/* Introduction */}
       <section className="py-16 bg-white">

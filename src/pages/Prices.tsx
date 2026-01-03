@@ -2,7 +2,7 @@ import { Check, Phone, Mail, MapPin, Clock, Users, Building2, Euro, Monitor, Bra
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { SEO, BreadcrumbSchema } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -91,10 +91,6 @@ const specialServices = [
   },
 ];
 
-const breadcrumbItems = [
-  { label: "Начало", href: "/" },
-  { label: "Цени" },
-];
 
 const Prices = () => {
   return (

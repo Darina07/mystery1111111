@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Heart, Users, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import contactBg from "@/assets/contact-bg.jpg";
 import blendedFamiliesHeader from "@/assets/blended-families-header.jpg";
 
@@ -86,10 +86,6 @@ const BlendedFamilies = () => {
           </div>
         </div>
       </section>
-
-      <div className="container py-4">
-        <PageBreadcrumb items={[{ label: "Услуги", href: "/#services" }, { label: data.parentService.name, href: data.parentService.href }, { label: data.title }]} />
-      </div>
 
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/10">
         <div className="container">

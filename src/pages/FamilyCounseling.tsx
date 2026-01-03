@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, HeartHandshake, Baby, Lock, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageBreadcrumb } from "@/components/PageBreadcrumb";
+
 import { ContactForm } from "@/components/ContactForm";
 import familyHeaderBg from "@/assets/family-counseling-header-bg.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
@@ -137,16 +137,6 @@ const FamilyCounseling = () => {
           </div>
         </div>
       </section>
-
-      {/* Breadcrumb */}
-      <div className="container py-4">
-        <PageBreadcrumb 
-          items={[
-            { label: "Услуги", href: "/#services" },
-            { label: "Семейно и партньорско консултиране" }
-          ]} 
-        />
-      </div>
 
       {/* Introduction Section */}
       <section className="py-16 md:py-24">

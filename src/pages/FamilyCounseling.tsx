@@ -5,7 +5,7 @@ import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, HeartHand
 import { Link } from "react-router-dom";
 import { PageBreadcrumb } from "@/components/PageBreadcrumb";
 import { ContactForm } from "@/components/ContactForm";
-import familyHeader from "@/assets/family-counseling-header.jpg";
+import familyHeaderBg from "@/assets/family-counseling-header-bg.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
 import marriageRings from "@/assets/marriage-rings.jpg";
 import couplesPartners from "@/assets/couples-partners.jpg";
@@ -104,9 +104,9 @@ const FamilyCounseling = () => {
       <section className="relative min-h-[60vh] overflow-hidden">
         {/* Background Image - positioned to the left */}
         <div 
-          className="absolute inset-0 bg-contain bg-left bg-no-repeat"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${familyHeader})`,
+            backgroundImage: `url(${familyHeaderBg})`,
           }}
         />
         

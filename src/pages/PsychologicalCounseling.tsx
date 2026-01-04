@@ -403,7 +403,7 @@ const PsychologicalCounseling = () => {
         <div className="container relative z-10">
           <div className="max-w-3xl py-4 pr-28 md:pr-40 text-left">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold mb-4 text-white text-balance">
-              Как да разберете какво е <span className="text-lavender-light">подходящо за вас?</span>
+              Какво е <span className="text-lavender-light">подходящо за вас?</span>
             </h2>
             <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">
               Ако не сте сигурни дали имате нужда от психологично консултиране или психотерапия, това е напълно нормално. В първата среща можем да изясним:

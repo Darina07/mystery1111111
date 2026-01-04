@@ -164,14 +164,14 @@ const Contact = () => {
         
         <div className="container relative z-10 h-full flex items-center justify-end min-h-[400px]">
           <div className="text-right space-y-6 max-w-2xl">
-            <p className="text-primary font-medium tracking-wide uppercase text-sm inline-block bg-background/80 backdrop-blur-sm px-4 py-1 rounded-full">
+            <p className="text-lavender font-medium tracking-wide uppercase text-sm [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
               Контакти
             </p>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-balance">
-              <span className="bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg inline">Свържете се</span>{" "}
-              <span className="gradient-text bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg inline">с нас</span>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-balance [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)]">
+              Свържете се{" "}
+              <span className="text-lavender">с нас</span>
             </h1>
-            <p className="text-muted-foreground text-xl inline-block bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
+            <p className="text-white/90 text-xl [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
               Ние сме тук, за да ви помогнем. Свържете се с нас по удобен за вас начин.
             </p>
           </div>

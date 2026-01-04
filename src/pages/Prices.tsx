@@ -133,7 +133,7 @@ const Prices = () => {
       </section>
 
       {/* Main Pricing Cards */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {pricingItems.map((item) => (
@@ -209,7 +209,7 @@ const Prices = () => {
       </section>
 
       {/* English Consultation Note */}
-      <section className="py-12 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container">
           <div className="max-w-4xl mx-auto flex items-center justify-center gap-4">
             <div className="flex gap-2">
@@ -232,7 +232,7 @@ const Prices = () => {
       </section>
 
       {/* Special Services */}
-      <section className="relative py-16 overflow-hidden">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -273,7 +273,7 @@ const Prices = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">

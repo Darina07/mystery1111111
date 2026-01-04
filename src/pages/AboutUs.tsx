@@ -267,7 +267,7 @@ const AboutUs = () => {
 
 
       {/* About Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-8">
@@ -325,7 +325,7 @@ const AboutUs = () => {
       </section>
 
       {/* Specialists Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <p className="text-primary font-medium tracking-wide uppercase text-sm">
@@ -384,7 +384,7 @@ const AboutUs = () => {
       <TherapeuticApproachesSection />
 
       {/* FAQ Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <p className="text-primary font-medium tracking-wide uppercase text-sm">
@@ -424,7 +424,7 @@ const AboutUs = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-secondary/30">
+      <section id="contact" className="py-16 md:py-24 bg-secondary/30">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <p className="text-primary font-medium tracking-wide uppercase text-sm">

@@ -288,7 +288,7 @@ const CoupleConflicts = () => {
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
                   <Button type="submit" variant="cta" size="lg" className="px-10">
-                    Изпрати
+                    ИЗПРАТИ
                   </Button>
                   
                   <a 

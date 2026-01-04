@@ -48,7 +48,7 @@ export const Hero = () => {
               <Button size="xl" className="uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" style={{ background: 'var(--gradient-cta)' }} asChild>
                 <Link to="/contact">КОНТАКТИ</Link>
               </Button>
-              <Button size="xl" className="uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" style={{ background: 'var(--gradient-cta)' }} asChild>
+              <Button variant="hero-outline" size="xl" className="uppercase" asChild>
                 <Link to="/services">УСЛУГИ</Link>
               </Button>
             </div>

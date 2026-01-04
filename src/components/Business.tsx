@@ -36,37 +36,37 @@ export const Business = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-8 max-w-5xl mx-auto">
           {services.map((service) => (
             <Link 
               to={service.link}
               key={service.title}
-              className="p-5 rounded-xl bg-secondary border border-primary/10 hover:shadow-card transition-all duration-300 group block"
+              className="p-4 sm:p-5 md:p-6 rounded-xl bg-secondary border border-primary/10 hover:shadow-card transition-all duration-300 group block"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                <service.icon className="h-6 w-6 text-primary" />
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                <service.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
               </div>
               
-              <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-3">
+              <h3 className="font-heading text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-2 sm:mb-3 leading-tight">
                 {service.title}
               </h3>
               
-              <p className="text-foreground/80 leading-relaxed mb-4 text-base md:text-lg">
+              <p className="text-foreground/80 leading-relaxed mb-3 sm:mb-4 text-base md:text-lg">
                 {service.description}
               </p>
               
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                 {service.tags.map((tag) => (
                   <span 
                     key={tag}
-                    className="px-3 py-1.5 rounded-full bg-muted text-muted-foreground text-sm"
+                    className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-muted text-muted-foreground text-sm"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
               
-              <span className="inline-flex items-center gap-2 text-foreground font-medium group-hover:gap-3 transition-all duration-300">
+              <span className="inline-flex items-center gap-2 text-foreground font-medium group-hover:gap-3 transition-all duration-300 min-h-[44px] py-2">
                 Научете повече
                 <ArrowRight className="h-4 w-4" />
               </span>

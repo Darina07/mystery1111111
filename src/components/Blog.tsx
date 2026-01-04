@@ -20,11 +20,11 @@ export const Blog = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
           {featuredPosts.map((post) => (
             <Link key={post.id} to={`/blog/${post.slug}`}>
               <Card className="group overflow-hidden bg-white border-0 shadow-card hover:shadow-lg transition-all duration-300 h-full">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 sm:h-48 overflow-hidden">
                   <img
                     src={post.image}
                     alt={post.title}
@@ -34,26 +34,26 @@ export const Blog = () => {
                     decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                    <span className="px-2.5 py-1 sm:px-3 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
                       {post.categoryLabel}
                     </span>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-center gap-3 sm:gap-4 text-sm text-muted-foreground mb-2 sm:mb-3">
                     <span className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
+                      <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                       {post.date}
                     </span>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-heading font-semibold text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-semibold text-foreground mb-2 sm:mb-3 line-clamp-2 group-hover:text-primary transition-colors leading-tight">
                     {post.title}
                   </h3>
-                  <p className="text-muted-foreground text-base md:text-lg mb-4 line-clamp-3">
+                  <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-3 sm:mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all min-h-[44px] py-2">
                     Прочетете повече
                     <ArrowRight className="h-4 w-4" />
                   </span>

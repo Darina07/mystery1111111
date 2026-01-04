@@ -67,22 +67,22 @@ export const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8">
           {services.map((service, index) => (
             <Link
               to={service.link}
               key={service.title}
-              className="group relative bg-card rounded-xl p-5 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 block"
+              className="group relative bg-card rounded-xl p-4 sm:p-5 shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-lavender/5 to-accent/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="h-6 w-6 text-primary" />
+              <div className="relative space-y-3 sm:space-y-4">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <service.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
 
-                <h3 className="font-heading text-xl font-semibold text-foreground">
+                <h3 className="font-heading text-lg sm:text-xl font-semibold text-foreground leading-tight">
                   {service.title}
                 </h3>
 
@@ -90,7 +90,7 @@ export const Services = () => {
                   {service.description}
                 </p>
 
-                <span className="inline-flex items-center gap-2 text-base font-medium text-primary group-hover:gap-3 transition-all duration-300">
+                <span className="inline-flex items-center gap-2 text-base font-medium text-primary group-hover:gap-3 transition-all duration-300 min-h-[44px] py-2">
                   Научи повече
                   <ArrowRight className="h-4 w-4" />
                 </span>

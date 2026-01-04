@@ -82,17 +82,17 @@ export const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-8 max-w-5xl mx-auto">
           {pricingItems.map((item) => (
             <div
               key={item.title}
-              className={`relative bg-card rounded-2xl p-8 shadow-card transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${
+              className={`relative bg-card rounded-xl sm:rounded-2xl p-5 sm:p-8 shadow-card transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${
                 item.popular ? "ring-2 ring-primary shadow-glow" : ""
               }`}
             >
               {item.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full">
+                <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2">
+                  <span className="bg-primary text-primary-foreground text-xs sm:text-sm font-medium px-3 py-1 sm:px-4 sm:py-1.5 rounded-full whitespace-nowrap">
                     Най-популярно
                   </span>
                 </div>
@@ -100,32 +100,32 @@ export const Pricing = () => {
 
               <div className="flex flex-col flex-grow">
                 <div>
-                  <h3 className="font-heading text-xl md:text-2xl font-semibold">
+                  <h3 className="font-heading text-lg sm:text-xl md:text-2xl font-semibold leading-tight">
                     {item.title}
                   </h3>
                   {item.subtitle && (
-                    <p className="text-sm md:text-base text-muted-foreground mt-1">
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground mt-1">
                       {item.subtitle}
                     </p>
                   )}
                 </div>
 
-                <div className="flex items-baseline gap-2 mt-6">
-                  <span className="font-heading text-4xl font-bold text-primary">
+                <div className="flex items-baseline gap-2 mt-4 sm:mt-6">
+                  <span className="font-heading text-3xl sm:text-4xl font-bold text-primary">
                     {item.price}
                   </span>
-                  <span className="text-muted-foreground">
+                  <span className="text-sm sm:text-base text-muted-foreground">
                     {item.currency} / {item.duration}
                   </span>
                 </div>
 
-                <ul className="space-y-4 mt-6 flex-grow">
+                <ul className="space-y-3 sm:space-y-4 mt-4 sm:mt-6 flex-grow">
                   {item.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                        <Check className="h-3.5 w-3.5 text-primary" />
+                    <li key={feature} className="flex items-start gap-2 sm:gap-3">
+                      <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                        <Check className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-primary" />
                       </div>
-                      <span className="text-base text-muted-foreground leading-relaxed">
+                      <span className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                         {feature}
                       </span>
                     </li>

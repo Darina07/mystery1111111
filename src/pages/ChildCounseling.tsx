@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, Baby, BookOpen, Brain, Smile, AlertTriangle, GraduationCap, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -125,6 +126,23 @@ const ConditionPill = ({ name, slug, colorIndex }: { name: string; slug: string;
 const ChildCounseling = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Детско-юношеско консултиране"
+        description="Професионална психологична помощ за деца и юноши. Работа с поведенчески проблеми, тревожност, училищни трудности и емоционално развитие."
+        url="/services/child-counseling"
+        keywords="детски психолог, юношеско консултиране, детска психология, поведенчески проблеми"
+      />
+      <ProfessionalServiceSchema
+        name="Детско-юношеско консултиране"
+        description="Професионална психологична помощ за деца и юноши при поведенчески и емоционални проблеми."
+        url="/services/child-counseling"
+        serviceType="Детска психология"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" },
+        { name: "Детско консултиране", url: "/services/child-counseling" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

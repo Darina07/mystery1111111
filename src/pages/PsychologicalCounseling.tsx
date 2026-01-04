@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -100,6 +101,23 @@ const ConditionPill = ({ name, slug }: { name: string; slug: string }) => (
 const PsychologicalCounseling = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEO 
+        title="Психологично консултиране и психотерапия"
+        description="Професионална психологична помощ при депресия, тревожност, стрес, бърнаут и други емоционални затруднения. Индивидуални консултации в София."
+        url="/services/psychological-counseling"
+        keywords="психолог София, психотерапия, консултиране, депресия, тревожност, стрес"
+      />
+      <ProfessionalServiceSchema
+        name="Психологично консултиране и психотерапия"
+        description="Професионална психологична помощ при депресия, тревожност, стрес, бърнаут и други емоционални затруднения."
+        url="/services/psychological-counseling"
+        serviceType="Психологично консултиране"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" },
+        { name: "Психологично консултиране", url: "/services/psychological-counseling" }
+      ]} />
       <Header />
       
       {/* Hero Section with Background Image */}

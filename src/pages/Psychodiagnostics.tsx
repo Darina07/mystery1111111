@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Brain, FileText, Target, Users, Baby, GraduationCap, Heart, Check, ClipboardList, Lightbulb, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -110,6 +111,23 @@ const assessmentAreas = [
 const Psychodiagnostics = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Психодиагностика"
+        description="Професионална психологическа диагностика. Когнитивна, емоционална и личностна оценка за деца и възрастни."
+        url="/services/psychodiagnostics"
+        keywords="психодиагностика, психологическа оценка, IQ тест, личностен тест, диагностика"
+      />
+      <ProfessionalServiceSchema
+        name="Психодиагностика"
+        description="Професионална психологическа диагностика и оценка за деца и възрастни."
+        url="/services/psychodiagnostics"
+        serviceType="Психодиагностика"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" },
+        { name: "Психодиагностика", url: "/services/psychodiagnostics" }
+      ]} />
       <Header />
       
       {/* Hero Section with Background Image */}

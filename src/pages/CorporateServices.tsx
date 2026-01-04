@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -135,6 +136,23 @@ const CorporateServices = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Корпоративни услуги"
+        description="Корпоративни услуги за бизнеса. Обучения, тиймбилдинги, бизнес консултации и програми за психично здраве на служителите."
+        url="/services/corporate-services"
+        keywords="корпоративни услуги, бизнес консултации, тиймбилдинг, обучения за служители"
+      />
+      <ProfessionalServiceSchema
+        name="Корпоративни услуги"
+        description="Корпоративни услуги за бизнеса - обучения, тиймбилдинги и програми за психично здраве."
+        url="/services/corporate-services"
+        serviceType="Корпоративни услуги"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" },
+        { name: "Корпоративни услуги", url: "/services/corporate-services" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

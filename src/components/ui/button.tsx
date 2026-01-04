@@ -22,7 +22,7 @@ const buttonVariants = cva(
         hero: "bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]",
         "hero-outline":
           "border-2 border-primary/40 bg-card/50 text-foreground hover:bg-primary/10 hover:border-primary backdrop-blur-sm",
-        cta: "bg-primary text-primary-foreground shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] font-semibold",
+        cta: "bg-[hsl(263,35%,48%)] hover:bg-[hsl(263,35%,42%)] text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] font-semibold",
       },
       size: {
         default: "h-10 px-5 py-2",

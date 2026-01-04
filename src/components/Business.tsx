@@ -47,11 +47,11 @@ export const Business = () => {
                 <service.icon className="h-6 w-6 text-primary" />
               </div>
               
-              <h3 className="font-heading text-lg font-semibold text-foreground mb-3">
+              <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-3">
                 {service.title}
               </h3>
               
-              <p className="text-foreground/80 leading-relaxed mb-4 text-sm">
+              <p className="text-foreground/80 leading-relaxed mb-4 text-base md:text-lg">
                 {service.description}
               </p>
               

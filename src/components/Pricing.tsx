@@ -100,11 +100,11 @@ export const Pricing = () => {
 
               <div className="flex flex-col flex-grow">
                 <div>
-                  <h3 className="font-heading text-xl font-semibold">
+                  <h3 className="font-heading text-xl md:text-2xl font-semibold">
                     {item.title}
                   </h3>
                   {item.subtitle && (
-                    <p className="text-sm text-muted-foreground mt-1">
+                    <p className="text-sm md:text-base text-muted-foreground mt-1">
                       {item.subtitle}
                     </p>
                   )}

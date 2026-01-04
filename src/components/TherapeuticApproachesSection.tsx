@@ -123,9 +123,9 @@ export const TherapeuticApproachesSection = () => {
           {/* CTA */}
           <Link 
             to="/therapeutic-approaches"
-            className="flex items-center justify-center"
+            className="col-span-2 lg:col-span-1 flex items-center justify-center"
           >
-            <Button variant="default" size="lg" className="uppercase font-semibold bg-primary hover:bg-primary/90">
+            <Button variant="default" size="default" className="uppercase font-semibold bg-primary hover:bg-primary/90 text-xs sm:text-sm whitespace-nowrap px-4 sm:px-6">
               ВИЖТЕ ВСИЧКИ ПОДХОДИ
             </Button>
           </Link>

@@ -15,6 +15,64 @@
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Critical CSS - inline for faster FCP -->
+    <style>
+      /* Critical reset and base styles */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { line-height: 1.5; -webkit-text-size-adjust: 100%; font-family: system-ui, -apple-system, sans-serif; }
+      body { min-height: 100vh; background-color: #fff; color: #221A42; }
+      img, video { max-width: 100%; height: auto; display: block; }
+      
+      /* Font display swap for faster text rendering */
+      @font-face {
+        font-family: 'Playfair Display';
+        font-display: swap;
+        src: local('Playfair Display');
+      }
+      @font-face {
+        font-family: 'DM Sans';
+        font-display: swap;
+        src: local('DM Sans');
+      }
+      
+      /* Critical layout styles for above-the-fold content */
+      #root { min-height: 100vh; }
+      
+      /* Header skeleton */
+      .header-skeleton {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: #221A42;
+        z-index: 50;
+      }
+      
+      /* Hero section skeleton to prevent CLS */
+      .hero-skeleton {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #fff 0%, #fff 70%, transparent 100%);
+        position: relative;
+      }
+      
+      /* Loading state */
+      .loading-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+
+      /* Primary color reference */
+      :root {
+        --primary: 263 35% 62%;
+        --background: 0 0% 100%;
+        --foreground: 252 41% 18%;
+      }
+    </style>
     
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://darpsiholog.com" />

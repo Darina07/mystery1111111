@@ -133,8 +133,9 @@ export const Pricing = () => {
                 </ul>
 
                 <Button
-                  variant={item.popular ? "cta" : "outline"}
-                  className="w-full uppercase mt-6"
+                  variant={item.popular ? "default" : "outline"}
+                  className={`w-full uppercase mt-6 ${item.popular ? 'text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]' : ''}`}
+                  style={item.popular ? { background: 'var(--gradient-cta)' } : undefined}
                   size="lg"
                   asChild
                 >

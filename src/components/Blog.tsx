@@ -64,7 +64,7 @@ export const Blog = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground uppercase" asChild>
+          <Button size="lg" className="uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" style={{ background: 'var(--gradient-cta)' }} asChild>
             <Link to="/blog">ВСИЧКИ СТАТИИ</Link>
           </Button>
         </div>

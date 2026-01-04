@@ -168,7 +168,7 @@ const Services = () => {
               Основни{" "}
               <span className="gradient-text">услуги</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg sm:text-xl">
               Предлагаме широк спектър от психологични услуги за индивидуални клиенти, двойки и семейства.
             </p>
           </div>
@@ -191,7 +191,7 @@ const Services = () => {
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+                  <p className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
                     {service.description}
                   </p>
                   <div className="text-center mt-auto">
@@ -249,7 +249,7 @@ const Services = () => {
               Професионално{" "}
               <span className="gradient-text">развитие</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg sm:text-xl">
               Услуги за кариерно развитие и корпоративни решения за вашия бизнес.
             </p>
           </div>
@@ -272,7 +272,7 @@ const Services = () => {
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+                  <p className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
                     {service.description}
                   </p>
                   <div className="text-center mt-auto">
@@ -299,7 +299,7 @@ const Services = () => {
               Често задавани{" "}
               <span className="gradient-text">въпроси</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg sm:text-xl">
               Отговори на най-честите въпроси, които получаваме от нашите клиенти.
             </p>
           </div>
@@ -318,7 +318,7 @@ const Services = () => {
                   <AccordionTrigger className="text-left font-heading font-semibold text-lg hover:no-underline py-6">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                  <AccordionContent className="text-muted-foreground text-base pb-6 leading-relaxed">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -339,7 +339,7 @@ const Services = () => {
               Свържете се{" "}
               <span className="gradient-text">с нас</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg sm:text-xl">
               Имате въпроси? Свържете се с нас за консултация или запазете час.
             </p>
           </div>

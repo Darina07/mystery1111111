@@ -148,7 +148,7 @@ const PsychologicalCounseling = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
               {/* Content */}
               <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                   Психологичното консултиране и психотерапията помагат при тревожност, депресивни състояния, стрес, панически атаки и други трудни преживявания. В център „Дар" предлагаме спокойна и подкрепяща среда, в която разговорът води до повече яснота, разбиране и устойчиви промени – без осъждане и с уважение към вашето темпо.
                 </p>
               </div>
@@ -169,7 +169,7 @@ const PsychologicalCounseling = () => {
                 <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
                   <span className="gradient-text">Психологично консултиране</span>
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base">
                   Подходящо при конкретни трудности и периоди на промяна, когато имате нужда да подредите мислите си и да намерите посока.
                 </p>
               </div>
@@ -177,7 +177,7 @@ const PsychologicalCounseling = () => {
                 <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
                   <span className="gradient-text">Психотерапия</span>
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base">
                   По-задълбочен процес, насочен към повтарящи се модели, вътрешни конфликти и по-трайна лична промяна.
                 </p>
               </div>
@@ -202,7 +202,7 @@ const PsychologicalCounseling = () => {
                         Кога може да бъде полезна{" "}
                         <span className="gradient-text">психологична подкрепа?</span>
                       </h3>
-                      <p className="text-muted-foreground mb-4">
+                      <p className="text-muted-foreground text-base mb-4">
                         Ако се чувствате тревожни или изчерпани, преживявате тъга, страх, проблеми със съня, житейска криза или усещане, че „нещо не е наред".
                       </p>
                       <p className="text-foreground font-medium italic">
@@ -248,7 +248,7 @@ const PsychologicalCounseling = () => {
                       <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
                         {step.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-base leading-relaxed">
                         {step.description}
                       </p>
                     </div>

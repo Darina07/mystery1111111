@@ -144,7 +144,7 @@ const GroupPrograms = () => {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 text-center">
               Груповите програми в „Дар Консулт" създават безопасно пространство за подкрепа, осъзнаване и лична промяна, където хора с близки преживявания могат да работят върху важни за тях теми с помощта на структуриран и професионално воден процес.
             </p>
             
@@ -161,7 +161,7 @@ const GroupPrograms = () => {
                     <div className="w-10 h-10 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center">
                       <item.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <p className="text-foreground text-sm">{item.text}</p>
+                    <p className="text-foreground text-base">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -209,7 +209,7 @@ const GroupPrograms = () => {
                   <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-full flex items-center justify-center">
                     <item.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <p className="text-foreground text-sm font-medium">{item.text}</p>
+                  <p className="text-foreground text-base font-medium">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -261,7 +261,7 @@ const GroupPrograms = () => {
                       {addictionsGroup.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground mb-4">{addictionsGroup.description}</p>
+                  <p className="text-muted-foreground text-base mb-4">{addictionsGroup.description}</p>
                   
                   <div className="space-y-4 mb-6">
                     <div>
@@ -313,7 +313,7 @@ const GroupPrograms = () => {
                       {relationshipsGroup.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground mb-4">{relationshipsGroup.description}</p>
+                  <p className="text-muted-foreground text-base mb-4">{relationshipsGroup.description}</p>
                   
                   <div className="mb-4">
                     <h4 className="font-semibold text-foreground mb-2">Фокус на групите:</h4>

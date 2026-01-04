@@ -143,7 +143,7 @@ const FamilyCounseling = () => {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12 text-center">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-12 text-center">
               В „Дар" център предлагаме професионално консултиране за двойки и семейства, насочено към подобряване на взаимоотношенията, комуникацията, емоционалната близост и интимния живот. Консултирането се води от брачен консултант и семеен психолог, а при необходимост включва и работа със сексолог при сексуални проблеми и смущения. Всичко се случва в спокойна, конфиденциална и неосъждаща среда.
             </p>
 

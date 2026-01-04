@@ -124,7 +124,7 @@ const Prices = () => {
               Ясни и{" "}
               <span className="gradient-text">прозрачни условия</span>
             </h1>
-            <p className="text-foreground text-lg">
+            <p className="text-foreground text-lg sm:text-xl">
               В Психологичен и консултативен център „Дар" държим на открита и ясна
               информация за цените на нашите услуги.
             </p>
@@ -186,7 +186,7 @@ const Prices = () => {
                         <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                           <Check className="h-3 w-3 text-primary" />
                         </div>
-                        <span className="text-sm text-muted-foreground">
+                        <span className="text-base text-muted-foreground">
                           {feature}
                         </span>
                       </li>
@@ -259,7 +259,7 @@ const Prices = () => {
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-base leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -284,7 +284,7 @@ const Prices = () => {
               Свържете се{" "}
               <span className="gradient-text">с нас</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg sm:text-xl">
               Имате въпроси относно цените? Свържете се с нас за консултация или запазете час.
             </p>
           </div>

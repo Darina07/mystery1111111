@@ -165,10 +165,10 @@ const ChildCounseling = () => {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 text-center">
               Детско-юношеското консултиране представлява професионална психологична подкрепа за деца и юноши, предоставяна от детски психолог, при емоционални, поведенчески и социални трудности. В център „Дар" създаваме спокойна и сигурна среда, в която децата и тийнейджърите могат да изразят преживяванията си по начин, съобразен с възрастта и индивидуалните им потребности.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed text-center">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed text-center">
               Работата с детски психолог е насочена както към детето или младежа, така и към родителите, когато това е необходимо. Целта е по-добро разбиране на трудностите, подкрепа в развитието и изграждане на устойчиви умения за справяне.
             </p>
           </div>

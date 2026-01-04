@@ -101,7 +101,7 @@ export const TherapeuticApproachesSection = () => {
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center shadow-md`}>
                   <category.icon className="h-4 w-4 text-white" />
                 </div>
-                <h3 className="font-heading text-base font-semibold text-foreground">
+                <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground">
                   {category.title}
                 </h3>
               </div>
@@ -111,7 +111,7 @@ export const TherapeuticApproachesSection = () => {
                   <Link
                     key={approach.name}
                     to={approach.href}
-                    className="px-3 py-1.5 rounded-full bg-muted text-muted-foreground text-sm hover:bg-primary/10 hover:text-primary transition-colors"
+                    className="px-3 py-1.5 rounded-full bg-muted text-muted-foreground text-sm md:text-base hover:bg-primary/10 hover:text-primary transition-colors"
                   >
                     {approach.name}
                   </Link>

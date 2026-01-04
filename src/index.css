@@ -16,7 +16,7 @@
     /* Brand Colors - DAR Psychological Center */
     --lavender: 263 35% 62%; /* #8F7BBF - primary lavender */
     --lavender-light: 263 40% 75%;
-    --lavender-dark: 263 30% 50%;
+    --lavender-dark: 263 35% 45%; /* Darker for better contrast */
     
     --indigo: 252 41% 18%; /* #221A42 - dark indigo */
     --indigo-light: 252 35% 25%;
@@ -38,7 +38,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 252 41% 18%;
 
-    --primary: 263 35% 62%;
+    /* Primary - darker for better contrast on white backgrounds */
+    --primary: 263 35% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 260 25% 95%;

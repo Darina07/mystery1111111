@@ -61,6 +61,12 @@ const socialLinks = [
     href: "https://linkedin.com/company/darpsiholog",
     color: "hover:bg-blue-700"
   },
+  {
+    icon: Youtube,
+    label: "YouTube",
+    href: "https://youtube.com/@darpsiholog",
+    color: "hover:bg-red-600"
+  },
 ];
 
 const faqItems = [

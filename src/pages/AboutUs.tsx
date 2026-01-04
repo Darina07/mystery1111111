@@ -203,7 +203,7 @@ const AboutUs = () => {
               className="absolute inset-0 w-full h-full object-cover object-center"
               aria-hidden="true"
             />
-            <div className="absolute inset-0 bg-indigo/60" />
+            <div className="absolute inset-0 bg-indigo/40" />
           </div>
         ))}
         

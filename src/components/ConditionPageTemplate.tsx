@@ -53,7 +53,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
           aria-hidden="true"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-indigo/70" />
+        <div className="absolute inset-0 bg-indigo/40" />
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
           <div className="max-w-3xl text-center bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">

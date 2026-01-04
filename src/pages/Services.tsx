@@ -138,7 +138,7 @@ const Services = () => {
           className="absolute inset-0 w-full h-full object-cover object-top"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-indigo/60" />
+        <div className="absolute inset-0 bg-indigo/35" />
         
         <div className="container relative z-10 h-full flex items-center justify-center min-h-[400px]">
           <div className="text-center space-y-6 max-w-3xl bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">

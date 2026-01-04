@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ContactForm } from "@/components/ContactForm";
 import contactBg from "@/assets/contact-bg.jpg";
 import { LucideIcon } from "lucide-react";
-import { SEO, MedicalConditionSchema, BreadcrumbSchema } from "@/components/SEO";
+import { SEO, MedicalConditionSchema, BreadcrumbSchema, HealthTopicSchema } from "@/components/SEO";
 export interface ConditionData {
   title: string;
   subtitle: string;
@@ -54,6 +54,12 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
         name={data.title}
         description={data.description}
         url={currentUrl}
+      />
+      <HealthTopicSchema 
+        name={data.title}
+        description={data.description}
+        url={currentUrl}
+        mainEntity={data.whatIs.content.substring(0, 500)}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />

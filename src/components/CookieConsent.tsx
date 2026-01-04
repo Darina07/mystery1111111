@@ -34,12 +34,12 @@ export const CookieConsent = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex-1 pr-8">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-foreground">
               Използваме бисквитки, за да подобрим вашето изживяване на сайта. 
               Продължавайки да разглеждате, вие се съгласявате с използването на бисквитки.{" "}
               <Link 
                 to="/cookie-policy" 
-                className="text-primary hover:underline font-medium"
+                className="text-foreground hover:underline font-semibold underline"
               >
                 Научете повече
               </Link>

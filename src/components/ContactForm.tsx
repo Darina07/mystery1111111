@@ -154,7 +154,7 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
               Изпращане...
             </>
           ) : (
-            "Изпрати"
+            "ИЗПРАТИ"
           )}
         </Button>
         

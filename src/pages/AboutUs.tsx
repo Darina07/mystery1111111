@@ -587,6 +587,7 @@ const AboutUs = () => {
                   variant="cta"
                   className="w-full uppercase"
                   size="lg"
+                  style={{ backgroundColor: "hsl(263, 35%, 48%)", color: "white" }}
                 >
                   Изпратете запитване
                 </Button>

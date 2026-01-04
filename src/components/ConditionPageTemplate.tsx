@@ -2,12 +2,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Heart } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { ContactForm } from "@/components/ContactForm";
 import contactBg from "@/assets/contact-bg.jpg";
 import { LucideIcon } from "lucide-react";
-
+import { SEO, MedicalConditionSchema, BreadcrumbSchema } from "@/components/SEO";
 export interface ConditionData {
   title: string;
   subtitle: string;
@@ -34,8 +34,28 @@ interface ConditionPageTemplateProps {
 }
 
 export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
+  const location = useLocation();
+  const currentUrl = `https://darpsychology.com${location.pathname}`;
+  
+  const breadcrumbItems = [
+    { name: "Начало", url: "https://darpsychology.com/" },
+    { name: data.parentService.name, url: `https://darpsychology.com${data.parentService.href}` },
+    { name: data.title, url: currentUrl }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${data.title} | ${data.subtitle} | ДАР Психология`}
+        description={data.description}
+        url={currentUrl}
+      />
+      <MedicalConditionSchema 
+        name={data.title}
+        description={data.description}
+        url={currentUrl}
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
       
       {/* Hero Section */}

@@ -161,7 +161,7 @@ const SexualProblems = () => {
                 </div>
                 <textarea placeholder="Съобщение" rows={4} className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground resize-none" />
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
-                  <Button type="submit" variant="cta" size="lg" className="px-10">Изпрати</Button>
+                  <Button type="submit" variant="cta" size="lg" className="px-10">ИЗПРАТИ</Button>
                   <a href="tel:+359887079256" className="flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg">
                     <Phone className="h-8 w-8 text-primary-foreground" />
                   </a>

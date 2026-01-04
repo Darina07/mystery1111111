@@ -61,7 +61,7 @@ export const About = () => {
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
                   <value.icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="font-heading font-semibold text-foreground text-lg mb-2">
+                <h3 className="font-heading font-semibold text-foreground text-xl mb-3">
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground text-base leading-relaxed">

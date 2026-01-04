@@ -119,13 +119,13 @@ export const Pricing = () => {
                   </span>
                 </div>
 
-                <ul className="space-y-3 mt-6 flex-grow">
+                <ul className="space-y-4 mt-6 flex-grow">
                   {item.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                        <Check className="h-3 w-3 text-primary" />
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                        <Check className="h-3.5 w-3.5 text-primary" />
                       </div>
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-base text-muted-foreground leading-relaxed">
                         {feature}
                       </span>
                     </li>

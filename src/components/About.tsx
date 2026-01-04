@@ -52,19 +52,19 @@ export const About = () => {
           </div>
 
           {/* Right - Values Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6">
             {values.map((value) => (
               <div 
                 key={value.title} 
-                className="p-6 rounded-2xl bg-card border border-border/50 hover:shadow-card transition-all duration-300 group"
+                className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-card border border-border/50 hover:shadow-card transition-all duration-300 group"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
-                  <value.icon className="h-7 w-7 text-primary" />
+                <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-primary/20 transition-colors duration-300">
+                  <value.icon className="h-5 w-5 sm:h-7 sm:w-7 text-primary" />
                 </div>
-                <h3 className="font-heading font-semibold text-foreground text-xl mb-3">
+                <h3 className="font-heading font-semibold text-foreground text-base sm:text-xl mb-2 sm:mb-3 leading-tight">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                   {value.description}
                 </p>
               </div>

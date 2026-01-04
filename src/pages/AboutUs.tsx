@@ -203,7 +203,7 @@ const AboutUs = () => {
               className="absolute inset-0 w-full h-full object-cover object-center"
               aria-hidden="true"
             />
-            <div className="absolute inset-0 bg-background/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/50 to-background/70" />
           </div>
         ))}
         

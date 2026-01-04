@@ -192,9 +192,14 @@ const AboutUs = () => {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
+            <img
+              src={slide.image}
+              alt=""
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              aria-hidden="true"
             />
             <div className="absolute inset-0 bg-background/40" />
           </div>
@@ -344,9 +349,13 @@ const AboutUs = () => {
                 }}
               >
                 {/* Background Image */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
-                  style={{ backgroundImage: `url(${specialist.image})` }}
+                <img 
+                  src={specialist.image}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.08]"
+                  aria-hidden="true"
                 />
                 
                 {/* Content */}

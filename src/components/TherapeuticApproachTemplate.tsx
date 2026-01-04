@@ -43,9 +43,14 @@ export const TherapeuticApproachTemplate = ({
 
       {/* Hero Section */}
       <section className="relative min-h-[50vh] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${headerImage})` }}
+        <img
+          src={headerImage}
+          alt=""
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
 
@@ -122,9 +127,13 @@ export const TherapeuticApproachTemplate = ({
 
       {/* Suitable For Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${suitableForBg})` }}
+        <img 
+          src={suitableForBg}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-deep-navy/85" />
         
@@ -190,9 +199,13 @@ export const TherapeuticApproachTemplate = ({
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${contactBg})` }}
+        <img 
+          src={contactBg}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-background/60" />
         

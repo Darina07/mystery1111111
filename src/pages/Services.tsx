@@ -127,9 +127,14 @@ const Services = () => {
       
       {/* Hero Section */}
       <section className="relative pt-24 min-h-[500px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-top"
-          style={{ backgroundImage: `url(${servicesHeader})` }}
+        <img
+          src={servicesHeader}
+          alt=""
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-background/50" />
         

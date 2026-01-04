@@ -41,10 +41,17 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] overflow-hidden">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${data.heroImage})` }}
+        <img 
+          src={data.heroImage}
+          alt=""
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
         />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-background/70" />
         {/* Overlay */}
         <div className="absolute inset-0 bg-background/70" />
         
@@ -158,9 +165,13 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${contactBg})` }}
+        <img 
+          src={contactBg}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-background/60" />
         

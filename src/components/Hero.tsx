@@ -45,10 +45,10 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
-              <Button variant="hero" size="xl" className="uppercase" asChild>
+              <Button size="xl" className="uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" style={{ background: 'var(--gradient-cta)' }} asChild>
                 <Link to="/contact">КОНТАКТИ</Link>
               </Button>
-              <Button variant="hero-outline" size="xl" className="uppercase" asChild>
+              <Button size="xl" className="uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" style={{ background: 'var(--gradient-cta)' }} asChild>
                 <Link to="/services">УСЛУГИ</Link>
               </Button>
             </div>

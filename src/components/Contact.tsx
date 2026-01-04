@@ -223,7 +223,7 @@ export const Contact = () => {
                 />
               </div>
 
-              <Button variant="cta" size="lg" className="w-full uppercase" disabled={isSubmitting}>
+              <Button size="lg" className="w-full uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" style={{ background: 'var(--gradient-cta)' }} disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" />

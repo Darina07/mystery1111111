@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,159 +6,196 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import { GoogleAnalyticsProvider } from "@/components/GoogleAnalytics";
-import Index from "./pages/Index";
-import AboutUs from "./pages/AboutUs";
-import NotFound from "./pages/NotFound";
-import PsychologicalCounseling from "./pages/PsychologicalCounseling";
-import FamilyCounseling from "./pages/FamilyCounseling";
-import ChildCounseling from "./pages/ChildCounseling";
-import GroupPrograms from "./pages/GroupPrograms";
-import AddictionsGroupPrograms from "./pages/AddictionsGroupPrograms";
-import AlcoholGroup from "./pages/addictions/AlcoholGroup";
-import SubstancesGroup from "./pages/addictions/SubstancesGroup";
-import GamblingGroup from "./pages/addictions/GamblingGroup";
-import LoveGroup from "./pages/addictions/LoveGroup";
-import CodependencyGroup from "./pages/addictions/CodependencyGroup";
-import RelationshipsGroupPrograms from "./pages/RelationshipsGroupPrograms";
-import AttachmentGroup from "./pages/relationships/AttachmentGroup";
-import EmotionalReadinessGroup from "./pages/relationships/EmotionalReadinessGroup";
-import SocialSkillsGroup from "./pages/relationships/SocialSkillsGroup";
-import BreakupRecoveryGroup from "./pages/relationships/BreakupRecoveryGroup";
-import MatchmakingGroup from "./pages/relationships/MatchmakingGroup";
-import ParentingGroupPrograms from "./pages/ParentingGroupPrograms";
-import PregnantMothersGroup from "./pages/parenting/PregnantMothersGroup";
-import PostpartumGroup from "./pages/parenting/PostpartumGroup";
-import ToddlerParentsGroup from "./pages/parenting/ToddlerParentsGroup";
-import DifficultSituationsGroup from "./pages/parenting/DifficultSituationsGroup";
-import NLPGroupPrograms from "./pages/NLPGroupPrograms";
-import PersonalEffectivenessGroup from "./pages/nlp/PersonalEffectivenessGroup";
-import AnxietyBlocksGroup from "./pages/nlp/AnxietyBlocksGroup";
-import GoalsMotivationGroup from "./pages/nlp/GoalsMotivationGroup";
-import CommunicationSkillsGroup from "./pages/nlp/CommunicationSkillsGroup";
-import HabitsGroup from "./pages/nlp/HabitsGroup";
-import SpeechTherapy from "./pages/SpeechTherapy";
-import Psychodiagnostics from "./pages/Psychodiagnostics";
-import CareerConsulting from "./pages/CareerConsulting";
-import CorporateServices from "./pages/CorporateServices";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import Prices from "./pages/Prices";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsConditions from "./pages/TermsConditions";
-import CookiePolicy from "./pages/CookiePolicy";
-import CoupleConflicts from "./pages/conditions/CoupleConflicts";
-import MaritalCrisis from "./pages/conditions/MaritalCrisis";
-import JealousyTrust from "./pages/conditions/JealousyTrust";
-import Infidelity from "./pages/conditions/Infidelity";
-import SexualProblems from "./pages/conditions/SexualProblems";
-import LackOfIntimacy from "./pages/conditions/LackOfIntimacy";
-import FamilyViolence from "./pages/conditions/FamilyViolence";
-import Postpartum from "./pages/conditions/Postpartum";
-import ParentChildRelations from "./pages/conditions/ParentChildRelations";
-import BlendedFamilies from "./pages/conditions/BlendedFamilies";
-import SeparationLoss from "./pages/conditions/SeparationLoss";
-import Depression from "./pages/conditions/Depression";
-import Anxiety from "./pages/conditions/Anxiety";
-import PanicAttacks from "./pages/conditions/PanicAttacks";
-import Phobias from "./pages/conditions/Phobias";
-import Hypochondria from "./pages/conditions/Hypochondria";
-import OCD from "./pages/conditions/OCD";
-import Bipolar from "./pages/conditions/Bipolar";
-import Anger from "./pages/conditions/Anger";
-import Stress from "./pages/conditions/Stress";
-import PTSD from "./pages/conditions/PTSD";
-import Burnout from "./pages/conditions/Burnout";
-import EmotionalExhaustion from "./pages/conditions/EmotionalExhaustion";
-import Insomnia from "./pages/conditions/Insomnia";
-import Psychosomatic from "./pages/conditions/Psychosomatic";
-import Fatigue from "./pages/conditions/Fatigue";
-import Insecurity from "./pages/conditions/Insecurity";
-import Perfectionism from "./pages/conditions/Perfectionism";
-import Boundaries from "./pages/conditions/Boundaries";
-import Loneliness from "./pages/conditions/Loneliness";
-import CommunicationDifficulties from "./pages/conditions/CommunicationDifficulties";
-import LifeCrisis from "./pages/conditions/LifeCrisis";
-import Loss from "./pages/conditions/Loss";
-import Separation from "./pages/conditions/Separation";
-import Adaptation from "./pages/conditions/Adaptation";
-import AlcoholAddiction from "./pages/conditions/AlcoholAddiction";
-import DrugAddiction from "./pages/conditions/DrugAddiction";
-import GamblingAddiction from "./pages/conditions/GamblingAddiction";
-import MedicationAddiction from "./pages/conditions/MedicationAddiction";
-import InternetAddiction from "./pages/conditions/InternetAddiction";
-import SocialMediaAddiction from "./pages/conditions/SocialMediaAddiction";
-import Workaholism from "./pages/conditions/Workaholism";
-import LoveAddiction from "./pages/conditions/LoveAddiction";
-import LGBTSupport from "./pages/conditions/LGBTSupport";
-import IdentitySelfAcceptance from "./pages/conditions/IdentitySelfAcceptance";
-import ComingOut from "./pages/conditions/ComingOut";
-import SocialRejectionStress from "./pages/conditions/SocialRejectionStress";
-import LGBTRelationships from "./pages/conditions/LGBTRelationships";
-import Autism from "./pages/conditions/Autism";
-import ADHD from "./pages/conditions/ADHD";
-import Asperger from "./pages/conditions/Asperger";
-import DownSyndrome from "./pages/conditions/DownSyndrome";
-import IntellectualDisability from "./pages/conditions/IntellectualDisability";
-import RettSyndrome from "./pages/conditions/RettSyndrome";
-import Dyslexia from "./pages/conditions/Dyslexia";
-import Dysgraphia from "./pages/conditions/Dysgraphia";
-import Dyscalculia from "./pages/conditions/Dyscalculia";
-import Dyspraxia from "./pages/conditions/Dyspraxia";
-import MemoryConcentration from "./pages/conditions/MemoryConcentration";
-import Stuttering from "./pages/conditions/Stuttering";
-import SelectiveMutism from "./pages/conditions/SelectiveMutism";
-import SpeechDisorders from "./pages/conditions/SpeechDisorders";
-import ChildPTSD from "./pages/conditions/ChildPTSD";
-import TicsTourette from "./pages/conditions/TicsTourette";
-import AggressionSelfHarm from "./pages/conditions/AggressionSelfHarm";
-import ChildFears from "./pages/conditions/ChildFears";
-import ChildSleepProblems from "./pages/conditions/ChildSleepProblems";
-import ChildPsychosomatic from "./pages/conditions/ChildPsychosomatic";
-import AdaptationDifficulties from "./pages/conditions/AdaptationDifficulties";
-import PeerCommunication from "./pages/conditions/PeerCommunication";
-import LowSelfEsteem from "./pages/conditions/LowSelfEsteem";
-import ConflictRelationships from "./pages/conditions/ConflictRelationships";
-import RunningAway from "./pages/conditions/RunningAway";
-import RiskyBehavior from "./pages/conditions/RiskyBehavior";
-import ChildGrief from "./pages/conditions/ChildGrief";
-import ParentsDivorce from "./pages/conditions/ParentsDivorce";
-import NewFamilyMember from "./pages/conditions/NewFamilyMember";
-import Relocation from "./pages/conditions/Relocation";
-import ChildStress from "./pages/conditions/ChildStress";
-import MuscularDystrophy from "./pages/conditions/MuscularDystrophy";
-import Epilepsy from "./pages/conditions/Epilepsy";
-import ChronicIllness from "./pages/conditions/ChronicIllness";
-import SpecialEducationalNeeds from "./pages/conditions/SpecialEducationalNeeds";
-import LGBTYouth from "./pages/conditions/LGBTYouth";
-import YouthIdentity from "./pages/conditions/YouthIdentity";
-import SocialRejectionSupport from "./pages/conditions/SocialRejectionSupport";
-import ComingOutSupport from "./pages/conditions/ComingOutSupport";
-import SpeechDelay from "./pages/conditions/SpeechDelay";
-import Articulation from "./pages/conditions/Articulation";
-import SpecialNeedsSpeech from "./pages/conditions/SpecialNeedsSpeech";
 import { CookieConsent } from "./components/CookieConsent";
-import TherapeuticApproaches from "./pages/TherapeuticApproaches";
-import Psychoanalysis from "./pages/approaches/Psychoanalysis";
-import PsychodynamicTherapy from "./pages/approaches/PsychodynamicTherapy";
-import CBT from "./pages/approaches/CBT";
-import SchemaTherapy from "./pages/approaches/SchemaTherapy";
-import GestaltTherapy from "./pages/approaches/GestaltTherapy";
-import ExistentialTherapy from "./pages/approaches/ExistentialTherapy";
-import PositiveTherapy from "./pages/approaches/PositiveTherapy";
-import FamilyTherapy from "./pages/approaches/FamilyTherapy";
-import TransgenerationalTherapy from "./pages/approaches/TransgenerationalTherapy";
-import CouplesTherapy from "./pages/approaches/CouplesTherapy";
-import EMDR from "./pages/approaches/EMDR";
-import SomaticExperiencing from "./pages/approaches/SomaticExperiencing";
-import BioenergeticTherapy from "./pages/approaches/BioenergticTherapy";
-import BodyPsychotherapy from "./pages/approaches/BodyPsychotherapy";
-import DanceMovementTherapy from "./pages/approaches/DanceMovementTherapy";
-import ArtTherapy from "./pages/approaches/ArtTherapy";
-import MusicTherapy from "./pages/approaches/MusicTherapy";
-import PlayTherapy from "./pages/approaches/PlayTherapy";
+
+// Only Index page is loaded eagerly for fastest FCP
+import Index from "./pages/Index";
+
+// Lazy load all other pages for code splitting
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const PsychologicalCounseling = lazy(() => import("./pages/PsychologicalCounseling"));
+const FamilyCounseling = lazy(() => import("./pages/FamilyCounseling"));
+const ChildCounseling = lazy(() => import("./pages/ChildCounseling"));
+const GroupPrograms = lazy(() => import("./pages/GroupPrograms"));
+const AddictionsGroupPrograms = lazy(() => import("./pages/AddictionsGroupPrograms"));
+const AlcoholGroup = lazy(() => import("./pages/addictions/AlcoholGroup"));
+const SubstancesGroup = lazy(() => import("./pages/addictions/SubstancesGroup"));
+const GamblingGroup = lazy(() => import("./pages/addictions/GamblingGroup"));
+const LoveGroup = lazy(() => import("./pages/addictions/LoveGroup"));
+const CodependencyGroup = lazy(() => import("./pages/addictions/CodependencyGroup"));
+const RelationshipsGroupPrograms = lazy(() => import("./pages/RelationshipsGroupPrograms"));
+const AttachmentGroup = lazy(() => import("./pages/relationships/AttachmentGroup"));
+const EmotionalReadinessGroup = lazy(() => import("./pages/relationships/EmotionalReadinessGroup"));
+const SocialSkillsGroup = lazy(() => import("./pages/relationships/SocialSkillsGroup"));
+const BreakupRecoveryGroup = lazy(() => import("./pages/relationships/BreakupRecoveryGroup"));
+const MatchmakingGroup = lazy(() => import("./pages/relationships/MatchmakingGroup"));
+const ParentingGroupPrograms = lazy(() => import("./pages/ParentingGroupPrograms"));
+const PregnantMothersGroup = lazy(() => import("./pages/parenting/PregnantMothersGroup"));
+const PostpartumGroup = lazy(() => import("./pages/parenting/PostpartumGroup"));
+const ToddlerParentsGroup = lazy(() => import("./pages/parenting/ToddlerParentsGroup"));
+const DifficultSituationsGroup = lazy(() => import("./pages/parenting/DifficultSituationsGroup"));
+const NLPGroupPrograms = lazy(() => import("./pages/NLPGroupPrograms"));
+const PersonalEffectivenessGroup = lazy(() => import("./pages/nlp/PersonalEffectivenessGroup"));
+const AnxietyBlocksGroup = lazy(() => import("./pages/nlp/AnxietyBlocksGroup"));
+const GoalsMotivationGroup = lazy(() => import("./pages/nlp/GoalsMotivationGroup"));
+const CommunicationSkillsGroup = lazy(() => import("./pages/nlp/CommunicationSkillsGroup"));
+const HabitsGroup = lazy(() => import("./pages/nlp/HabitsGroup"));
+const SpeechTherapy = lazy(() => import("./pages/SpeechTherapy"));
+const Psychodiagnostics = lazy(() => import("./pages/Psychodiagnostics"));
+const CareerConsulting = lazy(() => import("./pages/CareerConsulting"));
+const CorporateServices = lazy(() => import("./pages/CorporateServices"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const Prices = lazy(() => import("./pages/Prices"));
+const Services = lazy(() => import("./pages/Services"));
+const Contact = lazy(() => import("./pages/Contact"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsConditions = lazy(() => import("./pages/TermsConditions"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
+const TherapeuticApproaches = lazy(() => import("./pages/TherapeuticApproaches"));
+
+// Conditions - Family
+const CoupleConflicts = lazy(() => import("./pages/conditions/CoupleConflicts"));
+const MaritalCrisis = lazy(() => import("./pages/conditions/MaritalCrisis"));
+const JealousyTrust = lazy(() => import("./pages/conditions/JealousyTrust"));
+const Infidelity = lazy(() => import("./pages/conditions/Infidelity"));
+const SexualProblems = lazy(() => import("./pages/conditions/SexualProblems"));
+const LackOfIntimacy = lazy(() => import("./pages/conditions/LackOfIntimacy"));
+const FamilyViolence = lazy(() => import("./pages/conditions/FamilyViolence"));
+const Postpartum = lazy(() => import("./pages/conditions/Postpartum"));
+const ParentChildRelations = lazy(() => import("./pages/conditions/ParentChildRelations"));
+const BlendedFamilies = lazy(() => import("./pages/conditions/BlendedFamilies"));
+const SeparationLoss = lazy(() => import("./pages/conditions/SeparationLoss"));
+
+// Conditions - Psychological
+const Depression = lazy(() => import("./pages/conditions/Depression"));
+const Anxiety = lazy(() => import("./pages/conditions/Anxiety"));
+const PanicAttacks = lazy(() => import("./pages/conditions/PanicAttacks"));
+const Phobias = lazy(() => import("./pages/conditions/Phobias"));
+const Hypochondria = lazy(() => import("./pages/conditions/Hypochondria"));
+const OCD = lazy(() => import("./pages/conditions/OCD"));
+const Bipolar = lazy(() => import("./pages/conditions/Bipolar"));
+const Anger = lazy(() => import("./pages/conditions/Anger"));
+const Stress = lazy(() => import("./pages/conditions/Stress"));
+const PTSD = lazy(() => import("./pages/conditions/PTSD"));
+const Burnout = lazy(() => import("./pages/conditions/Burnout"));
+const EmotionalExhaustion = lazy(() => import("./pages/conditions/EmotionalExhaustion"));
+const Insomnia = lazy(() => import("./pages/conditions/Insomnia"));
+const Psychosomatic = lazy(() => import("./pages/conditions/Psychosomatic"));
+const Fatigue = lazy(() => import("./pages/conditions/Fatigue"));
+const Insecurity = lazy(() => import("./pages/conditions/Insecurity"));
+const Perfectionism = lazy(() => import("./pages/conditions/Perfectionism"));
+const Boundaries = lazy(() => import("./pages/conditions/Boundaries"));
+const Loneliness = lazy(() => import("./pages/conditions/Loneliness"));
+const CommunicationDifficulties = lazy(() => import("./pages/conditions/CommunicationDifficulties"));
+const LifeCrisis = lazy(() => import("./pages/conditions/LifeCrisis"));
+const Loss = lazy(() => import("./pages/conditions/Loss"));
+const Separation = lazy(() => import("./pages/conditions/Separation"));
+const Adaptation = lazy(() => import("./pages/conditions/Adaptation"));
+
+// Conditions - Addictions
+const AlcoholAddiction = lazy(() => import("./pages/conditions/AlcoholAddiction"));
+const DrugAddiction = lazy(() => import("./pages/conditions/DrugAddiction"));
+const GamblingAddiction = lazy(() => import("./pages/conditions/GamblingAddiction"));
+const MedicationAddiction = lazy(() => import("./pages/conditions/MedicationAddiction"));
+const InternetAddiction = lazy(() => import("./pages/conditions/InternetAddiction"));
+const SocialMediaAddiction = lazy(() => import("./pages/conditions/SocialMediaAddiction"));
+const Workaholism = lazy(() => import("./pages/conditions/Workaholism"));
+const LoveAddiction = lazy(() => import("./pages/conditions/LoveAddiction"));
+
+// Conditions - LGBT+
+const LGBTSupport = lazy(() => import("./pages/conditions/LGBTSupport"));
+const IdentitySelfAcceptance = lazy(() => import("./pages/conditions/IdentitySelfAcceptance"));
+const ComingOut = lazy(() => import("./pages/conditions/ComingOut"));
+const SocialRejectionStress = lazy(() => import("./pages/conditions/SocialRejectionStress"));
+const LGBTRelationships = lazy(() => import("./pages/conditions/LGBTRelationships"));
+
+// Conditions - Special Needs
+const Autism = lazy(() => import("./pages/conditions/Autism"));
+const ADHD = lazy(() => import("./pages/conditions/ADHD"));
+const Asperger = lazy(() => import("./pages/conditions/Asperger"));
+const DownSyndrome = lazy(() => import("./pages/conditions/DownSyndrome"));
+const IntellectualDisability = lazy(() => import("./pages/conditions/IntellectualDisability"));
+const RettSyndrome = lazy(() => import("./pages/conditions/RettSyndrome"));
+
+// Conditions - Learning Difficulties
+const Dyslexia = lazy(() => import("./pages/conditions/Dyslexia"));
+const Dysgraphia = lazy(() => import("./pages/conditions/Dysgraphia"));
+const Dyscalculia = lazy(() => import("./pages/conditions/Dyscalculia"));
+const Dyspraxia = lazy(() => import("./pages/conditions/Dyspraxia"));
+const MemoryConcentration = lazy(() => import("./pages/conditions/MemoryConcentration"));
+
+// Conditions - Speech
+const Stuttering = lazy(() => import("./pages/conditions/Stuttering"));
+const SelectiveMutism = lazy(() => import("./pages/conditions/SelectiveMutism"));
+const SpeechDisorders = lazy(() => import("./pages/conditions/SpeechDisorders"));
+const SpeechDelay = lazy(() => import("./pages/conditions/SpeechDelay"));
+const Articulation = lazy(() => import("./pages/conditions/Articulation"));
+const SpecialNeedsSpeech = lazy(() => import("./pages/conditions/SpecialNeedsSpeech"));
+
+// Conditions - Child Behavioral
+const ChildPTSD = lazy(() => import("./pages/conditions/ChildPTSD"));
+const TicsTourette = lazy(() => import("./pages/conditions/TicsTourette"));
+const AggressionSelfHarm = lazy(() => import("./pages/conditions/AggressionSelfHarm"));
+const ChildFears = lazy(() => import("./pages/conditions/ChildFears"));
+const ChildSleepProblems = lazy(() => import("./pages/conditions/ChildSleepProblems"));
+const ChildPsychosomatic = lazy(() => import("./pages/conditions/ChildPsychosomatic"));
+const AdaptationDifficulties = lazy(() => import("./pages/conditions/AdaptationDifficulties"));
+const PeerCommunication = lazy(() => import("./pages/conditions/PeerCommunication"));
+const LowSelfEsteem = lazy(() => import("./pages/conditions/LowSelfEsteem"));
+const ConflictRelationships = lazy(() => import("./pages/conditions/ConflictRelationships"));
+const RunningAway = lazy(() => import("./pages/conditions/RunningAway"));
+const RiskyBehavior = lazy(() => import("./pages/conditions/RiskyBehavior"));
+const ChildGrief = lazy(() => import("./pages/conditions/ChildGrief"));
+const ParentsDivorce = lazy(() => import("./pages/conditions/ParentsDivorce"));
+const NewFamilyMember = lazy(() => import("./pages/conditions/NewFamilyMember"));
+const Relocation = lazy(() => import("./pages/conditions/Relocation"));
+const ChildStress = lazy(() => import("./pages/conditions/ChildStress"));
+
+// Conditions - Physical/Medical
+const MuscularDystrophy = lazy(() => import("./pages/conditions/MuscularDystrophy"));
+const Epilepsy = lazy(() => import("./pages/conditions/Epilepsy"));
+const ChronicIllness = lazy(() => import("./pages/conditions/ChronicIllness"));
+const SpecialEducationalNeeds = lazy(() => import("./pages/conditions/SpecialEducationalNeeds"));
+
+// Conditions - Youth LGBT+
+const LGBTYouth = lazy(() => import("./pages/conditions/LGBTYouth"));
+const YouthIdentity = lazy(() => import("./pages/conditions/YouthIdentity"));
+const SocialRejectionSupport = lazy(() => import("./pages/conditions/SocialRejectionSupport"));
+const ComingOutSupport = lazy(() => import("./pages/conditions/ComingOutSupport"));
+
+// Therapeutic Approaches
+const Psychoanalysis = lazy(() => import("./pages/approaches/Psychoanalysis"));
+const PsychodynamicTherapy = lazy(() => import("./pages/approaches/PsychodynamicTherapy"));
+const CBT = lazy(() => import("./pages/approaches/CBT"));
+const SchemaTherapy = lazy(() => import("./pages/approaches/SchemaTherapy"));
+const GestaltTherapy = lazy(() => import("./pages/approaches/GestaltTherapy"));
+const ExistentialTherapy = lazy(() => import("./pages/approaches/ExistentialTherapy"));
+const PositiveTherapy = lazy(() => import("./pages/approaches/PositiveTherapy"));
+const FamilyTherapy = lazy(() => import("./pages/approaches/FamilyTherapy"));
+const TransgenerationalTherapy = lazy(() => import("./pages/approaches/TransgenerationalTherapy"));
+const CouplesTherapy = lazy(() => import("./pages/approaches/CouplesTherapy"));
+const EMDR = lazy(() => import("./pages/approaches/EMDR"));
+const SomaticExperiencing = lazy(() => import("./pages/approaches/SomaticExperiencing"));
+const BioenergeticTherapy = lazy(() => import("./pages/approaches/BioenergticTherapy"));
+const BodyPsychotherapy = lazy(() => import("./pages/approaches/BodyPsychotherapy"));
+const DanceMovementTherapy = lazy(() => import("./pages/approaches/DanceMovementTherapy"));
+const ArtTherapy = lazy(() => import("./pages/approaches/ArtTherapy"));
+const MusicTherapy = lazy(() => import("./pages/approaches/MusicTherapy"));
+const PlayTherapy = lazy(() => import("./pages/approaches/PlayTherapy"));
+
 const queryClient = new QueryClient();
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="animate-pulse flex flex-col items-center gap-4">
+      <div className="w-16 h-16 rounded-full bg-primary/20"></div>
+      <div className="h-4 w-32 bg-primary/20 rounded"></div>
+    </div>
+  </div>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -168,170 +206,173 @@ const App = () => (
         <ScrollToTop />
         <GoogleAnalyticsProvider>
           <CookieConsent />
-          <Routes>
-            <Route path="/" element={<Index />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/psychological-counseling" element={<PsychologicalCounseling />} />
-          <Route path="/services/family-counseling" element={<FamilyCounseling />} />
-          <Route path="/services/child-counseling" element={<ChildCounseling />} />
-          <Route path="/services/group-programs" element={<GroupPrograms />} />
-          <Route path="/services/group-programs/addictions" element={<AddictionsGroupPrograms />} />
-          <Route path="/services/group-programs/addictions/alcohol" element={<AlcoholGroup />} />
-          <Route path="/services/group-programs/addictions/substances" element={<SubstancesGroup />} />
-          <Route path="/services/group-programs/addictions/gambling" element={<GamblingGroup />} />
-          <Route path="/services/group-programs/addictions/love" element={<LoveGroup />} />
-          <Route path="/services/group-programs/addictions/codependency" element={<CodependencyGroup />} />
-          <Route path="/services/group-programs/relationships" element={<RelationshipsGroupPrograms />} />
-          <Route path="/services/group-programs/relationships/attachment" element={<AttachmentGroup />} />
-          <Route path="/services/group-programs/relationships/emotional-readiness" element={<EmotionalReadinessGroup />} />
-          <Route path="/services/group-programs/relationships/social-skills" element={<SocialSkillsGroup />} />
-          <Route path="/services/group-programs/relationships/breakup-recovery" element={<BreakupRecoveryGroup />} />
-          <Route path="/services/group-programs/relationships/matchmaking" element={<MatchmakingGroup />} />
-          <Route path="/services/group-programs/parenting" element={<ParentingGroupPrograms />} />
-          <Route path="/services/group-programs/parenting/pregnant-mothers" element={<PregnantMothersGroup />} />
-          <Route path="/services/group-programs/parenting/postpartum" element={<PostpartumGroup />} />
-          <Route path="/services/group-programs/parenting/toddler-parents" element={<ToddlerParentsGroup />} />
-          <Route path="/services/group-programs/parenting/difficult-situations" element={<DifficultSituationsGroup />} />
-          <Route path="/services/group-programs/nlp" element={<NLPGroupPrograms />} />
-          <Route path="/services/group-programs/nlp/personal-effectiveness" element={<PersonalEffectivenessGroup />} />
-          <Route path="/services/group-programs/nlp/anxiety-blocks" element={<AnxietyBlocksGroup />} />
-          <Route path="/services/group-programs/nlp/goals-motivation" element={<GoalsMotivationGroup />} />
-          <Route path="/services/group-programs/nlp/communication-skills" element={<CommunicationSkillsGroup />} />
-          <Route path="/services/group-programs/nlp/habits" element={<HabitsGroup />} />
-          <Route path="/services/speech-therapy" element={<SpeechTherapy />} />
-          <Route path="/services/psychodiagnostics" element={<Psychodiagnostics />} />
-          <Route path="/services/career-consulting" element={<CareerConsulting />} />
-          <Route path="/services/corporate-services" element={<CorporateServices />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/prices" element={<Prices />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/conditions/couple-conflicts" element={<CoupleConflicts />} />
-          <Route path="/conditions/marital-crisis" element={<MaritalCrisis />} />
-          <Route path="/conditions/jealousy-trust" element={<JealousyTrust />} />
-          <Route path="/conditions/infidelity" element={<Infidelity />} />
-          <Route path="/conditions/sexual-problems" element={<SexualProblems />} />
-          <Route path="/conditions/lack-of-intimacy" element={<LackOfIntimacy />} />
-          <Route path="/conditions/family-violence" element={<FamilyViolence />} />
-          <Route path="/conditions/postpartum" element={<Postpartum />} />
-          <Route path="/conditions/parent-child-relations" element={<ParentChildRelations />} />
-          <Route path="/conditions/blended-families" element={<BlendedFamilies />} />
-          <Route path="/conditions/separation-loss" element={<SeparationLoss />} />
-          {/* Psychological Counseling conditions */}
-          <Route path="/conditions/depression" element={<Depression />} />
-          <Route path="/conditions/anxiety" element={<Anxiety />} />
-          <Route path="/conditions/panic-attacks" element={<PanicAttacks />} />
-          <Route path="/conditions/phobias" element={<Phobias />} />
-          <Route path="/conditions/hypochondria" element={<Hypochondria />} />
-          <Route path="/conditions/ocd" element={<OCD />} />
-          <Route path="/conditions/bipolar" element={<Bipolar />} />
-          <Route path="/conditions/anger" element={<Anger />} />
-          <Route path="/conditions/stress" element={<Stress />} />
-          <Route path="/conditions/ptsd" element={<PTSD />} />
-          <Route path="/conditions/burnout" element={<Burnout />} />
-          <Route path="/conditions/emotional-exhaustion" element={<EmotionalExhaustion />} />
-          <Route path="/conditions/insomnia" element={<Insomnia />} />
-          <Route path="/conditions/psychosomatic" element={<Psychosomatic />} />
-          <Route path="/conditions/fatigue" element={<Fatigue />} />
-          <Route path="/conditions/insecurity" element={<Insecurity />} />
-          <Route path="/conditions/perfectionism" element={<Perfectionism />} />
-          <Route path="/conditions/boundaries" element={<Boundaries />} />
-          <Route path="/conditions/loneliness" element={<Loneliness />} />
-          <Route path="/conditions/communication-difficulties" element={<CommunicationDifficulties />} />
-          <Route path="/conditions/life-crisis" element={<LifeCrisis />} />
-          <Route path="/conditions/loss" element={<Loss />} />
-          <Route path="/conditions/separation" element={<Separation />} />
-          <Route path="/conditions/adaptation" element={<Adaptation />} />
-          {/* Addiction conditions */}
-          <Route path="/conditions/alcohol-addiction" element={<AlcoholAddiction />} />
-          <Route path="/conditions/drug-addiction" element={<DrugAddiction />} />
-          <Route path="/conditions/gambling-addiction" element={<GamblingAddiction />} />
-          <Route path="/conditions/medication-addiction" element={<MedicationAddiction />} />
-          <Route path="/conditions/internet-addiction" element={<InternetAddiction />} />
-          <Route path="/conditions/social-media-addiction" element={<SocialMediaAddiction />} />
-          <Route path="/conditions/workaholism" element={<Workaholism />} />
-          <Route path="/conditions/love-addiction" element={<LoveAddiction />} />
-          {/* LGBT+ conditions */}
-          <Route path="/conditions/lgbt-support" element={<LGBTSupport />} />
-          <Route path="/conditions/identity-self-acceptance" element={<IdentitySelfAcceptance />} />
-          <Route path="/conditions/coming-out" element={<ComingOut />} />
-          <Route path="/conditions/social-rejection-stress" element={<SocialRejectionStress />} />
-          <Route path="/conditions/lgbt-relationships" element={<LGBTRelationships />} />
-          {/* Special needs conditions */}
-          <Route path="/conditions/autism" element={<Autism />} />
-          <Route path="/conditions/adhd" element={<ADHD />} />
-          <Route path="/conditions/asperger" element={<Asperger />} />
-          <Route path="/conditions/down-syndrome" element={<DownSyndrome />} />
-          <Route path="/conditions/intellectual-disability" element={<IntellectualDisability />} />
-          <Route path="/conditions/rett-syndrome" element={<RettSyndrome />} />
-          {/* Learning difficulties conditions */}
-          <Route path="/conditions/dyslexia" element={<Dyslexia />} />
-          <Route path="/conditions/dysgraphia" element={<Dysgraphia />} />
-          <Route path="/conditions/dyscalculia" element={<Dyscalculia />} />
-          <Route path="/conditions/dyspraxia" element={<Dyspraxia />} />
-          <Route path="/conditions/memory-concentration" element={<MemoryConcentration />} />
-          {/* Child behavioral and emotional conditions */}
-          <Route path="/conditions/stuttering" element={<Stuttering />} />
-          <Route path="/conditions/selective-mutism" element={<SelectiveMutism />} />
-          <Route path="/conditions/speech-disorders" element={<SpeechDisorders />} />
-          <Route path="/conditions/child-ptsd" element={<ChildPTSD />} />
-          <Route path="/conditions/tics-tourette" element={<TicsTourette />} />
-          <Route path="/conditions/aggression-self-harm" element={<AggressionSelfHarm />} />
-          <Route path="/conditions/child-fears" element={<ChildFears />} />
-          <Route path="/conditions/child-sleep-problems" element={<ChildSleepProblems />} />
-          <Route path="/conditions/child-psychosomatic" element={<ChildPsychosomatic />} />
-          {/* Child social and life conditions */}
-          <Route path="/conditions/adaptation-difficulties" element={<AdaptationDifficulties />} />
-          <Route path="/conditions/peer-communication" element={<PeerCommunication />} />
-          <Route path="/conditions/low-self-esteem" element={<LowSelfEsteem />} />
-          <Route path="/conditions/conflict-relationships" element={<ConflictRelationships />} />
-          <Route path="/conditions/running-away" element={<RunningAway />} />
-          <Route path="/conditions/risky-behavior" element={<RiskyBehavior />} />
-          <Route path="/conditions/child-grief" element={<ChildGrief />} />
-          <Route path="/conditions/parents-divorce" element={<ParentsDivorce />} />
-          <Route path="/conditions/new-family-member" element={<NewFamilyMember />} />
-          <Route path="/conditions/relocation" element={<Relocation />} />
-          <Route path="/conditions/child-stress" element={<ChildStress />} />
-          {/* Special physical conditions */}
-          <Route path="/conditions/muscular-dystrophy" element={<MuscularDystrophy />} />
-          <Route path="/conditions/epilepsy" element={<Epilepsy />} />
-          <Route path="/conditions/chronic-illness" element={<ChronicIllness />} />
-          <Route path="/conditions/special-educational-needs" element={<SpecialEducationalNeeds />} />
-          {/* LGBT+ youth conditions */}
-          <Route path="/conditions/lgbt-youth" element={<LGBTYouth />} />
-          <Route path="/conditions/youth-identity" element={<YouthIdentity />} />
-          <Route path="/conditions/social-rejection-support" element={<SocialRejectionSupport />} />
-          <Route path="/conditions/coming-out-support" element={<ComingOutSupport />} />
-          {/* Speech therapy specific conditions */}
-          <Route path="/conditions/speech-delay" element={<SpeechDelay />} />
-          <Route path="/conditions/articulation" element={<Articulation />} />
-          <Route path="/conditions/special-needs" element={<SpecialNeedsSpeech />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-conditions" element={<TermsConditions />} />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/therapeutic-approaches" element={<TherapeuticApproaches />} />
-          <Route path="/approaches/psychoanalysis" element={<Psychoanalysis />} />
-          <Route path="/approaches/psychodynamic-therapy" element={<PsychodynamicTherapy />} />
-          <Route path="/approaches/cbt" element={<CBT />} />
-          <Route path="/approaches/schema-therapy" element={<SchemaTherapy />} />
-          <Route path="/approaches/gestalt-therapy" element={<GestaltTherapy />} />
-          <Route path="/approaches/existential-therapy" element={<ExistentialTherapy />} />
-          <Route path="/approaches/positive-therapy" element={<PositiveTherapy />} />
-          <Route path="/approaches/family-therapy" element={<FamilyTherapy />} />
-          <Route path="/approaches/transgenerational-therapy" element={<TransgenerationalTherapy />} />
-          <Route path="/approaches/couples-therapy" element={<CouplesTherapy />} />
-          <Route path="/approaches/emdr" element={<EMDR />} />
-          <Route path="/approaches/somatic-experiencing" element={<SomaticExperiencing />} />
-          <Route path="/approaches/bioenergetic-therapy" element={<BioenergeticTherapy />} />
-          <Route path="/approaches/body-psychotherapy" element={<BodyPsychotherapy />} />
-          <Route path="/approaches/dance-movement-therapy" element={<DanceMovementTherapy />} />
-          <Route path="/approaches/art-therapy" element={<ArtTherapy />} />
-          <Route path="/approaches/music-therapy" element={<MusicTherapy />} />
-          <Route path="/approaches/play-therapy" element={<PlayTherapy />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/psychological-counseling" element={<PsychologicalCounseling />} />
+              <Route path="/services/family-counseling" element={<FamilyCounseling />} />
+              <Route path="/services/child-counseling" element={<ChildCounseling />} />
+              <Route path="/services/group-programs" element={<GroupPrograms />} />
+              <Route path="/services/group-programs/addictions" element={<AddictionsGroupPrograms />} />
+              <Route path="/services/group-programs/addictions/alcohol" element={<AlcoholGroup />} />
+              <Route path="/services/group-programs/addictions/substances" element={<SubstancesGroup />} />
+              <Route path="/services/group-programs/addictions/gambling" element={<GamblingGroup />} />
+              <Route path="/services/group-programs/addictions/love" element={<LoveGroup />} />
+              <Route path="/services/group-programs/addictions/codependency" element={<CodependencyGroup />} />
+              <Route path="/services/group-programs/relationships" element={<RelationshipsGroupPrograms />} />
+              <Route path="/services/group-programs/relationships/attachment" element={<AttachmentGroup />} />
+              <Route path="/services/group-programs/relationships/emotional-readiness" element={<EmotionalReadinessGroup />} />
+              <Route path="/services/group-programs/relationships/social-skills" element={<SocialSkillsGroup />} />
+              <Route path="/services/group-programs/relationships/breakup-recovery" element={<BreakupRecoveryGroup />} />
+              <Route path="/services/group-programs/relationships/matchmaking" element={<MatchmakingGroup />} />
+              <Route path="/services/group-programs/parenting" element={<ParentingGroupPrograms />} />
+              <Route path="/services/group-programs/parenting/pregnant-mothers" element={<PregnantMothersGroup />} />
+              <Route path="/services/group-programs/parenting/postpartum" element={<PostpartumGroup />} />
+              <Route path="/services/group-programs/parenting/toddler-parents" element={<ToddlerParentsGroup />} />
+              <Route path="/services/group-programs/parenting/difficult-situations" element={<DifficultSituationsGroup />} />
+              <Route path="/services/group-programs/nlp" element={<NLPGroupPrograms />} />
+              <Route path="/services/group-programs/nlp/personal-effectiveness" element={<PersonalEffectivenessGroup />} />
+              <Route path="/services/group-programs/nlp/anxiety-blocks" element={<AnxietyBlocksGroup />} />
+              <Route path="/services/group-programs/nlp/goals-motivation" element={<GoalsMotivationGroup />} />
+              <Route path="/services/group-programs/nlp/communication-skills" element={<CommunicationSkillsGroup />} />
+              <Route path="/services/group-programs/nlp/habits" element={<HabitsGroup />} />
+              <Route path="/services/speech-therapy" element={<SpeechTherapy />} />
+              <Route path="/services/psychodiagnostics" element={<Psychodiagnostics />} />
+              <Route path="/services/career-consulting" element={<CareerConsulting />} />
+              <Route path="/services/corporate-services" element={<CorporateServices />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/prices" element={<Prices />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/conditions/couple-conflicts" element={<CoupleConflicts />} />
+              <Route path="/conditions/marital-crisis" element={<MaritalCrisis />} />
+              <Route path="/conditions/jealousy-trust" element={<JealousyTrust />} />
+              <Route path="/conditions/infidelity" element={<Infidelity />} />
+              <Route path="/conditions/sexual-problems" element={<SexualProblems />} />
+              <Route path="/conditions/lack-of-intimacy" element={<LackOfIntimacy />} />
+              <Route path="/conditions/family-violence" element={<FamilyViolence />} />
+              <Route path="/conditions/postpartum" element={<Postpartum />} />
+              <Route path="/conditions/parent-child-relations" element={<ParentChildRelations />} />
+              <Route path="/conditions/blended-families" element={<BlendedFamilies />} />
+              <Route path="/conditions/separation-loss" element={<SeparationLoss />} />
+              {/* Psychological Counseling conditions */}
+              <Route path="/conditions/depression" element={<Depression />} />
+              <Route path="/conditions/anxiety" element={<Anxiety />} />
+              <Route path="/conditions/panic-attacks" element={<PanicAttacks />} />
+              <Route path="/conditions/phobias" element={<Phobias />} />
+              <Route path="/conditions/hypochondria" element={<Hypochondria />} />
+              <Route path="/conditions/ocd" element={<OCD />} />
+              <Route path="/conditions/bipolar" element={<Bipolar />} />
+              <Route path="/conditions/anger" element={<Anger />} />
+              <Route path="/conditions/stress" element={<Stress />} />
+              <Route path="/conditions/ptsd" element={<PTSD />} />
+              <Route path="/conditions/burnout" element={<Burnout />} />
+              <Route path="/conditions/emotional-exhaustion" element={<EmotionalExhaustion />} />
+              <Route path="/conditions/insomnia" element={<Insomnia />} />
+              <Route path="/conditions/psychosomatic" element={<Psychosomatic />} />
+              <Route path="/conditions/fatigue" element={<Fatigue />} />
+              <Route path="/conditions/insecurity" element={<Insecurity />} />
+              <Route path="/conditions/perfectionism" element={<Perfectionism />} />
+              <Route path="/conditions/boundaries" element={<Boundaries />} />
+              <Route path="/conditions/loneliness" element={<Loneliness />} />
+              <Route path="/conditions/communication-difficulties" element={<CommunicationDifficulties />} />
+              <Route path="/conditions/life-crisis" element={<LifeCrisis />} />
+              <Route path="/conditions/loss" element={<Loss />} />
+              <Route path="/conditions/separation" element={<Separation />} />
+              <Route path="/conditions/adaptation" element={<Adaptation />} />
+              {/* Addiction conditions */}
+              <Route path="/conditions/alcohol-addiction" element={<AlcoholAddiction />} />
+              <Route path="/conditions/drug-addiction" element={<DrugAddiction />} />
+              <Route path="/conditions/gambling-addiction" element={<GamblingAddiction />} />
+              <Route path="/conditions/medication-addiction" element={<MedicationAddiction />} />
+              <Route path="/conditions/internet-addiction" element={<InternetAddiction />} />
+              <Route path="/conditions/social-media-addiction" element={<SocialMediaAddiction />} />
+              <Route path="/conditions/workaholism" element={<Workaholism />} />
+              <Route path="/conditions/love-addiction" element={<LoveAddiction />} />
+              {/* LGBT+ conditions */}
+              <Route path="/conditions/lgbt-support" element={<LGBTSupport />} />
+              <Route path="/conditions/identity-self-acceptance" element={<IdentitySelfAcceptance />} />
+              <Route path="/conditions/coming-out" element={<ComingOut />} />
+              <Route path="/conditions/social-rejection-stress" element={<SocialRejectionStress />} />
+              <Route path="/conditions/lgbt-relationships" element={<LGBTRelationships />} />
+              {/* Special needs conditions */}
+              <Route path="/conditions/autism" element={<Autism />} />
+              <Route path="/conditions/adhd" element={<ADHD />} />
+              <Route path="/conditions/asperger" element={<Asperger />} />
+              <Route path="/conditions/down-syndrome" element={<DownSyndrome />} />
+              <Route path="/conditions/intellectual-disability" element={<IntellectualDisability />} />
+              <Route path="/conditions/rett-syndrome" element={<RettSyndrome />} />
+              {/* Learning difficulties conditions */}
+              <Route path="/conditions/dyslexia" element={<Dyslexia />} />
+              <Route path="/conditions/dysgraphia" element={<Dysgraphia />} />
+              <Route path="/conditions/dyscalculia" element={<Dyscalculia />} />
+              <Route path="/conditions/dyspraxia" element={<Dyspraxia />} />
+              <Route path="/conditions/memory-concentration" element={<MemoryConcentration />} />
+              {/* Child behavioral and emotional conditions */}
+              <Route path="/conditions/stuttering" element={<Stuttering />} />
+              <Route path="/conditions/selective-mutism" element={<SelectiveMutism />} />
+              <Route path="/conditions/speech-disorders" element={<SpeechDisorders />} />
+              <Route path="/conditions/child-ptsd" element={<ChildPTSD />} />
+              <Route path="/conditions/tics-tourette" element={<TicsTourette />} />
+              <Route path="/conditions/aggression-self-harm" element={<AggressionSelfHarm />} />
+              <Route path="/conditions/child-fears" element={<ChildFears />} />
+              <Route path="/conditions/child-sleep-problems" element={<ChildSleepProblems />} />
+              <Route path="/conditions/child-psychosomatic" element={<ChildPsychosomatic />} />
+              <Route path="/conditions/adaptation-difficulties" element={<AdaptationDifficulties />} />
+              <Route path="/conditions/peer-communication" element={<PeerCommunication />} />
+              <Route path="/conditions/low-self-esteem" element={<LowSelfEsteem />} />
+              <Route path="/conditions/conflict-relationships" element={<ConflictRelationships />} />
+              <Route path="/conditions/running-away" element={<RunningAway />} />
+              <Route path="/conditions/risky-behavior" element={<RiskyBehavior />} />
+              <Route path="/conditions/child-grief" element={<ChildGrief />} />
+              <Route path="/conditions/parents-divorce" element={<ParentsDivorce />} />
+              <Route path="/conditions/new-family-member" element={<NewFamilyMember />} />
+              <Route path="/conditions/relocation" element={<Relocation />} />
+              <Route path="/conditions/child-stress" element={<ChildStress />} />
+              {/* Physical and medical conditions */}
+              <Route path="/conditions/muscular-dystrophy" element={<MuscularDystrophy />} />
+              <Route path="/conditions/epilepsy" element={<Epilepsy />} />
+              <Route path="/conditions/chronic-illness" element={<ChronicIllness />} />
+              <Route path="/conditions/special-educational-needs" element={<SpecialEducationalNeeds />} />
+              {/* Youth LGBT+ conditions */}
+              <Route path="/conditions/lgbt-youth" element={<LGBTYouth />} />
+              <Route path="/conditions/youth-identity" element={<YouthIdentity />} />
+              <Route path="/conditions/social-rejection-support" element={<SocialRejectionSupport />} />
+              <Route path="/conditions/coming-out-support" element={<ComingOutSupport />} />
+              {/* Speech therapy conditions */}
+              <Route path="/conditions/speech-delay" element={<SpeechDelay />} />
+              <Route path="/conditions/articulation" element={<Articulation />} />
+              <Route path="/conditions/special-needs-speech" element={<SpecialNeedsSpeech />} />
+              {/* Legal pages */}
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-and-conditions" element={<TermsConditions />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
+              {/* Therapeutic Approaches */}
+              <Route path="/therapeutic-approaches" element={<TherapeuticApproaches />} />
+              <Route path="/therapeutic-approaches/psychoanalysis" element={<Psychoanalysis />} />
+              <Route path="/therapeutic-approaches/psychodynamic-therapy" element={<PsychodynamicTherapy />} />
+              <Route path="/therapeutic-approaches/cbt" element={<CBT />} />
+              <Route path="/therapeutic-approaches/schema-therapy" element={<SchemaTherapy />} />
+              <Route path="/therapeutic-approaches/gestalt-therapy" element={<GestaltTherapy />} />
+              <Route path="/therapeutic-approaches/existential-therapy" element={<ExistentialTherapy />} />
+              <Route path="/therapeutic-approaches/positive-therapy" element={<PositiveTherapy />} />
+              <Route path="/therapeutic-approaches/family-therapy" element={<FamilyTherapy />} />
+              <Route path="/therapeutic-approaches/transgenerational-therapy" element={<TransgenerationalTherapy />} />
+              <Route path="/therapeutic-approaches/couples-therapy" element={<CouplesTherapy />} />
+              <Route path="/therapeutic-approaches/emdr" element={<EMDR />} />
+              <Route path="/therapeutic-approaches/somatic-experiencing" element={<SomaticExperiencing />} />
+              <Route path="/therapeutic-approaches/bioenergetic-therapy" element={<BioenergeticTherapy />} />
+              <Route path="/therapeutic-approaches/body-psychotherapy" element={<BodyPsychotherapy />} />
+              <Route path="/therapeutic-approaches/dance-movement-therapy" element={<DanceMovementTherapy />} />
+              <Route path="/therapeutic-approaches/art-therapy" element={<ArtTherapy />} />
+              <Route path="/therapeutic-approaches/music-therapy" element={<MusicTherapy />} />
+              <Route path="/therapeutic-approaches/play-therapy" element={<PlayTherapy />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </GoogleAnalyticsProvider>
       </BrowserRouter>
     </TooltipProvider>

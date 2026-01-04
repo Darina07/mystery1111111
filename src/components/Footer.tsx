@@ -12,13 +12,6 @@ const popularTherapies = [
   { name: "Заекване", path: "/conditions/stuttering" },
 ];
 
-const services = [
-  { name: "Индивидуално консултиране и психотерапия", path: "/services/psychological-counseling" },
-  { name: "Семейно и брачно консултиране", path: "/services/family-counseling" },
-  { name: "Детски и юношески услуги", path: "/services/child-counseling" },
-  { name: "Логопедия", path: "/services/speech-therapy" },
-  { name: "Психодиагностика", path: "/services/psychodiagnostics" },
-];
 
 const professionalDevelopment = [
   { name: "Кариерно и професионално развитие", path: "/services/career-consulting" },
@@ -68,21 +61,20 @@ export const Footer = () => {
             </Link>
           </div>
 
-          {/* Services */}
+          {/* Services & Group Programs */}
           <div>
-            <p className="font-heading text-lg font-semibold mb-6">Услуги</p>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link 
-                    to={service.path}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-base"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Link 
+              to="/services"
+              className="font-heading text-lg font-semibold mb-6 block hover:text-primary-foreground/80 transition-colors"
+            >
+              Услуги
+            </Link>
+            <Link 
+              to="/services/group-programs"
+              className="font-heading text-lg font-semibold block hover:text-primary-foreground/80 transition-colors"
+            >
+              Групови програми
+            </Link>
           </div>
 
           {/* Professional Development */}

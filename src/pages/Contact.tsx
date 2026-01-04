@@ -146,9 +146,14 @@ const Contact = () => {
       
       {/* Hero Section */}
       <section className="relative pt-24 min-h-[500px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${contactHeaderBg})` }}
+        <img
+          src={contactHeaderBg}
+          alt=""
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-deep-navy/60" />
         

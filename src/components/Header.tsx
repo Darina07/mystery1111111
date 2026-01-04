@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import darLogo from "@/assets/dar-logo.svg";
-import DesktopNavigation from "@/components/DesktopNavigation";
+
+// Lazy load desktop navigation - not needed on mobile
+const DesktopNavigation = lazy(() => import("@/components/DesktopNavigation"));
 
 interface SubMenuItem {
   label: string;
@@ -78,8 +80,10 @@ export const Header = () => {
           <div className="h-12 w-32" /> {/* Spacer to maintain header size */}
         </Link>
 
-        {/* Desktop Navigation */}
-        <DesktopNavigation navItems={navItems} />
+        {/* Desktop Navigation - lazy loaded */}
+        <Suspense fallback={<div className="hidden lg:block" />}>
+          <DesktopNavigation navItems={navItems} />
+        </Suspense>
 
         {/* Phone Icon */}
         <a

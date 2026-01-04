@@ -16,6 +16,10 @@
     
     <!-- Preload critical Hero image for faster LCP -->
     <link rel="preload" as="image" href="/src/assets/illustration-support.jpg" fetchpriority="high" />
+    
+    <!-- Preload critical fonts to avoid request chain delays -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Critical CSS - inline for faster FCP -->
     <style>

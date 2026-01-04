@@ -1,11 +1,11 @@
 import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Services } from "@/components/Services";
 import { Footer } from "@/components/Footer";
 import { SEO, LocalBusinessSchema, FAQSchema } from "@/components/SEO";
 
-// Lazy load below-the-fold sections for better initial load
-const Services = lazy(() => import("@/components/Services").then(m => ({ default: m.Services })));
+// Lazy load below-the-fold sections - these are not visible on initial load
 const About = lazy(() => import("@/components/About").then(m => ({ default: m.About })));
 const Business = lazy(() => import("@/components/Business").then(m => ({ default: m.Business })));
 const TherapeuticApproachesSection = lazy(() => import("@/components/TherapeuticApproachesSection").then(m => ({ default: m.TherapeuticApproachesSection })));
@@ -51,9 +51,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Suspense fallback={<SectionLoader />}>
-          <Services />
-        </Suspense>
+        <Services />
         <Suspense fallback={<SectionLoader />}>
           <About />
         </Suspense>

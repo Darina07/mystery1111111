@@ -184,7 +184,7 @@ export const Footer = () => {
               Политика за поверителност
             </Link>
             <Link
-              to="/terms-conditions"
+              to="/terms-and-conditions"
               className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
             >
               Общи условия

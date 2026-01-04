@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import { GoogleAnalyticsProvider } from "@/components/GoogleAnalytics";
 
@@ -197,6 +197,16 @@ const PageLoader = () => (
   </div>
 );
 
+const ApproachRedirect = () => {
+  const { slug } = useParams();
+  return (
+    <Navigate
+      replace
+      to={slug ? `/therapeutic-approaches/${slug}` : "/therapeutic-approaches"}
+    />
+  );
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <Suspense fallback={null}>
@@ -350,10 +360,10 @@ const App = () => (
               <Route path="/terms-and-conditions" element={<TermsConditions />} />
               <Route path="/cookie-policy" element={<CookiePolicy />} />
               {/* Therapeutic Approaches */}
+              <Route path="/approaches" element={<Navigate replace to="/therapeutic-approaches" />} />
+              <Route path="/approaches/:slug" element={<ApproachRedirect />} />
               <Route path="/therapeutic-approaches" element={<TherapeuticApproaches />} />
               <Route path="/therapeutic-approaches/psychoanalysis" element={<Psychoanalysis />} />
-              <Route path="/therapeutic-approaches/psychodynamic-therapy" element={<PsychodynamicTherapy />} />
-              <Route path="/therapeutic-approaches/cbt" element={<CBT />} />
               <Route path="/therapeutic-approaches/schema-therapy" element={<SchemaTherapy />} />
               <Route path="/therapeutic-approaches/gestalt-therapy" element={<GestaltTherapy />} />
               <Route path="/therapeutic-approaches/existential-therapy" element={<ExistentialTherapy />} />

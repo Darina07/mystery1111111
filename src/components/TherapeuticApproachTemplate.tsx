@@ -7,7 +7,7 @@ import { Phone, CheckCircle, Users, Target } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import contactBg from "@/assets/contact-bg.jpg";
 import suitableForBg from "@/assets/suitable-for-bg.jpg";
-import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema, HealthTopicSchema } from "@/components/SEO";
 
 interface Benefit {
   title: string;
@@ -59,6 +59,12 @@ export const TherapeuticApproachTemplate = ({
         description={subtitle}
         url={currentUrl}
         serviceType="Психотерапия"
+      />
+      <HealthTopicSchema 
+        name={title}
+        description={subtitle}
+        url={currentUrl}
+        mainEntity={description.join(' ').substring(0, 500)}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />

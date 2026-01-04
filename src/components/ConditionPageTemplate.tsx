@@ -56,12 +56,12 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
           <div className="max-w-3xl text-center">
-            <p className="text-primary font-medium mb-4 inline-block bg-background/80 backdrop-blur-sm px-4 py-1 rounded-full">{data.subtitle}</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
-              <span className="bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg inline">{data.title.split(" ").slice(0, -1).join(" ")}</span>{" "}
-              <span className="gradient-text bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg inline">{data.title.split(" ").slice(-1)}</span>
+            <p className="text-lavender font-medium mb-4 [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">{data.subtitle}</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-white [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)]">
+              {data.title.split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="text-lavender">{data.title.split(" ").slice(-1)}</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed inline-block bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
+            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
               {data.description}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

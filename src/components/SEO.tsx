@@ -288,3 +288,179 @@ export const ArticleSchema = ({
     </Helmet>
   );
 };
+
+// Website Schema for sitelinks search box
+export const WebsiteSchema = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Център Дар",
+    alternateName: "Дар Психологичен център",
+    url: "https://darpsiholog.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://darpsiholog.com/blog?search={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};
+
+// Professional Service Schema
+interface ProfessionalServiceSchemaProps {
+  name: string;
+  description: string;
+  url: string;
+  serviceType: string;
+  areaServed?: string;
+}
+
+export const ProfessionalServiceSchema = ({
+  name,
+  description,
+  url,
+  serviceType,
+  areaServed = "София",
+}: ProfessionalServiceSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name,
+    description,
+    url: `https://darpsiholog.com${url}`,
+    serviceType,
+    provider: {
+      "@type": "MedicalBusiness",
+      name: "Център Дар",
+      "@id": "https://darpsiholog.com/#organization",
+    },
+    areaServed: {
+      "@type": "City",
+      name: areaServed,
+    },
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceLocation: {
+        "@type": "Place",
+        name: "Център Дар",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "ул. Кишинев 18",
+          addressLocality: "София",
+          addressRegion: "Лозенец",
+          addressCountry: "BG",
+        },
+      },
+    },
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};
+
+// Medical Condition Schema for condition pages
+interface MedicalConditionSchemaProps {
+  name: string;
+  description: string;
+  url: string;
+  symptoms?: string[];
+  possibleTreatment?: string[];
+}
+
+export const MedicalConditionSchema = ({
+  name,
+  description,
+  url,
+  symptoms = [],
+  possibleTreatment = [],
+}: MedicalConditionSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    name,
+    description,
+    url: `https://darpsiholog.com${url}`,
+    ...(symptoms.length > 0 && {
+      signOrSymptom: symptoms.map((symptom) => ({
+        "@type": "MedicalSymptom",
+        name: symptom,
+      })),
+    }),
+    ...(possibleTreatment.length > 0 && {
+      possibleTreatment: possibleTreatment.map((treatment) => ({
+        "@type": "MedicalTherapy",
+        name: treatment,
+      })),
+    }),
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};
+
+// Contact Page Schema
+export const ContactPageSchema = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Контакти - Център Дар",
+    description: "Свържете се с нас за консултация",
+    url: "https://darpsiholog.com/contact",
+    mainEntity: {
+      "@type": "MedicalBusiness",
+      "@id": "https://darpsiholog.com/#organization",
+      name: "Център Дар",
+      telephone: "+359887079256",
+      email: "info@darpsiholog.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "ул. Кишинев 18",
+        addressLocality: "София",
+        addressRegion: "Лозенец",
+        postalCode: "1000",
+        addressCountry: "BG",
+      },
+    },
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};
+
+// About Page Schema
+export const AboutPageSchema = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "За нас - Център Дар",
+    description: "Научете повече за екипа на Център Дар и нашата мисия",
+    url: "https://darpsiholog.com/about",
+    mainEntity: {
+      "@type": "MedicalBusiness",
+      "@id": "https://darpsiholog.com/#organization",
+    },
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};

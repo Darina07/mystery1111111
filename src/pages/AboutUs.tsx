@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO, FAQSchema, BreadcrumbSchema } from "@/components/SEO";
+import { SEO, FAQSchema, BreadcrumbSchema, AboutPageSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { 
   Phone, Mail, MapPin, Clock, ChevronLeft, ChevronRight,
@@ -177,6 +177,7 @@ const AboutUs = () => {
         keywords="психологичен център София, екип психолози, за нас център Дар, специалисти психология"
       />
       <FAQSchema faqs={faqsForSchema} />
+      <AboutPageSchema />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },
         { name: "За нас", url: "/about" }

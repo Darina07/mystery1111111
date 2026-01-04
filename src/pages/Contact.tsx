@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO, FAQSchema, BreadcrumbSchema } from "@/components/SEO";
+import { SEO, FAQSchema, BreadcrumbSchema, ContactPageSchema } from "@/components/SEO";
 
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Youtube, Linkedin, Loader2 } from "lucide-react";
@@ -141,6 +141,7 @@ const Contact = () => {
         keywords="контакти психолог София, запази час психолог, център Дар контакти, психологична консултация София"
       />
       <FAQSchema faqs={faqsForSchema} />
+      <ContactPageSchema />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },
         { name: "Контакти", url: "/contact" }

@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPAnxietyWho from "@/assets/group-nlp-anxiety-who.jpg";
 import groupNLPAnxietyHeader from "@/assets/group-nlp-anxiety-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Идентифициране на корените на страховете",
   "НЛП техники за справяне с тревожност",
@@ -53,6 +53,22 @@ const AnxietyBlocksGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="НЛП при тревожност и вътрешни блокажи | ДАР Психология"
+        description="Работа със страхове, вътрешни ограничения и тревожни състояния чрез доказани НЛП техники"
+        url="/services/group-programs/nlp/anxiety-blocks"
+      />
+      <CourseSchema 
+        name="НЛП при тревожност и вътрешни блокажи"
+        description="Работа със страхове и вътрешни ограничения чрез НЛП техники"
+        url="https://darpsychology.com/services/group-programs/nlp/anxiety-blocks"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "НЛП", url: "/services/group-programs/nlp" },
+        { name: "Тревожност", url: "/services/group-programs/nlp/anxiety-blocks" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

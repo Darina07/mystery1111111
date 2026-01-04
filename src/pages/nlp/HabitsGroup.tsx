@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPHabitsWho from "@/assets/group-nlp-habits-who.jpg";
 import groupNLPHabitsHeader from "@/assets/group-nlp-habits-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Разбиране на механизмите на навиците",
   "Идентифициране на нежелани поведенчески модели",
@@ -53,6 +53,22 @@ const HabitsGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="НЛП за работа с навици и поведение | ДАР Психология"
+        description="Трансформирайте нежелани навици и поведенчески модели в осъзнати и подкрепящи действия"
+        url="/services/group-programs/nlp/habits"
+      />
+      <CourseSchema 
+        name="НЛП за работа с навици и поведение"
+        description="Трансформирайте нежелани навици чрез НЛП техники"
+        url="https://darpsychology.com/services/group-programs/nlp/habits"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "НЛП", url: "/services/group-programs/nlp" },
+        { name: "Навици", url: "/services/group-programs/nlp/habits" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

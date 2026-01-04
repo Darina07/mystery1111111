@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupDifficultSituationsWho from "@/assets/group-difficult-situations-who.jpg";
 import groupDifficultSituationsHeader from "@/assets/group-difficult-situations-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Споделяне в безопасна и подкрепяща среда",
   "Емоционална подкрепа при трудни преживявания",
@@ -53,6 +53,22 @@ const DifficultSituationsGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Родители в трудни житейски ситуации | ДАР Психология"
+        description="Подкрепяща група за родители, преминаващи през развод, загуба, болест или други трудни житейски обстоятелства"
+        url="/services/group-programs/parenting/difficult-situations"
+      />
+      <CourseSchema 
+        name="Родители в трудни житейски ситуации"
+        description="Подкрепяща група за родители в трудни житейски обстоятелства"
+        url="https://darpsychology.com/services/group-programs/parenting/difficult-situations"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Родителство", url: "/services/group-programs/parenting" },
+        { name: "Трудни ситуации", url: "/services/group-programs/parenting/difficult-situations" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

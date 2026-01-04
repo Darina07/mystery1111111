@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPEffectivenessBg from "@/assets/group-nlp-effectiveness-bg.jpg";
 import groupNLPEffectivenessHeader from "@/assets/group-nlp-effectiveness-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Техники за изграждане на вътрешна увереност",
   "Работа с ограничаващи убеждения за себе си",
@@ -53,6 +53,22 @@ const PersonalEffectivenessGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="НЛП за лична ефективност и увереност | ДАР Психология"
+        description="Практични техники за изграждане на увереност, по-добро себепредставяне и постигане на лични и професионални цели"
+        url="/services/group-programs/nlp/personal-effectiveness"
+      />
+      <CourseSchema 
+        name="НЛП за лична ефективност и увереност"
+        description="Практични техники за изграждане на увереност"
+        url="https://darpsychology.com/services/group-programs/nlp/personal-effectiveness"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "НЛП", url: "/services/group-programs/nlp" },
+        { name: "Лична ефективност", url: "/services/group-programs/nlp/personal-effectiveness" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPGoalsBg from "@/assets/group-nlp-goals-bg.jpg";
 import groupNLPGoalsHeader from "@/assets/group-nlp-goals-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Поставяне на ясни и постижими цели",
   "НЛП техники за устойчива мотивация",
@@ -53,6 +53,22 @@ const GoalsMotivationGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="НЛП за цели, мотивация и промяна | ДАР Психология"
+        description="Научете как да поставяте ясни цели, да поддържате мотивацията и да създавате устойчива промяна в живота си"
+        url="/services/group-programs/nlp/goals-motivation"
+      />
+      <CourseSchema 
+        name="НЛП за цели, мотивация и промяна"
+        description="Научете как да поставяте ясни цели и да поддържате мотивацията"
+        url="https://darpsychology.com/services/group-programs/nlp/goals-motivation"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "НЛП", url: "/services/group-programs/nlp" },
+        { name: "Цели и мотивация", url: "/services/group-programs/nlp/goals-motivation" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupLoveWho from "@/assets/group-love-who.jpg";
 import groupLoveHeader from "@/assets/group-love-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Пълна анонимност и конфиденциалност",
   "Безопасна и неосъждаща среда",
@@ -53,6 +53,22 @@ const LoveGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Анонимна група за любовна зависимост | ДАР Психология"
+        description="Група за хора, които изпитват нездравословни модели в любовните си взаимоотношения и търсят баланс"
+        url="/services/group-programs/addictions/love"
+      />
+      <CourseSchema 
+        name="Анонимна група за любовна зависимост"
+        description="Група за хора с нездравословни модели в любовните взаимоотношения"
+        url="https://darpsychology.com/services/group-programs/addictions/love"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Зависимости", url: "/services/group-programs/addictions" },
+        { name: "Любовна зависимост", url: "/services/group-programs/addictions/love" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupBreakupWho from "@/assets/group-breakup-who.jpg";
 import groupBreakupRecoveryHeader from "@/assets/group-breakup-recovery-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Обработване на емоции след раздяла",
   "Разбиране на уроците от връзката",
@@ -53,6 +53,22 @@ const BreakupRecoveryGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="След раздяла – възстановяване и ново начало | ДАР Психология"
+        description="Подкрепа за преодоляване на болката от раздяла и подготовка за нови, по-здрави взаимоотношения"
+        url="/services/group-programs/relationships/breakup-recovery"
+      />
+      <CourseSchema 
+        name="След раздяла – възстановяване и ново начало"
+        description="Подкрепа за преодоляване на болката от раздяла"
+        url="https://darpsychology.com/services/group-programs/relationships/breakup-recovery"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Взаимоотношения", url: "/services/group-programs/relationships" },
+        { name: "След раздяла", url: "/services/group-programs/relationships/breakup-recovery" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

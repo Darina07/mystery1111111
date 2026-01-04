@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPCommunicationBg from "@/assets/group-nlp-communication-bg.jpg";
 import groupNLPCommunicationHeader from "@/assets/group-nlp-communication-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Техники за ефективно слушане",
   "Разбиране на невербалната комуникация",
@@ -53,6 +53,22 @@ const CommunicationSkillsGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="НЛП и комуникационни умения | ДАР Психология"
+        description="Подобрете начина, по който общувате – научете се да разбирате другите и да бъдете разбрани"
+        url="/services/group-programs/nlp/communication-skills"
+      />
+      <CourseSchema 
+        name="НЛП и комуникационни умения"
+        description="Подобрете комуникацията си чрез НЛП техники"
+        url="https://darpsychology.com/services/group-programs/nlp/communication-skills"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "НЛП", url: "/services/group-programs/nlp" },
+        { name: "Комуникация", url: "/services/group-programs/nlp/communication-skills" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

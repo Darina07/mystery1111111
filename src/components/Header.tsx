@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import darLogo from "@/assets/dar-logo.svg";
 
@@ -68,7 +69,7 @@ export const Header = () => {
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 group relative">
+        <Link to="/" className="flex items-center gap-3 group relative">
           <img
             src={darLogo}
             alt="Дар - Психологичен център"
@@ -77,7 +78,7 @@ export const Header = () => {
             className="h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105 absolute -top-8"
           />
           <div className="h-12 w-32" /> {/* Spacer to maintain header size */}
-        </a>
+        </Link>
 
         {/* Desktop Navigation - Lazy loaded */}
         <Suspense fallback={<div className="hidden lg:block" />}>
@@ -131,38 +132,38 @@ export const Header = () => {
                             </summary>
                             <div className="pl-4 mt-1 flex flex-col gap-1">
                               {subItem.submenu?.map((nestedItem) => (
-                                <a
+                                <Link
                                   key={nestedItem.label}
-                                  href={nestedItem.href}
+                                  to={nestedItem.href}
                                   onClick={() => setIsMobileMenuOpen(false)}
                                   className="text-sm text-white/70 hover:text-white transition-colors py-1"
                                 >
                                   {nestedItem.label}
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </details>
                         ) : (
-                          <a
-                            href={subItem.href}
+                          <Link
+                            to={subItem.href}
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="block text-sm text-white/80 hover:text-white transition-colors py-2"
                           >
                             {subItem.label}
-                          </a>
+                          </Link>
                         )}
                       </div>
                     ))}
                   </div>
                 </details>
               ) : (
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block text-base font-semibold uppercase tracking-wider text-white hover:text-white/80 transition-colors py-2"
                 >
                   {item.label}
-                </a>
+                </Link>
               )}
             </div>
           ))}

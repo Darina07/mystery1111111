@@ -262,14 +262,14 @@ const GroupPrograms = () => {
 
             <div className="grid md:grid-cols-2 gap-6">
               {/* Addictions Group */}
-              <div className="relative rounded-2xl overflow-hidden group">
+              <div className="relative rounded-2xl overflow-hidden group flex flex-col">
                 <div 
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${groupAddictions})` }}
                 />
                 <div className="absolute inset-0 bg-background/90 group-hover:bg-background/85 transition-colors duration-300" />
                 
-                <div className="relative z-10 p-8">
+                <div className="relative z-10 p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                       <Shield className="h-6 w-6 text-primary" />
@@ -280,7 +280,7 @@ const GroupPrograms = () => {
                   </div>
                   <p className="text-muted-foreground text-base mb-4">{addictionsGroup.description}</p>
                   
-                  <div className="space-y-4 mb-6">
+                  <div className="space-y-4 mb-6 flex-grow">
                     <div>
                       <p className="font-semibold text-foreground mb-2">Характеристики:</p>
                       <ul className="space-y-1.5">
@@ -305,7 +305,7 @@ const GroupPrograms = () => {
                     </div>
                   </div>
                   
-                  <Link to="/services/group-programs/addictions">
+                  <Link to="/services/group-programs/addictions" className="mt-auto">
                     <Button variant="default" size="sm" className="gap-2">
                       Научи повече →
                     </Button>
@@ -314,14 +314,14 @@ const GroupPrograms = () => {
               </div>
 
               {/* Relationships Group */}
-              <div className="relative rounded-2xl overflow-hidden group">
+              <div className="relative rounded-2xl overflow-hidden group flex flex-col">
                 <div 
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${groupRelationships})` }}
                 />
                 <div className="absolute inset-0 bg-background/90 group-hover:bg-background/85 transition-colors duration-300" />
                 
-                <div className="relative z-10 p-8">
+                <div className="relative z-10 p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                       <Heart className="h-6 w-6 text-accent" />
@@ -332,7 +332,7 @@ const GroupPrograms = () => {
                   </div>
                   <p className="text-muted-foreground text-base mb-4">{relationshipsGroup.description}</p>
                   
-                  <div className="mb-4">
+                  <div className="mb-4 flex-grow">
                     <p className="font-semibold text-foreground mb-2">Фокус на групите:</p>
                     <ul className="space-y-1.5">
                       {relationshipsGroup.focus.map((item, index) => (
@@ -348,7 +348,7 @@ const GroupPrograms = () => {
                     <p className="text-foreground text-sm italic">{relationshipsGroup.note}</p>
                   </div>
                   
-                  <Link to="/services/group-programs/relationships">
+                  <Link to="/services/group-programs/relationships" className="mt-auto">
                     <Button variant="default" size="sm" className="gap-2">
                       Научи повече →
                     </Button>
@@ -357,14 +357,14 @@ const GroupPrograms = () => {
               </div>
 
               {/* Parenting Group */}
-              <div className="relative rounded-2xl overflow-hidden group">
+              <div className="relative rounded-2xl overflow-hidden group flex flex-col">
                 <div 
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${groupParenting})` }}
                 />
                 <div className="absolute inset-0 bg-background/90 group-hover:bg-background/85 transition-colors duration-300" />
                 
-                <div className="relative z-10 p-8">
+                <div className="relative z-10 p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                       <Baby className="h-6 w-6 text-primary" />
@@ -375,7 +375,7 @@ const GroupPrograms = () => {
                   </div>
                   <p className="text-muted-foreground mb-4">{parentingGroup.description}</p>
                   
-                  <div className="space-y-4 mb-6">
+                  <div className="space-y-4 mb-6 flex-grow">
                     <div>
                       <p className="font-semibold text-foreground mb-2">Групите са подходящи за:</p>
                       <ul className="space-y-1.5">
@@ -400,7 +400,7 @@ const GroupPrograms = () => {
                     </div>
                   </div>
                   
-                  <Link to="/services/group-programs/parenting">
+                  <Link to="/services/group-programs/parenting" className="mt-auto">
                     <Button variant="default" size="sm" className="gap-2">
                       Научи повече →
                     </Button>
@@ -409,14 +409,14 @@ const GroupPrograms = () => {
               </div>
 
               {/* NLP Group */}
-              <div className="relative rounded-2xl overflow-hidden group">
+              <div className="relative rounded-2xl overflow-hidden group flex flex-col">
                 <div 
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${groupNlp})` }}
                 />
                 <div className="absolute inset-0 bg-background/90 group-hover:bg-background/85 transition-colors duration-300" />
                 
-                <div className="relative z-10 p-8">
+                <div className="relative z-10 p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                       <Sparkles className="h-6 w-6 text-accent" />
@@ -427,7 +427,7 @@ const GroupPrograms = () => {
                   </div>
                   <p className="text-muted-foreground mb-4">{nlpGroup.description}</p>
                   
-                  <div className="mb-4">
+                  <div className="mb-4 flex-grow">
                     <p className="font-semibold text-foreground mb-2">НЛП групите подпомагат работа върху:</p>
                     <ul className="space-y-1.5">
                       {nlpGroup.topics.map((item, index) => (
@@ -443,7 +443,7 @@ const GroupPrograms = () => {
                     <p className="text-foreground text-sm">{nlpGroup.note}</p>
                   </div>
                   
-                  <Link to="/services/group-programs/nlp">
+                  <Link to="/services/group-programs/nlp" className="mt-auto">
                     <Button variant="default" size="sm" className="gap-2">
                       Научи повече →
                     </Button>

@@ -2,14 +2,18 @@ import { Suspense, lazy } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
-import { GoogleAnalyticsProvider } from "@/components/GoogleAnalytics";
+
+// Lazy load Google Analytics - not needed for initial render
+const GoogleAnalyticsProvider = lazy(() => 
+  import("@/components/GoogleAnalytics").then(m => ({ default: m.GoogleAnalyticsProvider }))
+);
 
 // Lazy load non-critical components
 const CookieConsent = lazy(() => import("./components/CookieConsent").then(m => ({ default: m.CookieConsent })));
 const Toaster = lazy(() => import("@/components/ui/toaster").then(m => ({ default: m.Toaster })));
 
-// Only Index page is loaded eagerly for fastest FCP
-import Index from "./pages/Index";
+// Lazy load Index page for better initial bundle
+const Index = lazy(() => import("./pages/Index"));
 
 // Lazy load all other pages for code splitting
 const AboutUs = lazy(() => import("./pages/AboutUs"));
@@ -214,11 +218,14 @@ const App = () => (
     </Suspense>
     <BrowserRouter>
       <ScrollToTop />
-      <GoogleAnalyticsProvider>
-        <CookieConsent />
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
+      <Suspense fallback={null}>
+        <GoogleAnalyticsProvider>
+          <CookieConsent />
+        </GoogleAnalyticsProvider>
+      </Suspense>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/psychological-counseling" element={<PsychologicalCounseling />} />
@@ -384,8 +391,7 @@ const App = () => (
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-        </Suspense>
-      </GoogleAnalyticsProvider>
+          </Suspense>
     </BrowserRouter>
   </QueryClientProvider>
 );

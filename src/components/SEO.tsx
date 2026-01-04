@@ -38,9 +38,12 @@ export const SEO = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
+      <html lang="bg" />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="language" content="Bulgarian" />
+      <meta name="content-language" content="bg" />
       <link rel="canonical" href={fullUrl} />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 

@@ -8,12 +8,14 @@ export const Hero = () => {
       id="home"
       className="relative min-h-screen overflow-hidden"
     >
-      {/* Background Image - optimized for mobile */}
-      <div 
-        className="absolute inset-0 bg-cover bg-no-repeat bg-[center_top] md:bg-center"
-        style={{
-          backgroundImage: `url(${illustrationSupport})`,
-        }}
+      {/* Background Image - optimized for LCP with img tag for priority loading */}
+      <img 
+        src={illustrationSupport}
+        alt=""
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover object-[center_top] md:object-center"
+        aria-hidden="true"
       />
       
       {/* White overlay at the top for text readability - adjusted for mobile */}

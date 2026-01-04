@@ -8,67 +8,67 @@ const approachCategories = [
     icon: Brain,
     color: "from-indigo to-indigo-light",
     approaches: [
-      { name: "Психоанализа", href: "/approaches/psychoanalysis" },
-      { name: "Психодинамична терапия", href: "/approaches/psychodynamic-therapy" }
-    ]
+      { name: "Психоанализа", href: "/therapeutic-approaches/psychoanalysis" },
+      { name: "Психодинамична терапия", href: "/therapeutic-approaches/psychodynamic-therapy" },
+    ],
   },
   {
     title: "Когнитивни подходи",
     icon: Zap,
     color: "from-primary to-accent",
     approaches: [
-      { name: "Когнитивно-поведенческа терапия", href: "/approaches/cbt" },
-      { name: "Схема терапия", href: "/approaches/schema-therapy" }
-    ]
+      { name: "Когнитивно-поведенческа терапия", href: "/therapeutic-approaches/cbt" },
+      { name: "Схема терапия", href: "/therapeutic-approaches/schema-therapy" },
+    ],
   },
   {
     title: "Хуманистични подходи",
     icon: Heart,
     color: "from-lavender to-lavender-light",
     approaches: [
-      { name: "Гещалт терапия", href: "/approaches/gestalt-therapy" },
-      { name: "Екзистенциална терапия", href: "/approaches/existential-therapy" },
-      { name: "Позитивна психотерапия", href: "/approaches/positive-therapy" }
-    ]
+      { name: "Гещалт терапия", href: "/therapeutic-approaches/gestalt-therapy" },
+      { name: "Екзистенциална терапия", href: "/therapeutic-approaches/existential-therapy" },
+      { name: "Позитивна психотерапия", href: "/therapeutic-approaches/positive-therapy" },
+    ],
   },
   {
     title: "Системни подходи",
     icon: Users,
     color: "from-soft-blue to-muted-teal",
     approaches: [
-      { name: "Семейна терапия", href: "/approaches/family-therapy" },
-      { name: "Трансгенерационна терапия", href: "/approaches/transgenerational-therapy" },
-      { name: "Терапия на двойки", href: "/approaches/couples-therapy" }
-    ]
+      { name: "Семейна терапия", href: "/therapeutic-approaches/family-therapy" },
+      { name: "Трансгенерационна терапия", href: "/therapeutic-approaches/transgenerational-therapy" },
+      { name: "Терапия на двойки", href: "/therapeutic-approaches/couples-therapy" },
+    ],
   },
   {
     title: "Травма-фокусирани",
     icon: Sparkles,
     color: "from-deep-navy to-indigo",
     approaches: [
-      { name: "EMDR терапия", href: "/approaches/emdr" },
-      { name: "Соматично преживяване", href: "/approaches/somatic-experiencing" }
-    ]
+      { name: "EMDR терапия", href: "/therapeutic-approaches/emdr" },
+      { name: "Соматично преживяване", href: "/therapeutic-approaches/somatic-experiencing" },
+    ],
   },
   {
     title: "Телесно-ориентирани",
     icon: Hand,
     color: "from-accent to-soft-blue",
     approaches: [
-      { name: "Биоенергийна терапия", href: "/approaches/bioenergetic-therapy" },
-      { name: "Телесна психотерапия", href: "/approaches/body-psychotherapy" },
-      { name: "Танцово-двигателна терапия", href: "/approaches/dance-movement-therapy" }
-    ]
+      { name: "Биоенергийна терапия", href: "/therapeutic-approaches/bioenergetic-therapy" },
+      { name: "Телесна психотерапия", href: "/therapeutic-approaches/body-psychotherapy" },
+      { name: "Танцово-двигателна терапия", href: "/therapeutic-approaches/dance-movement-therapy" },
+    ],
   },
   {
     title: "Креативни подходи",
     icon: Palette,
     color: "from-lavender-dark to-primary",
     approaches: [
-      { name: "Арт терапия", href: "/approaches/art-therapy" },
-      { name: "Музикотерапия", href: "/approaches/music-therapy" },
-      { name: "Игрова терапия", href: "/approaches/play-therapy" }
-    ]
+      { name: "Арт терапия", href: "/therapeutic-approaches/art-therapy" },
+      { name: "Музикотерапия", href: "/therapeutic-approaches/music-therapy" },
+      { name: "Игрова терапия", href: "/therapeutic-approaches/play-therapy" },
+    ],
   },
 ];
 

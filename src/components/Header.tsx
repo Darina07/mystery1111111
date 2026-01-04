@@ -78,6 +78,8 @@ export const Header = () => {
           <img
             src={darLogo}
             alt="Дар - Психологичен център"
+            width={128}
+            height={128}
             className="h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105 absolute -top-8"
           />
           <div className="h-12 w-32" /> {/* Spacer to maintain header size */}

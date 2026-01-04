@@ -235,9 +235,9 @@ const Contact = () => {
 
               {/* Social Media */}
               <div className="pt-6">
-                <h3 className="font-heading text-lg font-semibold mb-4 uppercase">
+                <p className="font-heading text-lg font-semibold mb-4 uppercase">
                   Последвайте ни
-                </h3>
+                </p>
                 <div className="flex gap-4">
                   {socialLinks.map((social) => (
                     <a
@@ -259,9 +259,9 @@ const Contact = () => {
             <div className="rounded-2xl p-8 shadow-card" style={{
               background: "linear-gradient(135deg, hsl(var(--card)) 0%, hsl(270 30% 98%) 50%, hsl(150 20% 97%) 100%)"
             }}>
-              <h3 className="font-heading text-2xl font-semibold mb-6 uppercase">
+              <h2 className="font-heading text-2xl font-semibold mb-6 uppercase">
                 Изпратете запитване
-              </h3>
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label

@@ -364,6 +364,8 @@ const App = () => (
               <Route path="/approaches/:slug" element={<ApproachRedirect />} />
               <Route path="/therapeutic-approaches" element={<TherapeuticApproaches />} />
               <Route path="/therapeutic-approaches/psychoanalysis" element={<Psychoanalysis />} />
+              <Route path="/therapeutic-approaches/psychodynamic-therapy" element={<PsychodynamicTherapy />} />
+              <Route path="/therapeutic-approaches/cbt" element={<CBT />} />
               <Route path="/therapeutic-approaches/schema-therapy" element={<SchemaTherapy />} />
               <Route path="/therapeutic-approaches/gestalt-therapy" element={<GestaltTherapy />} />
               <Route path="/therapeutic-approaches/existential-therapy" element={<ExistentialTherapy />} />

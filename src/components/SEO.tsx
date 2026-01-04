@@ -19,8 +19,8 @@ interface SEOProps {
 
 const DEFAULT_TITLE = "Дар – Психологичен и консултативен център | София";
 const DEFAULT_DESCRIPTION = "Професионално психологично консултиране и психотерапия за деца, възрастни и семейства в София. Подкрепа, която работи. Запазете час сега.";
-const DEFAULT_IMAGE = "https://darpsiholog.bg/og-image.jpg";
-const SITE_URL = "https://darpsiholog.bg";
+const DEFAULT_IMAGE = "https://darpsiholog.com/og-image.jpg";
+const SITE_URL = "https://darpsiholog.com";
 
 export const SEO = ({
   title,
@@ -101,12 +101,12 @@ export const LocalBusinessSchema = ({
   const schema = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    "@id": "https://darpsiholog.bg/#organization",
+    "@id": "https://darpsiholog.com/#organization",
     name,
     description,
-    url: "https://darpsiholog.bg",
-    logo: "https://darpsiholog.bg/logo.png",
-    image: "https://darpsiholog.bg/og-image.jpg",
+    url: "https://darpsiholog.com",
+    logo: "https://darpsiholog.com/logo.png",
+    image: "https://darpsiholog.com/og-image.jpg",
     telephone: "+359887079256",
     email: "info@darpsiholog.com",
     address: {
@@ -136,7 +136,7 @@ export const LocalBusinessSchema = ({
       name: "Психологически услуги",
       itemListElement: services.map((service, index) => ({
         "@type": "Offer",
-        "@id": `https://darpsiholog.bg/#service-${index}`,
+        "@id": `https://darpsiholog.com/#service-${index}`,
         itemOffered: {
           "@type": "Service",
           name: service,
@@ -193,7 +193,7 @@ export const BreadcrumbSchema = ({ items }: BreadcrumbSchemaProps) => {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://darpsiholog.bg${item.url}`,
+      item: `https://darpsiholog.com${item.url}`,
     })),
   };
 
@@ -217,11 +217,11 @@ export const ServiceSchema = ({ name, description, url, image }: ServiceSchemaPr
     "@type": "Service",
     name,
     description,
-    url: `https://darpsiholog.bg${url}`,
+    url: `https://darpsiholog.com${url}`,
     provider: {
       "@type": "MedicalBusiness",
       name: "Център Дар",
-      "@id": "https://darpsiholog.bg/#organization",
+      "@id": "https://darpsiholog.com/#organization",
     },
     areaServed: {
       "@type": "City",
@@ -261,7 +261,7 @@ export const ArticleSchema = ({
     "@type": "Article",
     headline,
     description,
-    image: image || "https://darpsiholog.bg/og-image.jpg",
+    image: image || "https://darpsiholog.com/og-image.jpg",
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
@@ -273,12 +273,12 @@ export const ArticleSchema = ({
       name: "Център Дар",
       logo: {
         "@type": "ImageObject",
-        url: "https://darpsiholog.bg/logo.png",
+        url: "https://darpsiholog.com/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://darpsiholog.bg${url}`,
+      "@id": `https://darpsiholog.com${url}`,
     },
   };
 

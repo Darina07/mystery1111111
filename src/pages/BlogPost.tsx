@@ -123,7 +123,7 @@ const BlogPost = () => {
               <Calendar className="w-4 h-4" />
               <span>{post.date}</span>
             </div>
-            <Badge className="bg-[#8F7BBF]/20 text-[#8F7BBF] hover:bg-[#8F7BBF]/30">
+            <Badge className="bg-gradient-to-r from-primary to-accent text-white uppercase tracking-wide">
               {post.categoryLabel}
             </Badge>
           </div>
@@ -202,7 +202,7 @@ const BlogPost = () => {
                       />
                     </div>
                     <CardContent className="p-5">
-                      <Badge className="mb-3 bg-[#8F7BBF]/20 text-[#8F7BBF] hover:bg-[#8F7BBF]/30">
+                      <Badge className="mb-3 bg-gradient-to-r from-primary to-accent text-white uppercase tracking-wide">
                         {relatedPost.categoryLabel}
                       </Badge>
                       <h3 className="text-lg font-semibold text-[#221A42] mb-2 line-clamp-2 group-hover:text-[#8F7BBF] transition-colors">

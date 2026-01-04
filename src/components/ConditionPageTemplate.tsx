@@ -44,6 +44,8 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
         <img 
           src={data.heroImage}
           alt=""
+          width={1920}
+          height={800}
           loading="eager"
           fetchPriority="high"
           decoding="async"
@@ -168,6 +170,8 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
         <img 
           src={contactBg}
           alt=""
+          width={1920}
+          height={600}
           loading="lazy"
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-center"

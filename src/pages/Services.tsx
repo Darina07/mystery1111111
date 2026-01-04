@@ -130,6 +130,8 @@ const Services = () => {
         <img
           src={servicesHeader}
           alt=""
+          width={1920}
+          height={800}
           loading="eager"
           fetchPriority="high"
           decoding="async"

@@ -35,6 +35,8 @@ export const Footer = () => {
             <img
               src={darLogo}
               alt="Дар - Психологичен център"
+              width={176}
+              height={176}
               className="h-44 w-auto mx-auto -my-14"
             />
           </a>

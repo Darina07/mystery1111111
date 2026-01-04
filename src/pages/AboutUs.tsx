@@ -584,10 +584,9 @@ const AboutUs = () => {
 
                 <Button
                   type="submit"
-                  variant="cta"
-                  className="w-full uppercase"
                   size="lg"
-                  style={{ backgroundColor: "hsl(263, 35%, 48%)", color: "white" }}
+                  className="w-full uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]"
+                  style={{ background: 'var(--gradient-cta)' }}
                 >
                   Изпратете запитване
                 </Button>

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import darLogo from "@/assets/dar-logo-transparent.svg";
 
@@ -163,6 +163,15 @@ export const Footer = () => {
                   className="w-10 h-10 rounded-full border border-primary-foreground/30 flex items-center justify-center text-primary-foreground/70 hover:text-primary-foreground hover:border-primary-foreground transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://youtube.com/@darpsiholog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="w-10 h-10 rounded-full border border-primary-foreground/30 flex items-center justify-center text-primary-foreground/70 hover:text-primary-foreground hover:border-primary-foreground transition-colors"
+                >
+                  <Youtube className="h-5 w-5" />
                 </a>
               </div>
             </div>

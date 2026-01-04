@@ -27,7 +27,7 @@ export const Business = () => {
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium uppercase">
             ЗА БИЗНЕСА
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             Професионално развитие
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

@@ -56,7 +56,7 @@ export const CookieConsent = () => {
             <Button 
               size="sm"
               onClick={handleAccept}
-              className="bg-primary hover:bg-primary/90"
+              className="bg-[hsl(263,35%,48%)] hover:bg-[hsl(263,35%,42%)] text-white"
             >
               Приемам
             </Button>

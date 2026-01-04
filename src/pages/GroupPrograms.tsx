@@ -306,8 +306,8 @@ const GroupPrograms = () => {
                   </div>
                   
                   <Link to="/services/group-programs/addictions" className="mt-auto">
-                    <Button variant="default" size="sm" className="gap-2">
-                      Научи повече →
+                    <Button variant="cta" size="sm">
+                      НАУЧИ ПОВЕЧЕ
                     </Button>
                   </Link>
                 </div>
@@ -349,8 +349,8 @@ const GroupPrograms = () => {
                   </div>
                   
                   <Link to="/services/group-programs/relationships" className="mt-auto">
-                    <Button variant="default" size="sm" className="gap-2">
-                      Научи повече →
+                    <Button variant="cta" size="sm">
+                      НАУЧИ ПОВЕЧЕ
                     </Button>
                   </Link>
                 </div>
@@ -401,8 +401,8 @@ const GroupPrograms = () => {
                   </div>
                   
                   <Link to="/services/group-programs/parenting" className="mt-auto">
-                    <Button variant="default" size="sm" className="gap-2">
-                      Научи повече →
+                    <Button variant="cta" size="sm">
+                      НАУЧИ ПОВЕЧЕ
                     </Button>
                   </Link>
                 </div>
@@ -444,8 +444,8 @@ const GroupPrograms = () => {
                   </div>
                   
                   <Link to="/services/group-programs/nlp" className="mt-auto">
-                    <Button variant="default" size="sm" className="gap-2">
-                      Научи повече →
+                    <Button variant="cta" size="sm">
+                      НАУЧИ ПОВЕЧЕ
                     </Button>
                   </Link>
                 </div>

@@ -77,12 +77,12 @@ export const Services = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-lavender/5 to-accent/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative space-y-3">
+              <div className="relative space-y-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                   <service.icon className="h-6 w-6 text-primary" />
                 </div>
 
-                <h3 className="font-heading text-xl font-semibold">
+                <h3 className="font-heading text-xl font-semibold text-foreground">
                   {service.title}
                 </h3>
 
@@ -90,7 +90,7 @@ export const Services = () => {
                   {service.description}
                 </p>
 
-                <span className="inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all duration-300">
+                <span className="inline-flex items-center gap-2 text-base font-medium text-primary group-hover:gap-3 transition-all duration-300">
                   Научи повече
                   <ArrowRight className="h-4 w-4" />
                 </span>

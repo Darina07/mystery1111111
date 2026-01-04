@@ -11,19 +11,26 @@
 @layer base {
   :root {
     /* Brand Colors - DAR Psychological Center */
-    --lavender: 263 35% 62%; /* #8F7BBF - primary lavender */
-    --lavender-light: 263 40% 75%;
-    --lavender-dark: 263 35% 45%; /* Darker for better contrast */
+    /* #8F7BBF - primary lavender */
+    --lavender: 263 35% 62%;
+    --lavender-light: 263 40% 72%;
+    --lavender-dark: 263 35% 50%;
     
-    --indigo: 252 41% 18%; /* #221A42 - dark indigo */
-    --indigo-light: 252 35% 25%;
+    /* #221A42 - dark indigo */
+    --indigo: 252 41% 18%;
+    --indigo-light: 252 35% 28%;
     
-    --soft-blue: 220 35% 63%; /* #7F96C3 */
-    --muted-teal: 205 30% 52%; /* #5E82AA */
-    --deep-navy: 241 28% 31%; /* #3B3A64 */
+    /* #7F96C3 - soft blue */
+    --soft-blue: 220 35% 63%;
+    
+    /* #5E82AA - muted teal */
+    --muted-teal: 205 30% 52%;
+    
+    /* #3B3A64 - deep navy */
+    --deep-navy: 241 28% 31%;
     
     /* Header Color - matches logo */
-    --header: 252 41% 18%; /* #221A42 - dark indigo for header */
+    --header: 252 41% 18%;
     
     /* Semantic Colors */
     --background: 0 0% 100%;
@@ -35,24 +42,25 @@
     --popover: 0 0% 100%;
     --popover-foreground: 252 41% 18%;
 
-    /* Primary - darker for better contrast on white backgrounds */
-    --primary: 263 35% 45%;
+    /* Primary - #8F7BBF lavender */
+    --primary: 263 35% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 260 25% 95%;
+    --secondary: 260 25% 96%;
     --secondary-foreground: 252 41% 18%;
 
-    --muted: 260 20% 94%;
-    --muted-foreground: 252 20% 45%;
+    --muted: 260 20% 95%;
+    --muted-foreground: 252 25% 40%;
 
+    /* Accent - #7F96C3 soft blue */
     --accent: 220 35% 63%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 260 20% 90%;
-    --input: 260 20% 90%;
+    --border: 260 20% 88%;
+    --input: 260 20% 88%;
     --ring: 263 35% 62%;
 
     --radius: 0.75rem;
@@ -60,20 +68,20 @@
     /* Custom Properties */
     --gradient-hero: linear-gradient(135deg, hsl(263 35% 62% / 0.1), hsl(220 35% 63% / 0.1));
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(260 30% 98%));
-    --gradient-cta: linear-gradient(135deg, hsl(263 35% 62%), hsl(220 35% 63%));
+    --gradient-cta: linear-gradient(135deg, hsl(263 35% 55%), hsl(205 30% 52%));
     --shadow-soft: 0 4px 20px -4px hsl(263 35% 62% / 0.15);
-    --shadow-card: 0 8px 30px -8px hsl(252 41% 18% / 0.1);
-    --shadow-glow: 0 0 40px hsl(263 35% 62% / 0.2);
+    --shadow-card: 0 8px 30px -8px hsl(252 41% 18% / 0.12);
+    --shadow-glow: 0 0 40px hsl(263 35% 62% / 0.25);
 
     /* Sidebar defaults */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-foreground: 252 41% 18%;
+    --sidebar-primary: 252 41% 18%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 25% 96%;
+    --sidebar-accent-foreground: 252 41% 18%;
+    --sidebar-border: 260 20% 88%;
+    --sidebar-ring: 263 35% 62%;
   }
 
   .dark {
@@ -126,11 +134,22 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased text-base;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+
+  /* Standardized text sizes for cards and content */
+  .card-text {
+    @apply text-base leading-relaxed;
+  }
+
+  .card-title {
+    @apply font-heading text-xl font-semibold;
   }
 }
 

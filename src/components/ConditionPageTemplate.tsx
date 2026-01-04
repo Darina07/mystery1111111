@@ -126,7 +126,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-white/70 text-base">
+                  <p className="text-white/80 text-base leading-relaxed">
                     {item.description}
                   </p>
                 </div>

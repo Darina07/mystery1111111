@@ -71,9 +71,15 @@ export const Footer = () => {
             </Link>
             <Link 
               to="/therapeutic-approaches"
-              className="font-heading text-lg font-semibold block hover:text-primary-foreground/80 transition-colors"
+              className="font-heading text-lg font-semibold mb-6 block hover:text-primary-foreground/80 transition-colors"
             >
               Терапевтични подходи
+            </Link>
+            <Link 
+              to="/prices"
+              className="font-heading text-lg font-semibold block hover:text-primary-foreground/80 transition-colors"
+            >
+              Цени
             </Link>
           </div>
 
@@ -121,15 +127,6 @@ export const Footer = () => {
                 <Mail className="h-5 w-5" />
                 info@dar-psiholog.com
               </a>
-              
-              <div className="pt-2">
-                <Link 
-                  to="/prices"
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-medium"
-                >
-                  Цени
-                </Link>
-              </div>
 
               <div className="pt-2">
                 <p className="text-primary-foreground/70 text-sm mb-1">Работно време:</p>

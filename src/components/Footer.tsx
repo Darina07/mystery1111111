@@ -104,9 +104,12 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <p className="font-heading text-lg font-semibold mb-6">
+            <Link 
+              to="/contact"
+              className="font-heading text-lg font-semibold mb-6 block hover:text-primary-foreground/80 transition-colors"
+            >
               Контакти
-            </p>
+            </Link>
             <div className="space-y-4 text-base">
               <div className="flex items-start gap-3 text-primary-foreground/70">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />

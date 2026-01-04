@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Phone, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 
 interface ContactFormProps {
   serviceName?: string;
@@ -10,6 +9,7 @@ interface ContactFormProps {
 }
 
 export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormProps) => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -23,7 +23,11 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.message) {
-      toast.error("Моля, попълнете всички задължителни полета.");
+      toast({
+        title: "Грешка",
+        description: "Моля, попълнете всички задължителни полета.",
+        variant: "destructive",
+      });
       return;
     }
 
@@ -34,7 +38,9 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
         ? `${formData.name} ${formData.lastName}` 
         : formData.name;
 
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+      // Dynamic import of supabase for code splitting
+      const { supabase } = await import("@/integrations/supabase/client");
+      const { error } = await supabase.functions.invoke("send-contact-email", {
         body: {
           name: fullName,
           email: formData.email,
@@ -46,11 +52,18 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
 
       if (error) {
         console.error("Error sending email:", error);
-        toast.error("Възникна грешка при изпращането. Моля, опитайте отново.");
+        toast({
+          title: "Грешка",
+          description: "Възникна грешка при изпращането. Моля, опитайте отново.",
+          variant: "destructive",
+        });
         return;
       }
 
-      toast.success("Вашето запитване беше изпратено успешно! Ще се свържем с вас скоро.");
+      toast({
+        title: "Успешно изпратено!",
+        description: "Вашето запитване беше изпратено успешно! Ще се свържем с вас скоро.",
+      });
       setFormData({
         name: "",
         lastName: "",
@@ -60,7 +73,11 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
       });
     } catch (error) {
       console.error("Error:", error);
-      toast.error("Възникна грешка при изпращането. Моля, опитайте отново.");
+      toast({
+        title: "Грешка",
+        description: "Възникна грешка при изпращането. Моля, опитайте отново.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }

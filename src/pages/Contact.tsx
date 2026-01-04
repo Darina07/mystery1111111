@@ -12,8 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import contactHeaderBg from "@/assets/contact-header-new.jpg";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 
 
 const contactInfo = [
@@ -88,6 +87,7 @@ const faqItems = [
 ];
 
 const Contact = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -107,17 +107,26 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+      // Dynamic import of supabase for code splitting
+      const { supabase } = await import("@/integrations/supabase/client");
+      const { error } = await supabase.functions.invoke("send-contact-email", {
         body: formData,
       });
 
       if (error) throw error;
 
-      toast.success("Вашето запитване беше изпратено успешно!");
+      toast({
+        title: "Успешно изпратено!",
+        description: "Вашето запитване беше изпратено успешно!",
+      });
       setFormData({ name: "", email: "", phone: "", service: "", message: "" });
     } catch (error: any) {
       console.error("Error sending contact form:", error);
-      toast.error("Възникна грешка при изпращането. Моля, опитайте отново.");
+      toast({
+        title: "Грешка",
+        description: "Възникна грешка при изпращането. Моля, опитайте отново.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }

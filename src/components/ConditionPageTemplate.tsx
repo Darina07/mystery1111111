@@ -55,13 +55,13 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
         {/* Overlay removed - text has its own background */}
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
-          <div className="max-w-3xl text-center bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">
-            <p className="text-primary font-medium mb-4">{data.subtitle}</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-foreground">
-              {data.title.split(" ").slice(0, -1).join(" ")}{" "}
-              <span className="gradient-text">{data.title.split(" ").slice(-1)}</span>
+          <div className="max-w-3xl text-center">
+            <p className="text-primary font-medium mb-4 inline-block bg-background/80 backdrop-blur-sm px-4 py-1 rounded-full">{data.subtitle}</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+              <span className="bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg inline">{data.title.split(" ").slice(0, -1).join(" ")}</span>{" "}
+              <span className="gradient-text bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg inline">{data.title.split(" ").slice(-1)}</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed inline-block bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
               {data.description}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

@@ -41,7 +41,7 @@ export const About = () => {
               <span className="gradient-text">партньор</span> в грижата за психичното здраве
             </h2>
 
-            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+            <div className="space-y-4 text-muted-foreground text-lg sm:text-xl leading-relaxed">
               <p>
                 Психологичен и консултативен център „Дар" предоставя професионални услуги в областта на психологията, консултирането и обучението. Работим с индивидуални клиенти, деца, семейства и бизнес организации.
               </p>
@@ -64,7 +64,7 @@ export const About = () => {
                 <h4 className="font-heading font-semibold text-foreground text-lg mb-2">
                   {value.title}
                 </h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   {value.description}
                 </p>
               </div>

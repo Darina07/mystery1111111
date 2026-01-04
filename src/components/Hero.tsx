@@ -38,7 +38,7 @@ export const Hero = () => {
               <span className="gradient-text">която работи</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl animate-fade-up delay-200">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl animate-fade-up delay-200">
               Предлагаме професионално психологично консултиране и психотерапия
               за деца, възрастни и семейства. Работим за вашето емоционално
               благополучие в безопасна, спокойна и подкрепяща среда.

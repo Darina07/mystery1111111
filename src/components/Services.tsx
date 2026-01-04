@@ -60,7 +60,7 @@ export const Services = () => {
             Комплексна грижа за вашето{" "}
             <span className="gradient-text">психично здраве</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg sm:text-xl">
             В център „Дар" предлагаме широк спектър от услуги, насочени към
             емоционалното здраве, взаимоотношенията и личностното развитие.
           </p>
@@ -86,7 +86,7 @@ export const Services = () => {
                   {service.title}
                 </h3>
 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   {service.description}
                 </p>
 

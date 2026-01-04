@@ -181,7 +181,7 @@ const Contact = () => {
                   Как да се{" "}
                   <span className="gradient-text">свържете с нас</span>
                 </h2>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-lg sm:text-xl">
                   Изберете най-удобния за вас начин за връзка. Ще ви отговорим в рамките на 24 часа.
                 </p>
               </div>
@@ -394,7 +394,7 @@ const Contact = () => {
               Къде да ни{" "}
               <span className="gradient-text">намерите</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg sm:text-xl">
               Нашият център се намира в квартал Лозенец, София – лесно достъпен с обществен транспорт и паркинг наблизо.
             </p>
           </div>

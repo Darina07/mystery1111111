@@ -73,7 +73,7 @@ export const Contact = () => {
             Свържете се{" "}
             <span className="gradient-text">с нас</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg sm:text-xl">
             Направете първата стъпка към по-добро психично здраве. Свържете се с
             нас за консултация или запазете час.
           </p>

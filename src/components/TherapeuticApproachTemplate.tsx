@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,7 @@ import { Phone, CheckCircle, Users, Target } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import contactBg from "@/assets/contact-bg.jpg";
 import suitableForBg from "@/assets/suitable-for-bg.jpg";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
 
 interface Benefit {
   title: string;
@@ -37,8 +38,29 @@ export const TherapeuticApproachTemplate = ({
   suitableFor,
   processSteps,
 }: TherapeuticApproachProps) => {
+  const location = useLocation();
+  const currentUrl = `https://darpsychology.com${location.pathname}`;
+  
+  const breadcrumbItems = [
+    { name: "Начало", url: "https://darpsychology.com/" },
+    { name: "Терапевтични подходи", url: "https://darpsychology.com/therapeutic-approaches" },
+    { name: title, url: currentUrl }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${title} | Терапевтични подходи | ДАР Психология`}
+        description={subtitle}
+        url={currentUrl}
+      />
+      <ProfessionalServiceSchema 
+        name={title}
+        description={subtitle}
+        url={currentUrl}
+        serviceType="Психотерапия"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
 
       {/* Hero Section */}

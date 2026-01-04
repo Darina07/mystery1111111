@@ -98,20 +98,20 @@ export const TherapeuticApproachesSection = () => {
               className="bg-card rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-sm border border-primary/10 hover:shadow-card transition-all duration-300"
             >
               <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center shadow-md flex-shrink-0`}>
-                  <category.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
+                <div className={`w-8 h-8 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center shadow-md flex-shrink-0`}>
+                  <category.icon className="h-4 w-4 sm:h-4 sm:w-4 text-white" />
                 </div>
-                <h3 className="font-heading text-sm sm:text-lg md:text-xl font-semibold text-foreground leading-tight">
+                <h3 className="font-heading text-base sm:text-lg md:text-xl font-semibold text-foreground leading-tight">
                   {category.title}
                 </h3>
               </div>
               
-              <div className="flex flex-wrap gap-1 sm:gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {category.approaches.map((approach) => (
                   <Link
                     key={approach.name}
                     to={approach.href}
-                    className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full bg-muted text-muted-foreground text-xs sm:text-sm md:text-base hover:bg-primary/10 hover:text-primary transition-colors min-h-[32px] sm:min-h-[36px] flex items-center"
+                    className="px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-full bg-muted text-muted-foreground text-sm sm:text-sm md:text-base hover:bg-primary/10 hover:text-primary transition-colors min-h-[36px] sm:min-h-[36px] flex items-center"
                   >
                     {approach.name}
                   </Link>

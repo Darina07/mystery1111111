@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupGamblingWho from "@/assets/group-gambling-who.jpg";
 import groupGamblingHeader from "@/assets/group-gambling-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Пълна анонимност – без имена, без лични данни",
   "Безопасна и неосъждаща среда",
@@ -53,6 +53,22 @@ const GamblingGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Анонимна група за хазартна зависимост | ДАР Психология"
+        description="Подкрепа за хора, борещи се с хазартна зависимост, чрез споделяне на опит и изграждане на стратегии за промяна"
+        url="/services/group-programs/addictions/gambling"
+      />
+      <CourseSchema 
+        name="Анонимна група за хазартна зависимост"
+        description="Подкрепа за хора, борещи се с хазартна зависимост"
+        url="https://darpsychology.com/services/group-programs/addictions/gambling"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Зависимости", url: "/services/group-programs/addictions" },
+        { name: "Хазарт", url: "/services/group-programs/addictions/gambling" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

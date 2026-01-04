@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupSocialSkillsBg from "@/assets/group-social-skills-bg.jpg";
 import groupSocialSkillsHeader from "@/assets/group-social-skills-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Техники за започване на разговор",
   "Невербална комуникация и език на тялото",
@@ -53,6 +53,22 @@ const SocialSkillsGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Социални умения и увереност при запознанства | ДАР Психология"
+        description="Практически групови упражнения за развиване на комуникативни умения и увереност в социални ситуации"
+        url="/services/group-programs/relationships/social-skills"
+      />
+      <CourseSchema 
+        name="Социални умения и увереност при запознанства"
+        description="Практически групови упражнения за развиване на комуникативни умения"
+        url="https://darpsychology.com/services/group-programs/relationships/social-skills"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Взаимоотношения", url: "/services/group-programs/relationships" },
+        { name: "Социални умения", url: "/services/group-programs/relationships/social-skills" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

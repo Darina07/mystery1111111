@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupPregnantMothersBg from "@/assets/group-pregnant-mothers-bg.jpg";
 import groupPregnantMothersHeader from "@/assets/group-pregnant-mothers-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Споделяне на емоции и преживявания през бременността",
   "Работа със страхове и тревожност",
@@ -53,6 +53,22 @@ const PregnantMothersGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Група за бременни и бъдещи майки | ДАР Психология"
+        description="Емоционална подкрепа през бременността. Споделяне на преживявания, страхове и радости с други бъдещи майки"
+        url="/services/group-programs/parenting/pregnant-mothers"
+      />
+      <CourseSchema 
+        name="Група за бременни и бъдещи майки"
+        description="Емоционална подкрепа през бременността"
+        url="https://darpsychology.com/services/group-programs/parenting/pregnant-mothers"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Родителство", url: "/services/group-programs/parenting" },
+        { name: "Бременни майки", url: "/services/group-programs/parenting/pregnant-mothers" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

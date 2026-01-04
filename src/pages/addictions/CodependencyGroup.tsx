@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupCodependencyWho from "@/assets/group-codependency-who.jpg";
 import groupCodependencyHeader from "@/assets/group-codependency-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Пълна анонимност и конфиденциалност",
   "Безопасна и неосъждаща среда",
@@ -54,6 +54,22 @@ const CodependencyGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Група за близки на хора със зависимости | ДАР Психология"
+        description="Подкрепа за семейства и близки на хора със зависимости, работа върху съзависими модели на поведение"
+        url="/services/group-programs/addictions/codependency"
+      />
+      <CourseSchema 
+        name="Група за близки на хора със зависимости (съзависимост)"
+        description="Подкрепа за семейства и близки на хора със зависимости"
+        url="https://darpsychology.com/services/group-programs/addictions/codependency"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Зависимости", url: "/services/group-programs/addictions" },
+        { name: "Съзависимост", url: "/services/group-programs/addictions/codependency" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

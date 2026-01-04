@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupPostpartumBg from "@/assets/group-postpartum-bg.jpg";
 import groupPostpartumHeader from "@/assets/group-postpartum-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Споделяне на преживяванията от следродилния период",
   "Работа с тревожност и следродилна депресия",
@@ -53,6 +53,22 @@ const PostpartumGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Следродилен период – адаптация и подкрепа | ДАР Психология"
+        description="Подкрепа за справяне с тревожност, адаптация към новата роля и емоционалните предизвикателства след раждането"
+        url="/services/group-programs/parenting/postpartum"
+      />
+      <CourseSchema 
+        name="Следродилен период – адаптация и подкрепа"
+        description="Подкрепа за справяне с тревожност и адаптация към новата роля"
+        url="https://darpsychology.com/services/group-programs/parenting/postpartum"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Родителство", url: "/services/group-programs/parenting" },
+        { name: "Следродилен период", url: "/services/group-programs/parenting/postpartum" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

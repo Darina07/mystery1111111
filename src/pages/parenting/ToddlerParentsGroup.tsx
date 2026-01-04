@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupToddlerWho from "@/assets/group-toddler-who.jpg";
 import groupToddlerParentsHeader from "@/assets/group-toddler-parents-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Справяне с ежедневни родителски предизвикателства",
   "Поставяне на здравословни граници",
@@ -53,6 +53,22 @@ const ToddlerParentsGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Родители на малки деца | ДАР Психология"
+        description="Група за родители на деца от 0 до 6 години. Емоции, граници, сигурност и ежедневни предизвикателства"
+        url="/services/group-programs/parenting/toddler-parents"
+      />
+      <CourseSchema 
+        name="Родители на малки деца"
+        description="Група за родители на деца от 0 до 6 години"
+        url="https://darpsychology.com/services/group-programs/parenting/toddler-parents"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Родителство", url: "/services/group-programs/parenting" },
+        { name: "Малки деца", url: "/services/group-programs/parenting/toddler-parents" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

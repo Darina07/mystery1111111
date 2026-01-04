@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupMatchmakingBg from "@/assets/group-matchmaking-bg.jpg";
 import groupMatchmakingHeader from "@/assets/group-matchmaking-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Работа върху яснота за ценности и приоритети",
   "Групови дискусии за партньорска съвместимост",
@@ -53,6 +53,22 @@ const MatchmakingGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Matchmaking група – свързване чрез ценности | ДАР Психология"
+        description="Осъзнат подход към намирането на партньор, базиран на споделени ценности и психологична съвместимост"
+        url="/services/group-programs/relationships/matchmaking"
+      />
+      <CourseSchema 
+        name="Matchmaking група – свързване чрез ценности"
+        description="Осъзнат подход към намирането на партньор"
+        url="https://darpsychology.com/services/group-programs/relationships/matchmaking"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Взаимоотношения", url: "/services/group-programs/relationships" },
+        { name: "Matchmaking", url: "/services/group-programs/relationships/matchmaking" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

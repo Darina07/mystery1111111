@@ -8,7 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupEmotionalReadinessBg from "@/assets/group-emotional-readiness-bg.jpg";
 import groupEmotionalReadinessHeader from "@/assets/group-emotional-readiness-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 const groupFeatures = [
   "Работа върху емоционална зрелост",
   "Развиване на здрава самооценка",
@@ -53,6 +53,22 @@ const EmotionalReadinessGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Емоционална готовност за връзка | ДАР Психология"
+        description="Подготовка за здрава връзка чрез работа върху емоционалната зрелост, самопознание и готовност за интимност"
+        url="/services/group-programs/relationships/emotional-readiness"
+      />
+      <CourseSchema 
+        name="Емоционална готовност за връзка"
+        description="Подготовка за здрава връзка чрез работа върху емоционалната зрелост"
+        url="https://darpsychology.com/services/group-programs/relationships/emotional-readiness"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Взаимоотношения", url: "/services/group-programs/relationships" },
+        { name: "Емоционална готовност", url: "/services/group-programs/relationships/emotional-readiness" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

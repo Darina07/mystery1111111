@@ -1,12 +1,13 @@
 import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import { GoogleAnalyticsProvider } from "@/components/GoogleAnalytics";
-import { CookieConsent } from "./components/CookieConsent";
+
+// Lazy load CookieConsent - not critical for initial render
+const CookieConsent = lazy(() => import("./components/CookieConsent").then(m => ({ default: m.CookieConsent })));
 
 // Only Index page is loaded eagerly for fastest FCP
 import Index from "./pages/Index";
@@ -201,7 +202,6 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
-      <Sonner />
       <BrowserRouter>
         <ScrollToTop />
         <GoogleAnalyticsProvider>

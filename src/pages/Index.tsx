@@ -1,14 +1,24 @@
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Services } from "@/components/Services";
-import { About } from "@/components/About";
-import { Business } from "@/components/Business";
-import { TherapeuticApproachesSection } from "@/components/TherapeuticApproachesSection";
-import { Pricing } from "@/components/Pricing";
-import { Blog } from "@/components/Blog";
-import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { SEO, LocalBusinessSchema, FAQSchema } from "@/components/SEO";
+
+// Lazy load below-the-fold sections for better initial load
+const Services = lazy(() => import("@/components/Services").then(m => ({ default: m.Services })));
+const About = lazy(() => import("@/components/About").then(m => ({ default: m.About })));
+const Business = lazy(() => import("@/components/Business").then(m => ({ default: m.Business })));
+const TherapeuticApproachesSection = lazy(() => import("@/components/TherapeuticApproachesSection").then(m => ({ default: m.TherapeuticApproachesSection })));
+const Pricing = lazy(() => import("@/components/Pricing").then(m => ({ default: m.Pricing })));
+const Blog = lazy(() => import("@/components/Blog").then(m => ({ default: m.Blog })));
+const Contact = lazy(() => import("@/components/Contact").then(m => ({ default: m.Contact })));
+
+// Minimal section loader
+const SectionLoader = () => (
+  <div className="py-16 flex justify-center">
+    <div className="w-8 h-8 rounded-full bg-primary/20 animate-pulse" />
+  </div>
+);
 
 const Index = () => {
   const faqs = [
@@ -41,13 +51,27 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Services />
-        <About />
-        <Business />
-        <TherapeuticApproachesSection />
-        <Pricing />
-        <Blog />
-        <Contact />
+        <Suspense fallback={<SectionLoader />}>
+          <Services />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <About />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Business />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <TherapeuticApproachesSection />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Pricing />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Blog />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </div>

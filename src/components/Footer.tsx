@@ -53,7 +53,7 @@ export const Footer = () => {
                 <li key={therapy.name}>
                   <Link 
                     to={therapy.path}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-base"
                   >
                     {therapy.name}
                   </Link>
@@ -76,7 +76,7 @@ export const Footer = () => {
                 <li key={service.name}>
                   <Link 
                     to={service.path}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-base"
                   >
                     {service.name}
                   </Link>
@@ -95,7 +95,7 @@ export const Footer = () => {
                 <li key={item.name}>
                   <Link 
                     to={item.path}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-base"
                   >
                     {item.name}
                   </Link>
@@ -109,7 +109,7 @@ export const Footer = () => {
             <h4 className="font-heading text-lg font-semibold mb-6">
               Контакти
             </h4>
-            <div className="space-y-4">
+            <div className="space-y-4 text-base">
               <div className="flex items-start gap-3 text-primary-foreground/70">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <span>София, кв. Лозенец, ул. Кишинев 18</span>

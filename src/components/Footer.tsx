@@ -53,12 +53,6 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-            <Link 
-              to="/therapeutic-approaches"
-              className="font-heading text-lg font-semibold mt-6 block hover:text-primary-foreground/80 transition-colors"
-            >
-              Терапевтични подходи
-            </Link>
           </div>
 
           {/* Services & Group Programs */}
@@ -71,9 +65,15 @@ export const Footer = () => {
             </Link>
             <Link 
               to="/services/group-programs"
-              className="font-heading text-lg font-semibold block hover:text-primary-foreground/80 transition-colors"
+              className="font-heading text-lg font-semibold mb-6 block hover:text-primary-foreground/80 transition-colors"
             >
               Групови програми
+            </Link>
+            <Link 
+              to="/therapeutic-approaches"
+              className="font-heading text-lg font-semibold block hover:text-primary-foreground/80 transition-colors"
+            >
+              Терапевтични подходи
             </Link>
           </div>
 

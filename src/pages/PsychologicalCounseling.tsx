@@ -402,26 +402,26 @@ const PsychologicalCounseling = () => {
         
         <div className="container relative z-10">
           <div className="max-w-3xl py-4 pr-28 md:pr-40 text-left">
-            <h2 className="text-xl md:text-2xl font-heading font-bold mb-3 text-white text-balance">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold mb-4 text-white text-balance">
               Как да разберете какво е <span className="text-lavender-light">подходящо за вас?</span>
             </h2>
-            <p className="text-sm text-white/80 mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">
               Ако не сте сигурни дали имате нужда от психологично консултиране или психотерапия, това е напълно нормално. В първата среща можем да изясним:
             </p>
             
             {/* Three items - always in a row */}
             <div className="flex flex-row items-center gap-5 flex-wrap md:flex-nowrap">
               <div className="flex items-start gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-xs font-medium leading-snug">Какво ви води при нас</p>
+                <div className="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0 mt-1.5" />
+                <p className="text-white text-sm md:text-base font-medium leading-snug">Какво ви води при нас</p>
               </div>
               <div className="flex items-start gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-xs font-medium leading-snug">Какво искате да се промени</p>
+                <div className="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0 mt-1.5" />
+                <p className="text-white text-sm md:text-base font-medium leading-snug">Какво искате да се промени</p>
               </div>
               <div className="flex items-start gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-xs font-medium leading-snug">Какъв тип работа е най-подходящ</p>
+                <div className="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0 mt-1.5" />
+                <p className="text-white text-sm md:text-base font-medium leading-snug">Какъв тип работа е най-подходящ</p>
               </div>
             </div>
           </div>

@@ -53,14 +53,8 @@ const socialLinks = [
   {
     icon: Instagram,
     label: "Instagram", 
-    href: "https://instagram.com/darpsiholog",
+    href: "https://instagram.com/darpsiholog7",
     color: "hover:bg-pink-600"
-  },
-  {
-    icon: Youtube,
-    label: "YouTube",
-    href: "https://youtube.com/@darpsiholog",
-    color: "hover:bg-red-600"
   },
   {
     icon: Linkedin,

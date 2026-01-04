@@ -1,5 +1,4 @@
 import { Suspense, lazy } from "react";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -200,17 +199,16 @@ const PageLoader = () => (
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Suspense fallback={null}>
-        <Toaster />
-      </Suspense>
-      <BrowserRouter>
-        <ScrollToTop />
-        <GoogleAnalyticsProvider>
-          <CookieConsent />
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<Index />} />
+    <Suspense fallback={null}>
+      <Toaster />
+    </Suspense>
+    <BrowserRouter>
+      <ScrollToTop />
+      <GoogleAnalyticsProvider>
+        <CookieConsent />
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Index />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/psychological-counseling" element={<PsychologicalCounseling />} />
@@ -374,10 +372,9 @@ const App = () => (
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </Suspense>
-        </GoogleAnalyticsProvider>
-      </BrowserRouter>
-    </TooltipProvider>
+        </Suspense>
+      </GoogleAnalyticsProvider>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 

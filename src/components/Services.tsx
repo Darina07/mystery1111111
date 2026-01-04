@@ -101,7 +101,7 @@ export const Services = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button variant="cta" size="lg" className="uppercase" asChild>
+          <Button size="lg" className="uppercase bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" asChild>
             <Link to="/services">ВИЖТЕ ВСИЧКИ УСЛУГИ</Link>
           </Button>
         </div>

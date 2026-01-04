@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, Heart, Target, Users, Shield, HeartHandshake, Baby, Lock, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -98,6 +99,23 @@ const difficulties = [
 const FamilyCounseling = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Семейно и партньорско консултиране"
+        description="Професионално семейно и партньорско консултиране за двойки, родители и семейства. Помощ при конфликти, криза и комуникационни проблеми."
+        url="/services/family-counseling"
+        keywords="семеен психолог, партньорска терапия, семейно консултиране, двойки, брачна терапия"
+      />
+      <ProfessionalServiceSchema
+        name="Семейно и партньорско консултиране"
+        description="Професионално семейно и партньорско консултиране за двойки, родители и семейства."
+        url="/services/family-counseling"
+        serviceType="Семейно консултиране"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" },
+        { name: "Семейно консултиране", url: "/services/family-counseling" }
+      ]} />
       <Header />
       
       {/* Hero Section with Background Image */}

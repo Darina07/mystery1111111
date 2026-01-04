@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -119,6 +120,23 @@ const CareerConsulting = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Кариерно консултиране"
+        description="Професионално кариерно консултиране и коучинг. Помощ при избор на кариера, смяна на професия и професионално развитие."
+        url="/services/career-consulting"
+        keywords="кариерно консултиране, коучинг, кариерно развитие, смяна на работа"
+      />
+      <ProfessionalServiceSchema
+        name="Кариерно консултиране"
+        description="Професионално кариерно консултиране и коучинг за професионално развитие."
+        url="/services/career-consulting"
+        serviceType="Кариерно консултиране"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" },
+        { name: "Кариерно консултиране", url: "/services/career-consulting" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

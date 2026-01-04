@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO, ProfessionalServiceSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, MessageCircle, BookOpen, Users, Baby, GraduationCap, Heart, Check, Mic, Brain, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -84,6 +85,23 @@ const difficulties = [
 const SpeechTherapy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Логопед"
+        description="Логопедична терапия за деца и възрастни. Корекция на говорни нарушения, заекване, артикулационни проблеми и езиково развитие."
+        url="/services/speech-therapy"
+        keywords="логопед София, логопедия, заекване, говорни нарушения, речева терапия"
+      />
+      <ProfessionalServiceSchema
+        name="Логопедична терапия"
+        description="Логопедична терапия за деца и възрастни. Корекция на говорни нарушения и езиково развитие."
+        url="/services/speech-therapy"
+        serviceType="Логопедия"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" },
+        { name: "Логопед", url: "/services/speech-therapy" }
+      ]} />
       <Header />
       
       {/* Hero Section with Background Image */}

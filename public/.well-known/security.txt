@@ -1,0 +1,6 @@
+# Security Policy for Dar Psychology Center
+# https://darpsiholog.com
+
+Contact: mailto:info@darpsiholog.com
+Preferred-Languages: bg, en
+Canonical: https://darpsiholog.com/.well-known/security.txt

@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Footer } from "@/components/Footer";
-import { SEO, LocalBusinessSchema, FAQSchema, WebsiteSchema } from "@/components/SEO";
+import { SEO, LocalBusinessSchema, FAQSchema, WebsiteSchema, OrganizationSchema } from "@/components/SEO";
 
 // Lazy load below-the-fold sections - these are not visible on initial load
 const About = lazy(() => import("@/components/About").then(m => ({ default: m.About })));
@@ -47,6 +47,7 @@ const Index = () => {
         keywords="психолог София, психотерапия, семеен психолог, детски психолог, логопед, психодиагностика, консултиране"
       />
       <WebsiteSchema />
+      <OrganizationSchema />
       <LocalBusinessSchema />
       <FAQSchema faqs={faqs} />
       <Header />

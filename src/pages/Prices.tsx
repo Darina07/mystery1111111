@@ -164,7 +164,7 @@ const Prices = () => {
                         {item.title}
                       </h3>
                       {item.subtitle && (
-                        <p className="text-sm text-muted-foreground mt-1">
+                        <p className="text-base text-muted-foreground mt-1">
                           {item.subtitle}
                         </p>
                       )}
@@ -218,7 +218,7 @@ const Prices = () => {
               <div className="w-2 h-2 rounded-full bg-lavender" />
             </div>
             <div className="bg-deep-navy rounded-full px-8 py-4">
-              <p className="text-center text-white font-medium uppercase tracking-wide text-sm">
+              <p className="text-center text-white font-medium uppercase tracking-wide text-base">
                 Консултациите на английски език се провеждат срещу допълнително заплащане от <span className="text-lg font-bold text-accent">+10 ЕВРО</span> към посочената цена.
               </p>
             </div>

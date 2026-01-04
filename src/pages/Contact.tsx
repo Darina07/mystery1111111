@@ -202,7 +202,7 @@ const Contact = () => {
                       <item.icon className="h-6 w-6 text-primary" />
                     </div>
                     <div className="flex flex-col justify-center">
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-base text-muted-foreground">
                         {item.label}
                       </p>
                       {item.href ? (

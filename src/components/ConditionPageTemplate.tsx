@@ -185,7 +185,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
                 <span className="gradient-text">Свържете се</span> с нас
               </h2>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Направете първата стъпка към по-добро психическо здраве.
               </p>
             </div>

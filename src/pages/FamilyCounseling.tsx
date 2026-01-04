@@ -111,12 +111,12 @@ const FamilyCounseling = () => {
         />
         
         {/* Overlay for text readability - gradient from right */}
-        <div className="absolute inset-0 bg-gradient-to-l from-background via-background/98 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-l from-background via-background/95 to-transparent" />
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-end">
-          <div className="max-w-xl text-right bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">
+          <div className="max-w-xl text-right">
             <p className="text-primary font-medium mb-4">Брачен консултант, семеен психолог и сексолог</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Консултиране за{" "}
               <span className="gradient-text">двойки и семейства</span>
             </h1>

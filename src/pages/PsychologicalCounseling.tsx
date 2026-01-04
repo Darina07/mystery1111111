@@ -113,11 +113,11 @@ const PsychologicalCounseling = () => {
         />
         
         {/* Overlay for text readability - gradient from right */}
-        <div className="absolute inset-0 bg-gradient-to-l from-background via-background/98 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-l from-background via-background/95 to-transparent" />
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-end">
-          <div className="max-w-xl text-right bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-foreground">
+          <div className="max-w-xl text-right">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Психологично консултиране и{" "}
               <span className="gradient-text">психотерапия</span>
             </h1>

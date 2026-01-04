@@ -53,12 +53,14 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
           aria-hidden="true"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-indigo/70" />
+        <div className="absolute inset-0 bg-background/70" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-background/70" />
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
-          <div className="max-w-3xl text-center bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">
+          <div className="max-w-3xl text-center">
             <p className="text-primary font-medium mb-4">{data.subtitle}</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               {data.title.split(" ").slice(0, -1).join(" ")}{" "}
               <span className="gradient-text">{data.title.split(" ").slice(-1)}</span>
             </h1>

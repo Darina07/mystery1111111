@@ -8,6 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupAlcoholWho from "@/assets/group-alcohol-who.jpg";
 import groupAlcoholHeader from "@/assets/group-alcohol-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 
 const groupFeatures = [
   "Пълна анонимност – без имена, без лични данни",
@@ -53,6 +54,22 @@ const AlcoholGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Анонимна група за проблемна употреба на алкохол | ДАР Психология"
+        description="Подкрепяща група за хора, които търсят промяна в безопасна и анонимна среда"
+        url="/services/group-programs/addictions/alcohol"
+      />
+      <CourseSchema 
+        name="Анонимна група за проблемна употреба на алкохол"
+        description="Подкрепяща група за хора, които търсят промяна в безопасна и анонимна среда"
+        url="https://darpsychology.com/services/group-programs/addictions/alcohol"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Зависимости", url: "/services/group-programs/addictions" },
+        { name: "Алкохол", url: "/services/group-programs/addictions/alcohol" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Shield, Lock, Users, Heart, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ContactForm } from "@/components/ContactForm";
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupAddictions from "@/assets/group-addictions.jpg";
 import groupAlcoholBg from "@/assets/group-alcohol-bg.jpg";
@@ -76,6 +77,21 @@ const keyPoints = [
 const AddictionsGroupPrograms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Групови програми при зависимости | ДАР Психология"
+        description="Подкрепящи и терапевтични групи за хора със зависимости и техни близки"
+        url="/services/group-programs/addictions"
+      />
+      <CourseSchema 
+        name="Групови програми при зависимости"
+        description="Подкрепящи и терапевтични групи за хора, които се сблъскват със зависимости, както и за техни близки"
+        url="https://darpsychology.com/services/group-programs/addictions"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Зависимости", url: "/services/group-programs/addictions" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

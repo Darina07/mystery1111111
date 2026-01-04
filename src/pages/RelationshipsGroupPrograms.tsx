@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Heart, Users, Sparkles, Target, ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ContactForm } from "@/components/ContactForm";
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupRelationshipsHeader from "@/assets/group-relationships-header-new.jpg";
 import groupAttachmentBg from "@/assets/group-attachment-bg.jpg";
@@ -76,6 +77,21 @@ const keyPoints = [
 const RelationshipsGroupPrograms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Групови програми за взаимоотношения | ДАР Психология"
+        description="Групови програми за хора, които искат да изграждат по-здрави и пълноценни връзки"
+        url="/services/group-programs/relationships"
+      />
+      <CourseSchema 
+        name="Необвързани и взаимоотношения"
+        description="Групови програми за хора, които искат да изграждат по-здрави, осъзнати и пълноценни връзки"
+        url="https://darpsychology.com/services/group-programs/relationships"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Взаимоотношения", url: "/services/group-programs/relationships" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

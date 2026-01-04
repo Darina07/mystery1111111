@@ -143,6 +143,8 @@ const Contact = () => {
         <img
           src={contactHeaderBg}
           alt=""
+          width={1920}
+          height={800}
           loading="eager"
           fetchPriority="high"
           decoding="async"

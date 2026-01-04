@@ -46,6 +46,8 @@ export const TherapeuticApproachTemplate = ({
         <img
           src={headerImage}
           alt=""
+          width={1920}
+          height={600}
           loading="eager"
           fetchPriority="high"
           decoding="async"

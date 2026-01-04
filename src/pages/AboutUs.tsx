@@ -195,6 +195,8 @@ const AboutUs = () => {
             <img
               src={slide.image}
               alt=""
+              width={1920}
+              height={800}
               loading={index === 0 ? "eager" : "lazy"}
               fetchPriority={index === 0 ? "high" : "auto"}
               decoding="async"
@@ -352,6 +354,8 @@ const AboutUs = () => {
                 <img 
                   src={specialist.image}
                   alt=""
+                  width={400}
+                  height={300}
                   loading="lazy"
                   decoding="async"
                   className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.08]"

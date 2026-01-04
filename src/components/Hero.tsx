@@ -12,6 +12,8 @@ export const Hero = () => {
       <img 
         src={illustrationSupport}
         alt=""
+        width={1920}
+        height={1080}
         fetchPriority="high"
         decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-[center_top] md:object-center"

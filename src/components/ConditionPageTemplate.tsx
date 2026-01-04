@@ -52,16 +52,17 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
           className="absolute inset-0 w-full h-full object-cover object-center"
           aria-hidden="true"
         />
-        {/* Overlay removed - text has its own background */}
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-indigo/70" />
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
-          <div className="max-w-3xl text-center">
-            <p className="text-lavender font-medium mb-4 [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">{data.subtitle}</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-white [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)]">
+          <div className="max-w-3xl text-center bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">
+            <p className="text-primary font-medium mb-4">{data.subtitle}</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-foreground">
               {data.title.split(" ").slice(0, -1).join(" ")}{" "}
-              <span className="text-lavender">{data.title.split(" ").slice(-1)}</span>
+              <span className="gradient-text">{data.title.split(" ").slice(-1)}</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               {data.description}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

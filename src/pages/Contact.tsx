@@ -160,18 +160,18 @@ const Contact = () => {
           className="absolute inset-0 w-full h-full object-cover object-center"
           aria-hidden="true"
         />
-        {/* Overlay removed - text has its own background */}
+        <div className="absolute inset-0 bg-indigo/70" />
         
         <div className="container relative z-10 h-full flex items-center justify-end min-h-[400px]">
-          <div className="text-right space-y-6 max-w-2xl">
-            <p className="text-lavender font-medium tracking-wide uppercase text-sm [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+          <div className="text-right space-y-6 max-w-2xl bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">
+            <p className="text-primary font-medium tracking-wide uppercase text-sm">
               Контакти
             </p>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-balance [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)]">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground text-balance">
               Свържете се{" "}
-              <span className="text-lavender">с нас</span>
+              <span className="gradient-text">с нас</span>
             </h1>
-            <p className="text-white/90 text-xl [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+            <p className="text-muted-foreground text-xl">
               Ние сме тук, за да ви помогнем. Свържете се с нас по удобен за вас начин.
             </p>
           </div>

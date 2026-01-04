@@ -138,18 +138,18 @@ const Services = () => {
           className="absolute inset-0 w-full h-full object-cover object-top"
           aria-hidden="true"
         />
-        {/* Overlay removed - text has its own background */}
+        <div className="absolute inset-0 bg-indigo/60" />
         
         <div className="container relative z-10 h-full flex items-center justify-center min-h-[400px]">
-          <div className="text-center space-y-6 max-w-3xl">
-            <p className="text-lavender font-medium tracking-wide uppercase text-sm [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+          <div className="text-center space-y-6 max-w-3xl bg-background/90 backdrop-blur-sm rounded-2xl px-8 py-10">
+            <p className="text-primary font-medium tracking-wide uppercase text-sm">
               Нашите услуги
             </p>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-balance [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)]">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground text-balance">
               Професионални{" "}
-              <span className="text-lavender">психологични услуги</span>
+              <span className="gradient-text">психологични услуги</span>
             </h1>
-            <p className="text-white/90 text-xl [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]">
+            <p className="text-muted-foreground text-xl">
               Подкрепа за всеки етап от живота
             </p>
           </div>

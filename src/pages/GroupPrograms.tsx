@@ -265,7 +265,7 @@ const GroupPrograms = () => {
                   
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Характеристики:</h4>
+                      <p className="font-semibold text-foreground mb-2">Характеристики:</p>
                       <ul className="space-y-1.5">
                         {addictionsGroup.characteristics.map((item, index) => (
                           <li key={index} className="flex items-center gap-2 text-muted-foreground">
@@ -276,7 +276,7 @@ const GroupPrograms = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Подходящи при:</h4>
+                      <p className="font-semibold text-foreground mb-2">Подходящи при:</p>
                       <ul className="space-y-1.5">
                         {addictionsGroup.suitable.map((item, index) => (
                           <li key={index} className="flex items-center gap-2 text-muted-foreground">
@@ -316,7 +316,7 @@ const GroupPrograms = () => {
                   <p className="text-muted-foreground text-base mb-4">{relationshipsGroup.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold text-foreground mb-2">Фокус на групите:</h4>
+                    <p className="font-semibold text-foreground mb-2">Фокус на групите:</p>
                     <ul className="space-y-1.5">
                       {relationshipsGroup.focus.map((item, index) => (
                         <li key={index} className="flex items-center gap-2 text-muted-foreground">
@@ -360,7 +360,7 @@ const GroupPrograms = () => {
                   
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Групите са подходящи за:</h4>
+                      <p className="font-semibold text-foreground mb-2">Групите са подходящи за:</p>
                       <ul className="space-y-1.5">
                         {parentingGroup.suitable.map((item, index) => (
                           <li key={index} className="flex items-center gap-2 text-muted-foreground">
@@ -371,7 +371,7 @@ const GroupPrograms = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2">Акцентът е върху:</h4>
+                      <p className="font-semibold text-foreground mb-2">Акцентът е върху:</p>
                       <ul className="space-y-1.5">
                         {parentingGroup.focus.map((item, index) => (
                           <li key={index} className="flex items-center gap-2 text-muted-foreground">
@@ -411,7 +411,7 @@ const GroupPrograms = () => {
                   <p className="text-muted-foreground mb-4">{nlpGroup.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold text-foreground mb-2">НЛП групите подпомагат работа върху:</h4>
+                    <p className="font-semibold text-foreground mb-2">НЛП групите подпомагат работа върху:</p>
                     <ul className="space-y-1.5">
                       {nlpGroup.topics.map((item, index) => (
                         <li key={index} className="flex items-center gap-2 text-muted-foreground">

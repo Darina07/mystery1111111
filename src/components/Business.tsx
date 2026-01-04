@@ -41,7 +41,7 @@ export const Business = () => {
             <Link 
               to={service.link}
               key={service.title}
-              className="p-5 rounded-xl bg-lavender/30 border border-primary/10 hover:shadow-card transition-all duration-300 group block"
+              className="p-5 rounded-xl bg-secondary border border-primary/10 hover:shadow-card transition-all duration-300 group block"
             >
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
                 <service.icon className="h-6 w-6 text-primary" />
@@ -51,7 +51,7 @@ export const Business = () => {
                 {service.title}
               </h3>
               
-              <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
+              <p className="text-foreground/80 leading-relaxed mb-4 text-sm">
                 {service.description}
               </p>
               

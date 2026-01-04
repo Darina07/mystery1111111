@@ -45,9 +45,9 @@ export const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Popular Therapies */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6">
+            <p className="font-heading text-lg font-semibold mb-6">
               Най-търсени
-            </h4>
+            </p>
             <ul className="space-y-3">
               {popularTherapies.map((therapy) => (
                 <li key={therapy.name}>
@@ -70,7 +70,7 @@ export const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6">Услуги</h4>
+            <p className="font-heading text-lg font-semibold mb-6">Услуги</p>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
@@ -87,9 +87,9 @@ export const Footer = () => {
 
           {/* Professional Development */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6">
+            <p className="font-heading text-lg font-semibold mb-6">
               Професионално развитие
-            </h4>
+            </p>
             <ul className="space-y-3">
               {professionalDevelopment.map((item) => (
                 <li key={item.name}>
@@ -106,9 +106,9 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-6">
+            <p className="font-heading text-lg font-semibold mb-6">
               Контакти
-            </h4>
+            </p>
             <div className="space-y-4 text-base">
               <div className="flex items-start gap-3 text-primary-foreground/70">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />

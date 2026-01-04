@@ -77,7 +77,7 @@ const difficulties = [
   { name: "Говорни смущения", slug: "speech-disorders" },
   { name: "Заекване", slug: "stuttering" },
   { name: "Артикулационни затруднения", slug: "articulation" },
-  { name: "Деца със СОП", slug: "special-needs" },
+  { name: "Деца със СОП", slug: "special-educational-needs" },
   { name: "Дисграфия", slug: "dysgraphia" },
   { name: "Дискалкулия", slug: "dyscalculia" },
 ];

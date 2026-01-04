@@ -44,12 +44,36 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    // Enable source maps for production debugging
-    sourcemap: true,
+    // Disable source maps in production for smaller bundle
+    sourcemap: false,
     // Optimize assets
     assetsInlineLimit: 4096,
+    // Reduce chunk size warnings threshold
+    chunkSizeWarningLimit: 500,
     rollupOptions: {
       output: {
+        // Better code splitting for improved caching
+        manualChunks: {
+          // Core React bundle - rarely changes
+          'vendor-react': ['react', 'react-dom'],
+          // Router bundle
+          'vendor-router': ['react-router-dom'],
+          // UI library bundle
+          'vendor-radix': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-navigation-menu',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toast',
+            '@radix-ui/react-tooltip',
+          ],
+          // Query bundle
+          'vendor-query': ['@tanstack/react-query'],
+          // Utility bundle
+          'vendor-utils': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+        },
         // Better caching for assets
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name?.split('.') || [];
@@ -59,7 +83,15 @@ export default defineConfig(({ mode }) => ({
           }
           return `assets/[name]-[hash][extname]`;
         },
+        // Consistent chunk naming for better caching
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
       },
     },
+    // Enable CSS code splitting
+    cssCodeSplit: true,
+    // Minification settings
+    minify: 'esbuild',
+    target: 'es2020',
   },
 }));

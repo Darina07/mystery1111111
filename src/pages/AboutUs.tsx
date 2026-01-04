@@ -203,18 +203,18 @@ const AboutUs = () => {
               className="absolute inset-0 w-full h-full object-cover object-center"
               aria-hidden="true"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/50 to-background/70" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/75" />
           </div>
         ))}
         
         <div className="container relative z-10 h-full flex items-center justify-center min-h-[500px]">
           <div className="text-center space-y-6 max-w-3xl">
-            <p className="text-primary font-medium mb-4 drop-shadow-md">За нас</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-foreground drop-shadow-lg [text-shadow:_0_2px_8px_rgba(0,0,0,0.3)]">
+            <p className="text-primary font-medium mb-4">За нас</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight text-foreground">
               {heroSlides[currentSlide].title}{" "}
-              <span className="gradient-text drop-shadow-lg">{heroSlides[currentSlide].highlight}</span>
+              <span className="gradient-text">{heroSlides[currentSlide].highlight}</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed drop-shadow-md [text-shadow:_0_1px_4px_rgba(0,0,0,0.2)]">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               {heroSlides[currentSlide].subtitle}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

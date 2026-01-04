@@ -246,12 +246,12 @@ const FamilyCounseling = () => {
                     className="flex items-start gap-3 bg-card/50 rounded-lg p-3"
                   >
                     <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-accent" />
-                    <p className="text-foreground text-sm">{topic}</p>
+                    <p className="text-foreground text-base">{topic}</p>
                   </div>
                 ))}
               </div>
 
-              <p className="text-sm text-muted-foreground italic text-center">
+              <p className="text-base text-muted-foreground italic text-center">
                 Подходът е деликатен, професионален и напълно конфиденциален.
               </p>
             </div>
@@ -288,10 +288,10 @@ const FamilyCounseling = () => {
                   <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                     <step.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                  <h3 className="text-lg md:text-xl font-heading font-semibold text-foreground mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-base">
                     {step.description}
                   </p>
                 </div>
@@ -328,7 +328,7 @@ const FamilyCounseling = () => {
                   <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <Heart className="h-4 w-4 text-primary-foreground" />
                   </div>
-                  <p className="text-foreground font-medium text-sm">{benefit}</p>
+                  <p className="text-foreground font-medium text-base">{benefit}</p>
                 </div>
               ))}
             </div>

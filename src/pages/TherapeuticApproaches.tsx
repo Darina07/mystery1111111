@@ -225,7 +225,7 @@ const TherapeuticApproaches = () => {
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading font-semibold text-foreground mb-2">Индивидуален подход</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-base">
                   Всеки клиент идва със своя история, преживявания и темпо на промяна.
                 </p>
               </div>
@@ -235,7 +235,7 @@ const TherapeuticApproaches = () => {
                   <Users className="h-6 w-6 text-accent" />
                 </div>
                 <h3 className="font-heading font-semibold text-foreground mb-2">Екип от специалисти</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-base">
                   Насочваме към най-подходящия специалист според трудностите и целите.
                 </p>
               </div>
@@ -245,7 +245,7 @@ const TherapeuticApproaches = () => {
                   <TreePine className="h-6 w-6 text-indigo" />
                 </div>
                 <h3 className="font-heading font-semibold text-foreground mb-2">Интегративен подход</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-base">
                   Работата може да включва интеграция на няколко подхода, когато е полезно.
                 </p>
               </div>
@@ -289,11 +289,11 @@ const TherapeuticApproaches = () => {
                       >
                         <div className="flex items-start gap-3 mb-2">
                           <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mt-2 flex-shrink-0`} />
-                          <h3 className="text-base font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+                        <h3 className="text-base md:text-lg font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
                             {approach.name}
                           </h3>
                         </div>
-                        <p className="text-muted-foreground text-sm leading-relaxed pl-5">
+                        <p className="text-muted-foreground text-base leading-relaxed pl-5">
                           {approach.description}
                         </p>
                       </div>

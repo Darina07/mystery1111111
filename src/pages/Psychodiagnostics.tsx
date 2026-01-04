@@ -209,10 +209,10 @@ const Psychodiagnostics = () => {
                   <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                     <type.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                  <h3 className="text-lg md:text-xl font-heading font-semibold text-foreground mb-2">
                     {type.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-base">
                     {type.description}
                   </p>
                 </div>
@@ -283,10 +283,10 @@ const Psychodiagnostics = () => {
                   <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 md:mx-auto md:mb-3 md:mt-2 bg-primary/10 rounded-full flex items-center justify-center">
                     <step.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                   </div>
-                  <h3 className="text-base md:text-sm font-heading font-semibold text-foreground md:mb-2">
+                  <h3 className="text-base md:text-lg font-heading font-semibold text-foreground md:mb-2">
                     {step.title}
                   </h3>
-                  <p className="hidden md:block text-muted-foreground text-sm">
+                  <p className="hidden md:block text-muted-foreground text-base">
                     {step.description}
                   </p>
                 </div>
@@ -317,7 +317,7 @@ const Psychodiagnostics = () => {
                   <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <Brain className="h-4 w-4 text-primary-foreground" />
                   </div>
-                  <p className="text-foreground font-medium text-sm">{benefit}</p>
+                  <p className="text-foreground font-medium text-base">{benefit}</p>
                 </div>
               ))}
             </div>

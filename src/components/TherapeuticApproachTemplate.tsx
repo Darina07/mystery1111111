@@ -114,10 +114,10 @@ export const TherapeuticApproachTemplate = ({
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                     <CheckCircle className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                  <h3 className="text-lg md:text-xl font-heading font-semibold text-foreground mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-base leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -184,11 +184,11 @@ export const TherapeuticApproachTemplate = ({
                       <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm">
                         {index + 1}
                       </div>
-                      <h3 className="text-base font-heading font-semibold text-foreground">
+                      <h3 className="text-base md:text-lg font-heading font-semibold text-foreground">
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed pl-11">
+                    <p className="text-muted-foreground text-base leading-relaxed pl-11">
                       {step.description}
                     </p>
                   </div>
@@ -217,7 +217,7 @@ export const TherapeuticApproachTemplate = ({
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
                 <span className="gradient-text">Свържете се</span> с нас
               </h2>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Направете първата стъпка към по-добро психическо здраве.
               </p>
             </div>

@@ -223,10 +223,10 @@ const SpeechTherapy = () => {
                   <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                     <step.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                  <h3 className="text-lg md:text-xl font-heading font-semibold text-foreground mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-base">
                     {step.description}
                   </p>
                 </div>

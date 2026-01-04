@@ -200,7 +200,7 @@ const ChildCounseling = () => {
                   <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-full flex items-center justify-center">
                     <item.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <p className="text-foreground text-sm font-medium">{item.text}</p>
+                  <p className="text-foreground text-base font-medium">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -275,10 +275,10 @@ const ChildCounseling = () => {
                         <step.icon className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-heading font-semibold text-foreground">
+                        <h3 className="text-base md:text-lg font-heading font-semibold text-foreground">
                           {step.title}
                         </h3>
-                        <p className="text-muted-foreground text-xs">
+                        <p className="text-muted-foreground text-sm md:text-base">
                           {step.description}
                         </p>
                       </div>

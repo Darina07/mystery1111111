@@ -8,7 +8,7 @@ export const Hero = () => {
       id="home"
       className="relative min-h-screen overflow-hidden"
     >
-      {/* Background Image - optimized for LCP with img tag for priority loading */}
+      {/* Background Image - optimized for LCP */}
       <img 
         src={illustrationSupport}
         alt=""

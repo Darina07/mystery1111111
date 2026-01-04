@@ -27,6 +27,8 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    // Enable source maps for production debugging
+    sourcemap: true,
     // Optimize assets
     assetsInlineLimit: 4096,
     rollupOptions: {

@@ -132,7 +132,7 @@ const GroupPrograms = () => {
         
         <div className="container relative z-10 pt-32 pb-20 min-h-[60vh] flex items-center justify-center">
           <div className="max-w-3xl text-center">
-            <p className="text-primary font-medium mb-4">Дар Консулт</p>
+            <p className="text-primary font-medium mb-4">Център Дар</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Групови{" "}
               <span className="gradient-text">програми</span>
@@ -162,7 +162,7 @@ const GroupPrograms = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 text-center">
-              Груповите програми в „Дар Консулт" създават безопасно пространство за подкрепа, осъзнаване и лична промяна, където хора с близки преживявания могат да работят върху важни за тях теми с помощта на структуриран и професионално воден процес.
+              Груповите програми в „Център Дар" създават безопасно пространство за подкрепа, осъзнаване и лична промяна, където хора с близки преживявания могат да работят върху важни за тях теми с помощта на структуриран и професионално воден процес.
             </p>
             
             <div className="bg-primary/5 rounded-2xl p-8 border border-primary/10">

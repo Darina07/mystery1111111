@@ -92,7 +92,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
               <span className="gradient-text">{data.whatIs.title.split(" ").slice(-1)}</span>
             </h2>
             <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-card border border-border/50">
-              <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed whitespace-pre-line">
                 {data.whatIs.content}
               </p>
             </div>
@@ -108,7 +108,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
               Как{" "}
               <span className="text-primary">помагаме?</span>
             </h2>
-            <p className="text-center text-white/70 mb-12">
+            <p className="text-center text-white/70 mb-12 text-base sm:text-lg">
               Нашият подход е индивидуален и съобразен с вашите нужди
             </p>
             
@@ -126,7 +126,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-white/70">
+                  <p className="text-white/70 text-base">
                     {item.description}
                   </p>
                 </div>
@@ -144,7 +144,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
               Какво ще{" "}
               <span className="gradient-text">постигнете?</span>
             </h2>
-            <p className="text-center text-muted-foreground mb-12">
+            <p className="text-center text-muted-foreground mb-12 text-base sm:text-lg">
               Резултатите от работата с нашите специалисти
             </p>
             
@@ -157,7 +157,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
                   <div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <Heart className="h-4 w-4 text-primary-foreground" />
                   </div>
-                  <p className="text-foreground font-medium text-sm">{benefit}</p>
+                  <p className="text-foreground font-medium text-base">{benefit}</p>
                 </div>
               ))}
             </div>

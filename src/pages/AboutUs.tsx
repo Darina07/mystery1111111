@@ -314,7 +314,7 @@ const AboutUs = () => {
                   <h4 className="font-heading font-semibold text-foreground text-lg mb-2 uppercase">
                     {value.title}
                   </h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-base leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -335,7 +335,7 @@ const AboutUs = () => {
               Разнообразие от{" "}
               <span className="gradient-text">специалисти</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg sm:text-xl">
               В център „Дар" работят квалифицирани професионалисти от различни области, 
               за да отговорим на всяка ваша нужда.
             </p>
@@ -370,7 +370,7 @@ const AboutUs = () => {
                   <h3 className="font-heading text-xl font-semibold mb-3 uppercase gradient-text">
                     {specialist.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground text-base leading-relaxed">
                     {specialist.description}
                   </p>
                 </div>
@@ -394,7 +394,7 @@ const AboutUs = () => {
               Често задавани{" "}
               <span className="gradient-text">въпроси</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg sm:text-xl">
               Отговори на най-честите въпроси, които получаваме от нашите клиенти.
             </p>
           </div>

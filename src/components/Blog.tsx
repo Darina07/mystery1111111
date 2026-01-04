@@ -15,7 +15,7 @@ export const Blog = () => {
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
             Блог
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Полезни статии, съвети и новини от нашите специалисти
           </p>
         </div>
@@ -50,7 +50,7 @@ export const Blog = () => {
                   <h3 className="text-xl font-heading font-semibold text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                  <p className="text-muted-foreground text-base mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">

@@ -362,7 +362,7 @@ const PsychologicalCounseling = () => {
       </section>
 
       {/* How to Know Section - Testimonial Style */}
-      <section className="relative py-4 md:py-6 overflow-visible">
+      <section className="relative py-16 md:py-24 overflow-visible">
         {/* Decorative dots in a semicircle hugging the curved edge */}
         <div className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 pointer-events-none">
           <svg 

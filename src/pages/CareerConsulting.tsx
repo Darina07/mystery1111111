@@ -148,7 +148,7 @@ const CareerConsulting = () => {
       </section>
 
       {/* Introduction */}
-      <section className="py-16 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#221A42] mb-6 font-playfair">
@@ -165,7 +165,7 @@ const CareerConsulting = () => {
       </section>
 
       {/* Target Audience */}
-      <section className="py-16 bg-gradient-to-br from-[#8F7BBF]/10 via-white to-[#7F96C3]/10">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#8F7BBF]/10 via-white to-[#7F96C3]/10">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[#221A42] mb-12 font-playfair">
             За кого е подходящо?
@@ -187,7 +187,7 @@ const CareerConsulting = () => {
       </section>
 
       {/* Services */}
-      <section className="py-16 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[#221A42] mb-12 font-playfair">
             Нашите услуги
@@ -209,7 +209,7 @@ const CareerConsulting = () => {
       </section>
 
       {/* Process */}
-      <section className="py-16 bg-gradient-to-br from-[#221A42] to-[#3B3A64]">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#221A42] to-[#3B3A64]">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12 font-playfair">
             Как протича процесът?
@@ -232,7 +232,7 @@ const CareerConsulting = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#221A42] mb-12 font-playfair">
@@ -251,7 +251,7 @@ const CareerConsulting = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-gradient-to-br from-[#8F7BBF]/10 via-white to-[#7F96C3]/10">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#8F7BBF]/10 via-white to-[#7F96C3]/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">

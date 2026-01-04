@@ -216,7 +216,7 @@ const TherapeuticApproaches = () => {
       </section>
 
       {/* Introduction */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -261,7 +261,7 @@ const TherapeuticApproaches = () => {
       </section>
 
       {/* Approach Categories - 2 per row */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
             Психотерапевтични подходи, в които{" "}
@@ -315,7 +315,7 @@ const TherapeuticApproaches = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-lavender/10 via-background to-soft-blue/10 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-lavender/10 via-background to-soft-blue/10 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />

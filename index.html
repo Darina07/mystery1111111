@@ -9,12 +9,16 @@
     <meta name="keywords" content="психолог, психотерапия, консултиране, София, семеен психолог, детски психолог, логопед, психодиагностика">
     <link rel="canonical" href="https://darpsiholog.com" />
 
-    <!-- Preload critical hero image for LCP improvement -->
-    <link rel="preload" as="image" href="/src/assets/illustration-support.jpg" fetchpriority="high" />
-    
-    <!-- Preconnect to external domains -->
+    <!-- Preconnect to external domains - early in head for priority -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="preconnect" href="https://maps.googleapis.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    
+    <!-- Preload fonts with font-display: swap -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQZNLo_U2r.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2" crossorigin />
 
     <!-- Critical CSS - inline for faster FCP -->
     <style>
@@ -24,16 +28,16 @@
       body { min-height: 100vh; background-color: #fff; color: #221A42; }
       img, video { max-width: 100%; height: auto; display: block; }
       
-      /* Font display swap for faster text rendering */
+      /* Font display optimization - show text immediately with fallback */
       @font-face {
         font-family: 'Playfair Display';
         font-display: swap;
-        src: local('Playfair Display');
+        font-weight: 600 700;
       }
       @font-face {
         font-family: 'DM Sans';
         font-display: swap;
-        src: local('DM Sans');
+        font-weight: 400 500;
       }
       
       /* Critical layout styles for above-the-fold content */

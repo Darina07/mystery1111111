@@ -1,9 +1,9 @@
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -43,33 +43,33 @@ export const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
                       <li key={subItem.label} className="relative group/sub">
                         {subItem.hasSubmenu ? (
                           <div className="relative">
-                            <a
-                              href={subItem.href}
+                            <Link
+                              to={subItem.href}
                               className="flex items-center justify-between w-full px-3 py-2 text-sm text-foreground hover:bg-lavender/30 rounded-md transition-colors"
                             >
                               {subItem.label}
                               <ChevronRight className="h-4 w-4" />
-                            </a>
+                            </Link>
                             <ul className="absolute left-full top-0 ml-1 w-[280px] bg-white rounded-lg shadow-lg p-3 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all z-[100] border border-gray-100">
                               {subItem.submenu?.map((nestedItem) => (
                                 <li key={nestedItem.label}>
-                                  <a
-                                    href={nestedItem.href}
+                                  <Link
+                                    to={nestedItem.href}
                                     className="block px-3 py-2 text-sm text-foreground hover:bg-lavender/30 rounded-md transition-colors"
                                   >
                                     {nestedItem.label}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
                           </div>
                         ) : (
-                          <a
-                            href={subItem.href}
+                          <Link
+                            to={subItem.href}
                             className="block px-3 py-2 text-sm text-foreground hover:bg-lavender/30 rounded-md transition-colors"
                           >
                             {subItem.label}
-                          </a>
+                          </Link>
                         )}
                       </li>
                     ))}
@@ -77,12 +77,12 @@ export const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
                 </NavigationMenuContent>
               </>
             ) : (
-              <NavigationMenuLink
-                href={item.href}
+              <Link
+                to={item.href}
                 className="text-sm font-semibold uppercase tracking-wider text-white hover:text-white/80 transition-colors duration-200 px-3 py-2"
               >
                 {item.label}
-              </NavigationMenuLink>
+              </Link>
             )}
           </NavigationMenuItem>
         ))}

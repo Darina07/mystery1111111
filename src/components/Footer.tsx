@@ -129,7 +129,6 @@ export const Footer = () => {
               </a>
 
               <div className="pt-2">
-                <p className="text-primary-foreground/70 text-sm mb-1">Работно време:</p>
                 <p className="text-primary-foreground/70">Понеделник – Неделя: 08:00 – 22:00</p>
               </div>
 

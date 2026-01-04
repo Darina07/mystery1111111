@@ -464,3 +464,59 @@ export const AboutPageSchema = () => {
     </Helmet>
   );
 };
+
+// Course/Event Schema for group programs
+interface CourseSchemaProps {
+  name: string;
+  description: string;
+  url: string;
+  provider?: string;
+  courseMode?: "online" | "onsite" | "blended";
+}
+
+export const CourseSchema = ({
+  name,
+  description,
+  url,
+  provider = "Център Дар",
+  courseMode = "onsite",
+}: CourseSchemaProps) => {
+  const modeMap = {
+    online: "https://schema.org/OnlineEventAttendanceMode",
+    onsite: "https://schema.org/OfflineEventAttendanceMode",
+    blended: "https://schema.org/MixedEventAttendanceMode",
+  };
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name,
+    description,
+    url,
+    provider: {
+      "@type": "Organization",
+      name: provider,
+      sameAs: "https://darpsychology.com",
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: modeMap[courseMode],
+      location: {
+        "@type": "Place",
+        name: "Център Дар",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "ул. Кишинев 18",
+          addressLocality: "София",
+          addressCountry: "BG",
+        },
+      },
+    },
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};

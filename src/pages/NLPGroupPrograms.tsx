@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Brain, Target, MessageCircle, Lightbulb, Zap, ArrowRight, Sparkles, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ContactForm } from "@/components/ContactForm";
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupNLPHeader from "@/assets/group-nlp-header.jpg";
 import groupNLPEffectivenessBg from "@/assets/group-nlp-effectiveness-bg.jpg";
@@ -76,6 +77,21 @@ const keyPoints = [
 const NLPGroupPrograms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="НЛП групови програми | ДАР Психология"
+        description="Практически ориентирани групи за личностно и професионално развитие чрез НЛП техники"
+        url="/services/group-programs/nlp"
+      />
+      <CourseSchema 
+        name="НЛП за личностно и професионално развитие"
+        description="Практически ориентирани групи, насочени към лична ефективност, вътрешна промяна и развитие"
+        url="https://darpsychology.com/services/group-programs/nlp"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "НЛП", url: "/services/group-programs/nlp" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

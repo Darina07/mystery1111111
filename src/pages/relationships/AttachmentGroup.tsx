@@ -8,6 +8,7 @@ import contactBg from "@/assets/contact-bg.jpg";
 import groupAttachmentWho from "@/assets/group-attachment-who.jpg";
 import groupAttachmentHeader from "@/assets/group-attachment-header.jpg";
 import { useScrollAnimationGroup } from "@/hooks/useScrollAnimation";
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 
 const groupFeatures = [
   "Разбиране на четирите типа привързаност",
@@ -53,6 +54,22 @@ const AttachmentGroup = () => {
   
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Модели на привързаност и избор на партньор | ДАР Психология"
+        description="Разберете защо избирате определени партньори и как да промените модела"
+        url="/services/group-programs/relationships/attachment"
+      />
+      <CourseSchema 
+        name="Модели на привързаност и избор на партньор"
+        description="Група за разбиране на моделите на привързаност и осъзнат избор на партньор"
+        url="https://darpsychology.com/services/group-programs/relationships/attachment"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Взаимоотношения", url: "/services/group-programs/relationships" },
+        { name: "Привързаност", url: "/services/group-programs/relationships/attachment" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

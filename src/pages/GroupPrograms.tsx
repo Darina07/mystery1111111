@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Users, Heart, Shield, Brain, Baby, MessageCircle, Target, Sparkles, Clock, Lock, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 import { ContactForm } from "@/components/ContactForm";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupProgramsHeader from "@/assets/group-programs-header.jpg";
@@ -101,6 +101,22 @@ const processSteps = [
 const GroupPrograms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Групови програми | ДАР Психология"
+        description="Подкрепа, споделяне и промяна в сигурна и професионална среда. Групови програми за зависимости, взаимоотношения, родителство и личностно развитие."
+        url="/services/group-programs"
+      />
+      <CourseSchema 
+        name="Групови програми"
+        description="Подкрепящи групови програми за личностно развитие, справяне със зависимости, подобряване на взаимоотношения и родителство"
+        url="https://darpsychology.com/services/group-programs"
+        courseMode="blended"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Услуги", url: "/services" },
+        { name: "Групови програми", url: "/services/group-programs" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

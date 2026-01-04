@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar, Heart, Users, Baby, Shield, ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ContactForm } from "@/components/ContactForm";
+import { SEO, CourseSchema, BreadcrumbSchema } from "@/components/SEO";
 import contactBg from "@/assets/contact-bg.jpg";
 import groupParentingHeader from "@/assets/group-parenting-header.jpg";
 import groupPregnantMothersBg from "@/assets/group-pregnant-mothers-bg.jpg";
@@ -68,6 +69,21 @@ const keyPoints = [
 const ParentingGroupPrograms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Групови програми за родители | ДАР Психология"
+        description="Подкрепящи групи за жени и родители в чувствителни и важни житейски етапи"
+        url="/services/group-programs/parenting"
+      />
+      <CourseSchema 
+        name="Бременност и родителство"
+        description="Подкрепящи групи за жени и родители в чувствителни и важни житейски етапи"
+        url="https://darpsychology.com/services/group-programs/parenting"
+      />
+      <BreadcrumbSchema items={[
+        { name: "Начало", url: "/" },
+        { name: "Групови програми", url: "/services/group-programs" },
+        { name: "Родителство", url: "/services/group-programs/parenting" }
+      ]} />
       <Header />
       
       {/* Hero Section */}

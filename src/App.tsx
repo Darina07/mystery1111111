@@ -214,9 +214,9 @@ const ApproachRedirect = () => {
 
 // Define all app routes as a render function so they can be mounted
 // under both "/" (Bulgarian) and "/en" (English) prefixes.
-const renderAppRoutes = (): ReactNode => (
+const renderAppRoutes = (prefix: string = ""): ReactNode => (
   <>
-    <Route path="/" element={<Index />} />
+    <Route path={`${prefix}/`} element={<Index />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/psychological-counseling" element={<PsychologicalCounseling />} />

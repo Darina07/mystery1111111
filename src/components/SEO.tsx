@@ -118,26 +118,39 @@ interface LocalBusinessSchemaProps {
   name?: string;
   description?: string;
   services?: string[];
+  language?: "bg" | "en";
 }
 
 export const LocalBusinessSchema = ({
-  name = "Дар – Психологичен и консултативен център",
-  description = "Професионално психологично консултиране и психотерапия за деца, възрастни и семейства",
-  services = [
-    "Психологично консултиране",
-    "Семейна терапия",
-    "Детска психология",
-    "Логопедия",
-    "Психодиагностика",
-    "Кариерно консултиране"
-  ],
-}: LocalBusinessSchemaProps) => {
+  name,
+  description,
+  services,
+  language,
+}: LocalBusinessSchemaProps = {}) => {
+  const loc = useLocation();
+  const lang = language ?? detectLangFromPath(loc.pathname);
+  const isEn = lang === "en";
+
+  const resolvedName = name ?? (isEn
+    ? "Dar – Psychological & Counseling Center"
+    : "Дар – Психологичен и консултативен център");
+  const resolvedDescription = description ?? (isEn
+    ? "Professional psychological counseling and psychotherapy for children, adults and families."
+    : "Професионално психологично консултиране и психотерапия за деца, възрастни и семейства");
+  const resolvedServices = services ?? (isEn
+    ? ["Psychological counseling", "Family therapy", "Child psychology", "Speech therapy", "Psychodiagnostics", "Career counseling"]
+    : ["Психологично консултиране", "Семейна терапия", "Детска психология", "Логопедия", "Психодиагностика", "Кариерно консултиране"]);
+  const offerCatalogName = isEn ? "Psychological services" : "Психологически услуги";
+  const address = isEn
+    ? { streetAddress: "18 Kishinev Str.", addressLocality: "Sofia", addressRegion: "Lozenets" }
+    : { streetAddress: "ул. Кишинев 18", addressLocality: "София", addressRegion: "Лозенец" };
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "@id": "https://darpsiholog.com/#organization",
-    name,
-    description,
+    name: resolvedName,
+    description: resolvedDescription,
     url: "https://darpsiholog.com",
     logo: "https://darpsiholog.com/logo.png",
     image: "https://darpsiholog.com/og-image.jpg",
@@ -145,42 +158,25 @@ export const LocalBusinessSchema = ({
     email: "info@darpsiholog.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "ул. Кишинев 18",
-      addressLocality: "София",
-      addressRegion: "Лозенец",
+      ...address,
       postalCode: "1000",
       addressCountry: "BG",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "42.6833",
-      longitude: "23.3333",
-    },
+    geo: { "@type": "GeoCoordinates", latitude: "42.6833", longitude: "23.3333" },
     openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "08:00",
-        closes: "22:00",
-      },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "08:00", closes: "22:00" },
     ],
     priceRange: "€€",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Психологически услуги",
-      itemListElement: services.map((service, index) => ({
+      name: offerCatalogName,
+      itemListElement: resolvedServices.map((service, index) => ({
         "@type": "Offer",
         "@id": `https://darpsiholog.com/#service-${index}`,
-        itemOffered: {
-          "@type": "Service",
-          name: service,
-        },
+        itemOffered: { "@type": "Service", name: service },
       })),
     },
-    sameAs: [
-      "https://www.facebook.com/darpsiholog",
-      "https://www.instagram.com/darpsiholog",
-    ],
+    sameAs: ["https://www.facebook.com/darpsiholog", "https://www.instagram.com/darpsiholog"],
   };
 
   return (
@@ -325,17 +321,20 @@ export const ArticleSchema = ({
 
 // Website Schema for sitelinks search box
 export const WebsiteSchema = () => {
+  const loc = useLocation();
+  const isEn = detectLangFromPath(loc.pathname) === "en";
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Център Дар",
-    alternateName: "Дар Психологичен център",
+    name: isEn ? "Dar Center" : "Център Дар",
+    alternateName: isEn ? "Dar – Psychological & Counseling Center" : "Дар Психологичен център",
     url: "https://darpsiholog.com",
+    inLanguage: isEn ? "en" : "bg",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://darpsiholog.com/blog?search={search_term_string}",
+        urlTemplate: `https://darpsiholog.com${isEn ? "/en" : ""}/blog?search={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },
@@ -557,12 +556,16 @@ export const CourseSchema = ({
 
 // Organization Schema for brand recognition
 export const OrganizationSchema = () => {
+  const loc = useLocation();
+  const isEn = detectLangFromPath(loc.pathname) === "en";
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://darpsiholog.com/#organization",
-    name: "Център Дар",
-    alternateName: "Дар – Психологичен и консултативен център",
+    name: isEn ? "Dar Center" : "Център Дар",
+    alternateName: isEn
+      ? "Dar – Psychological & Counseling Center"
+      : "Дар – Психологичен и консултативен център",
     url: "https://darpsiholog.com",
     logo: {
       "@type": "ImageObject",
@@ -571,41 +574,27 @@ export const OrganizationSchema = () => {
       height: 512,
     },
     image: "https://darpsiholog.com/og-image.jpg",
-    description: "Професионален психологичен център в София, предлагащ консултиране и терапия за деца, възрастни и семейства.",
+    description: isEn
+      ? "Professional psychological center in Sofia offering counseling and therapy for children, adults and families."
+      : "Професионален психологичен център в София, предлагащ консултиране и терапия за деца, възрастни и семейства.",
     email: "info@darpsiholog.com",
     telephone: "+359887079256",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "ул. Кишинев 18",
-      addressLocality: "София",
-      addressRegion: "Лозенец",
+      streetAddress: isEn ? "18 Kishinev Str." : "ул. Кишинев 18",
+      addressLocality: isEn ? "Sofia" : "София",
+      addressRegion: isEn ? "Lozenets" : "Лозенец",
       postalCode: "1000",
       addressCountry: "BG",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 42.6833,
-      longitude: 23.3333,
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "България",
-    },
+    geo: { "@type": "GeoCoordinates", latitude: 42.6833, longitude: 23.3333 },
+    areaServed: { "@type": "Country", name: isEn ? "Bulgaria" : "България" },
     foundingDate: "2020",
-    slogan: "Подкрепа, която работи",
-    knowsAbout: [
-      "Психология",
-      "Психотерапия",
-      "Семейна терапия",
-      "Детска психология",
-      "Логопедия",
-      "Когнитивно-поведенческа терапия",
-      "EMDR терапия",
-    ],
-    sameAs: [
-      "https://www.facebook.com/darpsiholog",
-      "https://www.instagram.com/darpsiholog",
-    ],
+    slogan: isEn ? "Support that works" : "Подкрепа, която работи",
+    knowsAbout: isEn
+      ? ["Psychology", "Psychotherapy", "Family therapy", "Child psychology", "Speech therapy", "Cognitive Behavioral Therapy", "EMDR therapy"]
+      : ["Психология", "Психотерапия", "Семейна терапия", "Детска психология", "Логопедия", "Когнитивно-поведенческа терапия", "EMDR терапия"],
+    sameAs: ["https://www.facebook.com/darpsiholog", "https://www.instagram.com/darpsiholog"],
   };
 
   return (

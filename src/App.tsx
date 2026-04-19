@@ -379,10 +379,33 @@ const renderAppRoutes = (): ReactNode => (
               <Route path="/therapeutic-approaches/art-therapy" element={<ArtTherapy />} />
               <Route path="/therapeutic-approaches/music-therapy" element={<MusicTherapy />} />
               <Route path="/therapeutic-approaches/play-therapy" element={<PlayTherapy />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+    <Route path="*" element={<NotFound />} />
+  </>
+);
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <Suspense fallback={null}>
+      <Toaster />
+    </Suspense>
+    <BrowserRouter>
+      <LanguageProvider>
+        <ScrollToTop />
+        <Suspense fallback={null}>
+          <GoogleAnalyticsProvider>
+            <CookieConsent />
+          </GoogleAnalyticsProvider>
+        </Suspense>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            {/* English routes mounted under /en */}
+            <Route path="/en/*" element={<Suspense fallback={<PageLoader />}><Routes>{renderAppRoutes()}</Routes></Suspense>} />
+            {/* Bulgarian (default) routes */}
+            {renderAppRoutes()}
+          </Routes>
+        </Suspense>
+      </LanguageProvider>
     </BrowserRouter>
   </QueryClientProvider>
 );

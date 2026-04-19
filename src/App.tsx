@@ -570,6 +570,43 @@ const App = () => (
             <Route path="/en/conditions/new-family-member" element={<EnNewFamilyMember />} />
             <Route path="/en/conditions/relocation" element={<EnRelocation />} />
             <Route path="/en/conditions/child-stress" element={<EnChildStress />} />
+            <Route path="/en/conditions/adaptation" element={<EnAdaptation />} />
+            <Route path="/en/conditions/articulation" element={<EnArticulation />} />
+            <Route path="/en/conditions/asperger" element={<EnAsperger />} />
+            <Route path="/en/conditions/boundaries" element={<EnBoundaries />} />
+            <Route path="/en/conditions/chronic-illness" element={<EnChronicIllness />} />
+            <Route path="/en/conditions/communication-difficulties" element={<EnCommunicationDifficulties />} />
+            <Route path="/en/conditions/down-syndrome" element={<EnDownSyndrome />} />
+            <Route path="/en/conditions/epilepsy" element={<EnEpilepsy />} />
+            <Route path="/en/conditions/fatigue" element={<EnFatigue />} />
+            <Route path="/en/conditions/insecurity" element={<EnInsecurity />} />
+            <Route path="/en/conditions/insomnia" element={<EnInsomnia />} />
+            <Route path="/en/conditions/intellectual-disability" element={<EnIntellectualDisability />} />
+            <Route path="/en/conditions/life-crisis" element={<EnLifeCrisis />} />
+            <Route path="/en/conditions/loneliness" element={<EnLoneliness />} />
+            <Route path="/en/conditions/loss" element={<EnLoss />} />
+            <Route path="/en/conditions/muscular-dystrophy" element={<EnMuscularDystrophy />} />
+            <Route path="/en/conditions/perfectionism" element={<EnPerfectionism />} />
+            <Route path="/en/conditions/psychosomatic" element={<EnPsychosomatic />} />
+            <Route path="/en/conditions/rett-syndrome" element={<EnRettSyndrome />} />
+            <Route path="/en/conditions/selective-mutism" element={<EnSelectiveMutism />} />
+            <Route path="/en/conditions/separation" element={<EnSeparation />} />
+            <Route path="/en/conditions/special-educational-needs" element={<EnSpecialEducationalNeeds />} />
+            <Route path="/en/conditions/special-needs-speech" element={<EnSpecialNeedsSpeech />} />
+            <Route path="/en/conditions/speech-delay" element={<EnSpeechDelay />} />
+            <Route path="/en/conditions/speech-disorders" element={<EnSpeechDisorders />} />
+            <Route path="/en/conditions/stuttering" element={<EnStuttering />} />
+            <Route path="/en/conditions/couple-conflicts" element={<EnCoupleConflicts />} />
+            <Route path="/en/conditions/marital-crisis" element={<EnMaritalCrisis />} />
+            <Route path="/en/conditions/jealousy-trust" element={<EnJealousyTrust />} />
+            <Route path="/en/conditions/infidelity" element={<EnInfidelity />} />
+            <Route path="/en/conditions/sexual-problems" element={<EnSexualProblems />} />
+            <Route path="/en/conditions/lack-of-intimacy" element={<EnLackOfIntimacy />} />
+            <Route path="/en/conditions/family-violence" element={<EnFamilyViolence />} />
+            <Route path="/en/conditions/postpartum" element={<EnPostpartum />} />
+            <Route path="/en/conditions/parent-child-relations" element={<EnParentChildRelations />} />
+            <Route path="/en/conditions/blended-families" element={<EnBlendedFamilies />} />
+            <Route path="/en/conditions/separation-loss" element={<EnSeparationLoss />} />
             {/* English routes mounted under /en (fallback to BG components for untranslated pages) */}
             {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}

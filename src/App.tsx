@@ -400,9 +400,9 @@ const App = () => (
         <Suspense fallback={<PageLoader />}>
           <Routes>
             {/* English routes mounted under /en */}
-            <Route path="/en/*" element={<Suspense fallback={<PageLoader />}><Routes>{renderAppRoutes()}</Routes></Suspense>} />
+            {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}
-            {renderAppRoutes()}
+            {renderAppRoutes("")}
           </Routes>
         </Suspense>
       </LanguageProvider>

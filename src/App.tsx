@@ -203,6 +203,15 @@ const EnChildCounseling = lazy(() => import("./pages/en/ChildCounseling"));
 const EnSpeechTherapy = lazy(() => import("./pages/en/SpeechTherapy"));
 const EnPsychodiagnostics = lazy(() => import("./pages/en/Psychodiagnostics"));
 
+// English (EN) condition pages
+const EnDepression = lazy(() => import("./pages/en/conditions/Depression"));
+const EnAnxiety = lazy(() => import("./pages/en/conditions/Anxiety"));
+const EnPanicAttacks = lazy(() => import("./pages/en/conditions/PanicAttacks"));
+const EnBurnout = lazy(() => import("./pages/en/conditions/Burnout"));
+const EnStress = lazy(() => import("./pages/en/conditions/Stress"));
+const EnADHD = lazy(() => import("./pages/en/conditions/ADHD"));
+const EnAutism = lazy(() => import("./pages/en/conditions/Autism"));
+
 const queryClient = new QueryClient();
 
 // Loading fallback component
@@ -424,6 +433,14 @@ const App = () => (
             <Route path="/en/services/child-counseling" element={<EnChildCounseling />} />
             <Route path="/en/services/speech-therapy" element={<EnSpeechTherapy />} />
             <Route path="/en/services/psychodiagnostics" element={<EnPsychodiagnostics />} />
+            {/* English condition pages */}
+            <Route path="/en/conditions/depression" element={<EnDepression />} />
+            <Route path="/en/conditions/anxiety" element={<EnAnxiety />} />
+            <Route path="/en/conditions/panic-attacks" element={<EnPanicAttacks />} />
+            <Route path="/en/conditions/burnout" element={<EnBurnout />} />
+            <Route path="/en/conditions/stress" element={<EnStress />} />
+            <Route path="/en/conditions/adhd" element={<EnADHD />} />
+            <Route path="/en/conditions/autism" element={<EnAutism />} />
             {/* English routes mounted under /en (fallback to BG components for untranslated pages) */}
             {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}

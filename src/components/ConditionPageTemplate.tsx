@@ -79,7 +79,7 @@ export const ConditionPageTemplate = ({ data, language = "bg" }: ConditionPageTe
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title={`${data.title} | ${data.subtitle} | ДАР Психология`}
+        title={`${data.title} | ${data.subtitle} | ${L.siteSuffix}`}
         description={data.description}
         url={currentUrl}
       />
@@ -127,9 +127,9 @@ export const ConditionPageTemplate = ({ data, language = "bg" }: ConditionPageTe
               {data.description}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/contact">
+              <Link to={language === "en" ? "/en/contact" : "/contact"}>
                 <Button variant="hero" size="lg" className="gap-2">
-                  КОНТАКТИ
+                  {L.contacts}
                 </Button>
               </Link>
               <a href="tel:+359887079256">
@@ -164,11 +164,11 @@ export const ConditionPageTemplate = ({ data, language = "bg" }: ConditionPageTe
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Как{" "}
-              <span className="text-primary">помагаме?</span>
+              {L.howTitlePrefix}{" "}
+              <span className="text-primary">{L.howTitleAccent}</span>
             </h2>
             <p className="text-center text-white/70 mb-12 text-base sm:text-lg">
-              Нашият подход е индивидуален и съобразен с вашите нужди
+              {L.howSubtitle}
             </p>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -200,11 +200,11 @@ export const ConditionPageTemplate = ({ data, language = "bg" }: ConditionPageTe
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Какво ще{" "}
-              <span className="gradient-text">постигнете?</span>
+              {L.benefitsPrefix}{" "}
+              <span className="gradient-text">{L.benefitsAccent}</span>
             </h2>
             <p className="text-center text-muted-foreground mb-12 text-base sm:text-lg">
-              Резултатите от работата с нашите специалисти
+              {L.benefitsSubtitle}
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -242,10 +242,10 @@ export const ConditionPageTemplate = ({ data, language = "bg" }: ConditionPageTe
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
-                <span className="gradient-text">Свържете се</span> с нас
+                <span className="gradient-text">{L.ctaPrefix}</span> {L.ctaSuffix}
               </h2>
               <p className="text-base text-muted-foreground">
-                Направете първата стъпка към по-добро психическо здраве.
+                {L.ctaSubtitle}
               </p>
             </div>
 

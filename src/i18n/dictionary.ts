@@ -399,8 +399,8 @@ export const dict = {
     en: "Monday – Sunday: 08:00 – 22:00",
   },
   "footer.copyright": {
-    bg: "© 2025 Дар – Подкрепа, която работи. Всички права запазени.",
-    en: "© 2025 Dar – Support that works. All rights reserved.",
+    bg: "© 2026 Дар – Подкрепа, която работи. Всички права запазени.",
+    en: "© 2026 Dar – Support that works. All rights reserved.",
   },
   "footer.privacy": { bg: "Политика за поверителност", en: "Privacy Policy" },
   "footer.terms": { bg: "Общи условия", en: "Terms & Conditions" },

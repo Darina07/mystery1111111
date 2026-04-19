@@ -31,14 +31,47 @@ export interface ConditionData {
 
 interface ConditionPageTemplateProps {
   data: ConditionData;
+  language?: "bg" | "en";
 }
 
-export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
+const LABELS = {
+  bg: {
+    home: "Начало",
+    contacts: "КОНТАКТИ",
+    howTitlePrefix: "Как",
+    howTitleAccent: "помагаме?",
+    howSubtitle: "Нашият подход е индивидуален и съобразен с вашите нужди",
+    benefitsPrefix: "Какво ще",
+    benefitsAccent: "постигнете?",
+    benefitsSubtitle: "Резултатите от работата с нашите специалисти",
+    ctaPrefix: "Свържете се",
+    ctaSuffix: "с нас",
+    ctaSubtitle: "Направете първата стъпка към по-добро психическо здраве.",
+    siteSuffix: "ДАР Психология",
+  },
+  en: {
+    home: "Home",
+    contacts: "CONTACT US",
+    howTitlePrefix: "How we",
+    howTitleAccent: "help",
+    howSubtitle: "Our approach is individual and tailored to your needs",
+    benefitsPrefix: "What you will",
+    benefitsAccent: "achieve",
+    benefitsSubtitle: "Results from working with our specialists",
+    ctaPrefix: "Get in touch",
+    ctaSuffix: "with us",
+    ctaSubtitle: "Take the first step toward better mental health.",
+    siteSuffix: "DAR Psychology",
+  },
+} as const;
+
+export const ConditionPageTemplate = ({ data, language = "bg" }: ConditionPageTemplateProps) => {
   const location = useLocation();
   const currentUrl = `https://darpsychology.com${location.pathname}`;
+  const L = LABELS[language];
   
   const breadcrumbItems = [
-    { name: "Начало", url: "https://darpsychology.com/" },
+    { name: L.home, url: "https://darpsychology.com/" },
     { name: data.parentService.name, url: `https://darpsychology.com${data.parentService.href}` },
     { name: data.title, url: currentUrl }
   ];

@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEO } from "@/components/SEO";
 
 const content = {
   bg: {
@@ -85,6 +86,14 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={lang === "en" ? "Privacy Policy" : "Политика за поверителност"}
+        description={lang === "en"
+          ? "Learn how Dar Psychological Center collects, uses, and protects your personal data in compliance with GDPR."
+          : "Научете как Психологичен център Дар събира, използва и защитава вашите лични данни в съответствие с GDPR."}
+        url="/privacy-policy"
+        noindex
+      />
       <Header />
       <main className="pt-24">
         <div className="container py-12">

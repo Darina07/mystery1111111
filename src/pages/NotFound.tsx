@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft, Phone } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEO } from "@/components/SEO";
 
 const NotFound = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO title="404" description="Page not found" noindex />
       <Header />
 
       <main className="flex-1 flex items-center justify-center py-20">

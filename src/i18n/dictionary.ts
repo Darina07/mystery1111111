@@ -474,6 +474,56 @@ export const dict = {
   "langSwitcher.bg": { bg: "БГ", en: "BG" },
   "langSwitcher.en": { bg: "EN", en: "EN" },
   "langSwitcher.aria": { bg: "Смяна на език", en: "Change language" },
+
+  // -------- Blog --------
+  "blog.metaTitle": { bg: "Блог", en: "Blog" },
+  "blog.metaDescription": {
+    bg: "Полезни статии за психология, психотерапия, семейни отношения, детско развитие и личностно израстване от специалистите на Център Дар.",
+    en: "Useful articles on psychology, psychotherapy, family relationships, child development and personal growth from the specialists at Dar Center.",
+  },
+  "blog.heroTitle": { bg: "БЛОГ", en: "BLOG" },
+  "blog.heroSubtitle": {
+    bg: "Полезни статии, съвети и ресурси за личностно и професионално развитие",
+    en: "Useful articles, tips and resources for personal and professional development",
+  },
+  "blog.searchPlaceholder": { bg: "Търсене на статии...", en: "Search articles..." },
+  "blog.featuredHeading": { bg: "Популярна статия", en: "Featured article" },
+  "blog.allArticles": { bg: "Всички статии", en: "All articles" },
+  "blog.articlesCount": { bg: "статии", en: "articles" },
+  "blog.readMore": { bg: "Прочети повече", en: "Read more" },
+  "blog.readShort": { bg: "Прочети", en: "Read" },
+  "blog.empty": {
+    bg: "Няма намерени статии за тази категория.",
+    en: "No articles found for this category.",
+  },
+  "blog.showAll": { bg: "Покажи всички статии", en: "Show all articles" },
+  "blog.newsletterTitle": {
+    bg: "Абонирайте се за нашия бюлетин",
+    en: "Subscribe to our newsletter",
+  },
+  "blog.newsletterSubtitle": {
+    bg: "Получавайте най-новите статии и съвети директно във вашата пощенска кутия.",
+    en: "Get the latest articles and tips delivered directly to your inbox.",
+  },
+  "blog.emailPlaceholder": { bg: "Вашият имейл адрес", en: "Your email address" },
+  "blog.subscribe": { bg: "Абонирай се", en: "Subscribe" },
+  "blog.breadcrumbHome": { bg: "Начало", en: "Home" },
+  "blog.breadcrumbBlog": { bg: "Блог", en: "Blog" },
+  "blog.backToBlog": { bg: "Назад към блога", en: "Back to blog" },
+  "blog.share": { bg: "Сподели:", en: "Share:" },
+  "blog.shareFacebook": { bg: "Сподели във Facebook", en: "Share on Facebook" },
+  "blog.shareLinkedIn": { bg: "Сподели в LinkedIn", en: "Share on LinkedIn" },
+  "blog.prevArticle": { bg: "Предишна статия", en: "Previous article" },
+  "blog.nextArticle": { bg: "Следваща статия", en: "Next article" },
+  "blog.relatedHeading": { bg: "Свързани статии", en: "Related articles" },
+  "blog.ctaHeading": {
+    bg: "Нуждаете се от професионална подкрепа?",
+    en: "Do you need professional support?",
+  },
+  "blog.ctaText": {
+    bg: "Свържете се с нас за консултация или запишете час при наш специалист.",
+    en: "Contact us for a consultation or book an appointment with one of our specialists.",
+  },
 } as const satisfies Record<string, Record<Lang, string>>;
 
 export type DictKey = keyof typeof dict;

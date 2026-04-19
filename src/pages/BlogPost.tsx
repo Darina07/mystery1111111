@@ -6,13 +6,23 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ArrowLeft, ArrowRight, Facebook, Linkedin, Share2 } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
-import { getBlogPostBySlug, getRelatedPosts, blogPosts } from "@/data/blogPosts";
+import {
+  getBlogPostBySlug,
+  getRelatedPosts,
+  blogPosts,
+  getPostTitle,
+  getPostExcerpt,
+  getPostContent,
+  getPostCategoryLabel,
+  getPostDate,
+} from "@/data/blogPosts";
 import ReactMarkdown from "react-markdown";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const ShareButtons = ({ title, url }: { title: string; url: string }) => {
+  const { t } = useLanguage();
   const encodedUrl = encodeURIComponent(url);
-  const encodedTitle = encodeURIComponent(title);
-  
+
   const shareLinks = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
@@ -22,14 +32,14 @@ const ShareButtons = ({ title, url }: { title: string; url: string }) => {
     <div className="flex items-center gap-3">
       <span className="text-sm text-[#3B3A64]/70 flex items-center gap-1">
         <Share2 className="w-4 h-4" />
-        Сподели:
+        {t("blog.share")}
       </span>
       <a
         href={shareLinks.facebook}
         target="_blank"
         rel="noopener noreferrer"
         className="w-8 h-8 rounded-full bg-[#1877F2] hover:bg-[#1877F2]/80 flex items-center justify-center transition-colors"
-        aria-label="Сподели във Facebook"
+        aria-label={t("blog.shareFacebook")}
       >
         <Facebook className="w-4 h-4 text-white" />
       </a>
@@ -38,7 +48,7 @@ const ShareButtons = ({ title, url }: { title: string; url: string }) => {
         target="_blank"
         rel="noopener noreferrer"
         className="w-8 h-8 rounded-full bg-[#0A66C2] hover:bg-[#0A66C2]/80 flex items-center justify-center transition-colors"
-        aria-label="Сподели в LinkedIn"
+        aria-label={t("blog.shareLinkedIn")}
       >
         <Linkedin className="w-4 h-4 text-white" />
       </a>
@@ -48,61 +58,68 @@ const ShareButtons = ({ title, url }: { title: string; url: string }) => {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { lang, t, localized } = useLanguage();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to={localized("/blog")} replace />;
   }
 
   const relatedPosts = getRelatedPosts(post.slug, post.category);
-  
+
   // Find previous and next posts
   const currentIndex = blogPosts.findIndex(p => p.slug === post.slug);
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
-  
+
   // Get current URL for sharing
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
 
+  const title = getPostTitle(post, lang);
+  const excerpt = getPostExcerpt(post, lang);
+  const content = getPostContent(post, lang);
+  const categoryLabel = getPostCategoryLabel(post, lang);
+  const date = getPostDate(post, lang);
+
   return (
     <div className="min-h-screen">
-      <SEO 
-        title={post.title}
-        description={post.excerpt}
+      <SEO
+        title={title}
+        description={excerpt}
         url={`/blog/${post.slug}`}
         type="article"
         image={post.image}
         article={{
           publishedTime: post.date,
-          section: post.categoryLabel,
+          section: categoryLabel,
         }}
       />
-      <ArticleSchema 
-        headline={post.title}
-        description={post.excerpt}
+      <ArticleSchema
+        headline={title}
+        description={excerpt}
         image={post.image}
         datePublished={post.date}
         url={`/blog/${post.slug}`}
       />
       <BreadcrumbSchema items={[
-        { name: "Начало", url: "/" },
-        { name: "Блог", url: "/blog" },
-        { name: post.title, url: `/blog/${post.slug}` }
+        { name: t("blog.breadcrumbHome"), url: "/" },
+        { name: t("blog.breadcrumbBlog"), url: "/blog" },
+        { name: title, url: `/blog/${post.slug}` }
       ]} />
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[280px] md:min-h-[450px] lg:min-h-[500px]">
-        <img 
-          src={post.image} 
-          alt={post.title}
+        <img
+          src={post.image}
+          alt={title}
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#221A42] via-[#221A42]/40 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 pb-6 md:pb-12">
           <div className="container mx-auto px-4">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-playfair max-w-4xl">
-              {post.title}
+              {title}
             </h1>
           </div>
         </div>
@@ -111,20 +128,20 @@ const BlogPost = () => {
       {/* Back button, date and category below header */}
       <div className="container mx-auto px-4 py-6">
         <div className="max-w-3xl mx-auto">
-          <Link 
-            to="/blog" 
+          <Link
+            to={localized("/blog")}
             className="inline-flex items-center gap-2 text-[#8F7BBF] hover:text-[#7F96C3] transition-colors mb-4"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Назад към блога</span>
+            <span>{t("blog.backToBlog")}</span>
           </Link>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2 text-[#3B3A64]/70">
               <Calendar className="w-4 h-4" />
-              <span>{post.date}</span>
+              <span>{date}</span>
             </div>
             <Badge className="bg-gradient-to-r from-primary to-accent text-white uppercase tracking-wide">
-              {post.categoryLabel}
+              {categoryLabel}
             </Badge>
           </div>
         </div>
@@ -135,12 +152,12 @@ const BlogPost = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg max-w-none [&_h2]:font-playfair [&_h2]:text-[#8F7BBF] [&_h2]:text-3xl [&_h2]:md:text-4xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-6 [&_h2:first-of-type]:mt-0 [&_h3]:font-playfair [&_h3]:text-[#8F7BBF] [&_h3]:text-xl [&_h3]:md:text-2xl [&_h3]:font-semibold [&_h3]:mt-8 [&_h3]:mb-4 [&_p]:text-[#3B3A64] [&_p]:mb-8 [&_p]:leading-loose [&_p]:text-lg [&_li]:text-[#3B3A64] [&_li]:mb-4 [&_li]:text-lg [&_strong]:text-[#221A42] [&_ul]:my-8 [&_ul]:pl-6 [&_ul]:list-disc [&_ul_li::marker]:text-[#8F7BBF] [&_blockquote]:border-l-4 [&_blockquote]:border-[#8F7BBF] [&_blockquote]:bg-[#8F7BBF]/5 [&_blockquote]:py-4 [&_blockquote]:px-6 [&_blockquote]:rounded-r-lg [&_blockquote]:italic [&_blockquote]:my-10 [&_hr]:my-14 [&_hr]:border-[#8F7BBF]/20">
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+              <ReactMarkdown>{content}</ReactMarkdown>
             </div>
-            
+
             {/* Share buttons after content */}
             <div className="mt-10 pt-6 border-t border-gray-200">
-              <ShareButtons title={post.title} url={currentUrl} />
+              <ShareButtons title={title} url={currentUrl} />
             </div>
           </div>
         </div>
@@ -151,28 +168,28 @@ const BlogPost = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center max-w-3xl mx-auto">
             {prevPost ? (
-              <Link 
-                to={`/blog/${prevPost.slug}`}
+              <Link
+                to={localized(`/blog/${prevPost.slug}`)}
                 className="group flex items-center gap-3 text-[#3B3A64] hover:text-[#8F7BBF] transition-colors"
               >
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                 <div className="text-left">
-                  <span className="text-sm text-[#3B3A64]/60">Предишна статия</span>
-                  <p className="font-medium line-clamp-1 max-w-[200px] md:max-w-[300px]">{prevPost.title}</p>
+                  <span className="text-sm text-[#3B3A64]/60">{t("blog.prevArticle")}</span>
+                  <p className="font-medium line-clamp-1 max-w-[200px] md:max-w-[300px]">{getPostTitle(prevPost, lang)}</p>
                 </div>
               </Link>
             ) : (
               <div />
             )}
-            
+
             {nextPost ? (
-              <Link 
-                to={`/blog/${nextPost.slug}`}
+              <Link
+                to={localized(`/blog/${nextPost.slug}`)}
                 className="group flex items-center gap-3 text-[#3B3A64] hover:text-[#8F7BBF] transition-colors"
               >
                 <div className="text-right">
-                  <span className="text-sm text-[#3B3A64]/60">Следваща статия</span>
-                  <p className="font-medium line-clamp-1 max-w-[200px] md:max-w-[300px]">{nextPost.title}</p>
+                  <span className="text-sm text-[#3B3A64]/60">{t("blog.nextArticle")}</span>
+                  <p className="font-medium line-clamp-1 max-w-[200px] md:max-w-[300px]">{getPostTitle(nextPost, lang)}</p>
                 </div>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -188,29 +205,29 @@ const BlogPost = () => {
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-[#221A42] mb-8 font-playfair text-center">
-              Свързани статии
+              {t("blog.relatedHeading")}
             </h2>
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {relatedPosts.map((relatedPost) => (
-                <Link key={relatedPost.id} to={`/blog/${relatedPost.slug}`}>
+                <Link key={relatedPost.id} to={localized(`/blog/${relatedPost.slug}`)}>
                   <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 group h-full">
                     <div className="aspect-video overflow-hidden">
-                      <img 
-                        src={relatedPost.image} 
-                        alt={relatedPost.title}
+                      <img
+                        src={relatedPost.image}
+                        alt={getPostTitle(relatedPost, lang)}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     <CardContent className="p-5">
                       <Badge className="mb-3 bg-gradient-to-r from-primary to-accent text-white uppercase tracking-wide">
-                        {relatedPost.categoryLabel}
+                        {getPostCategoryLabel(relatedPost, lang)}
                       </Badge>
                       <h3 className="text-lg font-semibold text-[#221A42] mb-2 line-clamp-2 group-hover:text-[#8F7BBF] transition-colors">
-                        {relatedPost.title}
+                        {getPostTitle(relatedPost, lang)}
                       </h3>
                       <div className="flex items-center gap-2 text-[#3B3A64]/70">
                         <Calendar className="w-4 h-4" />
-                        <span className="text-sm">{relatedPost.date}</span>
+                        <span className="text-sm">{getPostDate(relatedPost, lang)}</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -225,20 +242,20 @@ const BlogPost = () => {
       <section className="py-12 bg-gradient-to-br from-[#8F7BBF]/10 via-white to-[#7F96C3]/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-[#221A42] mb-4 font-playfair">
-            Нуждаете се от професионална подкрепа?
+            {t("blog.ctaHeading")}
           </h2>
           <p className="text-[#3B3A64] mb-6 max-w-xl mx-auto">
-            Свържете се с нас за консултация или запишете час при наш специалист.
+            {t("blog.ctaText")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
+            <Link to={localized("/contact")}>
               <Button className="bg-[#8F7BBF] hover:bg-[#7F96C3] text-white">
-                КОНТАКТИ
+                {t("common.contacts")}
               </Button>
             </Link>
-            <Link to="/services">
+            <Link to={localized("/services")}>
               <Button variant="outline" className="border-[#8F7BBF] text-[#8F7BBF] hover:bg-[#8F7BBF]/10">
-                УСЛУГИ
+                {t("common.services")}
               </Button>
             </Link>
           </div>

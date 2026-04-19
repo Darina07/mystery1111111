@@ -12,17 +12,40 @@ export interface BlogPost {
   date: string;
   image: string;
   slug: string;
+  // Optional English translations
+  titleEn?: string;
+  excerptEn?: string;
+  contentEn?: string;
+  categoryLabelEn?: string;
+  dateEn?: string;
 }
 
-export const categories: { value: Category; label: string }[] = [
-  { value: "all", label: "Всички" },
-  { value: "psychology", label: "Психология" },
-  { value: "family", label: "Семейство" },
-  { value: "children", label: "Деца" },
-  { value: "career", label: "Кариера" },
-  { value: "corporate", label: "Бизнес" },
-  { value: "wellness", label: "Благополучие" }
+export const categories: { value: Category; label: string; labelEn: string }[] = [
+  { value: "all", label: "Всички", labelEn: "All" },
+  { value: "psychology", label: "Психология", labelEn: "Psychology" },
+  { value: "family", label: "Семейство", labelEn: "Family" },
+  { value: "children", label: "Деца", labelEn: "Children" },
+  { value: "career", label: "Кариера", labelEn: "Career" },
+  { value: "corporate", label: "Бизнес", labelEn: "Business" },
+  { value: "wellness", label: "Благополучие", labelEn: "Wellness" }
 ];
+
+export type BlogLang = "bg" | "en";
+
+export const getPostTitle = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.titleEn ?? post.title) : post.title;
+export const getPostExcerpt = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.excerptEn ?? post.excerpt) : post.excerpt;
+export const getPostContent = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.contentEn ?? post.content) : post.content;
+export const getPostCategoryLabel = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.categoryLabelEn ?? post.categoryLabel) : post.categoryLabel;
+export const getPostDate = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.dateEn ?? post.date) : post.date;
+export const getCategoryLabel = (
+  cat: { label: string; labelEn: string },
+  lang: BlogLang,
+) => (lang === "en" ? cat.labelEn : cat.label);
 
 export const blogPosts: BlogPost[] = [
   {
@@ -110,7 +133,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Благополучие",
     date: "15 Декември 2024",
     image: blogStressManagement,
-    slug: "stress-management"
+    slug: "stress-management",
+    titleEn: "How to manage stress in the workplace",
+    excerptEn: "Practical tips for managing stress and achieving a healthier work-life balance.",
+    categoryLabelEn: "Wellness",
+    dateEn: "December 15, 2024"
   },
   {
     id: 2,
@@ -176,7 +203,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Семейство",
     date: "10 Декември 2024",
     image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&h=500&fit=crop",
-    slug: "family-communication"
+    slug: "family-communication",
+    titleEn: "Effective communication in the family",
+    excerptEn: "Learn how to improve communication with your partner and children for stronger relationships.",
+    categoryLabelEn: "Family",
+    dateEn: "December 10, 2024"
   },
   {
     id: 3,
@@ -256,7 +287,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Деца",
     date: "5 Декември 2024",
     image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=500&fit=crop",
-    slug: "child-development"
+    slug: "child-development",
+    titleEn: "Child development: what to expect at every stage",
+    excerptEn: "Understand the key milestones in child development and how to support your child's growth.",
+    categoryLabelEn: "Children",
+    dateEn: "December 5, 2024"
   },
   {
     id: 4,
@@ -334,7 +369,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Кариера",
     date: "1 Декември 2024",
     image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=500&fit=crop",
-    slug: "cv-writing"
+    slug: "cv-writing",
+    titleEn: "How to write a successful CV",
+    excerptEn: "A step-by-step guide to creating a professional CV that grabs attention.",
+    categoryLabelEn: "Career",
+    dateEn: "December 1, 2024"
   },
   {
     id: 5,
@@ -411,7 +450,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Бизнес",
     date: "28 Ноември 2024",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=500&fit=crop",
-    slug: "modern-leadership"
+    slug: "modern-leadership",
+    titleEn: "Leadership in modern business",
+    excerptEn: "What qualities a modern leader needs and how to develop them.",
+    categoryLabelEn: "Business",
+    dateEn: "November 28, 2024"
   },
   {
     id: 6,
@@ -504,7 +547,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Психология",
     date: "25 Ноември 2024",
     image: "https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=800&h=500&fit=crop",
-    slug: "understanding-anxiety"
+    slug: "understanding-anxiety",
+    titleEn: "Understanding anxiety",
+    excerptEn: "What anxiety is, how to recognize it, and proven methods for coping with it.",
+    categoryLabelEn: "Psychology",
+    dateEn: "November 25, 2024"
   },
   {
     id: 7,
@@ -601,7 +648,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Бизнес",
     date: "20 Ноември 2024",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop",
-    slug: "team-building"
+    slug: "team-building",
+    titleEn: "Team building activities that actually work",
+    excerptEn: "Effective team building exercises to strengthen team spirit in your company.",
+    categoryLabelEn: "Business",
+    dateEn: "November 20, 2024"
   },
   {
     id: 8,
@@ -699,7 +750,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Деца",
     date: "15 Ноември 2024",
     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=500&fit=crop",
-    slug: "first-school-day"
+    slug: "first-school-day",
+    titleEn: "Preparing your child for the first day of school",
+    excerptEn: "Tips for parents on how to prepare a child emotionally and practically for school.",
+    categoryLabelEn: "Children",
+    dateEn: "November 15, 2024"
   },
   {
     id: 9,
@@ -791,7 +846,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Благополучие",
     date: "10 Ноември 2024",
     image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=500&fit=crop",
-    slug: "meditation-beginners"
+    slug: "meditation-beginners",
+    titleEn: "Meditation for beginners",
+    excerptEn: "Easy meditation techniques you can practice every day for better health.",
+    categoryLabelEn: "Wellness",
+    dateEn: "November 10, 2024"
   },
   {
     id: 10,
@@ -883,7 +942,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Психология",
     date: "5 Ноември 2024",
     image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&h=500&fit=crop",
-    slug: "fear-of-change"
+    slug: "fear-of-change",
+    titleEn: "How to overcome the fear of change",
+    excerptEn: "Practical strategies for coping with fear and embracing change in life.",
+    categoryLabelEn: "Psychology",
+    dateEn: "November 5, 2024"
   },
   {
     id: 11,
@@ -975,7 +1038,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Семейство",
     date: "1 Ноември 2024",
     image: "https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=800&h=500&fit=crop",
-    slug: "work-family-balance"
+    slug: "work-family-balance",
+    titleEn: "Balancing work and family",
+    excerptEn: "How to find harmony between professional and family responsibilities.",
+    categoryLabelEn: "Family",
+    dateEn: "November 1, 2024"
   },
   {
     id: 12,
@@ -1081,7 +1148,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Бизнес",
     date: "28 Октомври 2024",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop",
-    slug: "emotional-intelligence-business"
+    slug: "emotional-intelligence-business",
+    titleEn: "Emotional intelligence in business",
+    excerptEn: "Why emotional intelligence is key to success in the business environment.",
+    categoryLabelEn: "Business",
+    dateEn: "October 28, 2024"
   },
   {
     id: 11,
@@ -1164,7 +1235,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Психология",
     date: "15 Декември 2024",
     image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&h=500&fit=crop",
-    slug: "anxiety-management"
+    slug: "anxiety-management",
+    titleEn: "How to handle anxiety in everyday life",
+    excerptEn: "Anxiety is a natural reaction to stress, but when it becomes excessive it can affect quality of life. Learn practical techniques for coping.",
+    categoryLabelEn: "Psychology",
+    dateEn: "December 15, 2024"
   },
   {
     id: 12,
@@ -1261,7 +1336,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Семейство",
     date: "10 Декември 2024",
     image: "https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?w=800&h=500&fit=crop",
-    slug: "family-child-development"
+    slug: "family-child-development",
+    titleEn: "The role of the family in child development",
+    excerptEn: "The family environment plays a key role in a child's emotional and cognitive development. Learn how to create a supportive environment.",
+    categoryLabelEn: "Family",
+    dateEn: "December 10, 2024"
   },
   {
     id: 13,
@@ -1372,7 +1451,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Взаимоотношения",
     date: "5 Декември 2024",
     image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=500&fit=crop",
-    slug: "couple-communication"
+    slug: "couple-communication",
+    titleEn: "5 steps to better communication in your relationship",
+    excerptEn: "Effective communication is the foundation of every healthy relationship. Discover how to improve dialogue with your partner.",
+    categoryLabelEn: "Relationships",
+    dateEn: "December 5, 2024"
   },
   {
     id: 15,
@@ -1475,7 +1558,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Психология",
     date: "28 Декември 2024",
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=500&fit=crop",
-    slug: "narcissism"
+    slug: "narcissism",
+    titleEn: "Narcissism: how to recognize a narcissistic personality",
+    excerptEn: "Understand what narcissism is, how it manifests, and how to deal with narcissistic people in your life.",
+    categoryLabelEn: "Psychology",
+    dateEn: "December 28, 2024"
   },
   {
     id: 16,
@@ -1550,7 +1637,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Психология",
     date: "25 Декември 2024",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=500&fit=crop",
-    slug: "emotional-intelligence"
+    slug: "emotional-intelligence",
+    titleEn: "Emotional intelligence: the key to successful relationships",
+    excerptEn: "Learn what emotional intelligence is and how to develop it for a better life.",
+    categoryLabelEn: "Psychology",
+    dateEn: "December 25, 2024"
   },
   {
     id: 17,
@@ -1635,7 +1726,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Деца",
     date: "22 Декември 2024",
     image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=500&fit=crop",
-    slug: "childhood-anxiety"
+    slug: "childhood-anxiety",
+    titleEn: "Childhood anxiety: signs and approaches to coping",
+    excerptEn: "How to recognize anxiety in children and help them cope with it.",
+    categoryLabelEn: "Children",
+    dateEn: "December 22, 2024"
   },
   {
     id: 18,
@@ -1723,7 +1818,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Взаимоотношения",
     date: "18 Декември 2024",
     image: "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=800&h=500&fit=crop",
-    slug: "toxic-relationships"
+    slug: "toxic-relationships",
+    titleEn: "Toxic relationships: how to recognize them and break free",
+    excerptEn: "Signs of a toxic relationship and steps toward healthier connections.",
+    categoryLabelEn: "Relationships",
+    dateEn: "December 18, 2024"
   },
   {
     id: 19,
@@ -1811,7 +1910,11 @@ export const blogPosts: BlogPost[] = [
     categoryLabel: "Благополучие",
     date: "12 Декември 2024",
     image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=500&fit=crop",
-    slug: "meditation-beginners"
+    slug: "meditation-beginners",
+    titleEn: "Meditation for beginners: a path to inner peace",
+    excerptEn: "A practical guide to starting a meditation practice and its benefits for mental health.",
+    categoryLabelEn: "Wellness",
+    dateEn: "December 12, 2024"
   }
 ];
 

@@ -159,7 +159,7 @@ export const TherapeuticApproachTemplate = ({
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8">
-              Какво е <span className="gradient-text">{title}</span>?
+              {t.whatIs} <span className="gradient-text">{title}</span>{t.questionMark}
             </h2>
             <div className="prose prose-lg max-w-none space-y-6">
               {description.map((paragraph, index) => (
@@ -177,7 +177,7 @@ export const TherapeuticApproachTemplate = ({
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
-              Ползи от <span className="gradient-text">{title.toLowerCase()}</span>
+              {t.benefitsOf} <span className="gradient-text">{title.toLowerCase()}</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
@@ -220,7 +220,7 @@ export const TherapeuticApproachTemplate = ({
                 <Users className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-3xl md:text-5xl font-heading font-bold text-white">
-                За кого е <span className="text-primary">подходяща</span>?
+                {t.suitableForPrefix} <span className="text-primary">{t.suitableForAccent}</span>{t.questionMark}
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-5">
@@ -246,7 +246,7 @@ export const TherapeuticApproachTemplate = ({
           <div className="container">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 text-center">
-                Как протича <span className="gradient-text">процесът</span>?
+                {t.processPrefix} <span className="gradient-text">{t.processAccent}</span>{t.questionMark}
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {processSteps.map((step, index) => (
@@ -289,10 +289,10 @@ export const TherapeuticApproachTemplate = ({
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
-                <span className="gradient-text">Свържете се</span> с нас
+                <span className="gradient-text">{t.contactTitle}</span> {t.contactWith}
               </h2>
               <p className="text-base text-muted-foreground">
-                Направете първата стъпка към по-добро психическо здраве.
+                {t.contactSubtitle}
               </p>
             </div>
 

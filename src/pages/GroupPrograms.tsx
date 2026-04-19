@@ -110,7 +110,7 @@ const GroupPrograms = () => {
       <CourseSchema 
         name="Групови програми"
         description="Подкрепящи групови програми за личностно развитие, справяне със зависимости, подобряване на взаимоотношения и родителство"
-        url="https://darpsychology.com/services/group-programs"
+        url="https://darpsiholog.com/services/group-programs"
         courseMode="blended"
       />
       <BreadcrumbSchema items={[

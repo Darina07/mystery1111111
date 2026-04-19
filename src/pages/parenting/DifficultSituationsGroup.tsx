@@ -61,7 +61,7 @@ const DifficultSituationsGroup = () => {
       <CourseSchema 
         name="Родители в трудни житейски ситуации"
         description="Подкрепяща група за родители в трудни житейски обстоятелства"
-        url="https://darpsychology.com/services/group-programs/parenting/difficult-situations"
+        url="https://darpsiholog.com/services/group-programs/parenting/difficult-situations"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

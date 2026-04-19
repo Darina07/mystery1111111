@@ -61,7 +61,7 @@ const HabitsGroup = () => {
       <CourseSchema 
         name="НЛП за работа с навици и поведение"
         description="Трансформирайте нежелани навици чрез НЛП техники"
-        url="https://darpsychology.com/services/group-programs/nlp/habits"
+        url="https://darpsiholog.com/services/group-programs/nlp/habits"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

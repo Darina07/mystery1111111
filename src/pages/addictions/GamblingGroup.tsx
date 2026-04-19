@@ -61,7 +61,7 @@ const GamblingGroup = () => {
       <CourseSchema 
         name="Анонимна група за хазартна зависимост"
         description="Подкрепа за хора, борещи се с хазартна зависимост"
-        url="https://darpsychology.com/services/group-programs/addictions/gambling"
+        url="https://darpsiholog.com/services/group-programs/addictions/gambling"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

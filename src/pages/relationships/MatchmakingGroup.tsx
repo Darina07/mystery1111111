@@ -61,7 +61,7 @@ const MatchmakingGroup = () => {
       <CourseSchema 
         name="Matchmaking група – свързване чрез ценности"
         description="Осъзнат подход към намирането на партньор"
-        url="https://darpsychology.com/services/group-programs/relationships/matchmaking"
+        url="https://darpsiholog.com/services/group-programs/relationships/matchmaking"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

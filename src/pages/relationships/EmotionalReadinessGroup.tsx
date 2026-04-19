@@ -61,7 +61,7 @@ const EmotionalReadinessGroup = () => {
       <CourseSchema 
         name="Емоционална готовност за връзка"
         description="Подготовка за здрава връзка чрез работа върху емоционалната зрелост"
-        url="https://darpsychology.com/services/group-programs/relationships/emotional-readiness"
+        url="https://darpsiholog.com/services/group-programs/relationships/emotional-readiness"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

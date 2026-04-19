@@ -529,7 +529,7 @@ export const CourseSchema = ({
     provider: {
       "@type": "Organization",
       name: provider,
-      sameAs: "https://darpsychology.com",
+      sameAs: "https://darpsiholog.com",
     },
     hasCourseInstance: {
       "@type": "CourseInstance",

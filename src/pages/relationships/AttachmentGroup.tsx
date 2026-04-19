@@ -62,7 +62,7 @@ const AttachmentGroup = () => {
       <CourseSchema 
         name="Модели на привързаност и избор на партньор"
         description="Група за разбиране на моделите на привързаност и осъзнат избор на партньор"
-        url="https://darpsychology.com/services/group-programs/relationships/attachment"
+        url="https://darpsiholog.com/services/group-programs/relationships/attachment"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

@@ -61,7 +61,7 @@ const PregnantMothersGroup = () => {
       <CourseSchema 
         name="Група за бременни и бъдещи майки"
         description="Емоционална подкрепа през бременността"
-        url="https://darpsychology.com/services/group-programs/parenting/pregnant-mothers"
+        url="https://darpsiholog.com/services/group-programs/parenting/pregnant-mothers"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

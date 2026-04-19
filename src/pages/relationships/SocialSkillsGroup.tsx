@@ -61,7 +61,7 @@ const SocialSkillsGroup = () => {
       <CourseSchema 
         name="Социални умения и увереност при запознанства"
         description="Практически групови упражнения за развиване на комуникативни умения"
-        url="https://darpsychology.com/services/group-programs/relationships/social-skills"
+        url="https://darpsiholog.com/services/group-programs/relationships/social-skills"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

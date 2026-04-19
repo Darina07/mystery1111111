@@ -67,12 +67,12 @@ const LABELS = {
 
 export const ConditionPageTemplate = ({ data, language = "bg" }: ConditionPageTemplateProps) => {
   const location = useLocation();
-  const currentUrl = `https://darpsychology.com${location.pathname}`;
+  const currentUrl = `https://darpsiholog.com${location.pathname}`;
   const L = LABELS[language];
   
   const breadcrumbItems = [
-    { name: L.home, url: "https://darpsychology.com/" },
-    { name: data.parentService.name, url: `https://darpsychology.com${data.parentService.href}` },
+    { name: L.home, url: "https://darpsiholog.com/" },
+    { name: data.parentService.name, url: `https://darpsiholog.com${data.parentService.href}` },
     { name: data.title, url: currentUrl }
   ];
 

@@ -61,7 +61,7 @@ const AnxietyBlocksGroup = () => {
       <CourseSchema 
         name="НЛП при тревожност и вътрешни блокажи"
         description="Работа със страхове и вътрешни ограничения чрез НЛП техники"
-        url="https://darpsychology.com/services/group-programs/nlp/anxiety-blocks"
+        url="https://darpsiholog.com/services/group-programs/nlp/anxiety-blocks"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

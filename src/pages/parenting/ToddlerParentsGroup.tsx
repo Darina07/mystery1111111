@@ -61,7 +61,7 @@ const ToddlerParentsGroup = () => {
       <CourseSchema 
         name="Родители на малки деца"
         description="Група за родители на деца от 0 до 6 години"
-        url="https://darpsychology.com/services/group-programs/parenting/toddler-parents"
+        url="https://darpsiholog.com/services/group-programs/parenting/toddler-parents"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

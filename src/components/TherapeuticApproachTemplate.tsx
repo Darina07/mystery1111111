@@ -84,12 +84,12 @@ export const TherapeuticApproachTemplate = ({
   language = "bg",
 }: TherapeuticApproachProps) => {
   const location = useLocation();
-  const currentUrl = `https://darpsychology.com${location.pathname}`;
+  const currentUrl = `https://darpsiholog.com${location.pathname}`;
   const t = LABELS[language];
 
   const breadcrumbItems = [
-    { name: t.home, url: `https://darpsychology.com${language === "en" ? "/en" : "/"}` },
-    { name: t.approachesNav, url: `https://darpsychology.com${t.approachesPath}` },
+    { name: t.home, url: `https://darpsiholog.com${language === "en" ? "/en" : "/"}` },
+    { name: t.approachesNav, url: `https://darpsiholog.com${t.approachesPath}` },
     { name: title, url: currentUrl }
   ];
 

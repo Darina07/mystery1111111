@@ -1,7 +1,6 @@
 import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
 
 // Plugin to make CSS non-render-blocking
@@ -27,8 +26,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [
-    react(), 
-    mode === "development" && componentTagger(),
+    react(),
     imagetools({
       // Auto-optimize images during build
       defaultDirectives: () => new URLSearchParams({

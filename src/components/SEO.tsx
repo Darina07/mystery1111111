@@ -347,13 +347,6 @@ export const WebsiteSchema = () => {
   );
 };
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
-    </Helmet>
-  );
-};
-
 // Professional Service Schema
 interface ProfessionalServiceSchemaProps {
   name: string;

@@ -1,7 +1,8 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 
 // Lazy load Google Analytics - not needed for initial render
 const GoogleAnalyticsProvider = lazy(() => 
@@ -211,21 +212,11 @@ const ApproachRedirect = () => {
   );
 };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <Suspense fallback={null}>
-      <Toaster />
-    </Suspense>
-    <BrowserRouter>
-      <ScrollToTop />
-      <Suspense fallback={null}>
-        <GoogleAnalyticsProvider>
-          <CookieConsent />
-        </GoogleAnalyticsProvider>
-      </Suspense>
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" element={<Index />} />
+// Define all app routes as a render function so they can be mounted
+// under both "/" (Bulgarian) and "/en" (English) prefixes.
+const renderAppRoutes = (): ReactNode => (
+  <>
+    <Route path="/" element={<Index />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/psychological-counseling" element={<PsychologicalCounseling />} />

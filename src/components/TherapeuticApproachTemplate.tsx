@@ -27,7 +27,51 @@ interface TherapeuticApproachProps {
   benefits: Benefit[];
   suitableFor: string[];
   processSteps?: ProcessStep[];
+  language?: "bg" | "en";
 }
+
+const LABELS = {
+  bg: {
+    home: "Начало",
+    approachesNav: "Терапевтични подходи",
+    siteSuffix: "Терапевтични подходи | ДАР Психология",
+    bookCta: "ЗАПАЗИ ЧАС",
+    callAria: "Обадете се",
+    whatIs: "Какво е",
+    benefitsOf: "Ползи от",
+    suitableForPrefix: "За кого е",
+    suitableForAccent: "подходяща",
+    processPrefix: "Как протича",
+    processAccent: "процесът",
+    contactTitle: "Свържете се",
+    contactWith: "с нас",
+    contactSubtitle: "Направете първата стъпка към по-добро психическо здраве.",
+    serviceType: "Психотерапия",
+    approachesPath: "/therapeutic-approaches",
+    contactPath: "/contact",
+    questionMark: "?",
+  },
+  en: {
+    home: "Home",
+    approachesNav: "Therapeutic approaches",
+    siteSuffix: "Therapeutic approaches | DAR Psychology",
+    bookCta: "BOOK A SESSION",
+    callAria: "Call us",
+    whatIs: "What is",
+    benefitsOf: "Benefits of",
+    suitableForPrefix: "Who is it",
+    suitableForAccent: "for",
+    processPrefix: "How does the",
+    processAccent: "process work",
+    contactTitle: "Contact",
+    contactWith: "us",
+    contactSubtitle: "Take the first step toward better mental health.",
+    serviceType: "Psychotherapy",
+    approachesPath: "/en/therapeutic-approaches",
+    contactPath: "/en/contact",
+    questionMark: "?",
+  },
+} as const;
 
 export const TherapeuticApproachTemplate = ({
   title,
@@ -37,13 +81,15 @@ export const TherapeuticApproachTemplate = ({
   benefits,
   suitableFor,
   processSteps,
+  language = "bg",
 }: TherapeuticApproachProps) => {
   const location = useLocation();
   const currentUrl = `https://darpsychology.com${location.pathname}`;
-  
+  const t = LABELS[language];
+
   const breadcrumbItems = [
-    { name: "Начало", url: "https://darpsychology.com/" },
-    { name: "Терапевтични подходи", url: "https://darpsychology.com/therapeutic-approaches" },
+    { name: t.home, url: `https://darpsychology.com${language === "en" ? "/en" : "/"}` },
+    { name: t.approachesNav, url: `https://darpsychology.com${t.approachesPath}` },
     { name: title, url: currentUrl }
   ];
 

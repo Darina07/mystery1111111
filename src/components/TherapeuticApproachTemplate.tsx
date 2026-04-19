@@ -139,12 +139,12 @@ export const TherapeuticApproachTemplate = ({
               {subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/contact">
+              <Link to={t.contactPath}>
                 <Button variant="hero" size="lg">
-                  ЗАПАЗИ ЧАС
+                  {t.bookCta}
                 </Button>
               </Link>
-              <a href="tel:+359887079256" aria-label="Обадете се">
+              <a href="tel:+359887079256" aria-label={t.callAria}>
                 <Button variant="hero-outline" size="lg">
                   <Phone className="h-5 w-5" />
                 </Button>

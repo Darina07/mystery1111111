@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import illustrationSupport from "@/assets/illustration-support.jpg";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Hero = () => {
+  const { t, localized } = useLanguage();
   return (
     <section
       id="home"
@@ -29,27 +31,25 @@ export const Hero = () => {
           <div className="flex flex-col gap-8">
             <div className="space-y-2 animate-fade-up">
               <p className="text-muted-foreground font-medium tracking-wide uppercase text-sm">
-                Психологичен и консултативен център ДАР
+                {t("hero.eyebrow")}
               </p>
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-balance animate-fade-up delay-100">
-              Подкрепа,{" "}
-              <span className="gradient-text">която работи</span>
+              {t("hero.title1")}{" "}
+              <span className="gradient-text">{t("hero.title2")}</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl animate-fade-up delay-200">
-              Предлагаме професионално психологично консултиране и психотерапия
-              за деца, възрастни и семейства. Работим за вашето емоционално
-              благополучие в безопасна, спокойна и подкрепяща среда.
+              {t("hero.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
               <Button size="xl" className="uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" style={{ background: 'var(--gradient-cta)' }} asChild>
-                <Link to="/contact">КОНТАКТИ</Link>
+                <Link to={localized("/contact")}>{t("common.contacts")}</Link>
               </Button>
               <Button variant="hero-outline" size="xl" className="uppercase" asChild>
-                <Link to="/services">УСЛУГИ</Link>
+                <Link to={localized("/services")}>{t("common.services")}</Link>
               </Button>
             </div>
           </div>

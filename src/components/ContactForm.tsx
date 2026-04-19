@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface ContactFormProps {
   serviceName?: string;
@@ -10,6 +11,7 @@ interface ContactFormProps {
 
 export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormProps) => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -24,8 +26,8 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
     
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Грешка",
-        description: "Моля, попълнете всички задължителни полета.",
+        title: t("common.error"),
+        description: t("common.errorRequiredFields"),
         variant: "destructive",
       });
       return;
@@ -38,7 +40,6 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
         ? `${formData.name} ${formData.lastName}` 
         : formData.name;
 
-      // Dynamic import of supabase for code splitting
       const { supabase } = await import("@/integrations/supabase/client");
       const { error } = await supabase.functions.invoke("send-contact-email", {
         body: {
@@ -53,29 +54,23 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
       if (error) {
         console.error("Error sending email:", error);
         toast({
-          title: "Грешка",
-          description: "Възникна грешка при изпращането. Моля, опитайте отново.",
+          title: t("common.error"),
+          description: t("common.errorMessage"),
           variant: "destructive",
         });
         return;
       }
 
       toast({
-        title: "Успешно изпратено!",
-        description: "Вашето запитване беше изпратено успешно! Ще се свържем с вас скоро.",
+        title: t("common.success"),
+        description: t("common.successMessageLong"),
       });
-      setFormData({
-        name: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
+      setFormData({ name: "", lastName: "", email: "", phone: "", message: "" });
     } catch (error) {
       console.error("Error:", error);
       toast({
-        title: "Грешка",
-        description: "Възникна грешка при изпращането. Моля, опитайте отново.",
+        title: t("common.error"),
+        description: t("common.errorMessage"),
         variant: "destructive",
       });
     } finally {
@@ -89,7 +84,7 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
         <div>
           <input 
             type="text" 
-            placeholder="Име *" 
+            placeholder={`${t("contact.name")} *`}
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
@@ -99,7 +94,7 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
         <div>
           <input 
             type="text" 
-            placeholder="Фамилия" 
+            placeholder={t("contact.lastName")}
             value={formData.lastName}
             onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
             className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
@@ -111,7 +106,7 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
         <div>
           <input 
             type="email" 
-            placeholder="Имейл *" 
+            placeholder={`${t("contact.email")} *`}
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
@@ -121,7 +116,7 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
         <div>
           <input 
             type="tel" 
-            placeholder="Телефон" 
+            placeholder={t("contact.phone")}
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             className="w-full px-4 py-3 border-b-2 border-border bg-transparent focus:border-primary outline-none transition-colors text-foreground placeholder:text-muted-foreground"
@@ -131,7 +126,7 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
 
       <div>
         <textarea 
-          placeholder="Съобщение *" 
+          placeholder={`${t("contact.message")} *`}
           rows={4}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -151,17 +146,17 @@ export const ContactForm = ({ serviceName, buttonVariant = "cta" }: ContactFormP
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Изпращане...
+              {t("common.sending")}
             </>
           ) : (
-            "ИЗПРАТИ"
+            t("common.send")
           )}
         </Button>
         
         <a 
           href="tel:+359887079256" 
           className="flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary/90 transition-colors shadow-lg"
-          aria-label="Обадете се на +359 887 079 256"
+          aria-label="+359 887 079 256"
         >
           <Phone className="h-8 w-8 text-primary-foreground" />
         </a>

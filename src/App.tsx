@@ -315,6 +315,27 @@ const EnArtTherapy = lazy(() => import("./pages/en/approaches/ArtTherapy"));
 const EnMusicTherapy = lazy(() => import("./pages/en/approaches/MusicTherapy"));
 const EnPlayTherapy = lazy(() => import("./pages/en/approaches/PlayTherapy"));
 
+// EN group program subpages
+const EnAlcoholGroup = lazy(() => import("./pages/en/addictions/AlcoholGroup"));
+const EnSubstancesGroup = lazy(() => import("./pages/en/addictions/SubstancesGroup"));
+const EnGamblingGroup = lazy(() => import("./pages/en/addictions/GamblingGroup"));
+const EnLoveGroup = lazy(() => import("./pages/en/addictions/LoveGroup"));
+const EnCodependencyGroup = lazy(() => import("./pages/en/addictions/CodependencyGroup"));
+const EnAttachmentGroup = lazy(() => import("./pages/en/relationships/AttachmentGroup"));
+const EnEmotionalReadinessGroup = lazy(() => import("./pages/en/relationships/EmotionalReadinessGroup"));
+const EnSocialSkillsGroup = lazy(() => import("./pages/en/relationships/SocialSkillsGroup"));
+const EnBreakupRecoveryGroup = lazy(() => import("./pages/en/relationships/BreakupRecoveryGroup"));
+const EnMatchmakingGroup = lazy(() => import("./pages/en/relationships/MatchmakingGroup"));
+const EnPregnantMothersGroup = lazy(() => import("./pages/en/parenting/PregnantMothersGroup"));
+const EnPostpartumGroup = lazy(() => import("./pages/en/parenting/PostpartumGroup"));
+const EnToddlerParentsGroup = lazy(() => import("./pages/en/parenting/ToddlerParentsGroup"));
+const EnDifficultSituationsGroup = lazy(() => import("./pages/en/parenting/DifficultSituationsGroup"));
+const EnPersonalEffectivenessGroup = lazy(() => import("./pages/en/nlp/PersonalEffectivenessGroup"));
+const EnAnxietyBlocksGroup = lazy(() => import("./pages/en/nlp/AnxietyBlocksGroup"));
+const EnGoalsMotivationGroup = lazy(() => import("./pages/en/nlp/GoalsMotivationGroup"));
+const EnCommunicationSkillsGroup = lazy(() => import("./pages/en/nlp/CommunicationSkillsGroup"));
+const EnHabitsGroup = lazy(() => import("./pages/en/nlp/HabitsGroup"));
+
 const queryClient = new QueryClient();
 
 // Loading fallback component
@@ -646,6 +667,26 @@ const App = () => (
             <Route path="/en/therapeutic-approaches/art-therapy" element={<EnArtTherapy />} />
             <Route path="/en/therapeutic-approaches/music-therapy" element={<EnMusicTherapy />} />
             <Route path="/en/therapeutic-approaches/play-therapy" element={<EnPlayTherapy />} />
+            {/* English group program subpages */}
+            <Route path="/en/services/group-programs/addictions/alcohol" element={<EnAlcoholGroup />} />
+            <Route path="/en/services/group-programs/addictions/substances" element={<EnSubstancesGroup />} />
+            <Route path="/en/services/group-programs/addictions/gambling" element={<EnGamblingGroup />} />
+            <Route path="/en/services/group-programs/addictions/love" element={<EnLoveGroup />} />
+            <Route path="/en/services/group-programs/addictions/codependency" element={<EnCodependencyGroup />} />
+            <Route path="/en/services/group-programs/relationships/attachment" element={<EnAttachmentGroup />} />
+            <Route path="/en/services/group-programs/relationships/emotional-readiness" element={<EnEmotionalReadinessGroup />} />
+            <Route path="/en/services/group-programs/relationships/social-skills" element={<EnSocialSkillsGroup />} />
+            <Route path="/en/services/group-programs/relationships/breakup-recovery" element={<EnBreakupRecoveryGroup />} />
+            <Route path="/en/services/group-programs/relationships/matchmaking" element={<EnMatchmakingGroup />} />
+            <Route path="/en/services/group-programs/parenting/pregnant-mothers" element={<EnPregnantMothersGroup />} />
+            <Route path="/en/services/group-programs/parenting/postpartum" element={<EnPostpartumGroup />} />
+            <Route path="/en/services/group-programs/parenting/toddler-parents" element={<EnToddlerParentsGroup />} />
+            <Route path="/en/services/group-programs/parenting/difficult-situations" element={<EnDifficultSituationsGroup />} />
+            <Route path="/en/services/group-programs/nlp/personal-effectiveness" element={<EnPersonalEffectivenessGroup />} />
+            <Route path="/en/services/group-programs/nlp/anxiety-blocks" element={<EnAnxietyBlocksGroup />} />
+            <Route path="/en/services/group-programs/nlp/goals-motivation" element={<EnGoalsMotivationGroup />} />
+            <Route path="/en/services/group-programs/nlp/communication-skills" element={<EnCommunicationSkillsGroup />} />
+            <Route path="/en/services/group-programs/nlp/habits" element={<EnHabitsGroup />} />
             {/* English routes mounted under /en (fallback to BG components for untranslated pages) */}
             {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}

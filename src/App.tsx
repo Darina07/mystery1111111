@@ -211,6 +211,52 @@ const EnBurnout = lazy(() => import("./pages/en/conditions/Burnout"));
 const EnStress = lazy(() => import("./pages/en/conditions/Stress"));
 const EnADHD = lazy(() => import("./pages/en/conditions/ADHD"));
 const EnAutism = lazy(() => import("./pages/en/conditions/Autism"));
+const EnPTSD = lazy(() => import("./pages/en/conditions/PTSD"));
+const EnOCD = lazy(() => import("./pages/en/conditions/OCD"));
+const EnPhobias = lazy(() => import("./pages/en/conditions/Phobias"));
+const EnHypochondria = lazy(() => import("./pages/en/conditions/Hypochondria"));
+const EnBipolar = lazy(() => import("./pages/en/conditions/Bipolar"));
+const EnAnger = lazy(() => import("./pages/en/conditions/Anger"));
+const EnEmotionalExhaustion = lazy(() => import("./pages/en/conditions/EmotionalExhaustion"));
+const EnAlcoholAddiction = lazy(() => import("./pages/en/conditions/AlcoholAddiction"));
+const EnDrugAddiction = lazy(() => import("./pages/en/conditions/DrugAddiction"));
+const EnGamblingAddiction = lazy(() => import("./pages/en/conditions/GamblingAddiction"));
+const EnMedicationAddiction = lazy(() => import("./pages/en/conditions/MedicationAddiction"));
+const EnInternetAddiction = lazy(() => import("./pages/en/conditions/InternetAddiction"));
+const EnSocialMediaAddiction = lazy(() => import("./pages/en/conditions/SocialMediaAddiction"));
+const EnWorkaholism = lazy(() => import("./pages/en/conditions/Workaholism"));
+const EnLoveAddiction = lazy(() => import("./pages/en/conditions/LoveAddiction"));
+const EnLGBTSupport = lazy(() => import("./pages/en/conditions/LGBTSupport"));
+const EnIdentitySelfAcceptance = lazy(() => import("./pages/en/conditions/IdentitySelfAcceptance"));
+const EnComingOut = lazy(() => import("./pages/en/conditions/ComingOut"));
+const EnSocialRejectionStress = lazy(() => import("./pages/en/conditions/SocialRejectionStress"));
+const EnLGBTRelationships = lazy(() => import("./pages/en/conditions/LGBTRelationships"));
+const EnLGBTYouth = lazy(() => import("./pages/en/conditions/LGBTYouth"));
+const EnYouthIdentity = lazy(() => import("./pages/en/conditions/YouthIdentity"));
+const EnSocialRejectionSupport = lazy(() => import("./pages/en/conditions/SocialRejectionSupport"));
+const EnComingOutSupport = lazy(() => import("./pages/en/conditions/ComingOutSupport"));
+const EnDyslexia = lazy(() => import("./pages/en/conditions/Dyslexia"));
+const EnDysgraphia = lazy(() => import("./pages/en/conditions/Dysgraphia"));
+const EnDyscalculia = lazy(() => import("./pages/en/conditions/Dyscalculia"));
+const EnDyspraxia = lazy(() => import("./pages/en/conditions/Dyspraxia"));
+const EnMemoryConcentration = lazy(() => import("./pages/en/conditions/MemoryConcentration"));
+const EnChildPTSD = lazy(() => import("./pages/en/conditions/ChildPTSD"));
+const EnTicsTourette = lazy(() => import("./pages/en/conditions/TicsTourette"));
+const EnAggressionSelfHarm = lazy(() => import("./pages/en/conditions/AggressionSelfHarm"));
+const EnChildFears = lazy(() => import("./pages/en/conditions/ChildFears"));
+const EnChildSleepProblems = lazy(() => import("./pages/en/conditions/ChildSleepProblems"));
+const EnChildPsychosomatic = lazy(() => import("./pages/en/conditions/ChildPsychosomatic"));
+const EnAdaptationDifficulties = lazy(() => import("./pages/en/conditions/AdaptationDifficulties"));
+const EnPeerCommunication = lazy(() => import("./pages/en/conditions/PeerCommunication"));
+const EnLowSelfEsteem = lazy(() => import("./pages/en/conditions/LowSelfEsteem"));
+const EnConflictRelationships = lazy(() => import("./pages/en/conditions/ConflictRelationships"));
+const EnRunningAway = lazy(() => import("./pages/en/conditions/RunningAway"));
+const EnRiskyBehavior = lazy(() => import("./pages/en/conditions/RiskyBehavior"));
+const EnChildGrief = lazy(() => import("./pages/en/conditions/ChildGrief"));
+const EnParentsDivorce = lazy(() => import("./pages/en/conditions/ParentsDivorce"));
+const EnNewFamilyMember = lazy(() => import("./pages/en/conditions/NewFamilyMember"));
+const EnRelocation = lazy(() => import("./pages/en/conditions/Relocation"));
+const EnChildStress = lazy(() => import("./pages/en/conditions/ChildStress"));
 
 const queryClient = new QueryClient();
 
@@ -441,6 +487,52 @@ const App = () => (
             <Route path="/en/conditions/stress" element={<EnStress />} />
             <Route path="/en/conditions/adhd" element={<EnADHD />} />
             <Route path="/en/conditions/autism" element={<EnAutism />} />
+            <Route path="/en/conditions/ptsd" element={<EnPTSD />} />
+            <Route path="/en/conditions/ocd" element={<EnOCD />} />
+            <Route path="/en/conditions/phobias" element={<EnPhobias />} />
+            <Route path="/en/conditions/hypochondria" element={<EnHypochondria />} />
+            <Route path="/en/conditions/bipolar" element={<EnBipolar />} />
+            <Route path="/en/conditions/anger" element={<EnAnger />} />
+            <Route path="/en/conditions/emotional-exhaustion" element={<EnEmotionalExhaustion />} />
+            <Route path="/en/conditions/alcohol-addiction" element={<EnAlcoholAddiction />} />
+            <Route path="/en/conditions/drug-addiction" element={<EnDrugAddiction />} />
+            <Route path="/en/conditions/gambling-addiction" element={<EnGamblingAddiction />} />
+            <Route path="/en/conditions/medication-addiction" element={<EnMedicationAddiction />} />
+            <Route path="/en/conditions/internet-addiction" element={<EnInternetAddiction />} />
+            <Route path="/en/conditions/social-media-addiction" element={<EnSocialMediaAddiction />} />
+            <Route path="/en/conditions/workaholism" element={<EnWorkaholism />} />
+            <Route path="/en/conditions/love-addiction" element={<EnLoveAddiction />} />
+            <Route path="/en/conditions/lgbt-support" element={<EnLGBTSupport />} />
+            <Route path="/en/conditions/identity-self-acceptance" element={<EnIdentitySelfAcceptance />} />
+            <Route path="/en/conditions/coming-out" element={<EnComingOut />} />
+            <Route path="/en/conditions/social-rejection-stress" element={<EnSocialRejectionStress />} />
+            <Route path="/en/conditions/lgbt-relationships" element={<EnLGBTRelationships />} />
+            <Route path="/en/conditions/lgbt-youth" element={<EnLGBTYouth />} />
+            <Route path="/en/conditions/youth-identity" element={<EnYouthIdentity />} />
+            <Route path="/en/conditions/social-rejection-support" element={<EnSocialRejectionSupport />} />
+            <Route path="/en/conditions/coming-out-support" element={<EnComingOutSupport />} />
+            <Route path="/en/conditions/dyslexia" element={<EnDyslexia />} />
+            <Route path="/en/conditions/dysgraphia" element={<EnDysgraphia />} />
+            <Route path="/en/conditions/dyscalculia" element={<EnDyscalculia />} />
+            <Route path="/en/conditions/dyspraxia" element={<EnDyspraxia />} />
+            <Route path="/en/conditions/memory-concentration" element={<EnMemoryConcentration />} />
+            <Route path="/en/conditions/child-ptsd" element={<EnChildPTSD />} />
+            <Route path="/en/conditions/tics-tourette" element={<EnTicsTourette />} />
+            <Route path="/en/conditions/aggression-self-harm" element={<EnAggressionSelfHarm />} />
+            <Route path="/en/conditions/child-fears" element={<EnChildFears />} />
+            <Route path="/en/conditions/child-sleep-problems" element={<EnChildSleepProblems />} />
+            <Route path="/en/conditions/child-psychosomatic" element={<EnChildPsychosomatic />} />
+            <Route path="/en/conditions/adaptation-difficulties" element={<EnAdaptationDifficulties />} />
+            <Route path="/en/conditions/peer-communication" element={<EnPeerCommunication />} />
+            <Route path="/en/conditions/low-self-esteem" element={<EnLowSelfEsteem />} />
+            <Route path="/en/conditions/conflict-relationships" element={<EnConflictRelationships />} />
+            <Route path="/en/conditions/running-away" element={<EnRunningAway />} />
+            <Route path="/en/conditions/risky-behavior" element={<EnRiskyBehavior />} />
+            <Route path="/en/conditions/child-grief" element={<EnChildGrief />} />
+            <Route path="/en/conditions/parents-divorce" element={<EnParentsDivorce />} />
+            <Route path="/en/conditions/new-family-member" element={<EnNewFamilyMember />} />
+            <Route path="/en/conditions/relocation" element={<EnRelocation />} />
+            <Route path="/en/conditions/child-stress" element={<EnChildStress />} />
             {/* English routes mounted under /en (fallback to BG components for untranslated pages) */}
             {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}

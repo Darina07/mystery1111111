@@ -257,6 +257,43 @@ const EnParentsDivorce = lazy(() => import("./pages/en/conditions/ParentsDivorce
 const EnNewFamilyMember = lazy(() => import("./pages/en/conditions/NewFamilyMember"));
 const EnRelocation = lazy(() => import("./pages/en/conditions/Relocation"));
 const EnChildStress = lazy(() => import("./pages/en/conditions/ChildStress"));
+const EnAdaptation = lazy(() => import("./pages/en/conditions/Adaptation"));
+const EnArticulation = lazy(() => import("./pages/en/conditions/Articulation"));
+const EnAsperger = lazy(() => import("./pages/en/conditions/Asperger"));
+const EnBoundaries = lazy(() => import("./pages/en/conditions/Boundaries"));
+const EnChronicIllness = lazy(() => import("./pages/en/conditions/ChronicIllness"));
+const EnCommunicationDifficulties = lazy(() => import("./pages/en/conditions/CommunicationDifficulties"));
+const EnDownSyndrome = lazy(() => import("./pages/en/conditions/DownSyndrome"));
+const EnEpilepsy = lazy(() => import("./pages/en/conditions/Epilepsy"));
+const EnFatigue = lazy(() => import("./pages/en/conditions/Fatigue"));
+const EnInsecurity = lazy(() => import("./pages/en/conditions/Insecurity"));
+const EnInsomnia = lazy(() => import("./pages/en/conditions/Insomnia"));
+const EnIntellectualDisability = lazy(() => import("./pages/en/conditions/IntellectualDisability"));
+const EnLifeCrisis = lazy(() => import("./pages/en/conditions/LifeCrisis"));
+const EnLoneliness = lazy(() => import("./pages/en/conditions/Loneliness"));
+const EnLoss = lazy(() => import("./pages/en/conditions/Loss"));
+const EnMuscularDystrophy = lazy(() => import("./pages/en/conditions/MuscularDystrophy"));
+const EnPerfectionism = lazy(() => import("./pages/en/conditions/Perfectionism"));
+const EnPsychosomatic = lazy(() => import("./pages/en/conditions/Psychosomatic"));
+const EnRettSyndrome = lazy(() => import("./pages/en/conditions/RettSyndrome"));
+const EnSelectiveMutism = lazy(() => import("./pages/en/conditions/SelectiveMutism"));
+const EnSeparation = lazy(() => import("./pages/en/conditions/Separation"));
+const EnSpecialEducationalNeeds = lazy(() => import("./pages/en/conditions/SpecialEducationalNeeds"));
+const EnSpecialNeedsSpeech = lazy(() => import("./pages/en/conditions/SpecialNeedsSpeech"));
+const EnSpeechDelay = lazy(() => import("./pages/en/conditions/SpeechDelay"));
+const EnSpeechDisorders = lazy(() => import("./pages/en/conditions/SpeechDisorders"));
+const EnStuttering = lazy(() => import("./pages/en/conditions/Stuttering"));
+const EnCoupleConflicts = lazy(() => import("./pages/en/conditions/CoupleConflicts"));
+const EnMaritalCrisis = lazy(() => import("./pages/en/conditions/MaritalCrisis"));
+const EnJealousyTrust = lazy(() => import("./pages/en/conditions/JealousyTrust"));
+const EnInfidelity = lazy(() => import("./pages/en/conditions/Infidelity"));
+const EnSexualProblems = lazy(() => import("./pages/en/conditions/SexualProblems"));
+const EnLackOfIntimacy = lazy(() => import("./pages/en/conditions/LackOfIntimacy"));
+const EnFamilyViolence = lazy(() => import("./pages/en/conditions/FamilyViolence"));
+const EnPostpartum = lazy(() => import("./pages/en/conditions/Postpartum"));
+const EnParentChildRelations = lazy(() => import("./pages/en/conditions/ParentChildRelations"));
+const EnBlendedFamilies = lazy(() => import("./pages/en/conditions/BlendedFamilies"));
+const EnSeparationLoss = lazy(() => import("./pages/en/conditions/SeparationLoss"));
 
 const queryClient = new QueryClient();
 
@@ -533,6 +570,43 @@ const App = () => (
             <Route path="/en/conditions/new-family-member" element={<EnNewFamilyMember />} />
             <Route path="/en/conditions/relocation" element={<EnRelocation />} />
             <Route path="/en/conditions/child-stress" element={<EnChildStress />} />
+            <Route path="/en/conditions/adaptation" element={<EnAdaptation />} />
+            <Route path="/en/conditions/articulation" element={<EnArticulation />} />
+            <Route path="/en/conditions/asperger" element={<EnAsperger />} />
+            <Route path="/en/conditions/boundaries" element={<EnBoundaries />} />
+            <Route path="/en/conditions/chronic-illness" element={<EnChronicIllness />} />
+            <Route path="/en/conditions/communication-difficulties" element={<EnCommunicationDifficulties />} />
+            <Route path="/en/conditions/down-syndrome" element={<EnDownSyndrome />} />
+            <Route path="/en/conditions/epilepsy" element={<EnEpilepsy />} />
+            <Route path="/en/conditions/fatigue" element={<EnFatigue />} />
+            <Route path="/en/conditions/insecurity" element={<EnInsecurity />} />
+            <Route path="/en/conditions/insomnia" element={<EnInsomnia />} />
+            <Route path="/en/conditions/intellectual-disability" element={<EnIntellectualDisability />} />
+            <Route path="/en/conditions/life-crisis" element={<EnLifeCrisis />} />
+            <Route path="/en/conditions/loneliness" element={<EnLoneliness />} />
+            <Route path="/en/conditions/loss" element={<EnLoss />} />
+            <Route path="/en/conditions/muscular-dystrophy" element={<EnMuscularDystrophy />} />
+            <Route path="/en/conditions/perfectionism" element={<EnPerfectionism />} />
+            <Route path="/en/conditions/psychosomatic" element={<EnPsychosomatic />} />
+            <Route path="/en/conditions/rett-syndrome" element={<EnRettSyndrome />} />
+            <Route path="/en/conditions/selective-mutism" element={<EnSelectiveMutism />} />
+            <Route path="/en/conditions/separation" element={<EnSeparation />} />
+            <Route path="/en/conditions/special-educational-needs" element={<EnSpecialEducationalNeeds />} />
+            <Route path="/en/conditions/special-needs-speech" element={<EnSpecialNeedsSpeech />} />
+            <Route path="/en/conditions/speech-delay" element={<EnSpeechDelay />} />
+            <Route path="/en/conditions/speech-disorders" element={<EnSpeechDisorders />} />
+            <Route path="/en/conditions/stuttering" element={<EnStuttering />} />
+            <Route path="/en/conditions/couple-conflicts" element={<EnCoupleConflicts />} />
+            <Route path="/en/conditions/marital-crisis" element={<EnMaritalCrisis />} />
+            <Route path="/en/conditions/jealousy-trust" element={<EnJealousyTrust />} />
+            <Route path="/en/conditions/infidelity" element={<EnInfidelity />} />
+            <Route path="/en/conditions/sexual-problems" element={<EnSexualProblems />} />
+            <Route path="/en/conditions/lack-of-intimacy" element={<EnLackOfIntimacy />} />
+            <Route path="/en/conditions/family-violence" element={<EnFamilyViolence />} />
+            <Route path="/en/conditions/postpartum" element={<EnPostpartum />} />
+            <Route path="/en/conditions/parent-child-relations" element={<EnParentChildRelations />} />
+            <Route path="/en/conditions/blended-families" element={<EnBlendedFamilies />} />
+            <Route path="/en/conditions/separation-loss" element={<EnSeparationLoss />} />
             {/* English routes mounted under /en (fallback to BG components for untranslated pages) */}
             {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}

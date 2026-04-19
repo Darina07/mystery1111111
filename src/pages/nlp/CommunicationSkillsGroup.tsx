@@ -61,7 +61,7 @@ const CommunicationSkillsGroup = () => {
       <CourseSchema 
         name="НЛП и комуникационни умения"
         description="Подобрете комуникацията си чрез НЛП техники"
-        url="https://darpsychology.com/services/group-programs/nlp/communication-skills"
+        url="https://darpsiholog.com/services/group-programs/nlp/communication-skills"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

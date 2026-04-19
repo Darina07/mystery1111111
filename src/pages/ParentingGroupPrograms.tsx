@@ -90,7 +90,7 @@ const ParentingGroupPrograms = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO title={c.seoTitle} description={c.seoDescription} url={basePath} keywords={c.seoKeywords} />
-      <CourseSchema name={c.courseName} description={c.courseDesc} url={`https://darpsychology.com${localized(basePath)}`} />
+      <CourseSchema name={c.courseName} description={c.courseDesc} url={`https://darpsiholog.com${localized(basePath)}`} />
       <BreadcrumbSchema items={[
         { name: c.home, url: lang === "en" ? "/en" : "/" },
         { name: c.groupPrograms, url: localized("/services/group-programs") },

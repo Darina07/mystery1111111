@@ -61,7 +61,7 @@ const BreakupRecoveryGroup = () => {
       <CourseSchema 
         name="След раздяла – възстановяване и ново начало"
         description="Подкрепа за преодоляване на болката от раздяла"
-        url="https://darpsychology.com/services/group-programs/relationships/breakup-recovery"
+        url="https://darpsiholog.com/services/group-programs/relationships/breakup-recovery"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

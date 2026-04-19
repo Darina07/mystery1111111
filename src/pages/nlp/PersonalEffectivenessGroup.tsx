@@ -61,7 +61,7 @@ const PersonalEffectivenessGroup = () => {
       <CourseSchema 
         name="НЛП за лична ефективност и увереност"
         description="Практични техники за изграждане на увереност"
-        url="https://darpsychology.com/services/group-programs/nlp/personal-effectiveness"
+        url="https://darpsiholog.com/services/group-programs/nlp/personal-effectiveness"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

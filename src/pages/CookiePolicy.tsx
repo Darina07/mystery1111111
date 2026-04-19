@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEO } from "@/components/SEO";
 
 type Block = { h?: string; sub?: string; p?: string; list?: string[] };
 
@@ -59,6 +60,14 @@ const CookiePolicy = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={language === "en" ? "Cookie Policy" : "Политика за бисквитки"}
+        description={language === "en"
+          ? "How Dar Psychological Center uses cookies and how you can manage your preferences."
+          : "Как Психологичен център Дар използва бисквитки и как можете да управлявате вашите предпочитания."}
+        url="/cookie-policy"
+        noindex
+      />
       <Header />
       <main className="pt-24">
         <div className="container py-12">

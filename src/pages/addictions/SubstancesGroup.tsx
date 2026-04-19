@@ -61,7 +61,7 @@ const SubstancesGroup = () => {
       <CourseSchema 
         name="Анонимна група за зависимости към вещества"
         description="Терапевтична група за хора, преживяващи зависимост към различни вещества"
-        url="https://darpsychology.com/services/group-programs/addictions/substances"
+        url="https://darpsiholog.com/services/group-programs/addictions/substances"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

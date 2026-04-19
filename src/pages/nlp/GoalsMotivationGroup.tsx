@@ -61,7 +61,7 @@ const GoalsMotivationGroup = () => {
       <CourseSchema 
         name="НЛП за цели, мотивация и промяна"
         description="Научете как да поставяте ясни цели и да поддържате мотивацията"
-        url="https://darpsychology.com/services/group-programs/nlp/goals-motivation"
+        url="https://darpsiholog.com/services/group-programs/nlp/goals-motivation"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

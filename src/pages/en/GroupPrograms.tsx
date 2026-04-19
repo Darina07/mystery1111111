@@ -84,7 +84,7 @@ const GroupPrograms = () => {
       <CourseSchema
         name="Group Programs"
         description="Supportive group programs for personal development, addiction recovery, relationships and parenting."
-        url="https://darpsychology.com/en/services/group-programs"
+        url="https://darpsiholog.com/en/services/group-programs"
         courseMode="blended"
       />
       <BreadcrumbSchema items={[

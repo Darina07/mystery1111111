@@ -62,7 +62,7 @@ const CodependencyGroup = () => {
       <CourseSchema 
         name="Група за близки на хора със зависимости (съзависимост)"
         description="Подкрепа за семейства и близки на хора със зависимости"
-        url="https://darpsychology.com/services/group-programs/addictions/codependency"
+        url="https://darpsiholog.com/services/group-programs/addictions/codependency"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

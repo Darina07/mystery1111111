@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { SEO } from "@/components/SEO";
 
 const content = {
   bg: {
@@ -43,6 +44,14 @@ const TermsConditions = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={language === "en" ? "Terms and Conditions" : "Общи условия"}
+        description={language === "en"
+          ? "Terms governing the use of services provided by Dar Psychological Center, including bookings, payment, and confidentiality."
+          : "Общи условия за ползване на услугите на Психологичен център Дар – записване, плащане и поверителност."}
+        url="/terms-and-conditions"
+        noindex
+      />
       <Header />
       <main className="pt-24">
         <div className="container py-12">

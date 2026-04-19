@@ -62,7 +62,7 @@ const AlcoholGroup = () => {
       <CourseSchema 
         name="Анонимна група за проблемна употреба на алкохол"
         description="Подкрепяща група за хора, които търсят промяна в безопасна и анонимна среда"
-        url="https://darpsychology.com/services/group-programs/addictions/alcohol"
+        url="https://darpsiholog.com/services/group-programs/addictions/alcohol"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

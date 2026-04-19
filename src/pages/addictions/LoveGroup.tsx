@@ -61,7 +61,7 @@ const LoveGroup = () => {
       <CourseSchema 
         name="Анонимна група за любовна зависимост"
         description="Група за хора с нездравословни модели в любовните взаимоотношения"
-        url="https://darpsychology.com/services/group-programs/addictions/love"
+        url="https://darpsiholog.com/services/group-programs/addictions/love"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

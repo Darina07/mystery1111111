@@ -83,9 +83,16 @@ export const SEO = ({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={fullTitle} />
       <meta property="og:locale" content={ogLocale} />
       <meta property="og:locale:alternate" content={isEn ? "bg_BG" : "en_US"} />
       <meta property="og:site_name" content={siteName} />
+
+      {/* Robots / crawler hints */}
+      {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
+      <meta name="googlebot" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1"} />
 
       {/* Article specific Open Graph */}
       {article?.publishedTime && (
@@ -529,7 +536,7 @@ export const CourseSchema = ({
     provider: {
       "@type": "Organization",
       name: provider,
-      sameAs: "https://darpsychology.com",
+      sameAs: "https://darpsiholog.com",
     },
     hasCourseInstance: {
       "@type": "CourseInstance",

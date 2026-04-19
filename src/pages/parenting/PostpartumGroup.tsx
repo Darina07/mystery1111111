@@ -61,7 +61,7 @@ const PostpartumGroup = () => {
       <CourseSchema 
         name="Следродилен период – адаптация и подкрепа"
         description="Подкрепа за справяне с тревожност и адаптация към новата роля"
-        url="https://darpsychology.com/services/group-programs/parenting/postpartum"
+        url="https://darpsiholog.com/services/group-programs/parenting/postpartum"
       />
       <BreadcrumbSchema items={[
         { name: "Начало", url: "/" },

@@ -96,7 +96,7 @@ export const TherapeuticApproachTemplate = ({
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title={`${title} | Терапевтични подходи | ДАР Психология`}
+        title={`${title} | ${t.siteSuffix}`}
         description={subtitle}
         url={currentUrl}
       />
@@ -104,7 +104,7 @@ export const TherapeuticApproachTemplate = ({
         name={title}
         description={subtitle}
         url={currentUrl}
-        serviceType="Психотерапия"
+        serviceType={t.serviceType}
       />
       <HealthTopicSchema 
         name={title}

@@ -556,12 +556,16 @@ export const CourseSchema = ({
 
 // Organization Schema for brand recognition
 export const OrganizationSchema = () => {
+  const loc = useLocation();
+  const isEn = detectLangFromPath(loc.pathname) === "en";
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://darpsiholog.com/#organization",
-    name: "Център Дар",
-    alternateName: "Дар – Психологичен и консултативен център",
+    name: isEn ? "Dar Center" : "Център Дар",
+    alternateName: isEn
+      ? "Dar – Psychological & Counseling Center"
+      : "Дар – Психологичен и консултативен център",
     url: "https://darpsiholog.com",
     logo: {
       "@type": "ImageObject",
@@ -570,41 +574,27 @@ export const OrganizationSchema = () => {
       height: 512,
     },
     image: "https://darpsiholog.com/og-image.jpg",
-    description: "Професионален психологичен център в София, предлагащ консултиране и терапия за деца, възрастни и семейства.",
+    description: isEn
+      ? "Professional psychological center in Sofia offering counseling and therapy for children, adults and families."
+      : "Професионален психологичен център в София, предлагащ консултиране и терапия за деца, възрастни и семейства.",
     email: "info@darpsiholog.com",
     telephone: "+359887079256",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "ул. Кишинев 18",
-      addressLocality: "София",
-      addressRegion: "Лозенец",
+      streetAddress: isEn ? "18 Kishinev Str." : "ул. Кишинев 18",
+      addressLocality: isEn ? "Sofia" : "София",
+      addressRegion: isEn ? "Lozenets" : "Лозенец",
       postalCode: "1000",
       addressCountry: "BG",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 42.6833,
-      longitude: 23.3333,
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "България",
-    },
+    geo: { "@type": "GeoCoordinates", latitude: 42.6833, longitude: 23.3333 },
+    areaServed: { "@type": "Country", name: isEn ? "Bulgaria" : "България" },
     foundingDate: "2020",
-    slogan: "Подкрепа, която работи",
-    knowsAbout: [
-      "Психология",
-      "Психотерапия",
-      "Семейна терапия",
-      "Детска психология",
-      "Логопедия",
-      "Когнитивно-поведенческа терапия",
-      "EMDR терапия",
-    ],
-    sameAs: [
-      "https://www.facebook.com/darpsiholog",
-      "https://www.instagram.com/darpsiholog",
-    ],
+    slogan: isEn ? "Support that works" : "Подкрепа, която работи",
+    knowsAbout: isEn
+      ? ["Psychology", "Psychotherapy", "Family therapy", "Child psychology", "Speech therapy", "Cognitive Behavioral Therapy", "EMDR therapy"]
+      : ["Психология", "Психотерапия", "Семейна терапия", "Детска психология", "Логопедия", "Когнитивно-поведенческа терапия", "EMDR терапия"],
+    sameAs: ["https://www.facebook.com/darpsiholog", "https://www.instagram.com/darpsiholog"],
   };
 
   return (

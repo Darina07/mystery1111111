@@ -295,6 +295,26 @@ const EnParentChildRelations = lazy(() => import("./pages/en/conditions/ParentCh
 const EnBlendedFamilies = lazy(() => import("./pages/en/conditions/BlendedFamilies"));
 const EnSeparationLoss = lazy(() => import("./pages/en/conditions/SeparationLoss"));
 
+// English (EN) therapeutic approaches
+const EnPsychoanalysis = lazy(() => import("./pages/en/approaches/Psychoanalysis"));
+const EnPsychodynamicTherapy = lazy(() => import("./pages/en/approaches/PsychodynamicTherapy"));
+const EnCBT = lazy(() => import("./pages/en/approaches/CBT"));
+const EnSchemaTherapy = lazy(() => import("./pages/en/approaches/SchemaTherapy"));
+const EnGestaltTherapy = lazy(() => import("./pages/en/approaches/GestaltTherapy"));
+const EnExistentialTherapy = lazy(() => import("./pages/en/approaches/ExistentialTherapy"));
+const EnPositiveTherapy = lazy(() => import("./pages/en/approaches/PositiveTherapy"));
+const EnFamilyTherapy = lazy(() => import("./pages/en/approaches/FamilyTherapy"));
+const EnTransgenerationalTherapy = lazy(() => import("./pages/en/approaches/TransgenerationalTherapy"));
+const EnCouplesTherapy = lazy(() => import("./pages/en/approaches/CouplesTherapy"));
+const EnEMDR = lazy(() => import("./pages/en/approaches/EMDR"));
+const EnSomaticExperiencing = lazy(() => import("./pages/en/approaches/SomaticExperiencing"));
+const EnBioenergeticTherapy = lazy(() => import("./pages/en/approaches/BioenergticTherapy"));
+const EnBodyPsychotherapy = lazy(() => import("./pages/en/approaches/BodyPsychotherapy"));
+const EnDanceMovementTherapy = lazy(() => import("./pages/en/approaches/DanceMovementTherapy"));
+const EnArtTherapy = lazy(() => import("./pages/en/approaches/ArtTherapy"));
+const EnMusicTherapy = lazy(() => import("./pages/en/approaches/MusicTherapy"));
+const EnPlayTherapy = lazy(() => import("./pages/en/approaches/PlayTherapy"));
+
 const queryClient = new QueryClient();
 
 // Loading fallback component
@@ -607,6 +627,25 @@ const App = () => (
             <Route path="/en/conditions/parent-child-relations" element={<EnParentChildRelations />} />
             <Route path="/en/conditions/blended-families" element={<EnBlendedFamilies />} />
             <Route path="/en/conditions/separation-loss" element={<EnSeparationLoss />} />
+            {/* English therapeutic approaches */}
+            <Route path="/en/therapeutic-approaches/psychoanalysis" element={<EnPsychoanalysis />} />
+            <Route path="/en/therapeutic-approaches/psychodynamic-therapy" element={<EnPsychodynamicTherapy />} />
+            <Route path="/en/therapeutic-approaches/cbt" element={<EnCBT />} />
+            <Route path="/en/therapeutic-approaches/schema-therapy" element={<EnSchemaTherapy />} />
+            <Route path="/en/therapeutic-approaches/gestalt-therapy" element={<EnGestaltTherapy />} />
+            <Route path="/en/therapeutic-approaches/existential-therapy" element={<EnExistentialTherapy />} />
+            <Route path="/en/therapeutic-approaches/positive-therapy" element={<EnPositiveTherapy />} />
+            <Route path="/en/therapeutic-approaches/family-therapy" element={<EnFamilyTherapy />} />
+            <Route path="/en/therapeutic-approaches/transgenerational-therapy" element={<EnTransgenerationalTherapy />} />
+            <Route path="/en/therapeutic-approaches/couples-therapy" element={<EnCouplesTherapy />} />
+            <Route path="/en/therapeutic-approaches/emdr" element={<EnEMDR />} />
+            <Route path="/en/therapeutic-approaches/somatic-experiencing" element={<EnSomaticExperiencing />} />
+            <Route path="/en/therapeutic-approaches/bioenergetic-therapy" element={<EnBioenergeticTherapy />} />
+            <Route path="/en/therapeutic-approaches/body-psychotherapy" element={<EnBodyPsychotherapy />} />
+            <Route path="/en/therapeutic-approaches/dance-movement-therapy" element={<EnDanceMovementTherapy />} />
+            <Route path="/en/therapeutic-approaches/art-therapy" element={<EnArtTherapy />} />
+            <Route path="/en/therapeutic-approaches/music-therapy" element={<EnMusicTherapy />} />
+            <Route path="/en/therapeutic-approaches/play-therapy" element={<EnPlayTherapy />} />
             {/* English routes mounted under /en (fallback to BG components for untranslated pages) */}
             {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}

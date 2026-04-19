@@ -27,7 +27,51 @@ interface TherapeuticApproachProps {
   benefits: Benefit[];
   suitableFor: string[];
   processSteps?: ProcessStep[];
+  language?: "bg" | "en";
 }
+
+const LABELS = {
+  bg: {
+    home: "Начало",
+    approachesNav: "Терапевтични подходи",
+    siteSuffix: "Терапевтични подходи | ДАР Психология",
+    bookCta: "ЗАПАЗИ ЧАС",
+    callAria: "Обадете се",
+    whatIs: "Какво е",
+    benefitsOf: "Ползи от",
+    suitableForPrefix: "За кого е",
+    suitableForAccent: "подходяща",
+    processPrefix: "Как протича",
+    processAccent: "процесът",
+    contactTitle: "Свържете се",
+    contactWith: "с нас",
+    contactSubtitle: "Направете първата стъпка към по-добро психическо здраве.",
+    serviceType: "Психотерапия",
+    approachesPath: "/therapeutic-approaches",
+    contactPath: "/contact",
+    questionMark: "?",
+  },
+  en: {
+    home: "Home",
+    approachesNav: "Therapeutic approaches",
+    siteSuffix: "Therapeutic approaches | DAR Psychology",
+    bookCta: "BOOK A SESSION",
+    callAria: "Call us",
+    whatIs: "What is",
+    benefitsOf: "Benefits of",
+    suitableForPrefix: "Who is it",
+    suitableForAccent: "for",
+    processPrefix: "How does the",
+    processAccent: "process work",
+    contactTitle: "Contact",
+    contactWith: "us",
+    contactSubtitle: "Take the first step toward better mental health.",
+    serviceType: "Psychotherapy",
+    approachesPath: "/en/therapeutic-approaches",
+    contactPath: "/en/contact",
+    questionMark: "?",
+  },
+} as const;
 
 export const TherapeuticApproachTemplate = ({
   title,
@@ -37,20 +81,22 @@ export const TherapeuticApproachTemplate = ({
   benefits,
   suitableFor,
   processSteps,
+  language = "bg",
 }: TherapeuticApproachProps) => {
   const location = useLocation();
   const currentUrl = `https://darpsychology.com${location.pathname}`;
-  
+  const t = LABELS[language];
+
   const breadcrumbItems = [
-    { name: "Начало", url: "https://darpsychology.com/" },
-    { name: "Терапевтични подходи", url: "https://darpsychology.com/therapeutic-approaches" },
+    { name: t.home, url: `https://darpsychology.com${language === "en" ? "/en" : "/"}` },
+    { name: t.approachesNav, url: `https://darpsychology.com${t.approachesPath}` },
     { name: title, url: currentUrl }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title={`${title} | Терапевтични подходи | ДАР Психология`}
+        title={`${title} | ${t.siteSuffix}`}
         description={subtitle}
         url={currentUrl}
       />
@@ -58,7 +104,7 @@ export const TherapeuticApproachTemplate = ({
         name={title}
         description={subtitle}
         url={currentUrl}
-        serviceType="Психотерапия"
+        serviceType={t.serviceType}
       />
       <HealthTopicSchema 
         name={title}
@@ -93,12 +139,12 @@ export const TherapeuticApproachTemplate = ({
               {subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/contact">
+              <Link to={t.contactPath}>
                 <Button variant="hero" size="lg">
-                  ЗАПАЗИ ЧАС
+                  {t.bookCta}
                 </Button>
               </Link>
-              <a href="tel:+359887079256" aria-label="Обадете се">
+              <a href="tel:+359887079256" aria-label={t.callAria}>
                 <Button variant="hero-outline" size="lg">
                   <Phone className="h-5 w-5" />
                 </Button>
@@ -113,7 +159,7 @@ export const TherapeuticApproachTemplate = ({
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8">
-              Какво е <span className="gradient-text">{title}</span>?
+              {t.whatIs} <span className="gradient-text">{title}</span>{t.questionMark}
             </h2>
             <div className="prose prose-lg max-w-none space-y-6">
               {description.map((paragraph, index) => (
@@ -131,7 +177,7 @@ export const TherapeuticApproachTemplate = ({
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
-              Ползи от <span className="gradient-text">{title.toLowerCase()}</span>
+              {t.benefitsOf} <span className="gradient-text">{title.toLowerCase()}</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
@@ -174,7 +220,7 @@ export const TherapeuticApproachTemplate = ({
                 <Users className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-3xl md:text-5xl font-heading font-bold text-white">
-                За кого е <span className="text-primary">подходяща</span>?
+                {t.suitableForPrefix} <span className="text-primary">{t.suitableForAccent}</span>{t.questionMark}
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-5">
@@ -200,7 +246,7 @@ export const TherapeuticApproachTemplate = ({
           <div className="container">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 text-center">
-                Как протича <span className="gradient-text">процесът</span>?
+                {t.processPrefix} <span className="gradient-text">{t.processAccent}</span>{t.questionMark}
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {processSteps.map((step, index) => (
@@ -243,10 +289,10 @@ export const TherapeuticApproachTemplate = ({
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
-                <span className="gradient-text">Свържете се</span> с нас
+                <span className="gradient-text">{t.contactTitle}</span> {t.contactWith}
               </h2>
               <p className="text-base text-muted-foreground">
-                Направете първата стъпка към по-добро психическо здраве.
+                {t.contactSubtitle}
               </p>
             </div>
 

@@ -216,7 +216,7 @@ const ApproachRedirect = () => {
 // under both "/" (Bulgarian) and "/en" (English) prefixes.
 const renderAppRoutes = (prefix: string = ""): ReactNode => (
   <>
-    <Route path={`${prefix}/`} element={<Index />} />
+    <Route path={prefix || "/"} element={<Index />} />
               <Route path={`${prefix}/about`} element={<AboutUs />} />
               <Route path={`${prefix}/services`} element={<Services />} />
               <Route path={`${prefix}/services/psychological-counseling`} element={<PsychologicalCounseling />} />

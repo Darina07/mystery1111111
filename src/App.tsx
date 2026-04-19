@@ -646,6 +646,26 @@ const App = () => (
             <Route path="/en/therapeutic-approaches/art-therapy" element={<EnArtTherapy />} />
             <Route path="/en/therapeutic-approaches/music-therapy" element={<EnMusicTherapy />} />
             <Route path="/en/therapeutic-approaches/play-therapy" element={<EnPlayTherapy />} />
+            {/* English group program subpages */}
+            <Route path="/en/services/group-programs/addictions/alcohol" element={<EnAlcoholGroup />} />
+            <Route path="/en/services/group-programs/addictions/substances" element={<EnSubstancesGroup />} />
+            <Route path="/en/services/group-programs/addictions/gambling" element={<EnGamblingGroup />} />
+            <Route path="/en/services/group-programs/addictions/love" element={<EnLoveGroup />} />
+            <Route path="/en/services/group-programs/addictions/codependency" element={<EnCodependencyGroup />} />
+            <Route path="/en/services/group-programs/relationships/attachment" element={<EnAttachmentGroup />} />
+            <Route path="/en/services/group-programs/relationships/emotional-readiness" element={<EnEmotionalReadinessGroup />} />
+            <Route path="/en/services/group-programs/relationships/social-skills" element={<EnSocialSkillsGroup />} />
+            <Route path="/en/services/group-programs/relationships/breakup-recovery" element={<EnBreakupRecoveryGroup />} />
+            <Route path="/en/services/group-programs/relationships/matchmaking" element={<EnMatchmakingGroup />} />
+            <Route path="/en/services/group-programs/parenting/pregnant-mothers" element={<EnPregnantMothersGroup />} />
+            <Route path="/en/services/group-programs/parenting/postpartum" element={<EnPostpartumGroup />} />
+            <Route path="/en/services/group-programs/parenting/toddler-parents" element={<EnToddlerParentsGroup />} />
+            <Route path="/en/services/group-programs/parenting/difficult-situations" element={<EnDifficultSituationsGroup />} />
+            <Route path="/en/services/group-programs/nlp/personal-effectiveness" element={<EnPersonalEffectivenessGroup />} />
+            <Route path="/en/services/group-programs/nlp/anxiety-blocks" element={<EnAnxietyBlocksGroup />} />
+            <Route path="/en/services/group-programs/nlp/goals-motivation" element={<EnGoalsMotivationGroup />} />
+            <Route path="/en/services/group-programs/nlp/communication-skills" element={<EnCommunicationSkillsGroup />} />
+            <Route path="/en/services/group-programs/nlp/habits" element={<EnHabitsGroup />} />
             {/* English routes mounted under /en (fallback to BG components for untranslated pages) */}
             {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}

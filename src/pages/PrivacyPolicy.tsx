@@ -87,8 +87,8 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={lang === "en" ? "Privacy Policy" : "Политика за поверителност"}
-        description={lang === "en"
+        title={language === "en" ? "Privacy Policy" : "Политика за поверителност"}
+        description={language === "en"
           ? "Learn how Dar Psychological Center collects, uses, and protects your personal data in compliance with GDPR."
           : "Научете как Психологичен център Дар събира, използва и защитава вашите лични данни в съответствие с GDPR."}
         url="/privacy-policy"

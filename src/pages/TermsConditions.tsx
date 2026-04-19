@@ -45,8 +45,8 @@ const TermsConditions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={lang === "en" ? "Terms and Conditions" : "Общи условия"}
-        description={lang === "en"
+        title={language === "en" ? "Terms and Conditions" : "Общи условия"}
+        description={language === "en"
           ? "Terms governing the use of services provided by Dar Psychological Center, including bookings, payment, and confidentiality."
           : "Общи условия за ползване на услугите на Психологичен център Дар – записване, плащане и поверителност."}
         url="/terms-and-conditions"

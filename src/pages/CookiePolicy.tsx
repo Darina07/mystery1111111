@@ -61,8 +61,8 @@ const CookiePolicy = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={lang === "en" ? "Cookie Policy" : "Политика за бисквитки"}
-        description={lang === "en"
+        title={language === "en" ? "Cookie Policy" : "Политика за бисквитки"}
+        description={language === "en"
           ? "How Dar Psychological Center uses cookies and how you can manage your preferences."
           : "Как Психологичен център Дар използва бисквитки и как можете да управлявате вашите предпочитания."}
         url="/cookie-policy"

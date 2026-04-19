@@ -315,6 +315,27 @@ const EnArtTherapy = lazy(() => import("./pages/en/approaches/ArtTherapy"));
 const EnMusicTherapy = lazy(() => import("./pages/en/approaches/MusicTherapy"));
 const EnPlayTherapy = lazy(() => import("./pages/en/approaches/PlayTherapy"));
 
+// EN group program subpages
+const EnAlcoholGroup = lazy(() => import("./pages/en/addictions/AlcoholGroup"));
+const EnSubstancesGroup = lazy(() => import("./pages/en/addictions/SubstancesGroup"));
+const EnGamblingGroup = lazy(() => import("./pages/en/addictions/GamblingGroup"));
+const EnLoveGroup = lazy(() => import("./pages/en/addictions/LoveGroup"));
+const EnCodependencyGroup = lazy(() => import("./pages/en/addictions/CodependencyGroup"));
+const EnAttachmentGroup = lazy(() => import("./pages/en/relationships/AttachmentGroup"));
+const EnEmotionalReadinessGroup = lazy(() => import("./pages/en/relationships/EmotionalReadinessGroup"));
+const EnSocialSkillsGroup = lazy(() => import("./pages/en/relationships/SocialSkillsGroup"));
+const EnBreakupRecoveryGroup = lazy(() => import("./pages/en/relationships/BreakupRecoveryGroup"));
+const EnMatchmakingGroup = lazy(() => import("./pages/en/relationships/MatchmakingGroup"));
+const EnPregnantMothersGroup = lazy(() => import("./pages/en/parenting/PregnantMothersGroup"));
+const EnPostpartumGroup = lazy(() => import("./pages/en/parenting/PostpartumGroup"));
+const EnToddlerParentsGroup = lazy(() => import("./pages/en/parenting/ToddlerParentsGroup"));
+const EnDifficultSituationsGroup = lazy(() => import("./pages/en/parenting/DifficultSituationsGroup"));
+const EnPersonalEffectivenessGroup = lazy(() => import("./pages/en/nlp/PersonalEffectivenessGroup"));
+const EnAnxietyBlocksGroup = lazy(() => import("./pages/en/nlp/AnxietyBlocksGroup"));
+const EnGoalsMotivationGroup = lazy(() => import("./pages/en/nlp/GoalsMotivationGroup"));
+const EnCommunicationSkillsGroup = lazy(() => import("./pages/en/nlp/CommunicationSkillsGroup"));
+const EnHabitsGroup = lazy(() => import("./pages/en/nlp/HabitsGroup"));
+
 const queryClient = new QueryClient();
 
 // Loading fallback component

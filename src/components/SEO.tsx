@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
+import { detectLangFromPath, stripLangPrefix, buildLocalizedPath } from "@/i18n/LanguageContext";
 
 interface SEOProps {
   title?: string;
@@ -17,14 +19,18 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-const DEFAULT_TITLE = "Дар – Психологичен и консултативен център | София";
-const DEFAULT_DESCRIPTION = "Професионално психологично консултиране и психотерапия за деца, възрастни и семейства в София. Подкрепа, която работи. Запазете час сега.";
+const DEFAULT_TITLE_BG = "Дар – Психологичен и консултативен център | София";
+const DEFAULT_TITLE_EN = "Dar – Psychological & Counseling Center | Sofia";
+const DEFAULT_DESCRIPTION_BG = "Професионално психологично консултиране и психотерапия за деца, възрастни и семейства в София. Подкрепа, която работи. Запазете час сега.";
+const DEFAULT_DESCRIPTION_EN = "Professional psychological counseling and psychotherapy for children, adults and families in Sofia. Support that works. Book a session now.";
 const DEFAULT_IMAGE = "https://darpsiholog.com/og-image.jpg";
 const SITE_URL = "https://darpsiholog.com";
+const SITE_NAME_BG = "Център Дар";
+const SITE_NAME_EN = "Dar Center";
 
 export const SEO = ({
   title,
-  description = DEFAULT_DESCRIPTION,
+  description,
   keywords,
   image = DEFAULT_IMAGE,
   url,
@@ -32,29 +38,54 @@ export const SEO = ({
   article,
   noindex = false,
 }: SEOProps) => {
-  const fullTitle = title ? `${title} | Център Дар` : DEFAULT_TITLE;
-  const fullUrl = url ? `${SITE_URL}${url}` : SITE_URL;
+  const location = useLocation();
+  const lang = detectLangFromPath(location.pathname);
+  const isEn = lang === "en";
+
+  // Determine canonical path: prefer explicit `url` prop, else current pathname
+  const currentPath = url ?? location.pathname ?? "/";
+  // Normalize the canonical (BG) path by stripping any lang prefix
+  const canonicalBgPath = stripLangPrefix(currentPath.startsWith("/") ? currentPath : `/${currentPath}`);
+  const localizedPath = buildLocalizedPath(canonicalBgPath, lang);
+  const fullUrl = `${SITE_URL}${localizedPath === "/" ? "" : localizedPath}`;
+
+  const bgAlternate = `${SITE_URL}${canonicalBgPath === "/" ? "" : canonicalBgPath}`;
+  const enAlternate = `${SITE_URL}${buildLocalizedPath(canonicalBgPath, "en")}`;
+
+  const siteName = isEn ? SITE_NAME_EN : SITE_NAME_BG;
+  const defaultTitle = isEn ? DEFAULT_TITLE_EN : DEFAULT_TITLE_BG;
+  const defaultDescription = isEn ? DEFAULT_DESCRIPTION_EN : DEFAULT_DESCRIPTION_BG;
+  const finalDescription = description ?? defaultDescription;
+  const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
+  const ogLocale = isEn ? "en_US" : "bg_BG";
+  const langAttr = isEn ? "en" : "bg";
+  const langMeta = isEn ? "English" : "Bulgarian";
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <html lang="bg" />
+      <html lang={langAttr} />
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={finalDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="language" content="Bulgarian" />
-      <meta name="content-language" content="bg" />
+      <meta name="language" content={langMeta} />
+      <meta name="content-language" content={langAttr} />
       <link rel="canonical" href={fullUrl} />
+      {/* Hreflang alternates */}
+      <link rel="alternate" hrefLang="bg" href={bgAlternate} />
+      <link rel="alternate" hrefLang="en" href={enAlternate} />
+      <link rel="alternate" hrefLang="x-default" href={bgAlternate} />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={finalDescription} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={image} />
-      <meta property="og:locale" content="bg_BG" />
-      <meta property="og:site_name" content="Център Дар" />
+      <meta property="og:locale" content={ogLocale} />
+      <meta property="og:locale:alternate" content={isEn ? "bg_BG" : "en_US"} />
+      <meta property="og:site_name" content={siteName} />
 
       {/* Article specific Open Graph */}
       {article?.publishedTime && (

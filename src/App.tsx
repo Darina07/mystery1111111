@@ -202,6 +202,8 @@ const EnFamilyCounseling = lazy(() => import("./pages/en/FamilyCounseling"));
 const EnChildCounseling = lazy(() => import("./pages/en/ChildCounseling"));
 const EnSpeechTherapy = lazy(() => import("./pages/en/SpeechTherapy"));
 const EnPsychodiagnostics = lazy(() => import("./pages/en/Psychodiagnostics"));
+const EnCareerConsulting = lazy(() => import("./pages/en/CareerConsulting"));
+const EnCorporateServices = lazy(() => import("./pages/en/CorporateServices"));
 
 // English (EN) condition pages
 const EnDepression = lazy(() => import("./pages/en/conditions/Depression"));
@@ -557,6 +559,8 @@ const App = () => (
             <Route path="/en/services/child-counseling" element={<EnChildCounseling />} />
             <Route path="/en/services/speech-therapy" element={<EnSpeechTherapy />} />
             <Route path="/en/services/psychodiagnostics" element={<EnPsychodiagnostics />} />
+            <Route path="/en/services/career-consulting" element={<EnCareerConsulting />} />
+            <Route path="/en/services/corporate-services" element={<EnCorporateServices />} />
             {/* English condition pages */}
             <Route path="/en/conditions/depression" element={<EnDepression />} />
             <Route path="/en/conditions/anxiety" element={<EnAnxiety />} />

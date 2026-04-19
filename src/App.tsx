@@ -190,6 +190,19 @@ const ArtTherapy = lazy(() => import("./pages/approaches/ArtTherapy"));
 const MusicTherapy = lazy(() => import("./pages/approaches/MusicTherapy"));
 const PlayTherapy = lazy(() => import("./pages/approaches/PlayTherapy"));
 
+// English (EN) hub pages
+const EnAboutUs = lazy(() => import("./pages/en/AboutUs"));
+const EnServices = lazy(() => import("./pages/en/Services"));
+const EnPrices = lazy(() => import("./pages/en/Prices"));
+const EnContact = lazy(() => import("./pages/en/Contact"));
+const EnGroupPrograms = lazy(() => import("./pages/en/GroupPrograms"));
+const EnTherapeuticApproaches = lazy(() => import("./pages/en/TherapeuticApproaches"));
+const EnPsychologicalCounseling = lazy(() => import("./pages/en/PsychologicalCounseling"));
+const EnFamilyCounseling = lazy(() => import("./pages/en/FamilyCounseling"));
+const EnChildCounseling = lazy(() => import("./pages/en/ChildCounseling"));
+const EnSpeechTherapy = lazy(() => import("./pages/en/SpeechTherapy"));
+const EnPsychodiagnostics = lazy(() => import("./pages/en/Psychodiagnostics"));
+
 const queryClient = new QueryClient();
 
 // Loading fallback component
@@ -399,7 +412,19 @@ const App = () => (
         </Suspense>
         <Suspense fallback={<PageLoader />}>
           <Routes>
-            {/* English routes mounted under /en */}
+            {/* English-specific overrides — must appear before generic /en routes */}
+            <Route path="/en/about" element={<EnAboutUs />} />
+            <Route path="/en/services" element={<EnServices />} />
+            <Route path="/en/prices" element={<EnPrices />} />
+            <Route path="/en/contact" element={<EnContact />} />
+            <Route path="/en/services/group-programs" element={<EnGroupPrograms />} />
+            <Route path="/en/therapeutic-approaches" element={<EnTherapeuticApproaches />} />
+            <Route path="/en/services/psychological-counseling" element={<EnPsychologicalCounseling />} />
+            <Route path="/en/services/family-counseling" element={<EnFamilyCounseling />} />
+            <Route path="/en/services/child-counseling" element={<EnChildCounseling />} />
+            <Route path="/en/services/speech-therapy" element={<EnSpeechTherapy />} />
+            <Route path="/en/services/psychodiagnostics" element={<EnPsychodiagnostics />} />
+            {/* English routes mounted under /en (fallback to BG components for untranslated pages) */}
             {renderAppRoutes("/en")}
             {/* Bulgarian (default) routes */}
             {renderAppRoutes("")}

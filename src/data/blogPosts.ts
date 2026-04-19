@@ -1,4 +1,6 @@
 import blogStressManagement from "@/assets/blog-stress-management.jpg";
+import blogDigitalOverwhelm from "@/assets/blog-digital-overwhelm.jpg";
+import blogLonelinessConnection from "@/assets/blog-loneliness-connection.jpg";
 
 export type Category = "all" | "psychology" | "family" | "children" | "career" | "corporate" | "wellness";
 
@@ -3502,6 +3504,364 @@ It is more important to meditate **regularly** than for a long time.
 ---
 
 **Meditation is a skill that develops with practice. Be patient with yourself and enjoy the journey toward a calmer and more aware life.**
+    `
+  },
+  {
+    id: 20,
+    title: "Дигитално претоварване: как да защитим психичното си здраве в епохата на ИИ",
+    excerpt: "Постоянните известия, социалните мрежи и изкуственият интелект променят начина, по който мислим и се чувстваме. Как да си върнем контрола?",
+    content: `Живеем във време, в което **информацията никога не спира**. Известия, имейли, безкрайни новинарски потоци, алгоритми и инструменти с **изкуствен интелект**, които ни предлагат съдържание 24/7. Това дигитално претоварване има цена – все повече хора съобщават за **тревожност, проблеми с концентрацията, нарушен сън и емоционално изтощение**.
+
+Това не е слабост. Мозъкът ни просто **не е създаден да обработва толкова много стимули** едновременно.
+
+---
+
+## Как се проявява дигиталното претоварване?
+
+- усещане за **постоянна умствена умора**, дори след почивка
+- трудност да се фокусираме за повече от няколко минути
+- **тревожност при липса на телефон** (номофобия)
+- сравняване със „съвършените" животи в социалните мрежи
+- **прекъсван сън** заради късно скролване
+- чувство на празнота след дълги часове онлайн
+
+> Изкуственият интелект и алгоритмите са създадени така, че да **задържат вниманието ни** възможно най-дълго. Това не е случайно – това е дизайн.
+
+---
+
+## Защо точно сега е толкова трудно?
+
+През 2025–2026 г. **ИИ инструментите** станаха част от ежедневието – от чатботове до генератори на съдържание. Това носи много ползи, но също така:
+
+- **размива границата** между работа и почивка
+- създава **натиск за постоянна продуктивност**
+- засилва **сравняването** и страха от изоставане (FOMO)
+- намалява **дълбокото мислене** и творческата пауза
+
+---
+
+## 7 практики за дигитално благополучие
+
+### 1. Създайте „зони без екран"
+Спалнята, масата за хранене и първият час след събуждане – нека бъдат **свободни от телефон**.
+
+### 2. Изключете несъществените известия
+Питайте се за всяко приложение: *„Това известие наистина ли заслужава вниманието ми сега?"*
+
+### 3. Практикувайте „еднозадачност"
+Затворете другите раздели. **Един екран, една задача** – мозъкът ви ще ви благодари.
+
+### 4. Въведете дигитален залез
+**1 час преди сън** – без екрани. Заменете телефона с книга, разходка или разговор.
+
+### 5. Използвайте ИИ съзнателно
+ИИ е инструмент, не заместник на мисленето. Питайте се: *„Това спестява ли ми време, или ме прави по-разсеян/а?"*
+
+### 6. Планирайте „офлайн" моменти
+Дори **30 минути на ден** без устройства връщат усещането за присъствие.
+
+### 7. Проверявайте емоциите си след употреба
+Как се чувствате след 30 минути в социалните мрежи? Ако отговорът е *„по-зле"* – това е важна информация.
+
+---
+
+## Кога е време за помощ?
+
+Помислете за консултация с психолог, ако:
+
+- не можете да си наложите граници, въпреки че опитвате
+- усещате **постоянна тревожност** или потиснатост
+- сънят и концентрацията ви са трайно нарушени
+- социалните мрежи активно влошават **самооценката** ви
+
+---
+
+## Балансът е възможен
+
+Технологиите не са враг – те са **инструмент**. Целта не е да се откажем от тях, а да възстановим **властта над собственото си внимание**. Малки, последователни промени могат да върнат спокойствието, фокуса и удоволствието от настоящия момент.
+
+> **Психичното здраве в дигиталната ера започва с един прост въпрос: „Аз ли използвам технологиите, или те използват мен?"**
+    `,
+    category: "wellness",
+    categoryLabel: "Благополучие",
+    date: "18 Април 2026",
+    image: blogDigitalOverwhelm,
+    slug: "digital-overwhelm-ai-mental-health",
+    titleEn: "Digital overwhelm: protecting your mental health in the age of AI",
+    excerptEn: "Constant notifications, social media and artificial intelligence are reshaping how we think and feel. Here's how to take back control.",
+    categoryLabelEn: "Wellness",
+    dateEn: "April 18, 2026",
+    contentEn: `We live in a time when **information never stops**. Notifications, emails, endless news feeds, algorithms and **AI tools** that serve us content 24/7. This digital overload has a cost — more and more people report **anxiety, difficulty concentrating, disrupted sleep and emotional exhaustion**.
+
+This is not weakness. Our brain simply **wasn't built to process this many stimuli** at once.
+
+---
+
+## How does digital overwhelm show up?
+
+- a feeling of **constant mental fatigue**, even after rest
+- difficulty focusing for more than a few minutes
+- **anxiety when away from your phone** (nomophobia)
+- comparing yourself with the "perfect" lives on social media
+- **interrupted sleep** from late-night scrolling
+- a sense of emptiness after long hours online
+
+> AI and algorithms are designed to **hold our attention** as long as possible. That's not accidental — it's design.
+
+---
+
+## Why is it so hard right now?
+
+In 2025–2026, **AI tools** became part of daily life — from chatbots to content generators. This brings many benefits, but it also:
+
+- **blurs the line** between work and rest
+- creates **pressure for constant productivity**
+- amplifies **comparison** and fear of missing out (FOMO)
+- reduces **deep thinking** and creative pauses
+
+---
+
+## 7 practices for digital wellbeing
+
+### 1. Create "screen-free zones"
+The bedroom, the dinner table and the first hour after waking — let them be **phone-free**.
+
+### 2. Turn off non-essential notifications
+Ask of every app: *"Does this notification really deserve my attention right now?"*
+
+### 3. Practice single-tasking
+Close the other tabs. **One screen, one task** — your brain will thank you.
+
+### 4. Introduce a digital sunset
+**1 hour before sleep** — no screens. Replace the phone with a book, a walk or a conversation.
+
+### 5. Use AI mindfully
+AI is a tool, not a replacement for thinking. Ask yourself: *"Is this saving me time, or is it making me more distracted?"*
+
+### 6. Schedule "offline" moments
+Even **30 minutes a day** without devices restores a sense of presence.
+
+### 7. Check in with your emotions after using
+How do you feel after 30 minutes on social media? If the answer is *"worse"* — that's important information.
+
+---
+
+## When is it time to ask for help?
+
+Consider speaking with a psychologist if:
+
+- you can't enforce boundaries even though you try
+- you feel **persistent anxiety** or low mood
+- your sleep and concentration are chronically disrupted
+- social media is actively damaging your **self-esteem**
+
+---
+
+## Balance is possible
+
+Technology is not the enemy — it's a **tool**. The goal isn't to give it up, but to reclaim **authority over your own attention**. Small, consistent changes can restore calm, focus and enjoyment of the present moment.
+
+> **Mental health in the digital age begins with one simple question: "Am I using technology, or is it using me?"**
+    `
+  },
+  {
+    id: 21,
+    title: "Епидемията на самотата: защо се чувстваме сами в свързан свят",
+    excerpt: "Самотата вече е признат глобален здравен проблем. Какво я причинява и как можем да изградим истински връзки днес?",
+    content: `Светът никога не е бил по-„свързан" – и въпреки това все повече хора се чувстват **дълбоко сами**. Световната здравна организация официално определи самотата като **сериозен здравен проблем**, който засяга както психичното, така и физическото ни благополучие.
+
+Самотата не е свързана само с това **колко хора има около нас**. Тя е за **качеството** на връзките – за това дали се чувстваме видени, разбрани и приети.
+
+---
+
+## Самотата vs. усамотението
+
+Важно е да правим разлика:
+
+- **Усамотение** – съзнателен избор да бъдеш сам, който носи покой и възстановяване
+- **Самота** – болезнено усещане за **липса на смислена връзка** с другите, дори когато сме заобиколени от хора
+
+> Можеш да бъдеш в препълнена стая и пак да се чувстваш напълно сам.
+
+---
+
+## Защо самотата нараства?
+
+### Дигитална замяна на близостта
+Чатовете и лайковете **не активират** същите мозъчни центрове като физическата близост, прегръдката или искрения разговор очи в очи.
+
+### Промяна в начина на живот
+- работа от вкъщи и по-малко спонтанни срещи
+- по-късно създаване на семейство
+- **по-малки общности** и отслабени съседски връзки
+- честа смяна на градове и държави
+
+### Култура на „винаги заети"
+Хроничното натоварване оставя малко време и енергия за **дълбоки приятелства**.
+
+### Срам от уязвимостта
+Често се страхуваме да признаем, че сме самотни – защото го преживяваме като **личен провал**.
+
+---
+
+## Какво причинява самотата на здравето?
+
+Изследванията показват, че продължителната самота е свързана с:
+
+- **повишен риск от депресия и тревожност**
+- по-висок кръвен натиск и сърдечносъдови проблеми
+- отслабена имунна система
+- ускорено когнитивно стареене
+- по-кратка продължителност на живота – сравнима по риск с тютюнопушенето
+
+---
+
+## Как да изграждаме истински връзки?
+
+### 1. Започнете с малки стъпки
+Не е нужно веднага да създадете „най-добър приятел". **Кратък разговор** с бариста, съсед или колега също се брои.
+
+### 2. Бъдете първи
+Често чакаме другите да направят първата крачка. **Напишете първи**, поканете първи, обадете се първи.
+
+### 3. Култивирайте няколко „редовни" контакта
+Един човек, на когото се обаждате **всяка седмица**, прави повече от 100 повърхностни контакта.
+
+### 4. Споделяйте нещо истинско
+Връзките се задълбочават чрез **уязвимост** – не чрез безопасни теми като времето.
+
+### 5. Намерете общност около интерес
+Спорт, изкуство, доброволчество, групови занимания – мястото, където редовно срещате **същите хора**, е плодородна почва за приятелства.
+
+### 6. Ограничете „пасивното" използване на социални мрежи
+Скролването без взаимодействие **засилва усещането за самота**. Коментирайте, пишете, обаждайте се.
+
+### 7. Бъдете нежни към себе си
+Самотата не означава, че **нещо не е наред с вас**. Тя е човешка – и преходна.
+
+---
+
+## Кога да потърсим професионална подкрепа?
+
+Помислете за психологическа консултация, ако:
+
+- самотата ви съпътства **повече от няколко месеца**
+- избягвате срещи, въпреки че копнеете за връзка
+- усещате, че **не знаете как** да се сближите с хората
+- самотата е свързана с депресия, тревожност или ниска самооценка
+- имате опит на **отхвърляне или травма**, който затруднява доверието
+
+В терапията можете да разберете какво поддържа самотата ви и да изградите **умения за по-дълбока свързаност**.
+
+---
+
+## Свързаността е умение
+
+Способността да създаваме близост **не е вродена** – тя се учи и развива. Във време, в което сме обградени от екрани, **истинският човешки контакт** е едно от най-ценните неща, които можем да си подарим.
+
+> **Не сте сами в това, че се чувствате сами. И това е първата стъпка към връзката.**
+    `,
+    category: "psychology",
+    categoryLabel: "Психология",
+    date: "19 Април 2026",
+    image: blogLonelinessConnection,
+    slug: "loneliness-epidemic-connection",
+    titleEn: "The loneliness epidemic: why we feel alone in a connected world",
+    excerptEn: "Loneliness is now recognized as a global health issue. What's causing it, and how can we build real connection today?",
+    categoryLabelEn: "Psychology",
+    dateEn: "April 19, 2026",
+    contentEn: `The world has never been more "connected" — and yet more and more people feel **deeply alone**. The World Health Organization has officially named loneliness a **serious health concern** that affects both mental and physical wellbeing.
+
+Loneliness isn't about **how many people are around us**. It's about the **quality** of our connections — whether we feel seen, understood and accepted.
+
+---
+
+## Loneliness vs. solitude
+
+It's important to distinguish:
+
+- **Solitude** — a conscious choice to be alone, which brings peace and restoration
+- **Loneliness** — a painful sense of **lacking meaningful connection** with others, even when we're surrounded by people
+
+> You can be in a crowded room and still feel completely alone.
+
+---
+
+## Why is loneliness rising?
+
+### Digital substitute for closeness
+Chats and likes **don't activate** the same brain regions as physical closeness, a hug or a real face-to-face conversation.
+
+### Lifestyle changes
+- remote work and fewer spontaneous encounters
+- starting families later in life
+- **smaller communities** and weakened neighborhood ties
+- frequent moves between cities and countries
+
+### A culture of "always busy"
+Chronic overload leaves little time and energy for **deep friendships**.
+
+### Shame around vulnerability
+We often fear admitting we're lonely — because we experience it as a **personal failure**.
+
+---
+
+## What does loneliness do to health?
+
+Research shows that prolonged loneliness is linked to:
+
+- **higher risk of depression and anxiety**
+- elevated blood pressure and cardiovascular issues
+- weakened immune function
+- accelerated cognitive aging
+- shorter lifespan — comparable in risk to smoking
+
+---
+
+## How do we build real connection?
+
+### 1. Start small
+You don't have to create a "best friend" overnight. A **short conversation** with a barista, a neighbor or a colleague counts too.
+
+### 2. Be the one who reaches out
+We often wait for others to take the first step. **Message first**, invite first, call first.
+
+### 3. Cultivate a few "regular" contacts
+One person you call **every week** does more than 100 superficial contacts.
+
+### 4. Share something real
+Connections deepen through **vulnerability** — not through safe topics like the weather.
+
+### 5. Find community around an interest
+Sport, art, volunteering, group activities — the place where you regularly see **the same people** is fertile ground for friendship.
+
+### 6. Limit "passive" social media use
+Scrolling without interacting **intensifies loneliness**. Comment, message, call.
+
+### 7. Be gentle with yourself
+Loneliness doesn't mean **something is wrong with you**. It's human — and temporary.
+
+---
+
+## When to seek professional support?
+
+Consider psychological consultation if:
+
+- loneliness has been with you for **more than a few months**
+- you avoid meeting people even though you long for connection
+- you feel you **don't know how** to get closer to others
+- loneliness is tied to depression, anxiety or low self-esteem
+- you've experienced **rejection or trauma** that makes trust hard
+
+In therapy you can understand what sustains your loneliness and build **skills for deeper connection**.
+
+---
+
+## Connection is a skill
+
+The ability to create closeness is **not innate** — it is learned and developed. In a time when we're surrounded by screens, **real human contact** is one of the most valuable things we can give ourselves.
+
+> **You are not alone in feeling alone. And that is the first step toward connection.**
     `
   }
 ];

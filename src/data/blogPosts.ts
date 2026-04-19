@@ -12,17 +12,40 @@ export interface BlogPost {
   date: string;
   image: string;
   slug: string;
+  // Optional English translations
+  titleEn?: string;
+  excerptEn?: string;
+  contentEn?: string;
+  categoryLabelEn?: string;
+  dateEn?: string;
 }
 
-export const categories: { value: Category; label: string }[] = [
-  { value: "all", label: "Всички" },
-  { value: "psychology", label: "Психология" },
-  { value: "family", label: "Семейство" },
-  { value: "children", label: "Деца" },
-  { value: "career", label: "Кариера" },
-  { value: "corporate", label: "Бизнес" },
-  { value: "wellness", label: "Благополучие" }
+export const categories: { value: Category; label: string; labelEn: string }[] = [
+  { value: "all", label: "Всички", labelEn: "All" },
+  { value: "psychology", label: "Психология", labelEn: "Psychology" },
+  { value: "family", label: "Семейство", labelEn: "Family" },
+  { value: "children", label: "Деца", labelEn: "Children" },
+  { value: "career", label: "Кариера", labelEn: "Career" },
+  { value: "corporate", label: "Бизнес", labelEn: "Business" },
+  { value: "wellness", label: "Благополучие", labelEn: "Wellness" }
 ];
+
+export type BlogLang = "bg" | "en";
+
+export const getPostTitle = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.titleEn ?? post.title) : post.title;
+export const getPostExcerpt = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.excerptEn ?? post.excerpt) : post.excerpt;
+export const getPostContent = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.contentEn ?? post.content) : post.content;
+export const getPostCategoryLabel = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.categoryLabelEn ?? post.categoryLabel) : post.categoryLabel;
+export const getPostDate = (post: BlogPost, lang: BlogLang) =>
+  lang === "en" ? (post.dateEn ?? post.date) : post.date;
+export const getCategoryLabel = (
+  cat: { label: string; labelEn: string },
+  lang: BlogLang,
+) => (lang === "en" ? cat.labelEn : cat.label);
 
 export const blogPosts: BlogPost[] = [
   {

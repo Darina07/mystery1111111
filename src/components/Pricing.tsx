@@ -1,83 +1,85 @@
 import { Check, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-const pricingItems = [
-  {
-    title: "Индивидуални и семейни консултации",
-    subtitle: "(присъствено)",
-    price: "40",
-    currency: "евро",
-    duration: "60 минути",
-    features: [
-      "Консултация с психолог",
-      "Психотерапия",
-      "Консултиране за двойки и семейства",
-      "Работа със сексолог",
-      "Детско и юношеско консултиране",
-      "Логопед – диагностика и терапия",
-      "Кариерно консултиране",
-    ],
-    popular: true,
-  },
-  {
-    title: "Онлайн консултации",
-    subtitle: "(телефон, Viber, WhatsApp, Skype, Google Meet)",
-    price: "35",
-    currency: "евро",
-    duration: "60 минути",
-    features: [
-      "Индивидуално психологично консултиране",
-      "Психотерапия",
-      "Консултиране за двойки",
-      "Кариерно консултиране",
-    ],
-    popular: false,
-  },
-  {
-    title: "Хипнотерапия",
-    subtitle: "",
-    price: "45",
-    currency: "евро",
-    duration: "60 минути",
-    features: [
-      "Самостоятелен терапевтичен метод",
-      "Допълващ метод при определени теми",
-      "След предварителна консултация",
-    ],
-    popular: false,
-  },
-  {
-    title: "Арт терапия и музикотерапия",
-    subtitle: "",
-    price: "50",
-    currency: "евро",
-    duration: "60 минути",
-    features: [
-      "Изразяване на емоции чрез творчество",
-      "Намаляване на напрежението",
-      "Подкрепа на емоционалния баланс",
-      "Подходящо за деца, юноши и възрастни",
-    ],
-    popular: false,
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Pricing = () => {
+  const { t, localized } = useLanguage();
+  const pricingItems = [
+    {
+      title: t("pricing.item1.title"),
+      subtitle: t("pricing.item1.subtitle"),
+      price: "40",
+      currency: t("pricing.currency"),
+      duration: t("pricing.duration"),
+      features: [
+        t("pricing.item1.f1"),
+        t("pricing.item1.f2"),
+        t("pricing.item1.f3"),
+        t("pricing.item1.f4"),
+        t("pricing.item1.f5"),
+        t("pricing.item1.f6"),
+        t("pricing.item1.f7"),
+      ],
+      popular: true,
+    },
+    {
+      title: t("pricing.item2.title"),
+      subtitle: t("pricing.item2.subtitle"),
+      price: "35",
+      currency: t("pricing.currency"),
+      duration: t("pricing.duration"),
+      features: [
+        t("pricing.item2.f1"),
+        t("pricing.item2.f2"),
+        t("pricing.item2.f3"),
+        t("pricing.item2.f4"),
+      ],
+      popular: false,
+    },
+    {
+      title: t("pricing.item3.title"),
+      subtitle: "",
+      price: "45",
+      currency: t("pricing.currency"),
+      duration: t("pricing.duration"),
+      features: [
+        t("pricing.item3.f1"),
+        t("pricing.item3.f2"),
+        t("pricing.item3.f3"),
+      ],
+      popular: false,
+    },
+    {
+      title: t("pricing.item4.title"),
+      subtitle: "",
+      price: "50",
+      currency: t("pricing.currency"),
+      duration: t("pricing.duration"),
+      features: [
+        t("pricing.item4.f1"),
+        t("pricing.item4.f2"),
+        t("pricing.item4.f3"),
+        t("pricing.item4.f4"),
+      ],
+      popular: false,
+    },
+  ];
+
   return (
     <section id="prices" className="py-12 bg-secondary/30">
       <div className="container">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-3">
           <p className="text-primary font-medium tracking-wide uppercase text-sm">
-            Цени
+            {t("pricing.eyebrow")}
           </p>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-            Ясни и{" "}
-            <span className="gradient-text">прозрачни условия</span>
+            {t("pricing.titlePart1")}{" "}
+            <span className="gradient-text">{t("pricing.titlePart2")}</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            В Психологичен и консултативен център „Дар" държим на открита и ясна
-            информация за цените на нашите услуги.
+            {t("pricing.subtitle")}
           </p>
         </div>
 
@@ -93,7 +95,7 @@ export const Pricing = () => {
               {item.popular && (
                 <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-primary text-primary-foreground text-xs sm:text-sm font-medium px-3 py-1 sm:px-4 sm:py-1.5 rounded-full whitespace-nowrap">
-                    Най-популярно
+                    {t("common.mostPopular")}
                   </span>
                 </div>
               )}
@@ -139,7 +141,7 @@ export const Pricing = () => {
                   size="lg"
                   asChild
                 >
-                  <Link to="/contact">СВЪРЖЕТЕ СЕ С НАС ЗА ЧАС</Link>
+                  <Link to={localized("/contact")}>{t("common.bookViaContact")}</Link>
                 </Button>
               </div>
             </div>
@@ -149,9 +151,8 @@ export const Pricing = () => {
         {/* Additional Note */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground">
-            Консултациите на <span className="font-semibold text-foreground">английски език</span> се провеждат срещу допълнително
-            заплащане от{" "}
-            <span className="font-semibold text-foreground">+10 евро</span>.
+            {t("pricing.note")} <span className="font-semibold text-foreground">{t("pricing.noteLang")}</span> {t("pricing.noteSurcharge")}{" "}
+            <span className="font-semibold text-foreground">{t("pricing.noteAmount")}</span>.
           </p>
           <a 
             href="tel:+359887079256" 
@@ -159,7 +160,7 @@ export const Pricing = () => {
           >
             <Phone className="h-5 w-5 text-primary" />
             <span className="text-foreground uppercase font-medium">
-              Попитайте ни за цени за групови програми и корпоративни услуги
+              {t("pricing.askGroup")}
             </span>
           </a>
         </div>

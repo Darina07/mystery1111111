@@ -1,29 +1,15 @@
 import { Heart, Shield, Award, Clock } from "lucide-react";
-
-const values = [
-  {
-    icon: Heart,
-    title: "Емпатия и разбиране",
-    description: "Всеки клиент е уникален. Слушаме без осъждане и създаваме безопасно пространство.",
-  },
-  {
-    icon: Shield,
-    title: "Конфиденциалност",
-    description: "Гарантираме пълна дискретност и защита на личната информация.",
-  },
-  {
-    icon: Award,
-    title: "Професионализъм",
-    description: "Работим с доказани методи и непрекъснато надграждаме квалификацията си.",
-  },
-  {
-    icon: Clock,
-    title: "Гъвкавост",
-    description: "Предлагаме удобни часове, включително вечер и в почивни дни.",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const About = () => {
+  const { t } = useLanguage();
+  const values = [
+    { icon: Heart, title: t("about.value1.title"), description: t("about.value1.desc") },
+    { icon: Shield, title: t("about.value2.title"), description: t("about.value2.desc") },
+    { icon: Award, title: t("about.value3.title"), description: t("about.value3.desc") },
+    { icon: Clock, title: t("about.value4.title"), description: t("about.value4.desc") },
+  ];
+
   return (
     <section id="about" className="py-12 bg-background">
       <div className="container">
@@ -32,22 +18,18 @@ export const About = () => {
           <div className="space-y-6">
             <div className="inline-block">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium uppercase">
-                ЗА НАС
+                {t("about.eyebrow")}
               </span>
             </div>
             
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-              Център „Дар" – вашият{" "}
-              <span className="gradient-text">партньор</span> в грижата за психичното здраве
+              {t("about.titlePart1")}{" "}
+              <span className="gradient-text">{t("about.titlePart2")}</span> {t("about.titlePart3")}
             </h2>
 
             <div className="space-y-4 text-muted-foreground text-lg sm:text-xl leading-relaxed">
-              <p>
-                Психологичен и консултативен център „Дар" предоставя професионални услуги в областта на психологията, консултирането и обучението. Работим с индивидуални клиенти, деца, семейства и бизнес организации.
-              </p>
-              <p>
-                Нашата мисия е да предоставяме качествена психологическа подкрепа, базирана на доверие, уважение и доказани терапевтични методи.
-              </p>
+              <p>{t("about.p1")}</p>
+              <p>{t("about.p2")}</p>
             </div>
           </div>
 

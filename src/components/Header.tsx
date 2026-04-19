@@ -1,7 +1,9 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import darLogo from "@/assets/dar-logo.svg";
+import { useLanguage } from "@/i18n/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 // Lazy load desktop navigation - not needed on mobile
 const DesktopNavigation = lazy(() => import("@/components/DesktopNavigation"));
@@ -20,40 +22,10 @@ interface NavItem {
   submenu?: SubMenuItem[];
 }
 
-const groupPrograms: SubMenuItem[] = [
-  { label: "Зависимости", href: "/services/group-programs/addictions" },
-  { label: "Необвързани и взаимоотношения (matchmaking)", href: "/services/group-programs/relationships" },
-  { label: "Бременност и родителство", href: "/services/group-programs/parenting" },
-  { label: "НЛП и личностно развитие", href: "/services/group-programs/nlp" },
-];
-
-const servicesSubmenu: SubMenuItem[] = [
-  { label: "Психологично консултиране и психотерапия", href: "/services/psychological-counseling" },
-  { label: "Семейно и партньорско консултиране", href: "/services/family-counseling" },
-  { label: "Детско - юношеско консултиране", href: "/services/child-counseling" },
-  { label: "Групови програми", href: "/services/group-programs", hasSubmenu: true, submenu: groupPrograms },
-  { label: "Логопед", href: "/services/speech-therapy" },
-  { label: "Психодиагностика", href: "/services/psychodiagnostics" },
-];
-
-const professionalSubmenu: SubMenuItem[] = [
-  { label: "Кариерно консултиране", href: "/services/career-consulting" },
-  { label: "Корпоративни услуги", href: "/services/corporate-services" },
-];
-
-const navItems: NavItem[] = [
-  { label: "Начало", href: "/" },
-  { label: "За нас", href: "/about" },
-  { label: "Услуги", href: "/services", hasSubmenu: true, submenu: servicesSubmenu },
-  { label: "Професионално развитие", href: "#professional", hasSubmenu: true, submenu: professionalSubmenu },
-  { label: "Цени", href: "/prices" },
-  { label: "Блог", href: "/blog" },
-  { label: "Контакти", href: "/contact" },
-];
-
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t, localized } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,13 +35,44 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navItems: NavItem[] = useMemo(() => {
+    const groupPrograms: SubMenuItem[] = [
+      { label: t("groups.addictions"), href: localized("/services/group-programs/addictions") },
+      { label: t("groups.relationships"), href: localized("/services/group-programs/relationships") },
+      { label: t("groups.parenting"), href: localized("/services/group-programs/parenting") },
+      { label: t("groups.nlp"), href: localized("/services/group-programs/nlp") },
+    ];
+
+    const servicesSubmenu: SubMenuItem[] = [
+      { label: t("services.psychological"), href: localized("/services/psychological-counseling") },
+      { label: t("services.family"), href: localized("/services/family-counseling") },
+      { label: t("services.child"), href: localized("/services/child-counseling") },
+      { label: t("services.groupPrograms"), href: localized("/services/group-programs"), hasSubmenu: true, submenu: groupPrograms },
+      { label: t("services.speech"), href: localized("/services/speech-therapy") },
+      { label: t("services.psychodiagnostics"), href: localized("/services/psychodiagnostics") },
+    ];
+
+    const professionalSubmenu: SubMenuItem[] = [
+      { label: t("services.career"), href: localized("/services/career-consulting") },
+      { label: t("services.corporate"), href: localized("/services/corporate-services") },
+    ];
+
+    return [
+      { label: t("nav.home"), href: localized("/") },
+      { label: t("nav.about"), href: localized("/about") },
+      { label: t("nav.services"), href: localized("/services"), hasSubmenu: true, submenu: servicesSubmenu },
+      { label: t("nav.professional"), href: "#professional", hasSubmenu: true, submenu: professionalSubmenu },
+      { label: t("nav.prices"), href: localized("/prices") },
+      { label: t("nav.blog"), href: localized("/blog") },
+      { label: t("nav.contact"), href: localized("/contact") },
+    ];
+  }, [t, localized]);
+
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-header py-4"
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-header py-4">
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group relative">
+        <Link to={localized("/")} className="flex items-center gap-3 group relative">
           <img
             src={darLogo}
             alt="Дар - Психологичен център"
@@ -85,20 +88,23 @@ export const Header = () => {
           <DesktopNavigation navItems={navItems} />
         </Suspense>
 
-        {/* Phone Icon */}
-        <a
-          href="tel:+359887079256"
-          className="hidden lg:flex items-center justify-center p-2 text-white hover:text-white/80 transition-colors"
-          aria-label="Обадете се"
-        >
-          <Phone className="h-5 w-5" />
-        </a>
+        {/* Right cluster: language switcher + phone */}
+        <div className="hidden lg:flex items-center gap-3">
+          <LanguageSwitcher />
+          <a
+            href="tel:+359887079256"
+            className="flex items-center justify-center p-2 text-white hover:text-white/80 transition-colors"
+            aria-label={t("common.callUs")}
+          >
+            <Phone className="h-5 w-5" />
+          </a>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="lg:hidden p-2 text-white"
-          aria-label="Toggle menu"
+          aria-label={t("nav.toggleMenu")}
         >
           {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -167,11 +173,12 @@ export const Header = () => {
               )}
             </div>
           ))}
-          <div className="pt-4 border-t border-white/20">
+          <div className="pt-4 border-t border-white/20 flex flex-col gap-4">
+            <LanguageSwitcher variant="mobile" />
             <a
               href="tel:+359887079256"
               className="flex items-center gap-2 text-base font-medium text-white hover:text-white/80 transition-colors"
-              aria-label="Обадете се на +359 887 079 256"
+              aria-label="+359 887 079 256"
             >
               <Phone className="h-5 w-5" />
               <span>+359 887 079 256</span>

@@ -1,37 +1,39 @@
 import { Target, Briefcase, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const services = [
-  {
-    icon: Target,
-    title: "Кариерно консултиране",
-    description: "Помагаме ви да откриете професионалния си път, да се развивате и да постигнете баланс между работа и личен живот.",
-    tags: ["Кариерна ориентация", "Професионално развитие", "Коучинг"],
-    link: "/services/career-consulting",
-  },
-  {
-    icon: Briefcase,
-    title: "Корпоративни услуги",
-    description: "Подкрепяме организации в развитието на екипи, управление на стреса и изграждане на здравословна работна среда.",
-    tags: ["Екипни тренинги", "Управление на стрес", "HR консултации"],
-    link: "/services/corporate-services",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Business = () => {
+  const { t, localized } = useLanguage();
+  const services = [
+    {
+      icon: Target,
+      title: t("biz.career.title"),
+      description: t("biz.career.desc"),
+      tags: [t("biz.career.tag1"), t("biz.career.tag2"), t("biz.career.tag3")],
+      link: localized("/services/career-consulting"),
+    },
+    {
+      icon: Briefcase,
+      title: t("biz.corp.title"),
+      description: t("biz.corp.desc"),
+      tags: [t("biz.corp.tag1"), t("biz.corp.tag2"), t("biz.corp.tag3")],
+      link: localized("/services/corporate-services"),
+    },
+  ];
+
   return (
     <section id="business" className="py-12 bg-background">
       <div className="container">
         {/* Header */}
         <div className="text-center mb-8 space-y-3">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium uppercase">
-            ЗА БИЗНЕСА
+            {t("biz.eyebrow")}
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold">
-            Професионално <span className="gradient-text">развитие</span>
+            {t("biz.titlePart1")} <span className="gradient-text">{t("biz.titlePart2")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Специализирани услуги за кариерно развитие и корпоративни решения.
+            {t("biz.subtitle")}
           </p>
         </div>
 
@@ -67,7 +69,7 @@ export const Business = () => {
               </div>
               
               <span className="inline-flex items-center gap-2 text-foreground font-medium group-hover:gap-3 transition-all duration-300 min-h-[44px] py-2">
-                Научете повече
+                {t("biz.cta")}
                 <ArrowRight className="h-4 w-4" />
               </span>
             </Link>

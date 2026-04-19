@@ -2,16 +2,17 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const COOKIE_CONSENT_KEY = "dar-cookie-consent";
 
 export const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t, localized } = useLanguage();
 
   useEffect(() => {
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
     if (!consent) {
-      // Small delay to prevent flash on page load
       const timer = setTimeout(() => setIsVisible(true), 500);
       return () => clearTimeout(timer);
     }
@@ -35,36 +36,31 @@ export const CookieConsent = () => {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex-1 pr-8">
             <p className="text-sm text-foreground">
-              Използваме бисквитки, за да подобрим вашето изживяване на сайта. 
-              Продължавайки да разглеждате, вие се съгласявате с използването на бисквитки.{" "}
+              {t("cookie.message")}{" "}
               <Link 
-                to="/cookie-policy" 
+                to={localized("/cookie-policy")}
                 className="text-foreground hover:underline font-semibold underline"
               >
-                Научете повече
+                {t("cookie.learnMore")}
               </Link>
             </p>
           </div>
           <div className="flex items-center gap-3 flex-shrink-0">
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={handleDecline}
-            >
-              Отказвам
+            <Button variant="outline" size="sm" onClick={handleDecline}>
+              {t("cookie.decline")}
             </Button>
             <Button 
               size="sm"
               onClick={handleAccept}
               className="bg-[hsl(263,35%,48%)] hover:bg-[hsl(263,35%,42%)] text-white"
             >
-              Приемам
+              {t("cookie.accept")}
             </Button>
           </div>
           <button
             onClick={handleDecline}
             className="absolute top-4 right-4 md:hidden text-muted-foreground hover:text-foreground"
-            aria-label="Затвори"
+            aria-label={t("cookie.close")}
           >
             <X className="h-5 w-5" />
           </button>

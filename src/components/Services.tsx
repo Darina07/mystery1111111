@@ -1,68 +1,33 @@
 import { Brain, Users, Baby, UsersRound, Mic2, ClipboardCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
-const services = [
-  {
-    icon: Brain,
-    title: "Психологично консултиране и психотерапия",
-    description:
-      "Индивидуална психологична подкрепа при тревожност, депресия, стрес, бърнаут, житейски кризи и други емоционални затруднения.",
-    link: "/services/psychological-counseling",
-  },
-  {
-    icon: Users,
-    title: "За двойки и семейства",
-    description:
-      "Консултиране за двойки и семейства с брачен консултант, семеен психолог и сексолог – при партньорски, семейни и интимни проблеми.",
-    link: "/services/family-counseling",
-  },
-  {
-    icon: Baby,
-    title: "Детско-юношеско консултиране",
-    description:
-      "Психологична подкрепа за деца и тийнейджъри с емоционални, поведенчески, социални и училищни затруднения.",
-    link: "/services/child-counseling",
-  },
-  {
-    icon: UsersRound,
-    title: "Групови програми",
-    description:
-      "Групови програми за споделяне, подкрепа и развитие – зависимости, отношения, родителство и личностно развитие.",
-    link: "/services/group-programs",
-  },
-  {
-    icon: Mic2,
-    title: "Логопед",
-    description:
-      "Диагностика и терапия на говорни, езикови и комуникативни нарушения при деца и възрастни.",
-    link: "/services/speech-therapy",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Психодиагностика",
-    description:
-      "Психологични оценки и изследвания на когнитивни способности, емоционално състояние и личностови характеристики.",
-    link: "/services/psychodiagnostics",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Services = () => {
+  const { t, localized } = useLanguage();
+  const services = [
+    { icon: Brain, title: t("servicesSec.s1.title"), description: t("servicesSec.s1.desc"), link: localized("/services/psychological-counseling") },
+    { icon: Users, title: t("servicesSec.s2.title"), description: t("servicesSec.s2.desc"), link: localized("/services/family-counseling") },
+    { icon: Baby, title: t("servicesSec.s3.title"), description: t("servicesSec.s3.desc"), link: localized("/services/child-counseling") },
+    { icon: UsersRound, title: t("servicesSec.s4.title"), description: t("servicesSec.s4.desc"), link: localized("/services/group-programs") },
+    { icon: Mic2, title: t("servicesSec.s5.title"), description: t("servicesSec.s5.desc"), link: localized("/services/speech-therapy") },
+    { icon: ClipboardCheck, title: t("servicesSec.s6.title"), description: t("servicesSec.s6.desc"), link: localized("/services/psychodiagnostics") },
+  ];
+
   return (
     <section id="services" className="py-12 bg-secondary/30">
       <div className="container">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-3">
           <p className="text-primary font-medium tracking-wide uppercase text-sm">
-            Нашите услуги
+            {t("servicesSec.eyebrow")}
           </p>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-            Комплексна грижа за вашето{" "}
-            <span className="gradient-text">психично здраве</span>
+            {t("servicesSec.titlePart1")}{" "}
+            <span className="gradient-text">{t("servicesSec.titlePart2")}</span>
           </h2>
           <p className="text-muted-foreground text-lg sm:text-xl">
-            В център „Дар" предлагаме широк спектър от услуги, насочени към
-            емоционалното здраве, взаимоотношенията и личностното развитие.
+            {t("servicesSec.subtitle")}
           </p>
         </div>
 
@@ -91,7 +56,7 @@ export const Services = () => {
                 </p>
 
                 <span className="inline-flex items-center gap-2 text-base font-medium text-primary group-hover:gap-3 transition-all duration-300 min-h-[44px] py-2">
-                  Научи повече
+                  {t("common.learnMore")}
                   <ArrowRight className="h-4 w-4" />
                 </span>
               </div>
@@ -102,7 +67,7 @@ export const Services = () => {
         {/* CTA */}
         <div className="text-center mt-12">
           <Button size="lg" className="uppercase text-white shadow-soft hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]" style={{ background: 'var(--gradient-cta)' }} asChild>
-            <Link to="/services">ВИЖТЕ ВСИЧКИ УСЛУГИ</Link>
+            <Link to={localized("/services")}>{t("common.viewAllServices")}</Link>
           </Button>
         </div>
       </div>

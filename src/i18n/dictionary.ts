@@ -148,7 +148,14 @@ export const dict = {
     bg: "Индивидуална психологична подкрепа при тревожност, депресия, стрес, бърнаут, житейски кризи и други емоционални затруднения.",
     en: "Individual psychological support for anxiety, depression, stress, burnout, life crises and other emotional difficulties.",
   },
+  "servicesSec.s1.title": {
+    bg: "Психологично консултиране и психотерапия",
+    en: "Psychological Counseling & Psychotherapy",
+  },
   "servicesSec.s2.title": { bg: "За двойки и семейства", en: "For Couples & Families" },
+  "servicesSec.s4.title": { bg: "Групови програми", en: "Group Programs" },
+  "servicesSec.s5.title": { bg: "Логопед", en: "Speech Therapy" },
+  "servicesSec.s6.title": { bg: "Психодиагностика", en: "Psychodiagnostics" },
   "servicesSec.s2.desc": {
     bg: "Консултиране за двойки и семейства с брачен консултант, семеен психолог и сексолог – при партньорски, семейни и интимни проблеми.",
     en: "Counseling for couples and families with a marriage counselor, family psychologist and sexologist – for relationship, family and intimate issues.",
@@ -182,6 +189,8 @@ export const dict = {
     bg: "Специализирани услуги за кариерно развитие и корпоративни решения.",
     en: "Specialized services for career development and corporate solutions.",
   },
+  "biz.career.title": { bg: "Кариерно консултиране", en: "Career Counseling" },
+  "biz.corp.title": { bg: "Корпоративни услуги", en: "Corporate Services" },
   "biz.career.desc": {
     bg: "Помагаме ви да откриете професионалния си път, да се развивате и да постигнете баланс между работа и личен живот.",
     en: "We help you discover your professional path, grow, and achieve a healthy work-life balance.",
@@ -453,9 +462,10 @@ export const dict = {
   // -------- Cookie consent --------
   "cookie.title": { bg: "Използваме бисквитки", en: "We use cookies" },
   "cookie.message": {
-    bg: "Този сайт използва бисквитки, за да подобри вашето преживяване. Чрез продължаване на разглеждането се съгласявате с нашата политика за бисквитки.",
-    en: "This site uses cookies to improve your experience. By continuing to browse you agree to our cookie policy.",
+    bg: 'Използваме бисквитки, за да подобрим вашето изживяване на сайта. Продължавайки да разглеждате, вие се съгласявате с използването на бисквитки.',
+    en: "We use cookies to improve your experience on the site. By continuing to browse you agree to the use of cookies.",
   },
+  "cookie.close": { bg: "Затвори", en: "Close" },
   "cookie.accept": { bg: "Приемам", en: "Accept" },
   "cookie.decline": { bg: "Отказвам", en: "Decline" },
   "cookie.learnMore": { bg: "Научете повече", en: "Learn more" },

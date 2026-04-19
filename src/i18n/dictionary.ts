@@ -524,6 +524,80 @@ export const dict = {
     bg: "Свържете се с нас за консултация или запишете час при наш специалист.",
     en: "Contact us for a consultation or book an appointment with one of our specialists.",
   },
+
+  // -------- Homepage Blog preview block --------
+  "homeBlog.heading": { bg: "Блог", en: "Blog" },
+  "homeBlog.subtitle": {
+    bg: "Полезни статии, съвети и новини от нашите специалисти",
+    en: "Useful articles, tips and news from our specialists",
+  },
+
+  // -------- Homepage FAQ --------
+  "faq.q1": { bg: "Как да запазя час за консултация?", en: "How can I book a consultation?" },
+  "faq.a1": {
+    bg: "Можете да запазите час като се обадите на +359 887 079 256 или като попълните контактната форма на сайта. Ще се свържем с вас в рамките на 24 часа.",
+    en: "You can book an appointment by calling +359 887 079 256 or by filling in the contact form on the website. We will get back to you within 24 hours.",
+  },
+  "faq.q2": { bg: "Колко време продължава една сесия?", en: "How long does a session last?" },
+  "faq.a2": {
+    bg: "Стандартната консултация е с продължителност 50-60 минути. Семейните и двойковите сесии могат да бъдат до 90 минути.",
+    en: "A standard consultation lasts 50-60 minutes. Family and couples sessions can run up to 90 minutes.",
+  },
+  "faq.q3": { bg: "Предлагате ли онлайн консултации?", en: "Do you offer online consultations?" },
+  "faq.a3": {
+    bg: "Да, предлагаме онлайн консултации чрез видео връзка за всички наши услуги. Онлайн сесиите са също толкова ефективни, колкото и присъствените.",
+    en: "Yes, we offer online consultations via video for all our services. Online sessions are just as effective as in-person ones.",
+  },
+  "faq.q4": { bg: "Каква е цената на консултацията?", en: "How much does a consultation cost?" },
+  "faq.a4": {
+    bg: "Цените варират в зависимост от вида на услугата. Индивидуална консултация започва от 80 лв., семейна терапия от 120 лв. Вижте пълния ценоразпис на страницата Цени.",
+    en: "Prices vary depending on the type of service. An individual consultation starts at 80 BGN, family therapy from 120 BGN. See the full price list on the Pricing page.",
+  },
+
+  // -------- Therapeutic Approaches homepage section --------
+  "approachesSec.eyebrow": { bg: "ТЕРАПЕВТИЧНИ ПОДХОДИ", en: "THERAPEUTIC APPROACHES" },
+  "approachesSec.titleStart": { bg: "Индивидуален подход за", en: "An individual approach for" },
+  "approachesSec.titleAccent": { bg: "всеки клиент", en: "every client" },
+  "approachesSec.subtitle": {
+    bg: "Работим с различни психотерапевтични подходи, съобразени с конкретните нужди на всеки човек.",
+    en: "We work with a range of psychotherapy approaches tailored to the specific needs of every person.",
+  },
+  "approachesSec.cat.classical": { bg: "Класически подходи", en: "Classical approaches" },
+  "approachesSec.cat.cognitive": { bg: "Когнитивни подходи", en: "Cognitive approaches" },
+  "approachesSec.cat.humanistic": { bg: "Хуманистични подходи", en: "Humanistic approaches" },
+  "approachesSec.cat.systemic": { bg: "Системни подходи", en: "Systemic approaches" },
+  "approachesSec.cat.trauma": { bg: "Травма-фокусирани", en: "Trauma-focused" },
+  "approachesSec.cat.body": { bg: "Телесно-ориентирани", en: "Body-oriented" },
+  "approachesSec.cat.creative": { bg: "Креативни подходи", en: "Creative approaches" },
+  "approach.psychoanalysis": { bg: "Психоанализа", en: "Psychoanalysis" },
+  "approach.psychodynamic": { bg: "Психодинамична терапия", en: "Psychodynamic therapy" },
+  "approach.cbt": { bg: "Когнитивно-поведенческа терапия", en: "Cognitive Behavioral Therapy" },
+  "approach.schema": { bg: "Схема терапия", en: "Schema therapy" },
+  "approach.gestalt": { bg: "Гещалт терапия", en: "Gestalt therapy" },
+  "approach.existential": { bg: "Екзистенциална терапия", en: "Existential therapy" },
+  "approach.positive": { bg: "Позитивна психотерапия", en: "Positive psychotherapy" },
+  "approach.family": { bg: "Семейна терапия", en: "Family therapy" },
+  "approach.transgenerational": { bg: "Трансгенерационна терапия", en: "Transgenerational therapy" },
+  "approach.couples": { bg: "Терапия на двойки", en: "Couples therapy" },
+  "approach.emdr": { bg: "EMDR терапия", en: "EMDR therapy" },
+  "approach.somatic": { bg: "Соматично преживяване", en: "Somatic experiencing" },
+  "approach.bioenergetic": { bg: "Биоенергийна терапия", en: "Bioenergetic therapy" },
+  "approach.bodyPsychotherapy": { bg: "Телесна психотерапия", en: "Body psychotherapy" },
+  "approach.dance": { bg: "Танцово-двигателна терапия", en: "Dance/movement therapy" },
+  "approach.art": { bg: "Арт терапия", en: "Art therapy" },
+  "approach.music": { bg: "Музикотерапия", en: "Music therapy" },
+  "approach.play": { bg: "Игрова терапия", en: "Play therapy" },
+
+  // -------- 404 page --------
+  "notFound.title": { bg: "Страницата не е намерена", en: "Page not found" },
+  "notFound.subtitle": {
+    bg: "Съжаляваме, но страницата, която търсите, не съществува или е била преместена.",
+    en: "Sorry, the page you are looking for does not exist or has been moved.",
+  },
+  "notFound.toHome": { bg: "Към началната страница", en: "Back to homepage" },
+  "notFound.back": { bg: "Назад", en: "Go back" },
+  "notFound.maybeLooking": { bg: "Може би търсите:", en: "You may be looking for:" },
+  "notFound.needHelp": { bg: "Нужна ви е помощ?", en: "Need help?" },
 } as const satisfies Record<string, Record<Lang, string>>;
 
 export type DictKey = keyof typeof dict;

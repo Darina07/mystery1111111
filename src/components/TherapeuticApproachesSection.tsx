@@ -65,7 +65,7 @@ const approachCategories: Array<{
     color: "from-accent to-soft-blue",
     approaches: [
       { nameKey: "approach.bioenergetic", href: "/therapeutic-approaches/bioenergetic-therapy" },
-      { nameKey: "approach.bodyPsychotherapy", href: "/therapeutic-approaches/body-psychotherapy" },
+      { nameKey: "approach.body", href: "/therapeutic-approaches/body-psychotherapy" },
       { nameKey: "approach.dance", href: "/therapeutic-approaches/dance-movement-therapy" },
     ],
   },

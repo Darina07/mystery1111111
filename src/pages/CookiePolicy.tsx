@@ -54,7 +54,7 @@ const content = {
 };
 
 const CookiePolicy = () => {
-  const { language } = useLanguage();
+  const { lang: language } = useLanguage();
   const data = content[language];
 
   return (

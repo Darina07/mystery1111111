@@ -80,7 +80,7 @@ const content = {
 };
 
 const PrivacyPolicy = () => {
-  const { language } = useLanguage();
+  const { lang: language } = useLanguage();
   const data = content[language];
 
   return (

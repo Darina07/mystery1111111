@@ -321,21 +321,31 @@ export const ArticleSchema = ({
 
 // Website Schema for sitelinks search box
 export const WebsiteSchema = () => {
+  const loc = useLocation();
+  const isEn = detectLangFromPath(loc.pathname) === "en";
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Център Дар",
-    alternateName: "Дар Психологичен център",
+    name: isEn ? "Dar Center" : "Център Дар",
+    alternateName: isEn ? "Dar – Psychological & Counseling Center" : "Дар Психологичен център",
     url: "https://darpsiholog.com",
+    inLanguage: isEn ? "en" : "bg",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://darpsiholog.com/blog?search={search_term_string}",
+        urlTemplate: `https://darpsiholog.com${isEn ? "/en" : ""}/blog?search={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },
   };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};
 
   return (
     <Helmet>

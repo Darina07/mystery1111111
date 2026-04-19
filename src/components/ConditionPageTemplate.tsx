@@ -31,14 +31,47 @@ export interface ConditionData {
 
 interface ConditionPageTemplateProps {
   data: ConditionData;
+  language?: "bg" | "en";
 }
 
-export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
+const LABELS = {
+  bg: {
+    home: "Начало",
+    contacts: "КОНТАКТИ",
+    howTitlePrefix: "Как",
+    howTitleAccent: "помагаме?",
+    howSubtitle: "Нашият подход е индивидуален и съобразен с вашите нужди",
+    benefitsPrefix: "Какво ще",
+    benefitsAccent: "постигнете?",
+    benefitsSubtitle: "Резултатите от работата с нашите специалисти",
+    ctaPrefix: "Свържете се",
+    ctaSuffix: "с нас",
+    ctaSubtitle: "Направете първата стъпка към по-добро психическо здраве.",
+    siteSuffix: "ДАР Психология",
+  },
+  en: {
+    home: "Home",
+    contacts: "CONTACT US",
+    howTitlePrefix: "How we",
+    howTitleAccent: "help",
+    howSubtitle: "Our approach is individual and tailored to your needs",
+    benefitsPrefix: "What you will",
+    benefitsAccent: "achieve",
+    benefitsSubtitle: "Results from working with our specialists",
+    ctaPrefix: "Get in touch",
+    ctaSuffix: "with us",
+    ctaSubtitle: "Take the first step toward better mental health.",
+    siteSuffix: "DAR Psychology",
+  },
+} as const;
+
+export const ConditionPageTemplate = ({ data, language = "bg" }: ConditionPageTemplateProps) => {
   const location = useLocation();
   const currentUrl = `https://darpsychology.com${location.pathname}`;
+  const L = LABELS[language];
   
   const breadcrumbItems = [
-    { name: "Начало", url: "https://darpsychology.com/" },
+    { name: L.home, url: "https://darpsychology.com/" },
     { name: data.parentService.name, url: `https://darpsychology.com${data.parentService.href}` },
     { name: data.title, url: currentUrl }
   ];
@@ -46,7 +79,7 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title={`${data.title} | ${data.subtitle} | ДАР Психология`}
+        title={`${data.title} | ${data.subtitle} | ${L.siteSuffix}`}
         description={data.description}
         url={currentUrl}
       />
@@ -94,9 +127,9 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
               {data.description}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/contact">
+              <Link to={language === "en" ? "/en/contact" : "/contact"}>
                 <Button variant="hero" size="lg" className="gap-2">
-                  КОНТАКТИ
+                  {L.contacts}
                 </Button>
               </Link>
               <a href="tel:+359887079256">
@@ -131,11 +164,11 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Как{" "}
-              <span className="text-primary">помагаме?</span>
+              {L.howTitlePrefix}{" "}
+              <span className="text-primary">{L.howTitleAccent}</span>
             </h2>
             <p className="text-center text-white/70 mb-12 text-base sm:text-lg">
-              Нашият подход е индивидуален и съобразен с вашите нужди
+              {L.howSubtitle}
             </p>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -167,11 +200,11 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Какво ще{" "}
-              <span className="gradient-text">постигнете?</span>
+              {L.benefitsPrefix}{" "}
+              <span className="gradient-text">{L.benefitsAccent}</span>
             </h2>
             <p className="text-center text-muted-foreground mb-12 text-base sm:text-lg">
-              Резултатите от работата с нашите специалисти
+              {L.benefitsSubtitle}
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -209,10 +242,10 @@ export const ConditionPageTemplate = ({ data }: ConditionPageTemplateProps) => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 uppercase tracking-wide">
-                <span className="gradient-text">Свържете се</span> с нас
+                <span className="gradient-text">{L.ctaPrefix}</span> {L.ctaSuffix}
               </h2>
               <p className="text-base text-muted-foreground">
-                Направете първата стъпка към по-добро психическо здраве.
+                {L.ctaSubtitle}
               </p>
             </div>
 
